@@ -1,0 +1,23 @@
+
+@-webkit-keyframes clickit{
+    0% {background-color: white;}
+    100% {background-color: transparent;}
+}
+
+.clickit{
+    animation: clickit 1s 1;
+    -webkit-animation: clickit 1s 1;
+}
+
+@-webkit-keyframes rotate{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+.rotate{
+    
+    -webkit-transform-origin: 50% 50%; 
+    -webkit-animation: rotate 2s infinite linear;
+    transform-origin: 50% 50%;
+    animation: clickit 1s 1;
+}
