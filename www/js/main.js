@@ -1,5 +1,6 @@
 $(document).ready(function(){
      
+    FastClick.attach(document.body);
     $(window).resize(setWidth);
     $('#puzzle-scene').hide();
     PuzzleScene.Init();

@@ -8,7 +8,7 @@ PuzzleDefinition.prototype.Puzzle02 = function() {
     this.req = 66;  
     this.textID = '7-A';
     this.name = 'Synchronicity';
-    this.description = 'Block 7 puzzles all require acting while other actions are still animating."
+    this.description = 'Block 7 puzzles all require acting while other actions are still animating.';
 
     this.initialContents = [
         
