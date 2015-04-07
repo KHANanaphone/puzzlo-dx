@@ -87,8 +87,18 @@
 
 .level-tile {
 
-    -webkit-transition: background-color 0.3s, opacity 0.5s, border-color 0.5s;
-    transition: background-color 0.3s, opacity 0.5s, border-color 0.5s;
+    -webkit-transition: 
+        background-color 0.3s, 
+        opacity 0.5s, 
+        border-color 0.5s,
+        border-width 0.3s,
+        opacity 0.5s;
+    transition:
+        background-color 0.3s, 
+        opacity 0.5s, 
+        border-color 0.5s,
+        border-width 0.3s,
+        opacity 0.5s;
 
     width: 11.7%;
     margin-right: 0.8%;
@@ -133,8 +143,14 @@
 .level-tile.selected{
     
     border-width: 0;
-    background-color: violet;
+    background-color: violet !important;
 }
+
+.level-tile.notselected{
+    
+    opacity: 0;
+}
+
 
 .level-tile.complete[tier='1']
 {
@@ -226,55 +242,6 @@
 #diamond-menu.all-clear .level-tile{
     background-color: gold;
     border-color: goldenrod;
-}
-
-.level-tile.ready[tier='1']:active,
-.level-tile.complete[tier='1']:active,
-#diamond-menu.all-clear .level-tile[tier='1']:active{
-
-    background-color: #B16ADA;
-}
-
-.level-tile.ready[tier='2']:active,
-.level-tile.complete[tier='2']:active,
-#diamond-menu.all-clear .level-tile[tier='2']:active{
-
-    background-color: #389CD3;
-}
-
-.level-tile.ready[tier='3']:active,
-.level-tile.complete[tier='3']:active,
-#diamond-menu.all-clear .level-tile[tier='3']:active{
-
-    background-color: #39BEB9;
-}
-
-.level-tile.ready[tier='4']:active,
-.level-tile.complete[tier='4']:active,
-#diamond-menu.all-clear .level-tile[tier='4']:active{
-
-    background-color: #4EEB40;
-}
-
-.level-tile.ready[tier='5']:active,
-.level-tile.complete[tier='5']:active,
-#diamond-menu.all-clear .level-tile[tier='5']:active{
-
-    background-color: #FAEC47;
-}
-
-.level-tile.ready[tier='6']:active,
-.level-tile.complete[tier='6']:active,
-#diamond-menu.all-clear .level-tile[tier='6']:active{
-
-    background-color: #F79F00;
-}
-
-.level-tile.ready[tier='7']:active,
-.level-tile.complete[tier='7']:active,
-#diamond-menu.all-clear .level-tile[tier='7']:active{
-
-    background-color: #F00;
 }
 
 .noPuzz {

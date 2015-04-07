@@ -199,6 +199,8 @@ PuzzleScene.SetupBoard = function(puzzle) {
 
 PuzzleScene.RefreshAll = function(){
     
+    $('.clickit').removeClass('clickit');
+    
     $('#main-content').css('background-color', '');
     $('#bottom-area a').fadeIn();
     $('#success-popup').hide();
@@ -206,8 +208,6 @@ PuzzleScene.RefreshAll = function(){
 };
 
 PuzzleScene.SetupPuzzle = function() {
-
-    PuzzleScene.RefreshAll();
     
     var puzzle = PuzzleScene.puzzle;
     puzzle.Setup();
@@ -296,9 +296,27 @@ PuzzleScene.NextItem = function() {
 
 
 PuzzleScene.RetryClicked = function() {
-
-    PuzzleScene.SetupPuzzle(PuzzleScene.puzzle);
-    Timer.Stop();
+    
+    if(PuzzleScene.retrying)
+        return;
+    
+    PuzzleScene.retrying = true;
+    
+    var $button = $('#retry-button');
+    $button.css('color', 'white');
+    $('#tiles').fadeOut();
+    PuzzleScene.RefreshAll();
+    
+    setTimeout(function(){
+            
+        PuzzleScene.retrying = false;
+        Timer.Stop();
+        $button.css('color', '');
+        PuzzleScene.SetupPuzzle(PuzzleScene.puzzle);
+        $('#tiles').fadeIn();
+        
+    }, 400);
+    
 };
 
 PuzzleScene.ReduceMovesLeft = function() {
