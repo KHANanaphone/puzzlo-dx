@@ -43,7 +43,8 @@ PuzzleScene.Init = function() {
 };
 
 PuzzleScene.ShowPuzzle = function(x, y) {
-
+    
+    PuzzleScene.RefreshAll();
     PuzzleScene.solved = false;
     $('#bottom-buttons .btn').prop('disabled', false);
     $('#success-popup').hide();
@@ -103,7 +104,7 @@ PuzzleScene.ResetTiles = function() {
 };
 
 PuzzleScene.SetupBoard = function(puzzle) {
-
+    
     PuzzleScene.puzzle = puzzle;
 
     var startX = Math.round((8 - puzzle.width) / 2);
