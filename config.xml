@@ -1,12 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.adanferguson.puzzlo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Puzzlo Android</name>
+    <name>Puzzlo</name>
     <description>
-        Puzzle Android PUT BETTER DESCRIPTION HERE
+		Tricky puzzle game with 80 levels. Destroy all of the diamonds using as few shots as possible. 
     </description>
     <author email="adanferguson@gmail.com" href="http://www.adanferguson.com">
         Adan Ferguson
     </author>
     <content src="index.html" />
     <access origin="*" />
+    
+    <icon src="icon.png" />
+	
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="1000" />
+	
+	<platform name="android">
+		<splash src="splash.png" density="land-hdpi"/>
+		<splash src="splash.png" density="land-ldpi"/>
+		<splash src="splash.png" density="land-mdpi"/>
+		<splash src="splash.png" density="land-xhdpi"/>
+		<splash src="splash.png" density="port-hdpi"/>
+		<splash src="splash.png" density="port-ldpi"/>
+		<splash src="splash.png" density="port-mdpi"/>
+		<splash src="splash.png" density="port-xhdpi"/>
+	</platform>
+	
 </widget>

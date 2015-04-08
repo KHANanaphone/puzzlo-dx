@@ -1,7 +1,7 @@
 var Timer = {
     actions: [],
     running: false,
-    interval: 300
+    interval: 260
 };
 
 Timer.Run = function() {

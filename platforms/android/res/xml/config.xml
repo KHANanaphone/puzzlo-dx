@@ -5,13 +5,24 @@
         <param name="android-package" value="com.jamiestarke.webviewdebug.WebViewDebug" />
         <param name="onload" value="true" />
     </feature>
-    <name>Puzzlo Android</name>
+    <splash density="land-hdpi" src="splash.png" />
+    <splash density="land-ldpi" src="splash.png" />
+    <splash density="land-mdpi" src="splash.png" />
+    <splash density="land-xhdpi" src="splash.png" />
+    <splash density="port-hdpi" src="splash.png" />
+    <splash density="port-ldpi" src="splash.png" />
+    <splash density="port-mdpi" src="splash.png" />
+    <splash density="port-xhdpi" src="splash.png" />
+    <name>Puzzlo</name>
     <description>
-        Puzzle Android PUT BETTER DESCRIPTION HERE
+		Tricky puzzle game with 80 levels. Destroy all of the diamonds using as few shots as possible. 
     </description>
     <author email="adanferguson@gmail.com" href="http://www.adanferguson.com">
         Adan Ferguson
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <icon src="icon.png" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="1000" />
 </widget>
