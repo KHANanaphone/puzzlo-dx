@@ -3,9 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.adanferguson.puzzlo"
         versionCode = "10" 
-        version     = "1.0.0" >
-
-    <!-- versionCode is optional and Android only -->
+        version     = "1.0.1" >
 
     <name>Puzzlo</name>
 

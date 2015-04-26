@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.adanferguson.puzzlo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.adanferguson.puzzlo" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Puzzlo</name>
     <description>
 		Way cool puzzle game where you destroy all of the diamonds using as few shots as possible. Can you beat all 80 levels? I doubt it.

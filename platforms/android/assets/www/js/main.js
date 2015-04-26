@@ -1,5 +1,8 @@
+
+
 $(document).ready(function(){
-     
+    
+    document.addEventListener("deviceready", deviceReady, false);
     FastClick.attach(document.body);
     $(window).resize(setWidth);
     $('#puzzle-scene').hide();
@@ -18,8 +21,18 @@ $(document).ready(function(){
             $ws.width($ws.height() * 0.7);     
         else
             $ws.width(ww);
-    }
-});
+    }; 
+
+    function deviceReady(){        
+
+        document.addEventListener("backbutton", function(){
+            
+            console.log('Back Clicked');
+            MenuScene.Show();
+            
+        }, false);
+    };
+});   
 
 var DEBUG_CTRL = false;
 

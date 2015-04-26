@@ -118,9 +118,9 @@
 }
 
 @-webkit-keyframes readyAnim{
-    0% {border-color: #373746;}
+    0% {border-color: #6F6F7C;}
     50% {border-color: rgba(255, 255, 255, 1);}
-    100% {border-color: #373746;}
+    100% {border-color: #6F6F7C;}
 }
 
 .level-tile.ready {
