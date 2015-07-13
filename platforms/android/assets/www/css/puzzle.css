@@ -1,7 +1,7 @@
 
 /* LAYOUT */
 
-#width-setter{
+#size-setter{
    height: 100%;
     position: relative;
     margin: 0 auto;
@@ -194,7 +194,7 @@
 
     color: rgb(156, 156, 156);
 
-    font-size: 1.4em;
+    font-size: 1.7em;
     
     padding-left: 5%;
 
@@ -234,22 +234,7 @@
 }
 
 .puzzle-tile {
-
-    height: 100%;
-
-    width: 12.5%;
-
-    display: inline-block;
-
-    vertical-align: top;
-
-    position: relative;
-
-    /*
-    -webkit-transition: background-color 0.2s;
-
-    transition: background-color 0.2s;
-*/
+    position: absoute;
 }
 
 .icon text{
@@ -260,9 +245,6 @@
 
 #tiles {
 
-    height: 100%;
-
-    width: 100%;
 
 }
 
@@ -283,6 +265,7 @@
 .puzzle-tile.odd[tile-type='board'] {
 
     background-color: #CCC;
+    
 
 }
 

@@ -10,12 +10,12 @@ $(document).ready(function(){
     MenuScene.Init();
     
     setWidth();
-    $('#width-setter').fitText(3); 
+    $('#size-setter').fitText(3); 
     
     function setWidth(){
         
         var ww = $(window).width();
-        var $ws = $('#width-setter');
+        var $ws = $('#size-setter');
         
         if(ww > $ws.height() * 0.7)
             $ws.width($ws.height() * 0.7);     
@@ -27,8 +27,10 @@ $(document).ready(function(){
 
         document.addEventListener("backbutton", function(){
             
-            console.log('Back Clicked');
-            MenuScene.Show();
+            if(!MenuScene.shown)
+                MenuScene.Show();
+            else
+                navigator.app.exitApp();
             
         }, false);
     };

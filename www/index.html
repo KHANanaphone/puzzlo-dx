@@ -24,9 +24,6 @@
     <script type="text/javascript" src="js/main.js?v=1.03"></script>
     <script type="text/javascript" src="js/puzzleDefinition.js?v=1.03"></script>
 
-    <script type="text/javascript" src="js/scenes/menu.js?v=1.03"></script>
-    <script type="text/javascript" src="js/scenes/puzzle.js?v=1.03"></script>
-
     <script type="text/javascript" src="js/puzzles/puzzle1.js?v=1.03"></script>
     <script type="text/javascript" src="js/puzzles/puzzle2.js?v=1.03"></script>
     <script type="text/javascript" src="js/puzzles/puzzle3.js?v=1.03"></script>
@@ -48,12 +45,15 @@
     <script type="text/javascript" src="js/logic/potionlogic.js?v=1.03"></script>
     <script type="text/javascript" src="js/logic/teleporterlogic.js?v=1.03"></script>
     <script type="text/javascript" src="js/logic/timer.js?v=1.03"></script>
+    
+    <script type="text/javascript" src="js/scenes/menu.js?v=1.03"></script>
+    <script type="text/javascript" src="js/scenes/puzzle.js?v=1.03"></script>
 
 </head>
 
 <body>
     <div id="main-content">
-        <div id="width-setter">
+        <div id="size-setter">
             <div id="puzzle-scene" class="scene">
 
                 <div id="text-area">
@@ -73,13 +73,13 @@
                     </div>
                 </div>
                 <div id="buttons-area">
-<!--
+                    
                     <a id="menu-button" onclick="MenuScene.Show()" title="Level Select">
                         <i class="fa fa-th-large"></i>
                     </a>
--->
                     <a id="retry-button" onclick="PuzzleScene.RetryClicked()" title="Retry">
                         <i class="fa fa-undo"></i>
+                        
                     </a>
                 </div>
 
@@ -169,6 +169,12 @@
                         </svg>
                     </div>
 
+                    <div class="puzzle-tile">
+                        <div class="inner">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                    
                     <div class="item-tile">
                         <div class="inner">
                             <div class="icon"></div>
@@ -177,7 +183,7 @@
 
                 </div>
             </div>
-            <div id="menu-scene" class="scene">
+            <div id="tower-scene" class="scene">
 
                 <div id="diamond-menu">
                 </div>
@@ -186,6 +192,9 @@
                     Select a level
                 </div>
 
+            </div>
+            <div id='menu-scene' class='scene'>
+                MENU SCENE
             </div>
         </div>
     </div>
