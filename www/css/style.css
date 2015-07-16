@@ -16,14 +16,17 @@ html, body{
     background-color: #373746;
     -webkit-transition: background-color 0.4s;
     transition: background-color 0.4s;
+    overflow: hidden;
 }
 
 .scene{
+    position: absolute;
 	width: 100%;
 	height: 100%;
+    display: none;
 }
 
-.hidden{
+#hidden{
     display: none;
 }
 
@@ -45,9 +48,15 @@ html, body{
 
 #change-link {
     
-position: absolute;
-right: 1vh;
-top: 1vh;
-font-size: 4vh;
-color: rgb(151, 161, 194);
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    font-size: 4vh;
+    color: rgb(151, 161, 194);
+}
+
+#size-setter{
+   height: 100%;
+    position: relative;
+    margin: 0 auto;
 }

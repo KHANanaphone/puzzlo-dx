@@ -175,7 +175,7 @@ Tile.prototype.DrawContents = function() {
 
         if (value > 0) {
 
-            var $diamond = $('.hidden .diamond-icon').clone();
+            var $diamond = $('#hidden .diamond-icon').clone();
             $icon.append($diamond);
             $diamond.find('text').html(value);
         }
@@ -184,7 +184,7 @@ Tile.prototype.DrawContents = function() {
     function drawBlock(value) {
 
         if (value > 0) {
-            var $block = $('.hidden .breakable-block-icon').clone();
+            var $block = $('#hidden .breakable-block-icon').clone();
         } else {
             $inner.css('background-color', 'black');
         }
@@ -194,20 +194,20 @@ Tile.prototype.DrawContents = function() {
 
     function drawBomb(value) {
 
-        var $bomb = $('.hidden .bomb-icon').clone();
+        var $bomb = $('#hidden .bomb-icon').clone();
         $icon.append($bomb);
     };
 
     function drawShifter(value) {
 
-        var $shifter = $('.hidden .shifter-icon').clone();
+        var $shifter = $('#hidden .shifter-icon').clone();
         $shifter.find('polygon').attr('transform', 'rotate(' + (90 * value) + ',100,75)');
         $icon.append($shifter);
     };
 
     function drawMirror(subtype, value) {
 
-        var $mirror = $('.hidden .mirror-icon').clone();
+        var $mirror = $('#hidden .mirror-icon').clone();
         $mirror.find('polygon').attr('transform', 'rotate(' + (-45 * value) + ',100,100)');
         $icon.append($mirror);
     }
@@ -216,19 +216,19 @@ Tile.prototype.DrawContents = function() {
         
         if(subtype == 'potion'){
             
-            var $potion = $('.hidden .potion-icon').clone();
+            var $potion = $('#hidden .potion-icon').clone();
             $icon.append($potion);
         }   
         else if(subtype == 'poison'){
             
-            var $potion = $('.hidden .poison-icon').clone();
+            var $potion = $('#hidden .poison-icon').clone();
             $icon.append($potion);
         }    
     }
     
     function drawTeleporter(subtype){
         
-        var $teleporter = $('.hidden .teleporter-icon').clone().addClass(subtype);
+        var $teleporter = $('#hidden .teleporter-icon').clone().addClass(subtype);
         
 //        if(subtype == 't0')
 //            $teleporter.find('text').text('\u2660');

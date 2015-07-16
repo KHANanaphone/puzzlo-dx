@@ -19,185 +19,220 @@
     <script src="js/includes/TweenMax.min.js"></script>
     <script src="js/includes/jquery.fittext.js"></script>
     <script src="js/includes/fastclick.js"></script>
+    <script src="js/includes/vivus.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <script type="text/javascript" src="js/main.js?v=1.03"></script>
-    <script type="text/javascript" src="js/puzzleDefinition.js?v=1.03"></script>
+    <script type="text/javascript" src="js/main.js?v=1.04"></script>
+    <script type="text/javascript" src="js/puzzleDefinition.js?v=1.04"></script>
 
-    <script type="text/javascript" src="js/puzzles/puzzle1.js?v=1.03"></script>
-    <script type="text/javascript" src="js/puzzles/puzzle2.js?v=1.03"></script>
-    <script type="text/javascript" src="js/puzzles/puzzle3.js?v=1.03"></script>
-    <script type="text/javascript" src="js/puzzles/puzzle4.js?v=1.03"></script>
-    <script type="text/javascript" src="js/puzzles/puzzle5.js?v=1.03"></script>
-    <script type="text/javascript" src="js/puzzles/puzzle6.js?v=1.03"></script>
-    <script type="text/javascript" src="js/puzzles/puzzle7.js?v=1.03"></script>
+    <script type="text/javascript" src="js/puzzles/puzzle1.js?v=1.04"></script>
+    <script type="text/javascript" src="js/puzzles/puzzle2.js?v=1.04"></script>
+    <script type="text/javascript" src="js/puzzles/puzzle3.js?v=1.04"></script>
+    <script type="text/javascript" src="js/puzzles/puzzle4.js?v=1.04"></script>
+    <script type="text/javascript" src="js/puzzles/puzzle5.js?v=1.04"></script>
+    <script type="text/javascript" src="js/puzzles/puzzle6.js?v=1.04"></script>
+    <script type="text/javascript" src="js/puzzles/puzzle7.js?v=1.04"></script>
 
-    <script type="text/javascript" src="js/components/tile.js?v=1.03"></script>
-    <script type="text/javascript" src="js/components/ice.js?v=1.03"></script>
-    <script type="text/javascript" src="js/components/lightning.js?v=1.03"></script>
+    <script type="text/javascript" src="js/components/tile.js?v=1.04"></script>
+    <script type="text/javascript" src="js/components/ice.js?v=1.04"></script>
+    <script type="text/javascript" src="js/components/lightning.js?v=1.04"></script>
 
-    <script type="text/javascript" src="js/logic/lightninglogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/icelogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/bomblogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/firelogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/shifterlogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/mirrorlogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/potionlogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/teleporterlogic.js?v=1.03"></script>
-    <script type="text/javascript" src="js/logic/timer.js?v=1.03"></script>
+    <script type="text/javascript" src="js/logic/lightninglogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/icelogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/bomblogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/firelogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/shifterlogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/mirrorlogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/potionlogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/teleporterlogic.js?v=1.04"></script>
+    <script type="text/javascript" src="js/logic/timer.js?v=1.04"></script>
     
-    <script type="text/javascript" src="js/scenes/menu.js?v=1.03"></script>
-    <script type="text/javascript" src="js/scenes/puzzle.js?v=1.03"></script>
+    <script type="text/javascript" src="js/scenes/menu.js?v=1.04"></script>
+    <script type="text/javascript" src="js/scenes/tower.js?v=1.04"></script>
+    <script type="text/javascript" src="js/scenes/puzzle.js?v=1.04"></script>
 
 </head>
 
 <body>
-    <div id="main-content">
-        <div id="size-setter">
-            <div id="puzzle-scene" class="scene">
+<div id="main-content">
+    <div id="size-setter">
+        <div id="puzzle-scene" class="scene">
 
-                <div id="text-area">
-                    <div id='puzzle-name-section'>
-                        <span id='puzzle-id'></span>  <span id='puzzle-name'></span>
-                    </div>
-                </div>
-                <div id="item-area">
-                </div>
-                <div id="shots-left-area">
-                    <span class='shots-text'>
-                    Shots</span>
-                    <div id="shots-icons"></div>
-                </div>
-                <div id="tile-area">
-                    <div id="tiles">
-                    </div>
-                </div>
-                <div id="buttons-area">
-                    
-                    <a id="menu-button" onclick="MenuScene.Show()" title="Level Select">
-                        <i class="fa fa-th-large"></i>
-                    </a>
-                    <a id="retry-button" onclick="PuzzleScene.RetryClicked()" title="Retry">
-                        <i class="fa fa-undo"></i>
-                        
-                    </a>
-                </div>
-
-                <div class="popup" id="tutorial-popup">
-                    <div class='relative'>
-                        <span class="popup-text"></span>
-                        <button class="btn btn-primary" onclick="PuzzleScene.ClosePopup()">Got it</button>
-                    </div>
-                </div>
-
-                <div class="popup" id="success-popup">
-                    <div class='relative'>
-
-                        <span class="popup-text"><br/>Level Complete
-                        </span>
-
-                        <button class="btn btn-success" onclick="MenuScene.Solved(PuzzleScene.puzzleX, PuzzleScene.puzzleY, 'easy')">Continue</button>
-                    </div>
-                </div>
-
-                <div class="popup" id="failure-popup">
-                    <div class='relative'>
-
-                        <span class="popup-text"><br/>No Moves Left
-                        </span>
-
-                        <button class="btn btn-danger" onclick="PuzzleScene.RetryClicked()">Retry</button>
-                    </div>
-                </div>
-
-                <div class="hidden">
-
-                    <svg class="lightning-icon" viewBox="0 0 200 200">
-                        <path d="M25,25 A100,100 0 0,0 175,25 L100,175 Z" />
-                    </svg>
-
-                    <svg class="ice-icon" viewBox="0 0 200 200">
-                        <path d="M25,25 A100,100 0 0,1 25,175 L175,100 Z" />
-                    </svg>
-
-                    <svg class="diamond-icon" viewBox="0 0 200 200">
-                        <polygon points="0,100 100,0 200,100 100,200"></polygon>
-                        <text text-anchor="middle" x="100" y="135" font-size="100"></text>
-                    </svg>
-
-                    <svg class="breakable-block-icon" viewBox="0 0 100 100">
-                        <polygon points="1,1 99,1 99,99 1,99"></polygon>
-                        <polygon points="20,20 80,20 80,80 20,80" style="fill:white;"></polygon>
-                    </svg>
-
-                    <svg class="bomb-icon" viewBox="0 0 200 200">
-                        <path d="M100,20 A90,90 0 1,0 180,100 L200,80 L120,0 Z"></path>
-                        <text text-anchor="middle" x="90" y="145" font-size="100">B</text>
-                    </svg>
-
-                    <svg class="shifter-icon" viewBox="0 0 200 150">
-                        <polygon points="100,25 175,100 150,125 100,75 50,125 25,100"></polygon>
-                    </svg>
-
-                    <svg class="mirror-icon" viewBox="0 0 200 200">
-                        <polygon points="10,85 190,85 190,115 10,115"></polygon>
-                    </svg>
-
-                    <svg class='potion-icon' viewBox='0 0 200 200'>
-                        <path class='bottom' d='M25,175 L45,195 L155,195 L175,175 L120,120 L120,90 L80,90 L80,120 Z'></path>
-                        <path class='top' d='M120,90 L120,25 L80,25 L80,90'></path>
-                    </svg>
-
-                    <svg class='poison-icon' viewBox='0 0 200 200'>
-                        <path class='bottom' d='M25,175 L45,195 L155,195 L175,175 L120,120 L120,90 L80,90 L80,120 Z'></path>
-                        <path class='top' d='M120,90 L120,25 L80,25 L80,90'></path>
-                        <circle cx='60' cy='170' r='10'></circle>
-                        <circle cx='110' cy='140' r='10'></circle>
-                        <circle cx='98' cy='44' r='10'></circle>
-                    </svg>
-
-                    <svg class='teleporter-icon' viewBox='0 0 200 200'>
-
-                        <circle cx='100' cy='100' r='90'></circle>
-                        <path class='spinner' d='M100,10 L100,190 M10,100 L190,100'></path>
-                    </svg>
-
-                    <div class="dot">
-                        <svg viewBox="0 0 200 200">
-                            <circle cx="100" cy="100" r="80">
-                            </circle>
-                        </svg>
-                    </div>
-
-                    <div class="puzzle-tile">
-                        <div class="inner">
-                            <div class="icon"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="item-tile">
-                        <div class="inner">
-                            <div class="icon"></div>
-                        </div>
-                    </div>
-
+            <div id="text-area">
+                <div id='puzzle-name-section'>
+                    <span id='puzzle-id'></span>  <span id='puzzle-name'></span>
                 </div>
             </div>
-            <div id="tower-scene" class="scene">
-
-                <div id="diamond-menu">
-                </div>
-
-                <div id="bottom-section">
-                    Select a level
-                </div>
-
+            <div id="item-area">
             </div>
-            <div id='menu-scene' class='scene'>
-                MENU SCENE
+            <div id="shots-left-area">
+                <span class='shots-text'>
+                Shots</span>
+                <div id="shots-icons"></div>
+            </div>
+            <div id="tile-area">
+                <div id="tiles">
+                </div>
+            </div>
+            <div id="buttons-area">
+
+                <a id="menu-button" onclick="MenuScene.Show()" title="Level Select">
+                    <i class="fa fa-th-large"></i>
+                </a>
+                <a id="retry-button" onclick="PuzzleScene.RetryClicked()" title="Retry">
+                    <i class="fa fa-undo"></i>
+
+                </a>
+            </div>
+
+            <div class="popup" id="tutorial-popup">
+                <div class='relative'>
+                    <span class="popup-text"></span>
+                    <button class="btn btn-primary" onclick="PuzzleScene.ClosePopup()">Got it</button>
+                </div>
+            </div>
+
+            <div class="popup" id="success-popup">
+                <div class='relative'>
+
+                    <span class="popup-text"><br/>Level Complete
+                    </span>
+
+                    <button class="btn btn-success" onclick="MenuScene.Solved(PuzzleScene.puzzleX, PuzzleScene.puzzleY, 'easy')">Continue</button>
+                </div>
+            </div>
+
+            <div class="popup" id="failure-popup">
+                <div class='relative'>
+
+                    <span class="popup-text"><br/>No Moves Left
+                    </span>
+
+                    <button class="btn btn-danger" onclick="PuzzleScene.RetryClicked()">Retry</button>
+                </div>
+            </div>                
+        </div>
+        <div id="tower-scene" class="scene">
+
+            <div id="diamond-menu">
+            </div>
+
+            <div id="bottom-section">
+                Select a level
+            </div>
+
+        </div>
+        <div id='menu-scene' class='scene'>
+            <div class='menu-header'>
+                <svg viewbox='0,0,800,600'>
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <g class='p'>
+                        <polygon fill='url(#grad)' points='10,210 210,10 410,210 210,410'></polygon>
+                        <text x='225' y='200' text-anchor='middle' alignment-baseline='middle'>p</text>
+                    </g>
+                    <text class='uzzlo' x='303' y='300'>uzzlo</text>
+                    <g class='dx'>
+                    </g>
+                    <svg x='560' y='160' viewbox='0,0,1400,1400' id='dx-logo'>
+                        <path class='l1' d='M0,0 l-20,120 c120,0 160,-120 20,-120'></path>
+<!--                        <path class='l3' d='M520,410 l-20,120 c120,0 160,-120 20,-120'></path>-->
+                        <path class='l2' d='M10,10 l-20,120 c120,0 160,-120 20,-120'></path>
+                        <path class='l4' d='M110,0 l60,120 m-80,0 l100,-120'></path>
+<!--                        <path class='l6' d='M650,410 l60,120 m-80,0 l100,-120'></path>-->
+                        <path class='l5' d='M120,10 l60,120 m-80,0 l100,-120'></path>
+                    </svg>
+                </svg>
+            </div>
+            <div class='tower-select'>
+                <div class='background'></div>
             </div>
         </div>
     </div>
-</body>
+</div>
+    
+<div id="hidden">
 
+    <svg class="lightning-icon" viewBox="0 0 200 200">
+        <path d="M25,25 A100,100 0 0,0 175,25 L100,175 Z" />
+    </svg>
+
+    <svg class="ice-icon" viewBox="0 0 200 200">
+        <path d="M25,25 A100,100 0 0,1 25,175 L175,100 Z" />
+    </svg>
+
+    <svg class="diamond-icon" viewBox="0 0 200 200">
+        <polygon points="0,100 100,0 200,100 100,200"></polygon>
+        <text text-anchor="middle" x="100" y="135" font-size="100"></text>
+    </svg>
+
+    <svg class="breakable-block-icon" viewBox="0 0 100 100">
+        <polygon points="1,1 99,1 99,99 1,99"></polygon>
+        <polygon points="20,20 80,20 80,80 20,80" style="fill:white;"></polygon>
+    </svg>
+
+    <svg class="bomb-icon" viewBox="0 0 200 200">
+        <path d="M100,20 A90,90 0 1,0 180,100 L200,80 L120,0 Z"></path>
+        <text text-anchor="middle" x="90" y="145" font-size="100">B</text>
+    </svg>
+
+    <svg class="shifter-icon" viewBox="0 0 200 150">
+        <polygon points="100,25 175,100 150,125 100,75 50,125 25,100"></polygon>
+    </svg>
+
+    <svg class="mirror-icon" viewBox="0 0 200 200">
+        <polygon points="10,85 190,85 190,115 10,115"></polygon>
+    </svg>
+
+    <svg class='potion-icon' viewBox='0 0 200 200'>
+        <path class='bottom' d='M25,175 L45,195 L155,195 L175,175 L120,120 L120,90 L80,90 L80,120 Z'></path>
+        <path class='top' d='M120,90 L120,25 L80,25 L80,90'></path>
+    </svg>
+
+    <svg class='poison-icon' viewBox='0 0 200 200'>
+        <path class='bottom' d='M25,175 L45,195 L155,195 L175,175 L120,120 L120,90 L80,90 L80,120 Z'></path>
+        <path class='top' d='M120,90 L120,25 L80,25 L80,90'></path>
+        <circle cx='60' cy='170' r='10'></circle>
+        <circle cx='110' cy='140' r='10'></circle>
+        <circle cx='98' cy='44' r='10'></circle>
+    </svg>
+
+    <svg class='teleporter-icon' viewBox='0 0 200 200'>
+
+        <circle cx='100' cy='100' r='90'></circle>
+        <path class='spinner' d='M100,10 L100,190 M10,100 L190,100'></path>
+    </svg>
+
+    <div class="dot">
+        <svg viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="80">
+            </circle>
+        </svg>
+    </div>
+
+    <div class="puzzle-tile">
+        <div class="inner">
+            <div class="icon"></div>
+        </div>
+    </div>
+    
+    <div class="menu-puzzle-tile">
+    </div>
+    
+    <div class="menu-tower-row">
+        <span class='name'></span>
+        <span class='pct'></span>
+    </div>
+
+    <div class="item-tile">
+        <div class="inner">
+            <div class="icon"></div>
+        </div>
+    </div>
+</div>    
+</body>
 </html>

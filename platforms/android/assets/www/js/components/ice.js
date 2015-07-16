@@ -15,7 +15,7 @@ function Ice($tile, isLeft){
 
 Ice.prototype.DrawContents = function(){
     
-    var $icon = $('.hidden .ice-icon').clone();
+    var $icon = $('#hidden .ice-icon').clone();
     
     if(!this.isLeft)
         $icon.find('path').attr('transform', 'scale(-1,1) translate(-200, 0)');

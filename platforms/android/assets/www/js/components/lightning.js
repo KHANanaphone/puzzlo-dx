@@ -15,7 +15,7 @@ function Lightning($tile, isTop){
 
 Lightning.prototype.DrawContents = function(){
     
-    var $icon = $('.hidden .lightning-icon').clone();
+    var $icon = $('#hidden .lightning-icon').clone();
     
     if(!this.isTop)
         $icon.find('path').attr('transform', 'scale(1, -1) translate(0, -200)');

@@ -18,7 +18,7 @@ PuzzleScene.init = function(){
 
     for (var x = 0; x < 8; x++) {
 
-        var $clone = $('.hidden .item-tile').clone();
+        var $clone = $('#hidden .item-tile').clone();
         $('#item-area').append($clone);
         PuzzleScene.itemTiles[x] = new Tile($clone);
     }
@@ -123,7 +123,7 @@ PuzzleScene.setupBoard = function(puzzle) {
             
             for(var j = 0; j < PuzzleScene.puzzleSize; j++){
                 
-                var $tile = $('.hidden .puzzle-tile').clone();                
+                var $tile = $('#hidden .puzzle-tile').clone();                
                 $tile.attr('x', j).attr('y', i);                
                 PuzzleScene.$tiles[i][j] = $tile;
                 $tiles.append($tile);
@@ -190,7 +190,7 @@ PuzzleScene.setupBoard = function(puzzle) {
         var $span = $('#shots-icons').empty();
         
         for(var i = 0; i < max; i++){
-            $span.append($('.hidden .dot').clone());
+            $span.append($('#hidden .dot').clone());
         }
     };
 };

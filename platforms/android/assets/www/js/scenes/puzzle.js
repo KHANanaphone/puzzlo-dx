@@ -36,7 +36,7 @@ PuzzleScene.Init = function() {
 
     for (var x = 0; x < 8; x++) {
 
-        var $clone = $('.hidden .item-tile').clone();
+        var $clone = $('#hidden .item-tile').clone();
         $('#item-area').append($clone);
         PuzzleScene.itemTiles[x] = new Tile($clone);
     }
@@ -177,7 +177,7 @@ PuzzleScene.SetupBoard = function(puzzle) {
         var $span = $('#shots-icons').empty();
         
         for(var i = 0; i < max; i++){
-            $span.append($('.hidden .dot').clone());
+            $span.append($('#hidden .dot').clone());
         }
     };
     

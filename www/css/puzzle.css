@@ -1,12 +1,6 @@
 
 /* LAYOUT */
 
-#size-setter{
-   height: 100%;
-    position: relative;
-    margin: 0 auto;
-}
-
 .popup{
     
     position: absolute;

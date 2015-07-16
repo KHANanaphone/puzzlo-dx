@@ -1,0 +1,250 @@
+
+
+#diamond-menu {
+
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 0px;
+    left: 0px;
+    
+    border: 0.5em solid transparent;
+    border-right-width: 0.2em;
+}
+
+#diamond-menu.all-clear{
+    
+}
+
+
+#diamond-bg {
+
+
+    position: absolute;
+
+
+    top: 15%;
+
+
+    left: 21%;
+
+
+    width: 59%;
+
+
+    height: 59%;
+
+
+    background-color: rgba(255, 0, 0, 0.28);
+
+
+}
+
+
+#bottom-section {
+
+
+    font-family: 'Chunk';
+    font-size: 4.2em;
+    color: white;
+    text-transform: uppercase;
+
+
+    position: absolute;
+
+
+    width: 100%;
+
+
+    height: 13%;
+
+
+    bottom: 0px;
+
+
+    left: 0px;
+
+
+    text-align: center;
+
+
+}
+
+
+.level-row {
+
+
+    height: 9.3%;
+    margin-bottom: 0.5%;
+
+
+    width: 100%;
+
+
+}
+
+
+.level-tile {
+
+    -webkit-transition: 
+        background-color 0.3s, 
+        opacity 0.5s, 
+        border-color 0.5s,
+        border-width 0.3s,
+        opacity 0.5s;
+    transition:
+        background-color 0.3s, 
+        opacity 0.5s, 
+        border-color 0.5s,
+        border-width 0.3s,
+        opacity 0.5s;
+
+    width: 11.7%;
+    margin-right: 0.8%;
+
+
+    height: 100%;
+
+
+    background-color: transparent;
+
+    border: 0.5em solid transparent;
+    
+    display: inline-block;
+    
+    opacity: 0;
+    
+}
+
+@-webkit-keyframes readyAnim{
+    0% {border-color: #6F6F7C;}
+    50% {border-color: rgba(255, 255, 255, 1);}
+    100% {border-color: #6F6F7C;}
+}
+
+.level-tile.ready {
+
+    background-color: white;
+    cursor: pointer; 
+    opacity: 1;
+    
+    animation: readyAnim 4s 1;
+    -webkit-animation: readyAnim 4s infinite;
+}
+
+.level-tile.complete {
+
+    background-color: rgb(19, 218, 35);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.level-tile.selected{
+    
+    border-width: 0;
+    background-color: violet !important;
+}
+
+.level-tile.notselected{
+    
+    opacity: 0;
+}
+
+
+.level-tile.complete[tier='1']
+{
+    border-color: #B891BD;
+}
+
+.level-tile.complete[tier='2']{
+    border-color: #8CACBD;
+}
+
+.level-tile.complete[tier='3']{
+    border-color: #94CBC8;
+}
+
+.level-tile.complete[tier='4']{
+    border-color: #84CB7D;
+}
+
+.level-tile.complete[tier='5']{
+    border-color: #C3C374;
+}
+
+.level-tile.complete[tier='6']{
+    border-color: #C59C51;
+}
+
+.level-tile.complete[tier='7']{
+    border-color: #CB5E5E;
+}
+
+.level-tile.complete[tier='1'], .level-tile.ready[tier='1']
+{
+    background-color: #E7B6EE;
+}
+
+.level-tile.complete[tier='2'], .level-tile.ready[tier='2']{
+    background-color: #B0D8EE;
+}
+
+.level-tile.complete[tier='3'], .level-tile.ready[tier='3']{
+    background-color: #BAFFFC;
+}
+
+.level-tile.complete[tier='4'], .level-tile.ready[tier='4']{
+    background-color: #A6FF9E;
+}
+
+.level-tile.complete[tier='5'], .level-tile.ready[tier='5']{
+    background-color: #F5F592;
+}
+
+.level-tile.complete[tier='6'], .level-tile.ready[tier='6']{
+    background-color: #F8C466;
+}
+
+.level-tile.complete[tier='7'], .level-tile.ready[tier='7']{
+    background-color: #F77;
+}
+
+.level-tile.complete[tier='1'], .level-tile.ready[tier='1']
+{
+    background-color: #E7B6EE;
+}
+
+.level-tile.complete[tier='2'], .level-tile.ready[tier='2']{
+    background-color: #B0D8EE;
+}
+
+.level-tile.complete[tier='3'], .level-tile.ready[tier='3']{
+    background-color: #BAFFFC;
+}
+
+.level-tile.complete[tier='4'], .level-tile.ready[tier='4']{
+    background-color: #A6FF9E;
+}
+
+.level-tile.complete[tier='5'], .level-tile.ready[tier='5']{
+    background-color: #F5F592;
+}
+
+.level-tile.complete[tier='6'], .level-tile.ready[tier='6']{
+    background-color: #F8C466;
+}
+
+.level-tile.complete[tier='7'], .level-tile.ready[tier='7']{
+    background-color: #F77;
+}
+
+#diamond-menu.all-clear .level-tile{
+    background-color: gold;
+    border-color: goldenrod;
+}
+
+.noPuzz {
+
+    visibility: hidden;
+}

@@ -7,19 +7,32 @@ $(document).ready(function(){
     $(window).resize(setSize); 
     setSize();
     $('#size-setter').fitText(3);
-    
+
+    MenuScene.init();
+//    TowerScene.init();    
     PuzzleScene.init();
-    PuzzleScene.showPuzzle(new PuzzleDefinition(0, 0));
+    
+    Main.showScene('menu');
     
     function setSize(){
         
-        var ww = $(window).width();
         var $ws = $('#size-setter');
+        var width = $(window).width();
+        var height = $(window).height();       
         
-        if(ww > $ws.height() * 0.7)
-            $ws.width($ws.height() * 0.7);     
-        else
-            $ws.width(ww);
+        if(width > height * 0.7){
+            $ws.css('top', '0');
+            $ws.width(height * 0.7); 
+            $ws.height(height - 1);
+        }    
+        else{
+            
+            var topMargin = (height - (width / 0.7)) / 2;
+            
+            $ws.css('top', topMargin + 'px');
+            $ws.width(width);
+            $ws.height(width / 0.7 - 1);
+        }
         
         if(Main.currentScene == 'puzzle')
             PuzzleScene.resizeTiles();
