@@ -1,0 +1,220 @@
+#tower-scene {
+/*    background: url(../svg/tower1.png);*/
+}
+
+#tower-scene .header{
+    height: 7%;
+    width: 100%;
+    position: relative;
+    text-align: center;   
+    
+    font-family: 'Chunk';
+    color: white;
+    font-size: 2.8em;
+}
+
+#tower-scene .level-select{
+    height: 78%;
+    width: 92%;
+    position: relative;
+    margin: 5% auto;
+}
+
+#tower-scene .tower-progress{
+    text-align: center;
+    height: 6%;
+    width: 94%;
+    border: 2px solid rgb(195, 190, 221);
+    margin: 0% auto;
+    color: #FFF;
+    font-size: 1.7em;
+    position: relative;
+}
+
+#tower-scene .back-button{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12%;
+    opacity: 0.4;
+    cursor: pointer;
+    
+    top: 20%;
+    bottom: -10%;
+    
+    -webkit-transition: opacity 0.25s; /* Safari */
+    transition: opacity 0.25s;
+}
+
+#tower-scene .back-button:hover{
+    opacity: 1;
+}
+
+#tower-scene .back-button:hover polygon{
+    fill: black;
+}
+
+#tower-scene .back-button polygon{
+
+    fill: transparent;
+    stroke: #FFF;
+    stroke-width: 3;
+    -webkit-transition: fill 0.25s; /* Safari */
+    transition: fill 0.25s;
+}
+
+#tower-scene .bar{
+    position: absolute;
+    height: 100%;
+    background-color: white;
+    left: 0;
+    right: 0;
+    
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2e8c1c+0,70e256+100 */
+background: rgb(46,140,28); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(46,140,28,1) 0%, rgba(112,226,86,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(46,140,28,1)), color-stop(100%,rgba(112,226,86,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e8c1c', endColorstr='#70e256',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+#tower-scene .text{
+    position:relative;
+    z-index: 10;
+    font-family: 'Makhina';
+}
+
+#tower-scene .bar-hider{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    left: 0%;
+    height: 100%;
+    background-color: rgb(77, 68, 100);
+    
+    -webkit-transition: left 0.4s;
+    transition: left 0.4s;
+}
+
+#tower-scene .level-select .level-tile{
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#tower-scene .level-select .level-tile .inner{
+    
+    margin: 15%;
+    border: 0.3em solid white;
+    background-color: white;
+    
+    -webkit-transition: border-color 0.25s;
+    transition: border-color 0.25s;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#tower-scene .level-select .level-tile:hover .inner{
+
+    border-color: #8A88CC;
+}
+
+#tower-scene .level-select .level-path{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+}
+
+#tower-scene .level-tile[status='solved'] .inner{
+    border-color: #6A6;
+}
+
+#tower-scene .level-tile[status='solved'] .checkmark{
+    visibility: visible;
+}
+
+#tower-scene .level-tile svg{
+    
+    margin-top: 0.32em;
+}
+
+#tower-scene .level-tile .checkmark{
+        
+    fill: #6A6;
+    stroke: #6A6;
+    stroke-width: 15;
+    visibility: hidden;
+    -webkit-transition: fill 0.25s, stroke 0.25s;
+    transition: fill 0.25s, stroke 0.25s;
+}
+
+#tower-scene .level-tile .levelid{
+    
+    font-size: 95px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: #AAA;
+    -webkit-transition: fill 0.25s;
+    transition: fill 0.25s;
+    font-family: 'Makhina';
+}
+
+#tower-scene .level-tile:hover .levelid{
+
+    fill: black !important;
+}
+
+#tower-scene .level-tile:hover .checkmark{
+
+    fill: transparent !important;
+    stroke: transparent !important;
+}
+
+#tower-scene .level-tile[status='solved'] .inner{
+    background-color: #DFD;
+}
+
+#tower-scene .level-tile[status='solved'] .levelid{
+    fill: transparent;
+}
+
+#tower-scene .level-tile .locked{
+    
+    opacity: 0;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+#tower-scene .level-tile[status='locked'] .locked{
+    
+    opacity: 1;
+}
+
+#tower-scene .level-tile[status='locked'] .levelid,
+#tower-scene .level-tile[status='locked'] .checkmark{
+    
+    opacity: 0;
+}
+
+#tower-scene .level-tile .locked path{
+    
+    fill: #575;
+}
+
+#tower-scene .level-tile .locked text{
+    
+    font-size: 90px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: white;
+    -webkit-transition: fill 0.25s;
+    transition: fill 0.25s;
+    font-family: 'Makhina';
+}

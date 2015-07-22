@@ -1,4 +1,11 @@
-var Main = {};
+var Main = {
+    storageId: 'pdx',
+    towerInfos: {
+        fun: {id: 'fun', name: 'Fun Tower'},
+        advanced: {id: 'advanced', name: 'Advanced Tower'},
+        dx: {id: 'dx', name: 'DX Tower'}
+    }
+};
 
 $(document).ready(function(){
     
@@ -9,10 +16,11 @@ $(document).ready(function(){
     $('#size-setter').fitText(3);
 
     MenuScene.init();
-//    TowerScene.init();    
+    TowerScene.init();    
     PuzzleScene.init();
     
     Main.showScene('menu');
+    MenuScene.beginAnimation();
     
     function setSize(){
         
@@ -42,14 +50,41 @@ $(document).ready(function(){
 
         document.addEventListener("backbutton", function(){
             
-            if(!MenuScene.shown)
-                MenuScene.Show();
+            if(Main.currentScene == 'puzzle')
+                Main.showScene('tower');
+            else if(Main.currentScene == 'tower')
+                Main.showScene('menu');
             else
                 navigator.app.exitApp();
             
         }, false);
     };
 });   
+
+Main.loadProgressInfo = function(){
+    
+    var storageString = localStorage[Main.storageId];
+
+    if(!storageString){
+        
+        Main.progressInfo = {};
+        
+        for(var id in Main.towerInfos){
+            
+            var tower = Main.towerInfos[id];
+            var obj = {id: tower.id, solvedCount: 0, solved: {}};
+            Main.progressInfo[tower.id] = obj;
+        }
+    }
+    else
+        Main.progressInfo = JSON.parse(storageString);
+};
+
+Main.saveProgressInfo = function(){
+    
+    var storageString = JSON.stringify(Main.progressInfo);
+    localStorage[Main.storageId] = storageString;
+};
 
 Main.showScene = function(scene){
     

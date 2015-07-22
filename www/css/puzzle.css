@@ -256,9 +256,17 @@
 /* BOARD */
 
 .puzzle-tile.even[tile-type='board'] {
-
-    background-color: #DDD;
-
+    
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#AAC+1,000000+100 */
+    background: #AAC; /* Old browsers */
+    background: -moz-linear-gradient(top,  #AAC 1%, #779 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#AAC), color-stop(100%,#779)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #AAC 1%,#779 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #AAC 1%,#779 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #AAC 1%,#779 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #AAC 1%,#779 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AAC', endColorstr='#779',GradientType=0 ); /* IE6-9 */
+    
 }
 
 .puzzle-tile.odd[tile-type='board'] {
@@ -367,27 +375,25 @@
 .icon[tile-subtype='normal'] .diamond-icon polygon {
 
     fill: black;
-
+    stroke: white;
+    stroke-width: 8px;
 }
 
 .icon[tile-subtype='ice'] .diamond-icon polygon,
-
 .icon[tile-subtype='ice'] .bomb-icon path {
 
-    fill: rgb(198, 241, 247);
-    
-    stroke: black;
+    fill: rgb(198, 241, 247);  
+    stroke: white;
+    stroke-width: 8px;
 
 }
 
 .icon[tile-subtype='lightning'] .diamond-icon polygon,
-
 .icon[tile-subtype='lightning'] .bomb-icon path {
 
     fill: #FFEA00;
-
-    stroke: black;
-
+    stroke: white;
+    stroke-width: 8px;
 }
 
 .icon[tile-subtype='lightning'] .diamond-icon text,
@@ -397,7 +403,7 @@
 .icon[tile-subtype='fire'] .diamond-icon text,
 .icon[tile-subtype='fire'] .bomb-icon text {
 
-    fill: black;
+    fill: white;
 }
 
 .icon[tile-subtype='fire'] .diamond-icon polygon,
@@ -405,8 +411,8 @@
 .icon[tile-subtype='fire'] .bomb-icon path {
 
     fill: #F88;
-    stroke: black;
-
+    stroke: white;
+    stroke-width: 8px;
 }
 
 /* BLOCKS */

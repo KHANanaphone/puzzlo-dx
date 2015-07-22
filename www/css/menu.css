@@ -1,17 +1,21 @@
 #menu-scene .menu-header{
-    height: 47%;
+    height: 93%;
     margin: 5%;
 }
 
 #menu-scene .tower-select{
-    height: 43%;
-    margin: 5%;
-    border: 4px solid white;
     
+    height: 43%;
+    border: 4px solid white;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    position: relative;
+    position: absolute;
+    opacity: 0;
+    bottom: 15%;
+    right: 5%;
+    left: 5%;
+    z-index: 20;
 }
 
 #menu-scene .background{
@@ -37,12 +41,28 @@
 
 #menu-scene .menu-puzzle-tile.even{
     
-    background-color: #CCC;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#AAB+1,000000+100 */
+    background: #AAC; /* Old browsers */
+    background: -moz-linear-gradient(top,  #AAC 1%, #779 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#AAC), color-stop(100%,#779)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #AAC 1%,#779 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #AAC 1%,#779 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #AAC 1%,#779 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #AAC 1%,#779 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AAC', endColorstr='#779',GradientType=0 ); /* IE6-9 */
 }
 
 #menu-scene .menu-puzzle-tile.odd{
     
-    background-color: #DDD;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#BBD+1,000000+100 */
+    background: #BBD; /* Old browsers */
+    background: -moz-linear-gradient(top,  #BBD 1%, #88A 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#BBD), color-stop(100%,#88A)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #BBD 1%,#88A 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #BBD 1%,#88A 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #BBD 1%,#88A 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #BBD 1%,#88A 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BBD', endColorstr='#88A',GradientType=0 ); /* IE6-9 */
 }
 
 #menu-scene .menu-tower-row{
@@ -61,7 +81,7 @@
     float: right;
 }
 
-#menu-scene .menu-tower-row.beginner{
+#menu-scene .menu-tower-row.fun{
     
   text-shadow:
    -1px -1px 0 #00F,  
@@ -123,10 +143,11 @@
     font-size: 150px;
     stroke: black;
     stroke-width: 3px;
+    letter-spacing: -78px;
 }
 
 #menu-scene #dx-logo{
-    stroke-width: 7px;
+    stroke-width: 14px;
     fill: transparent;
 }
 
@@ -153,4 +174,22 @@
 
 #menu-scene #dx-logo .l6{
     stroke: red;
+}
+
+#menu-scene .menu-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.9;
+}
+
+#menu-scene .puzzle-tile{
+    width: 8%;
+    height: 8%;
+}
+
+#menu-scene .puzzle-text text{
+    fill: white;
 }

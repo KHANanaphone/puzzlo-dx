@@ -60,7 +60,7 @@ Tile.prototype.Clicked = function() {
         return;
     else {
         
-        this.SetContents(nextItemTile);
+        this.setContents(nextItemTile);
         
         var $inner = this.$tile.find('.inner').removeClass('clickit');        
         $inner.width($inner.width());        
@@ -69,12 +69,12 @@ Tile.prototype.Clicked = function() {
         if(nextItemTile.type == 'teleporter')
             TeleporterLogic.CheckTeleporters();
         
-        nextItemTile.SetContents(1000);
+        nextItemTile.setContents(1000);
         PuzzleScene.NextItem();
     }
 }
 
-Tile.prototype.SetContents = function(contents) {
+Tile.prototype.setContents = function(contents) {
 
     if (typeof contents === 'object') {
         this.type = contents.type;

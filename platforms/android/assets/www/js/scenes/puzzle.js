@@ -239,7 +239,7 @@ PuzzleScene.SetupPuzzle = function() {
         for (var j = 0; j < puzzle.height; j++) {
             for (var i = 0; i < puzzle.width; i++) {
 
-                PuzzleScene.board[j][i].SetContents(puzzle.contents[j][i]);
+                PuzzleScene.board[j][i].setContents(puzzle.contents[j][i]);
             }
         }
         
@@ -253,13 +253,13 @@ PuzzleScene.SetupPuzzle = function() {
             var item = puzzle.items[i];
             var tile = PuzzleScene.itemTiles[i];
 
-            tile.SetContents(item);
+            tile.setContents(item);
         }
 
         for (; i < 8; i++) {
 
             var tile = PuzzleScene.itemTiles[i];
-            tile.SetContents(1000);
+            tile.setContents(1000);
         }
 
         PuzzleScene.NextItem();

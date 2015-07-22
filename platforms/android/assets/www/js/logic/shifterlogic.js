@@ -7,7 +7,7 @@ ShifterLogic.DoShift = function(nextItemTile, targetTile) {
     if (!shift(direction, targetTile))
         return;
     
-    nextItemTile.SetContents(1000);
+    nextItemTile.setContents(1000);
     PuzzleScene.NextItem();
 
 
@@ -40,7 +40,7 @@ ShifterLogic.DoShift = function(nextItemTile, targetTile) {
                    shift(direction, nextTile)){
                     
                     animateShift(nextTile, targetTile, direction);
-                    targetTile.SetContents(1000);
+                    targetTile.setContents(1000);
                     TeleporterLogic.CheckTeleporters();
                     return true;
                 }
@@ -55,7 +55,7 @@ ShifterLogic.DoShift = function(nextItemTile, targetTile) {
     
     function animateShift(target, contents, direction){
         
-        target.SetContents(contents);
+        target.setContents(contents);
         
         var property = ['bottom', 'left', 'top', 'right'][direction];
         var obj1 = {};
