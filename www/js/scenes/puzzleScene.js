@@ -45,6 +45,7 @@ PuzzleScene.showPuzzle = function(puzzle) {
         showTutorialPopup(puzzle.description);
     
     Main.showScene('puzzle');
+    PuzzleScene.resizeTiles();
     
     function showTutorialPopup(desc){
         
@@ -128,9 +129,7 @@ PuzzleScene.setupBoard = function(puzzle) {
                 PuzzleScene.$tiles[i][j] = $tile;
                 $tiles.append($tile);
             }            
-        }
-        
-        PuzzleScene.resizeTiles();
+        }        
     };
     
     function setLightnings() {
@@ -198,7 +197,7 @@ PuzzleScene.setupBoard = function(puzzle) {
 PuzzleScene.setupPuzzle = function() {
     
     var puzzle = PuzzleScene.puzzle;
-    puzzle.Setup();
+    puzzle.setup();
     PuzzleScene.UpdateMovesLeft();
 
     setupShots();
@@ -235,13 +234,14 @@ PuzzleScene.setupPuzzle = function() {
 
     function setupItems() {
 
-        for (var i = 0; i < puzzle.items.length; i++) {
+        if(puzzle.items)
+            for (var i = 0; i < puzzle.items.length; i++) {
 
-            var item = puzzle.items[i];
-            var tile = PuzzleScene.itemTiles[i];
+                var item = puzzle.items[i];
+                var tile = PuzzleScene.itemTiles[i];
 
-            tile.setContents(item);
-        }
+                tile.setContents(item);
+            }
 
         for (; i < 8; i++) {
 

@@ -70,16 +70,8 @@
     background-color: white;
     left: 0;
     right: 0;
-    
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2e8c1c+0,70e256+100 */
-background: rgb(46,140,28); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(46,140,28,1) 0%, rgba(112,226,86,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(46,140,28,1)), color-stop(100%,rgba(112,226,86,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(46,140,28,1) 0%,rgba(112,226,86,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e8c1c', endColorstr='#70e256',GradientType=0 ); /* IE6-9 */
+
+background: rgb(98, 194, 80);
 
 
 }
@@ -133,7 +125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e8c1c', end
 }
 
 #tower-scene .level-tile[status='solved'] .inner{
-    border-color: #6A6;
+    border-color: #3A3;
 }
 
 #tower-scene .level-tile[status='solved'] .checkmark{
@@ -146,9 +138,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e8c1c', end
 }
 
 #tower-scene .level-tile .checkmark{
-        
-    fill: #6A6;
-    stroke: #6A6;
+
+    fill: #3A3;
+    stroke: #3A3;
     stroke-width: 15;
     visibility: hidden;
     -webkit-transition: fill 0.25s, stroke 0.25s;
@@ -178,7 +170,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e8c1c', end
 }
 
 #tower-scene .level-tile[status='solved'] .inner{
-    background-color: #DFD;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,bfffc9+100 */
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(191,255,201,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(191,255,201,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(191,255,201,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(191,255,201,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(191,255,201,1) 100%); /* IE10+ */
+background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(191,255,201,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfffc9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 #tower-scene .level-tile[status='solved'] .levelid{
