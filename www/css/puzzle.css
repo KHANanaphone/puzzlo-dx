@@ -52,17 +52,6 @@
     left: 31%;
 }
 
-#puzzle-name-section{
-    
-    font-family: 'Chunk';
-    text-transform: uppercase;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 2%;
-    right: 0;
-}
-
 #puzzle-name-section #puzzle-id{
     
     font-size: 3.6em;
@@ -75,22 +64,51 @@
     padding-left: 2%;
 }
 
-#text-area {
+#header-area {
 
     width: 100%;
-
-    height: 11%;
-
+    height: 8%;
     padding: 2% 2%;
     position: relative;
 }
+
+#header-area .puzzle-name-section{
+    
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    right: 0;
+}
+
+#header-area .retry-button{
+    
+    position: absolute;
+    right: 1%;
+    top: 35%;
+    color: rgb(173, 173, 173);
+    font-family: 'Makhina';
+    font-size: 1.7em;
+    -ms-transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    cursor: pointer;
+    
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+}
+
+#header-area .retry-button:hover{
+    
+    color: white;
+}
+
 
 #tile-area {
 
     width: 100%;
 
-    height: 75%;
-    margin-top: 2%;
+    height: 70%;
 
     overflow: hidden;
 
@@ -99,21 +117,13 @@
 .item-tile {
 
     display: inline-block;
-
     width: 12.5%;
-
     height: 100%;
-
     background-color: white;
-
     border: 1px solid #888;
-
     margin-top: 0;
-
     margin-left: 0;
-
     position: relative;
-
     border-bottom: 2px solid #888;
 
 }
@@ -126,41 +136,36 @@
 
 #item-area {
 
-    height: 7%;
-
+    height: 12%;
     width: 100%;
-
     position: relative;
+}
 
+#item-area .background{
+    width: 100%;
+    height: 100%;
+}
+
+#item-area .background circle{
+    
+    fill: #AAF;
+    opacity: 0.25;
 }
 
 #shots-left-area{
-    font-family: 'Makhina';
-    font-size: 1.6em;
+    font-family: 'Chunk';
+    font-size: 2.4em;
     text-transform: uppercase;
-    
-    color: rgb(215, 255, 173);
-    height: 4%;
+    color: rgb(255, 255, 255);
+    height: 10%;
     width: 100%;
-    padding-left: 1%;
-    vertical-align: top;
+    text-align: right;
+    padding-right: 21%;
 }
 
-#shots-left-area #shots-icons{
-    display: inline-block;
-    width: 75%
-}
-
-#shots-icons .dot{
-    
-    width: 10%;
-    display: inline-block;
-    vertical-align: middle;
-    stroke: rgb(215, 255, 173);
-    stroke-width: 10px;
-
-    -webkit-transition: fill 0.2s;
-    transition: fill 0.2s;
+#shots-left-area .shots-left-value{
+    color: greenyellow;
+    font-size: 1.5em;
 }
 
 .dot.filled{
@@ -284,15 +289,10 @@
 .inner {
 
     position: absolute;
-
     top: 0;
-
     right: 0;
-
     bottom: 0;
-
     left: 0;
-
     z-index: 10;
 }
 
@@ -300,68 +300,63 @@
 
     position: absolute;
 
-    top: 10%;
+    top: 3%;
 
-    right: 10%;
+    right: 3%;
 
-    bottom: 10%;
+    bottom: 3%;
 
-    left: 10%;
+    left: 3%;
 
     text-align: center;
 
 }
 
-/* ICE */
+/* ICE & LIGHTNING */
 
-.puzzle-tile[tile-type='ice'][ready='0'] {
+.puzzle-tile[tile-type='lightning'][ready='0'] .arrow,
+.puzzle-tile[tile-type='ice'][ready='0'] .arrow{
 
-    opacity: 0.2;
+    fill: transparent;
 }
 
-.puzzle-tile[tile-type='ice'] .inner {
+.puzzle-tile[tile-type='ice'][ready='1']:hover .inner{
+    background-color: #229;
+}
 
-    cursor: pointer;
+.puzzle-tile[tile-type='lightning'][ready='1']:hover .inner{
+    background-color: #992;
+}
+
+.puzzle-tile[tile-type='ice']  .inner,
+.puzzle-tile[tile-type='lightning']  .inner {
     
+    -webkit-transition: background-color 0.25s;
+    transition: background-color 0.25s;    
 }
 
-.puzzle-tile[tile-type='ice'] path {
+.puzzle-tile[tile-type='ice'][ready='1']  .inner,
+.puzzle-tile[tile-type='lightning'][ready='1']  .inner {
+
+    cursor: pointer;   
+}
+
+.puzzle-tile[tile-type='ice'] .arrow {
 
     stroke-width: 6;
-
-    fill: rgb(63, 163, 177);
-    stroke: rgb(198, 241, 247);
-
-    -webkit-transition: fill 0.2s;
-
-    transition: fill 0.2s;
-
+    fill: #77E;
+    stroke: #55C;
+    -webkit-transition: fill 0.25s;
+    transition: fill 0.25s;
 }
 
-/* LIGHTNING */
-
-.puzzle-tile[tile-type='lightning'][ready='0'] {
-
-    opacity: 0.2;
-
-}
-
-.puzzle-tile[tile-type='lightning'] .inner {
-
-    cursor: pointer;
-
-}
-
-.puzzle-tile[tile-type='lightning'] path {
+.puzzle-tile[tile-type='lightning'] .arrow {
 
     stroke-width: 6;
-    fill: rgb(167, 159, 70);
-    stroke: rgb(245, 255, 0);
-
-    -webkit-transition: fill 0.2s;
-
-    transition: fill 0.2s;
-
+    fill: #EE7;
+    stroke: #CC5;
+    -webkit-transition: fill 0.25s;
+    transition: fill 0.25s;
 }
 
 /* DIAMONDS & BOMBS */
@@ -372,28 +367,33 @@
 
 }
 
-.icon[tile-subtype='normal'] .diamond-icon polygon {
-
-    fill: black;
+.icon .diamond-icon polygon{
+    
     stroke: white;
     stroke-width: 8px;
+}
+
+.icon[tile-subtype='normal'] .diamond-icon polygon {
+
+    fill: url(#grad_normal);
 }
 
 .icon[tile-subtype='ice'] .diamond-icon polygon,
 .icon[tile-subtype='ice'] .bomb-icon path {
 
-    fill: rgb(198, 241, 247);  
-    stroke: white;
-    stroke-width: 8px;
-
+    fill: url(#grad_ice);
 }
 
 .icon[tile-subtype='lightning'] .diamond-icon polygon,
 .icon[tile-subtype='lightning'] .bomb-icon path {
 
-    fill: #FFEA00;
-    stroke: white;
-    stroke-width: 8px;
+    fill: url(#grad_lightning);
+}
+
+.icon[tile-subtype='fire'] .diamond-icon polygon,
+.icon[tile-subtype='fire'] .bomb-icon path {
+
+    fill: url(#grad_fire);
 }
 
 .icon[tile-subtype='lightning'] .diamond-icon text,
@@ -405,16 +405,6 @@
 
     fill: white;
 }
-
-.icon[tile-subtype='fire'] .diamond-icon polygon,
-
-.icon[tile-subtype='fire'] .bomb-icon path {
-
-    fill: #F88;
-    stroke: white;
-    stroke-width: 8px;
-}
-
 /* BLOCKS */
 
 .icon[tile-type='block'][tile-subtype='normal'] polygon {

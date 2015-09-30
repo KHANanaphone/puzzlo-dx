@@ -1,7 +1,7 @@
 //The 'logic' files are basically extensions of PuzzleScene
 var LightningLogic = {};
 
-LightningLogic.ShootLightning = function(lightning) {
+LightningLogic.shootLightning = function(lightning) {
 
     Timer.AddAction({
         x: lightning.x,
@@ -45,7 +45,7 @@ LightningLogic.Step = function() {
 //returns whether the lightning gets stopped during the action
 LightningLogic.ApplyLightning = function(action, tile) {
 
-    tile.FlashBackground('yellow');
+    tile.FlashBackground('#992');
 
     if (tile.type == 'diamond' && tile.value > 0) {
 

@@ -104,7 +104,11 @@ MenuScene.beginAnimation = function(){
     tl.to($towerSelect, 0.5, {opacity: 1}, 1.8);    
     tl.play();
     
-    setInterval(MenuScene.createRandomBgObject, 2000);
+    setTimeout(MenuScene.createRandomBgObject, 2000);
+    setTimeout(MenuScene.createRandomBgObject, 4000);
+    setTimeout(MenuScene.createRandomBgObject, 6000);
+    setTimeout(MenuScene.createRandomBgObject, 8000);
+    setTimeout(MenuScene.createRandomBgObject, 10000);
 };
 
 MenuScene.createRandomBgObject = function(){
@@ -124,5 +128,6 @@ MenuScene.createRandomBgObject = function(){
     
     function remove(){
         $tile.remove();
+        MenuScene.createRandomBgObject();
     };
 };

@@ -9,11 +9,11 @@ function Lightning($tile, isTop){
 	$tile.attr('tile-type', 'lightning').css('background-color', '')
     .find('.icon').attr('tile-type', '');
     
-    this.DrawContents();
-    this.SetupClicking();
+    this.drawContents();
+    this.setupClicking();
 }
 
-Lightning.prototype.DrawContents = function(){
+Lightning.prototype.drawContents = function(){
     
     var $icon = $('#hidden .lightning-icon').clone();
     
@@ -24,7 +24,7 @@ Lightning.prototype.DrawContents = function(){
     
 }
 
-Lightning.prototype.SetupClicking = function(){
+Lightning.prototype.setupClicking = function(){
     
     var self = this;
     var $tile = this.$tile;
@@ -42,16 +42,16 @@ Lightning.prototype.SetupClicking = function(){
         else if(PuzzleScene.solved)
             return;
         
-        $tile.removeClass('clickit');      
-        $tile.width($tile.width());        
-        $tile.addClass('clickit');
+//        $tile.removeClass('clickit');      
+//        $tile.width($tile.width());        
+//        $tile.addClass('clickit');
         
         $tile.attr('ready', 0);
-        LightningLogic.ShootLightning(self);
+        LightningLogic.shootLightning(self);
     });
 }
 
-Lightning.prototype.MakeReady = function(){
+Lightning.prototype.makeReady = function(){
     
     this.$tile.attr('ready', 1);
 }

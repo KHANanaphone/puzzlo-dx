@@ -222,14 +222,14 @@ PuzzleScene.SetupPuzzle = function() {
 
         for (var i = 0; i < puzzle.width; i++) {
 
-            PuzzleScene.shots.top[i].MakeReady();
-            PuzzleScene.shots.bottom[i].MakeReady();
+            PuzzleScene.shots.top[i].makeReady();
+            PuzzleScene.shots.bottom[i].makeReady();
         }
 
         for (var i = 0; i < PuzzleScene.puzzle.height; i++) {
 
-            PuzzleScene.shots.left[i].MakeReady();
-            PuzzleScene.shots.right[i].MakeReady();
+            PuzzleScene.shots.left[i].makeReady();
+            PuzzleScene.shots.right[i].makeReady();
         }
     };
 

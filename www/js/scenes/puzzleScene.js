@@ -15,13 +15,13 @@ var PuzzleScene = {
 PuzzleScene.init = function(){
     
     PuzzleScene.itemTiles = [];
-
-    for (var x = 0; x < 8; x++) {
-
-        var $clone = $('#hidden .item-tile').clone();
-        $('#item-area').append($clone);
-        PuzzleScene.itemTiles[x] = new Tile($clone);
-    }
+//
+//    for (var x = 0; x < 8; x++) {
+//
+//        var $clone = $('#hidden .item-tile').clone();
+////        $('#item-area').append($clone);
+//        PuzzleScene.itemTiles[x] = new Tile($clone);
+//    }
 
  };
 
@@ -208,14 +208,14 @@ PuzzleScene.setupPuzzle = function() {
 
         for (var i = 0; i < puzzle.width; i++) {
 
-            PuzzleScene.shots.top[i].MakeReady();
-            PuzzleScene.shots.bottom[i].MakeReady();
+            PuzzleScene.shots.top[i].makeReady();
+            PuzzleScene.shots.bottom[i].makeReady();
         }
 
         for (var i = 0; i < PuzzleScene.puzzle.height; i++) {
 
-            PuzzleScene.shots.left[i].MakeReady();
-            PuzzleScene.shots.right[i].MakeReady();
+            PuzzleScene.shots.left[i].makeReady();
+            PuzzleScene.shots.right[i].makeReady();
         }
     };
 
@@ -315,18 +315,18 @@ PuzzleScene.ReduceMovesLeft = function() {
 
 PuzzleScene.UpdateMovesLeft = function() {
 
-    var left = PuzzleScene.puzzle.movesLeft;
-    var $span = $('#shots-icons .dot');
-    
-    $span.each(function(index){
-        
-        if(left > index)
-            $(this).attr('class', 'dot filled');
-        else
-            $(this).attr('class', 'dot hollow');
-    });
-    
-    $('#moves-left-value').text(PuzzleScene.puzzle.movesLeft);
+//    var left = PuzzleScene.puzzle.movesLeft;
+//    var $span = $('#shots-icons .dot');
+//    
+//    $span.each(function(index){
+//        
+//        if(left > index)
+//            $(this).attr('class', 'dot filled');
+//        else
+//            $(this).attr('class', 'dot hollow');
+//    });
+//    
+    $('#shots-left-area .shots-left-value').text(PuzzleScene.puzzle.movesLeft);
 }
 
 PuzzleScene.SolutionCheck = function() {

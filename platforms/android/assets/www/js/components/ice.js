@@ -49,7 +49,7 @@ Ice.prototype.SetupClicking = function(){
     });
 }
 
-Ice.prototype.MakeReady = function(){
+Ice.prototype.makeReady = function(){
     
     this.$tile.attr('ready', 1);
 }

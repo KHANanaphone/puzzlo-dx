@@ -45,7 +45,7 @@ IceLogic.Step = function() {
 //returns whether the ice gets stopped during the action
 IceLogic.ApplyIce = function(action, tile) {
 
-    tile.FlashBackground('rgb(63, 163, 177)');
+    tile.FlashBackground('#229');
 
     if (tile.type == 'diamond' && tile.value > 0) {
 

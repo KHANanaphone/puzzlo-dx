@@ -51,7 +51,7 @@ Lightning.prototype.SetupClicking = function(){
     });
 }
 
-Lightning.prototype.MakeReady = function(){
+Lightning.prototype.makeReady = function(){
     
     this.$tile.attr('ready', 1);
 }
