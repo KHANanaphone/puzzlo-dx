@@ -3,8 +3,8 @@ function Ice($tile, isLeft){
 	this.$tile = $tile;
     this.isLeft = isLeft;
     
-    this.x = $tile.attr('x');
-    this.y = $tile.attr('y');
+    this.x = $tile.attr('tile-x');
+    this.y = $tile.attr('tile-y');
     
 	$tile.attr('tile-type', 'ice').css('background-color', '')
     .find('.icon').attr('tile-type', '');

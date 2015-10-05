@@ -11,9 +11,8 @@ IceLogic.ShootIce = function(ice) {
         step: IceLogic.Step
     });
 
-    Timer.Run();
-
     PuzzleScene.ReduceMovesLeft();
+    Timer.Run();
 };
 
 IceLogic.Step = function() {
@@ -89,7 +88,6 @@ IceLogic.ApplyIce = function(action, tile) {
         
         return TeleporterLogic.ApplyLogic(action, tile);
     }
-
 
     return false;
 }

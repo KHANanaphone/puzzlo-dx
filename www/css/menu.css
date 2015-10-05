@@ -108,8 +108,8 @@
     1px  1px 0 #F00;
 }
 
-#menu-scene .menu-tower-row.beginner:hover,
-#menu-scene .menu-tower-row.beginner.clicked{
+#menu-scene .menu-tower-row.fun:hover,
+#menu-scene .menu-tower-row.fun.clicked{
     
     color: #88F;
 }

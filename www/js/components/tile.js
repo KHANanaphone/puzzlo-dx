@@ -31,11 +31,9 @@ function Tile($tile, properties) {
         $tile.attr('board-y', this.y);
 
         if ((this.x + this.y) % 2 == 0) {
-            $tile.addClass('even')
-                .removeClass('odd');
+            $tile.attr('even', true);
         } else {
-            $tile.addClass('odd')
-                .removeClass('even');
+            $tile.attr('even', false);
         }
 
         $tile.click(
@@ -245,23 +243,19 @@ Tile.prototype.DrawContents = function() {
 
 Tile.prototype.FlashBackground = function(color) {
 
-    var $tile = this.$tile.find('.inner');
-    var bgcolor = 'transparent';
+    var $bg = this.$tile.find('.bg');
+    var bgcolor = $bg.css('fill');
     
     if(this.type == 'block' && this.value == 0){
         return;
     }    
 
-    TweenMax.fromTo($tile, Timer.interval / 400, {
-        css: {
-            backgroundColor: color
-        }
-    }, {
-        css: {
-            backgroundColor: bgcolor
-        },
+    TweenMax.fromTo($bg, Timer.interval / 800, {
+            fill: color 
+        }, {
+            fill: bgcolor,
         onComplete: function() {
-            $tile.css('background-color', bgcolor);
+            $bg.css('fill', '');
         }
     });
 }

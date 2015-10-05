@@ -84,8 +84,26 @@
             </div>
             
             <div id="tile-area">
-                <div id="tiles">
-                </div>
+                <svg id="tiles" viewbox='0,0,2000,2000'>                    
+                    <defs>
+                        <linearGradient id="grad_diamond_normal" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad_diamond_ice" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:#66B;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#66F;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad_diamond_lightning" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:#CC6;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#EE6;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad_diamond_fire" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:#B66;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#F66;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
                 
             <div id="shots-left-area">
@@ -155,12 +173,28 @@
                           <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
                           <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
                         </linearGradient>
+                        <linearGradient id="grad_diamond_normal" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad_diamond_ice" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:#66B;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#66F;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad_diamond_lightning" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:#CC6;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#EE6;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad_diamond_fire" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:#B66;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#F66;stop-opacity:1" />
+                        </linearGradient>
                     </defs>
                     <g class='p'>
                         <polygon fill='url(#grad)' points='10,210 210,10 410,210 210,410'></polygon>
                         <text x='225' y='200' text-anchor='middle' alignment-baseline='middle'>p</text>
                     </g>
-                    <g id="dx-logo" transform='translate(620, 320)'>
+                    <g id="dx-logo" transform='translate(580, 320)'>
                         <path class='l1' d='M0,0 l-20,120 c120,0 160,-120 8,-120'></path>
 <!--                        <path class='l3' d='M520,410 l-20,120 c120,0 160,-120 20,-120'></path>-->
                         <path class='l2' d='M10,10 l-20,120 c120,0 160,-120 8,-120'></path>
@@ -191,25 +225,7 @@
     </svg>
 
     <svg class="diamond-icon" viewBox="0 0 200 200">
-        <defs>
-            <linearGradient id="grad_normal" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
-              <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="grad_ice" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#66B;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#66F;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="grad_lightning" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#CC6;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#EE6;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="grad_fire" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#B66;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#F66;stop-opacity:1" />
-            </linearGradient>
-        </defs>
-        <polygon points="8,100 100,8 192,100 100,192"></polygon>
+        <polygon points="20,100 100,20 180,100 100,180"></polygon>
         <text text-anchor="middle" x="100" y="135" font-size="100"></text>
     </svg>
 
@@ -257,11 +273,11 @@
         </svg>
     </div>
 
-    <div class="puzzle-tile">
-        <div class="inner">
-            <div class="icon"></div>
-        </div>
-    </div>
+    <svg class="puzzle-tile">
+        <rect class='bg'>            
+        </rect>
+        <svg class="icon"></svg>
+    </svg>
     
     <div class="menu-puzzle-tile">
     </div>

@@ -2,8 +2,8 @@ var BombLogic = {};
 
 BombLogic.Detonate = function(tile) {
     
-    var x = tile.$tile.attr('x');
-    var y = tile.$tile.attr('y');
+    var x = tile.$tile.attr('board-x');
+    var y = tile.$tile.attr('board-y');
     
     if(tile.subtype == 'fire')
         detonateFire();

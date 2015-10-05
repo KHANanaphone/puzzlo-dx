@@ -3,8 +3,8 @@ function Lightning($tile, isTop){
 	this.$tile = $tile;
     this.isTop = isTop;
     
-    this.x = $tile.attr('x');
-    this.y = $tile.attr('y');
+    this.x = $tile.attr('tile-x');
+    this.y = $tile.attr('tile-y');
     
 	$tile.attr('tile-type', 'lightning').css('background-color', '')
     .find('.icon').attr('tile-type', '');

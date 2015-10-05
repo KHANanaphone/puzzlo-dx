@@ -70,12 +70,12 @@ PuzzleScene.ClosePopup = function(){
 };
 
 PuzzleScene.resizeTiles = function(){
-    
+
     var $tiles = $('#tiles');
     
     var size = PuzzleScene.puzzleSize;
-    var width = $tiles.width() / size;
-    var height = $tiles.height() / size;
+    var width = 2000 / size;
+    var height = 2000 / size;
     
     var offset = PuzzleScene.puzzle.width - PuzzleScene.puzzle.height;
     
@@ -86,12 +86,12 @@ PuzzleScene.resizeTiles = function(){
     
     $tiles.find('.puzzle-tile').each(function(){
         
-        var x = $(this).attr('x');
-        var y = $(this).attr('y');
+        var x = $(this).attr('tile-x');
+        var y = $(this).attr('tile-y');
         
-        $(this).css({
-            top: (y * height) + 'px', 
-            left: (x * width) + 'px',
+        $(this).attr({
+            y: (y * height) + 'px', 
+            x: (x * width) + 'px',
             width: width + 'px',
             height: height + 'px'
         });
@@ -125,7 +125,7 @@ PuzzleScene.setupBoard = function(puzzle) {
             for(var j = 0; j < PuzzleScene.puzzleSize; j++){
                 
                 var $tile = $('#hidden .puzzle-tile').clone();                
-                $tile.attr('x', j).attr('y', i);                
+                $tile.attr('tile-x', j).attr('tile-y', i);                
                 PuzzleScene.$tiles[i][j] = $tile;
                 $tiles.append($tile);
             }            
@@ -282,8 +282,7 @@ PuzzleScene.NextItem = function() {
     }
 }
 
-
-PuzzleScene.RetryClicked = function() {
+PuzzleScene.retry = function() {
     
     if(PuzzleScene.retrying)
         return;
@@ -305,6 +304,11 @@ PuzzleScene.RetryClicked = function() {
         
     }, 400);
     
+};
+
+PuzzleScene.back = function(){
+    
+    Main.showScene('tower');
 };
 
 PuzzleScene.ReduceMovesLeft = function() {

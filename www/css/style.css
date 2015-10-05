@@ -70,6 +70,9 @@ html, body{
    height: 100%;
     position: relative;
     margin: 0 auto;
+    background: url(../img/gradient-squares.png);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .back-button{

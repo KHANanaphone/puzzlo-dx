@@ -238,6 +238,25 @@
     position: absolute;
 }
 
+.puzzle-tile .bg{
+
+    x: 2px;
+    y: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    fill: transparent;
+}
+.puzzle-tile[tile-type='board'] .bg{
+    stroke-width: 2px;
+    stroke: white;
+}
+.puzzle-tile[tile-type='board'][even=true] .bg{
+    fill: rgb(171, 174, 195);
+}
+.puzzle-tile[tile-type='board'][even=false] .bg{
+    fill: rgb(134, 134, 156);
+}
+
 .icon text{
   
     font-family: 'Makhina';
@@ -249,67 +268,14 @@
     height: 100%;
     width: 100%;
     position: relative;
-
-}
-
-.puzzle-tile[tile-type='background'] {
-
-    background-color: transparent;
-
+    border: 1% solid white;
 }
 
 /* BOARD */
 
-.puzzle-tile.even[tile-type='board'] {
-    
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#AAC+1,000000+100 */
-    background: #AAC; /* Old browsers */
-    background: -moz-linear-gradient(top,  #AAC 1%, #779 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#AAC), color-stop(100%,#779)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #AAC 1%,#779 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #AAC 1%,#779 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #AAC 1%,#779 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #AAC 1%,#779 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AAC', endColorstr='#779',GradientType=0 ); /* IE6-9 */
-    
-}
-
-.puzzle-tile.odd[tile-type='board'] {
-
-    background-color: #CCC;
-
-}
-
 .puzzle-tile.clickable {
 
     cursor: pointer;
-
-}
-
-.inner {
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-}
-
-.icon {
-
-    position: absolute;
-
-    top: 3%;
-
-    right: 3%;
-
-    bottom: 3%;
-
-    left: 3%;
-
-    text-align: center;
-
 }
 
 /* ICE & LIGHTNING */
@@ -320,23 +286,23 @@
     fill: transparent;
 }
 
-.puzzle-tile[tile-type='ice'][ready='1']:hover .inner{
-    background-color: #229;
+.puzzle-tile[tile-type='ice'] .bg,
+.puzzle-tile[tile-type='lightning'] .bg{
+
+    -webkit-transition: fill 0.4s;
+    transition: fill 0.4s;
 }
 
-.puzzle-tile[tile-type='lightning'][ready='1']:hover .inner{
-    background-color: #992;
+.puzzle-tile[tile-type='ice'][ready='1']:hover .bg{
+    fill: rgba(185, 195, 255, 0.5);
 }
 
-.puzzle-tile[tile-type='ice']  .inner,
-.puzzle-tile[tile-type='lightning']  .inner {
-    
-    -webkit-transition: background-color 0.25s;
-    transition: background-color 0.25s;    
+.puzzle-tile[tile-type='lightning'][ready='1']:hover .bg{
+    fill: rgba(255, 249, 142, 0.5);
 }
 
-.puzzle-tile[tile-type='ice'][ready='1']  .inner,
-.puzzle-tile[tile-type='lightning'][ready='1']  .inner {
+.puzzle-tile[tile-type='ice'][ready='1'],
+.puzzle-tile[tile-type='lightning'][ready='1'] {
 
     cursor: pointer;   
 }
@@ -345,7 +311,7 @@
 
     stroke-width: 6;
     fill: #77E;
-    stroke: #55C;
+    stroke: #31314D;
     -webkit-transition: fill 0.25s;
     transition: fill 0.25s;
 }
@@ -354,7 +320,7 @@
 
     stroke-width: 6;
     fill: #EE7;
-    stroke: #CC5;
+    stroke: #46462D;
     -webkit-transition: fill 0.25s;
     transition: fill 0.25s;
 }
@@ -375,25 +341,25 @@
 
 .icon[tile-subtype='normal'] .diamond-icon polygon {
 
-    fill: url(#grad_normal);
+    fill: url(#grad_diamond_normal);
 }
 
 .icon[tile-subtype='ice'] .diamond-icon polygon,
 .icon[tile-subtype='ice'] .bomb-icon path {
 
-    fill: url(#grad_ice);
+    fill: url(#grad_diamond_ice);
 }
 
 .icon[tile-subtype='lightning'] .diamond-icon polygon,
 .icon[tile-subtype='lightning'] .bomb-icon path {
 
-    fill: url(#grad_lightning);
+    fill: url(#grad_diamond_lightning);
 }
 
 .icon[tile-subtype='fire'] .diamond-icon polygon,
 .icon[tile-subtype='fire'] .bomb-icon path {
 
-    fill: url(#grad_fire);
+    fill: url(#grad_diamond_fire);
 }
 
 .icon[tile-subtype='lightning'] .diamond-icon text,
