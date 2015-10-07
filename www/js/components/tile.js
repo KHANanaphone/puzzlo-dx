@@ -79,31 +79,21 @@ Tile.prototype.setContents = function(contents) {
         this.subtype = contents.subtype;
         this.value = contents.value;
     } else {
-        this.type = intToType(Math.floor(contents / 100) % 10);
-        this.subtype = intToSubtype(this.type, Math.floor((contents / 10) % 10));
-        this.value = Math.floor(contents % 10);
+        this.type = getType(contents[0]);
+        this.subtype = getSubtype(this.type, contents[1]);
+        this.value = getValue(this.type, this.subtype, contents[2]);
     }
     
     this.DrawContents();
 
-    function intToType(a) {
+    function getType(t) {
 
-        if (a == 0)
+        if (t == ' ')
             return 'blank';
-        else if (a == 1)
+        else if (t == 'D')
             return 'diamond';
-        else if (a == 2)
+        else if (t == 'B')
             return 'block';
-        else if (a == 3)
-            return 'bomb';
-        else if (a == 4)
-            return 'shifter';
-        else if (a == 5)
-            return 'mirror';
-        else if (a == 6)
-            return 'potion';
-        else if(a == 7)
-            return 'teleporter';
     }
 
     function intToSubtype(t, b) {
@@ -149,7 +139,6 @@ Tile.prototype.setContents = function(contents) {
 
 Tile.prototype.DrawContents = function() {
 
-    var $inner = this.$tile.find('.inner').css('background-color', '');
     var $icon = this.$tile.find('.icon').empty().attr('tile-type', this.type);
 
     if (this.type == 'diamond')
@@ -261,7 +250,7 @@ Tile.prototype.FlashBackground = function(color) {
 }
 
 Tile.prototype.Clear = function() {
-    
+
     this.value = 0;
     this.type = 'blank';
     this.DrawContents();

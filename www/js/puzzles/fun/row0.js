@@ -2,13 +2,13 @@ Puzzles.fun['0-0'] = {
     
     height: 4,
     width: 4,
-    moves: 9,    
+    moves: 16,   
     name: "Intro",
-    description: "Destroy all the diamonds by clicking the arrows.",
+    description: "Use the colored arrowed to destroy all of the diamonds.",
     contents: [
-        [1101, 1000, 1000, 1000], 
-        [1102, 1000, 1000, 1000], 
-        [1103, 1000, 1000, 1000], 
-        [1000, 1111, 1121, 1131]        
+        ['DN1', '   ', '   ', '   '], 
+        ['DN1', '   ', '   ', '   '], 
+        ['DN1', '   ', '   ', '   '], 
+        ['   ', 'DB2', 'DR3', 'DY4']        
     ]
 };

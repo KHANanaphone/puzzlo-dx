@@ -34,9 +34,8 @@ PuzzleScene.showPuzzle = function(puzzle) {
     $('#failure-popup').hide(); 
     $('#tutorial-popup').hide();
 
-    $('#text-area #puzzle-id').text(puzzle.textID);
-    $('#text-area #puzzle-name').text(puzzle.name);
-    $('#text-area #puzzle-description').text(puzzle.description ? puzzle.description : '');
+    $('#puzzle-scene .puzzle-id').text(puzzle.id);
+    $('#header-area .puzzle-name').text(puzzle.name);
 
     PuzzleScene.setupBoard(puzzle);
     PuzzleScene.setupPuzzle(puzzle);
@@ -288,6 +287,7 @@ PuzzleScene.retry = function() {
         return;
     
     PuzzleScene.retrying = true;
+    PuzzleScene.solved = false;
     
     var $button = $('#retry-button');
     $button.css('color', 'white');
@@ -308,7 +308,8 @@ PuzzleScene.retry = function() {
 
 PuzzleScene.back = function(){
     
-    Main.showScene('tower');
+    if(!PuzzleScene.solved)
+        Main.showScene('tower');
 };
 
 PuzzleScene.ReduceMovesLeft = function() {
@@ -365,3 +366,9 @@ PuzzleScene.SolutionCheck = function() {
         $('#failure-popup').fadeIn();
     }
 }
+
+PuzzleScene.solvedContinue = function(){
+
+    Main.showScene('tower');
+    TowerScene.setSolved(this.puzzle.id);
+};

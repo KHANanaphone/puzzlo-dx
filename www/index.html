@@ -70,12 +70,11 @@
                     <polygon points='5,50 50,5 50,30 95,30 95,70 50,70 50,95'></polygon>
                 </svg>
             </div>
+            <div class='puzzle-id'></div> 
 
             <div id="header-area">                
                 
-                <div class='puzzle-name-section'>
-                    <span class='puzzle-id'></span> <span class='puzzle-name'></span>
-                </div>
+                <div class='puzzle-name'></div>
                 
                 <div class='retry-button' onclick='PuzzleScene.retry()'>
                     Retry
@@ -106,12 +105,12 @@
                 </svg>
             </div>
                 
-            <div id="shots-left-area">
-                <span class='shots-left-value'></span> Shots Left
-            </div>
-                
             <div id="item-area">
             </div>
+
+            <div id="shots-left-area">
+                <span class='shots-left-value'></span> Shots Left
+            </div>                
 
             <div class="popup" id="tutorial-popup">
                 <div class='relative'>
@@ -126,7 +125,7 @@
                     <span class="popup-text"><br/>Level Complete
                     </span>
 
-                    <button class="btn btn-success" onclick="MenuScene.Solved(PuzzleScene.puzzleX, PuzzleScene.puzzleY, 'easy')">Continue</button>
+                    <button class="btn btn-success" onclick="PuzzleScene.solvedContinue();">Continue</button>
                 </div>
             </div>
 
@@ -217,11 +216,13 @@
 <div id="hidden">
 
     <svg class="lightning-icon" viewBox="0 0 200 200">
-        <path class='arrow' d='M50,100 L100,160 L150,100 L120,100 L120,40 L80,40 L80,100 z'/>
+        <path class='arrow-out' d='M50,100 L100,160 L150,100 L120,100 L120,40 L80,40 L80,100 z'/>
+        <path class='arrow-in' d='M50,100 L100,160 L150,100 L120,100 L120,40 L80,40 L80,100 z'/>
     </svg>
 
     <svg class="ice-icon" viewBox="0 0 200 200">
-        <path class='arrow' d='M100,50 L160,100 L100,150 L100,120 L40,120 L40,80 L100,80 z'/>
+        <path class='arrow-out' d='M100,50 L160,100 L100,150 L100,120 L40,120 L40,80 L100,80 z'/>
+        <path class='arrow-in' d='M100,50 L160,100 L100,150 L100,120 L40,120 L40,80 L100,80 z'/>
     </svg>
 
     <svg class="diamond-icon" viewBox="0 0 200 200">
@@ -261,7 +262,6 @@
     </svg>
 
     <svg class='teleporter-icon' viewBox='0 0 200 200'>
-
         <circle cx='100' cy='100' r='90'></circle>
         <path class='spinner' d='M100,10 L100,190 M10,100 L190,100'></path>
     </svg>

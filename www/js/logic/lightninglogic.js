@@ -45,7 +45,7 @@ LightningLogic.Step = function() {
 //returns whether the lightning gets stopped during the action
 LightningLogic.ApplyLightning = function(action, tile) {
 
-    tile.FlashBackground('#992');
+    tile.FlashBackground('#EE7');
 
     if (tile.type == 'diamond' && tile.value > 0) {
 
@@ -56,8 +56,8 @@ LightningLogic.ApplyLightning = function(action, tile) {
         
         if(tile.value == 0)
             tile.Clear();
-        
-        tile.DrawContents();
+        else 
+            tile.DrawContents();
         
     } else if (tile.type == 'block') {
 

@@ -19,5 +19,7 @@ function Tower(id, map){
 
 Tower.prototype.getPuzzle = function(id){
 
-    return new Puzzle(Puzzles[this.id][id]);    
+    var puzz = new Puzzle(Puzzles[this.id][id]);
+    puzz.id = id;
+    return puzz;   
 };

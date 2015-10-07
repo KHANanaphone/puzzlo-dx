@@ -10,7 +10,8 @@
     
     font-family: 'Chunk';
     color: white;
-    font-size: 2.8em;
+    font-size: 2.5em;
+    padding-top: 0.2em;
 }
 
 #tower-scene .level-select{

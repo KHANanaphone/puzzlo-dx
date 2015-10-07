@@ -33,8 +33,9 @@ TowerScene.init = function(){
                 if($(this).attr('status') == 'locked')
                     return;
 
-                var puzzle = TowerScene.tower.getPuzzle($(this).data('id'));                
-                PuzzleScene.showPuzzle(puzzle);
+                var id = $(this).data('id');
+                var puzzle = TowerScene.tower.getPuzzle(id);                
+                PuzzleScene.showPuzzle(puzzle, id);
             });
             $tile.find('.levelid').text(tileId);
             
