@@ -94,47 +94,27 @@ Tile.prototype.setContents = function(contents) {
             return 'diamond';
         else if (t == 'B')
             return 'block';
-    }
+    };
 
-    function intToSubtype(t, b) {
+    function getSubtype(t, s) {
 
-        if (t == 'mirror') {
-
-            if (b == 0)
-                return 'normal';
-            else
-                return 'splitter';
-        }
-        
-        if (t == 'potion'){
-            
-            if (b == 0)
-                return 'potion';
-            else
-                return 'poison';
-        }
-        
-        if (t == 'teleporter'){
-            
-            if(b == 0)
-                return 't0';
-            else if(b == 1)
-                return 't1';
-            else if(b == 2)
-                return 't2';
-            else if(b == 3)
-                return 't3';            
-        }
-
-        if (b == 0)
+        if (s == 'N')
             return 'normal';
-        else if (b == 1)
+        else if (s == 'B')
             return 'ice';
-        else if (b == 2)
+        else if (s == 'Y')
             return 'lightning';
-        else if (b == 3)
+        else if (s == 'R')
             return 'fire';
-    }
+    };
+
+    function getValue(t, s, v){
+
+        if(v == ' ' || v == 'B')
+            return 0;
+        else
+            return parseInt(v);
+    };
 }
 
 Tile.prototype.DrawContents = function() {
@@ -170,12 +150,7 @@ Tile.prototype.DrawContents = function() {
 
     function drawBlock(value) {
 
-        if (value > 0) {
-            var $block = $('#hidden .breakable-block-icon').clone();
-        } else {
-            $inner.css('background-color', 'black');
-        }
-
+        var $block = $('#hidden .breakable-block-icon').clone();
         $icon.append($block);
     };
 
@@ -255,3 +230,8 @@ Tile.prototype.Clear = function() {
     this.type = 'blank';
     this.DrawContents();
 }
+
+Tile.applyLogic = function(action){
+
+    
+};

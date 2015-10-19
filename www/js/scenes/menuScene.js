@@ -1,5 +1,9 @@
 var MenuScene = {
-    bgTileTypes: [1101, 1102, 1103, 1111, 1112, 1113, 1121, 1122, 1123, 1131, 1132, 1133]
+    bgTileTypes: [
+    'DR1', 'DN1', 'DB1', 'DY1', 
+    'DR2', 'DN2', 'DB2', 'DY2',
+    'DR3', 'DN3', 'DB3', 'DY3',
+    'DR4', 'DN4', 'DB4', 'DY4']
 };
 
 MenuScene.init = function(){
@@ -52,10 +56,14 @@ MenuScene.init = function(){
 MenuScene.updatePcts = function(){
     
     $('#menu-scene .tower-select .menu-tower-row').each(function(){   
-        
+
         var id = $(this).data('towerId');
         var pct = Math.round(
             100 * Main.progressInfo[id].solvedCount / Towers[id].puzzleCount);
+
+        if(isNaN(pct))
+            pct = 0;
+
         $(this).find('.pct').text(pct + '%');        
     });
 };
@@ -66,6 +74,8 @@ MenuScene.rowClicked = function($row){
         return false;
     
     var towerId = $row.data('towerId');
+
+    $('#main-content').attr('tower-type', towerId);
     
     $row.addClass('clicked');  
     Main.showScene('tower'); 

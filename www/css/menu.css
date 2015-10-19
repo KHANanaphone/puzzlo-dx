@@ -1,6 +1,6 @@
 #menu-scene .menu-header{
-    height: 93%;
-    margin: 5%;
+    height: 96%;
+    margin: 2%;
 }
 
 #menu-scene .tower-select{
@@ -12,7 +12,7 @@
     border-radius: 8px;
     position: absolute;
     opacity: 0;
-    bottom: 15%;
+    bottom: 8%;
     right: 5%;
     left: 5%;
     z-index: 20;
@@ -176,18 +176,18 @@
     stroke: red;
 }
 
-#menu-scene .menu-bg{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0.9;
+#menu-scene .menu-bg .bg{
+
+    stroke: none;
 }
 
 #menu-scene .puzzle-tile{
     width: 8%;
     height: 8%;
+}
+
+#menu-scene .puzzle-tile .bg{
+    stroke: none;
 }
 
 #menu-scene .puzzle-text text{

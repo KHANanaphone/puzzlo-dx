@@ -402,29 +402,7 @@
 .icon[tile-type='block'][tile-subtype='normal'] polygon {
 
     fill: black;
-
-}
-
-.icon[tile-type='block'][tile-subtype='ice'] polygon {
-
-    fill: rgb(198, 241, 247);
     stroke: black;
-
-}
-
-.icon[tile-type='block'][tile-subtype='fire'] polygon {
-
-    fill: #F88;
-    stroke: black;
-
-}
-
-.icon[tile-type='block'][tile-subtype='lightning'] polygon {
-
-    fill: #FFEA00;
-
-    stroke: black;
-
 }
 
 /* MIRRORS */
