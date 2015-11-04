@@ -33,6 +33,7 @@ TowerScene.setupGrid = function(){
     };
 
     var $grid = $('#tower-scene .level-select');
+    $grid.empty();
     var tower = TowerScene.tower;
     var height = tower.yxMap.length;
     var width = tower.yxMap[0].length;
@@ -168,7 +169,7 @@ TowerScene.showAndUpdateTile = function(node, animate){
 TowerScene.showTilesConnectedTo = function(node, animate){
     
     var y = node.y, x = node.x;
-    var paths = node.paths;
+    var paths = node.paths ? node.paths : '';
     var yxMap = TowerScene.tower.yxMap;
     
     if(paths.indexOf('L') != -1){

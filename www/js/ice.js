@@ -9,11 +9,11 @@ function Ice($tile, isLeft){
 	$tile.attr('tile-type', 'ice').css('background-color', '')
     .find('.icon').attr('tile-type', '');
     
-    this.DrawContents();
-    this.SetupClicking();
+    this.drawContents();
+    this.setupClicking();
 }
 
-Ice.prototype.DrawContents = function(){
+Ice.prototype.drawContents = function(){
     
     var $icon = $('#hidden .ice-icon').clone();
     
@@ -23,14 +23,16 @@ Ice.prototype.DrawContents = function(){
     this.$tile.find('.icon').empty().append($icon);
 }
 
-Ice.prototype.SetupClicking = function(){
-    
-    var self = this;
+Ice.prototype.setupClicking = function(){
+
     var $tile = this.$tile;
+    var ice = this;
     
     $tile
     .attr('ready', 1)
-    .click(function(){
+    .click(clicked);
+
+    function clicked(){
 
         if($tile.attr('ready') == 0)
             return;
@@ -38,15 +40,19 @@ Ice.prototype.SetupClicking = function(){
             return;
         else if(PuzzleScene.solved)
             return;
-        
-        $tile.removeClass('clickit');      
-        $tile.width($tile.width());        
-        $tile.addClass('clickit');
-        
+
         $tile.attr('ready', 0);
-        IceLogic.ShootIce(self);
-        
-    });
+
+        Timer.AddAction({
+            x: ice.x,
+            y: ice.y,
+            direction: ice.isLeft ? 'R' : 'L',
+            color: 'blue'
+        });
+
+        PuzzleScene.ReduceMovesLeft();
+        Timer.Run();
+    }
 }
 
 Ice.prototype.makeReady = function(){

@@ -1,89 +1,78 @@
-Puzzles.fun['0-0'] = {
+Puzzles.fun['8-1'] = {
     
-    height: 4,
-    width: 4,
-    moves: 16,   
-    name: "Intro",
-    description: "Use the colored arrowed to destroy all of the diamonds.",
+    moves: 2,   
+    name: "Colored Bombs",
+    description: "Hmm...these bombs aren't red...how curious...",
     contents: [
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['   ', 'DB2', 'DR3', 'DY4']        
+        ['DN1','BB ','DN1','WWW','DN1','   ','   '],
+        ['   ','DN1','   ','WWW','BY ','DN1','DN1'],
+        ['   ','DN1','   ','WWW','DN1','   ','   ']
     ]
 };
 
-Puzzles.fun['0-1'] = {
+Puzzles.fun['8-2'] = {
     
-    height: 4,
-    width: 4,
-    moves: 16,   
-    name: "Intro",
-    description: "Use the colored arrowed to destroy all of the diamonds.",
+    moves: 2,   
+    name: "Colored Bombs",
+    items: ['BB ','BB '],
     contents: [
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['   ', 'DB2', 'DR3', 'DY4']        
+        ['   ','   ','   '],
+        ['DN3','   ','DN3'],
+        ['   ','   ','   ']
     ]
 };
 
-Puzzles.fun['0-2'] = {
+Puzzles.fun['8-3'] = {
     
-    height: 4,
-    width: 4,
-    moves: 16,   
-    name: "Intro",
-    description: "Use the colored arrowed to destroy all of the diamonds.",
+    moves: 2,   
+    name: "Colored Bombs",
     contents: [
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['   ', 'DB2', 'DR3', 'DY4']        
+        ['DN1','BB ','[N]','DN1'],
+        ['   ','DN2','BY ','   '],
+        ['   ','   ','DN1','   ']
     ]
 };
 
-Puzzles.fun['0-3'] = {
+Puzzles.fun['8-4'] = {
     
-    height: 4,
-    width: 4,
-    moves: 16,   
-    name: "Intro",
-    description: "Use the colored arrowed to destroy all of the diamonds.",
+    moves: 1,   
+    name: "Colored Bombs",
+    items: ['BR ','BY '],
     contents: [
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['   ', 'DB2', 'DR3', 'DY4']        
+        ['   ','   ','   ','   ','   '],
+        ['   ','DN1','DN1','   ','   '],
+        ['   ','DN1','   ','DN1','   '],
+        ['   ','DN2','DN1','DN1','   '],
+        ['   ','   ','   ','   ','   ']
     ]
 };
 
-Puzzles.fun['0-4'] = {
+Puzzles.fun['8-5'] = {
     
-    height: 4,
-    width: 4,
-    moves: 16,   
-    name: "Intro",
-    description: "Use the colored arrowed to destroy all of the diamonds.",
+    moves: 1,   
+    name: "Colored Bombs",
+    items: ['BY ','BY ','BY '],
     contents: [
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['   ', 'DB2', 'DR3', 'DY4']        
+        ['WWW','WWW','WWW','WWW','WWW'],
+        ['   ','   ','   ','   ','WWW'],
+        ['WWW','   ','   ','BB ','WWW'],
+        ['WWW','BB ','   ','   ','WWW'],
+        ['WWW','   ','   ','BB ','WWW'],
+        ['WWW','DN1','WWW','WWW','WWW'],
+        ['WWW','WWW','WWW','WWW','WWW']
     ]
 };
 
-Puzzles.fun['0-5'] = {
+Puzzles.fun['8-6'] = {
     
-    height: 4,
-    width: 4,
-    moves: 16,   
-    name: "Intro",
-    description: "Use the colored arrowed to destroy all of the diamonds.",
+    moves: 1,   
+    name: "Colored Bombs",
+    items: ['BR ','BB ','BB ','BY ','BY '],
     contents: [
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['DN1', '   ', '   ', '   '], 
-        ['   ', 'DB2', 'DR3', 'DY4']        
+        ['   ','DN1','DN1','DN1','   '],
+        ['DN1','   ','   ','   ','DN1'],
+        ['DN2','   ','   ','   ','DN1'],
+        ['DN1','   ','   ','   ','DN1'],
+        ['   ','DN1','DN1','DN1','   ']
     ]
 };

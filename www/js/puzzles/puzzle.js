@@ -6,6 +6,7 @@ function Puzzle(puzzleInfo){
     this.initialContents = puzzleInfo.contents.slice();
     this.name = puzzleInfo.name;
     this.description = puzzleInfo.description;
+    this.items = puzzleInfo.items;
     
     this.setup();
 };

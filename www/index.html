@@ -23,7 +23,12 @@
     <script src="js/includes/vivus.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <script type="text/javascript" src="js/globals.js?v=1.04"></script>
     <script type="text/javascript" src="js/main.js?v=1.04"></script>
+    <script type="text/javascript" src="js/tile.js?v=1.04"></script>
+    <script type="text/javascript" src="js/ice.js?v=1.04"></script>
+    <script type="text/javascript" src="js/lightning.js?v=1.04"></script>
+    <script type="text/javascript" src="js/timer.js?v=1.04"></script>
     
     <script type="text/javascript" src="js/towers/towers.js?v=1.04"></script>
     <script type="text/javascript" src="js/towers/funTower.js?v=1.04"></script>
@@ -38,21 +43,17 @@
     <script type="text/javascript" src="js/puzzles/fun/row5.js"></script>  
     <script type="text/javascript" src="js/puzzles/fun/row6.js"></script>  
     <script type="text/javascript" src="js/puzzles/fun/row7.js"></script>   
-    <script type="text/javascript" src="js/puzzles/fun/row8.js"></script>
+    <script type="text/javascript" src="js/puzzles/fun/row8.js"></script>  
+    <script type="text/javascript" src="js/puzzles/adv/section1.js"></script>  
+    <script type="text/javascript" src="js/puzzles/adv/section2.js"></script>  
+    <script type="text/javascript" src="js/puzzles/adv/section3.js"></script>  
+    <script type="text/javascript" src="js/puzzles/adv/section4.js"></script>  
 
-    <script type="text/javascript" src="js/components/tile.js?v=1.04"></script>
-    <script type="text/javascript" src="js/components/ice.js?v=1.04"></script>
-    <script type="text/javascript" src="js/components/lightning.js?v=1.04"></script>
-
-    <script type="text/javascript" src="js/logic/lightninglogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/icelogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/bomblogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/firelogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/shifterlogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/mirrorlogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/potionlogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/teleporterlogic.js?v=1.04"></script>
-    <script type="text/javascript" src="js/logic/timer.js?v=1.04"></script>
+    <script type="text/javascript" src="js/pieces/blank.js?v=1.04"></script>
+    <script type="text/javascript" src="js/pieces/diamond.js?v=1.04"></script>
+    <script type="text/javascript" src="js/pieces/block.js?v=1.04"></script>
+    <script type="text/javascript" src="js/pieces/wall.js?v=1.04"></script>
+    <script type="text/javascript" src="js/pieces/bomb.js?v=1.04"></script>
     
     <script type="text/javascript" src="js/scenes/menuScene.js?v=1.04"></script>
     <script type="text/javascript" src="js/scenes/towerScene.js?v=1.04"></script>
@@ -89,17 +90,17 @@
                           <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
                           <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
                         </linearGradient>
-                        <linearGradient id="grad_diamond_ice" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <linearGradient id="grad_diamond_blue" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color:#66B;stop-opacity:1" />
                           <stop offset="100%" style="stop-color:#66F;stop-opacity:1" />
                         </linearGradient>
-                        <linearGradient id="grad_diamond_lightning" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <linearGradient id="grad_diamond_yellow" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color:#CC6;stop-opacity:1" />
                           <stop offset="100%" style="stop-color:#EE6;stop-opacity:1" />
                         </linearGradient>
-                        <linearGradient id="grad_diamond_fire" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" style="stop-color:#B66;stop-opacity:1" />
-                          <stop offset="100%" style="stop-color:#F66;stop-opacity:1" />
+                        <linearGradient id="grad_diamond_red" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:#B33;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#F44;stop-opacity:1" />
                         </linearGradient>
                     </defs>
                     <g>
@@ -150,7 +151,7 @@
             </div>
 
             <div class='header'>
-                <!-- <span class='tower-name'>[Tower Name]</span> -->
+                <span class='tower-name'>[Tower Name]</span>
             </div>
             
             <div class="level-select">
@@ -173,20 +174,20 @@
                         <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
                           <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
-                        </linearGradient>
+                        </linearGradient>                        
                         <linearGradient id="grad_diamond_normal" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
                           <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
                         </linearGradient>
-                        <linearGradient id="grad_diamond_ice" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <linearGradient id="grad_diamond_blue" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color:#66B;stop-opacity:1" />
                           <stop offset="100%" style="stop-color:#66F;stop-opacity:1" />
                         </linearGradient>
-                        <linearGradient id="grad_diamond_lightning" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <linearGradient id="grad_diamond_yellow" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color:#CC6;stop-opacity:1" />
                           <stop offset="100%" style="stop-color:#EE6;stop-opacity:1" />
                         </linearGradient>
-                        <linearGradient id="grad_diamond_fire" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <linearGradient id="grad_diamond_red" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color:#B66;stop-opacity:1" />
                           <stop offset="100%" style="stop-color:#F66;stop-opacity:1" />
                         </linearGradient>
@@ -232,11 +233,15 @@
         <text text-anchor="middle" x="100" y="135" font-size="100"></text>
     </svg>
 
-    <svg class="breakable-block-icon" viewBox="0 0 100 100">
+    <svg class="wall-icon" viewBox="0 0 100 100">
         <polygon points="0,0 0,100 100,100 100,0"></polygon>
     </svg>
 
-    <svg class="bomb-icon" viewBox="0 0 200 200">
+    <svg class="block-icon" viewBox="0 0 100 100">
+        <polygon points="20,20 80,20 80,80 20,80"></polygon>
+    </svg>
+
+    <svg class="bomb-icon" viewBox="-50 -50 300 300">
         <path d="M100,20 A90,90 0 1,0 180,100 L200,80 L120,0 Z"></path>
         <text text-anchor="middle" x="90" y="145" font-size="100">B</text>
     </svg>
@@ -286,12 +291,6 @@
     <div class="menu-tower-row">
         <span class='name'></span>
         <span class='pct'></span>
-    </div>
-
-    <div class="item-tile">
-        <div class="inner">
-            <div class="icon"></div>
-        </div>
     </div>
     
     <div class='level-tile'>

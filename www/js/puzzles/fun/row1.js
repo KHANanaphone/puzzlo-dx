@@ -16,9 +16,9 @@ Puzzles.fun['1-2'] = {
     moves: 2,   
     name: " ",
     contents: [
-        ['BBB', 'DN1', 'BBB'], 
+        ['WWW', 'DN1', 'WWW'], 
         ['DN1', 'DN2', 'DN1'],  
-        ['BBB', 'DN1', 'BBB']         
+        ['WWW', 'DN1', 'WWW']         
     ]
 };
 
