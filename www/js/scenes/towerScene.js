@@ -1,179 +1,197 @@
 var TowerScene = {
-    xCount: 6,
-    yCount: 8,
     components: {
-        tiles: {},
-        paths: {}
+        tiles: [],
+        hPaths: [],
+        vPaths: []
     },
     locked: {}
 };
 
-TowerScene.init = function(){
+TowerScene.init = function(){     
     
-    var $sel = $('#tower-scene .level-select');
-    var width = 100 / TowerScene.xCount;
-    var height = 100 / TowerScene.yCount; 
-    
-    for(var y = 0; y < TowerScene.yCount; y++){
-        
-        for(var x = 0; x < TowerScene.xCount; x++){
-            
-            var tileId = y + '-' + x;
-            var $tile = $('#hidden .level-tile').clone();
-            $tile.data('id', tileId)
-            .css({
-                left: (x * width) + '%',
-                bottom: (y * height) + '%',
-                height: height + '%',
-                width: width + '%'
-            })
-            .hide()
-            .click(function(){
-                
-                if($(this).attr('status') == 'locked')
-                    return;
-
-                var id = $(this).data('id');
-                var puzzle = TowerScene.tower.getPuzzle(id);                
-                PuzzleScene.showPuzzle(puzzle, id);
-            });
-            $tile.find('.levelid').text(tileId);
-            
-            TowerScene.components.tiles[tileId] = $tile;
-            $sel.append($tile);
-            
-            if(x < TowerScene.xCount - 1){
-                
-                var pathId = 'h' + y + '-' + x;
-                var $path = $('#hidden .level-path').clone();
-                $path.data('id', pathId)
-                .css({
-                    left: (x * width + (0.8 * width)) + '%',
-                    bottom: (y * height + (0.45 * height)) + '%',
-                    width: (0.4 * width) + '%',
-                    height: (0.1 * height) + '%'
-                })
-                .hide();
-                
-                TowerScene.components.paths[pathId] = $path;
-                $sel.append($path);
-            }
-            
-            if(y < TowerScene.yCount - 1){
-                
-                var pathId = 'v' + y + '-' + x;
-                var $path = $('#hidden .level-path').clone();
-                $path.data('id', pathId)
-                .css({
-                    left: (x * width + (0.45 * width)) + '%',
-                    bottom: (y * height + (0.8 * height)) + '%',
-                    width: (0.1 * width) + '%',
-                    height: (0.4 * height) + '%'
-                })
-                .hide();
-                
-                TowerScene.components.paths[pathId] = $path;
-                $sel.append($path);
-            }
-        };
-    };
+    return;
 };
 
 TowerScene.loadTower = function(towerId){
-    
-    for(var id in TowerScene.components.tiles){
-        
-        TowerScene.components.tiles[id].hide().attr('status', 'hidden');
-    }
-    
-    for(var id in TowerScene.components.paths){
-        
-        TowerScene.components.paths[id].hide();
-    }
-    
-    var info = Main.towerInfos[towerId];
-    TowerScene.progress = Main.progressInfo[towerId];
+
+    TowerScene.towerId = towerId;
     TowerScene.tower = Towers[towerId];
+    TowerScene.info = Main.towerInfos[towerId];
+    TowerScene.progress = Main.progressInfo[towerId];
     
-    $('#tower-scene .tower-name').text(info.name);
+    $('#tower-scene .tower-name').text(TowerScene.info.name);
     TowerScene.updateSolved();
-    TowerScene.showAndUpdateTile(TowerScene.tower.first);   
+    TowerScene.setupGrid();
 };
 
-TowerScene.showAndUpdateTile = function(puzzleId, animate){
-    
-    var $tile = TowerScene.components.tiles[puzzleId];
-    var puzz = TowerScene.tower.map[puzzleId];
-    $tile.fadeIn();
-    
-    if(TowerScene.progress.solved[puzzleId]){
-        
-        if($tile.attr('status') != 'solved'){
-            $tile.attr('status', 'solved');
-            TowerScene.showTilesConnectedTo(puzzleId, animate);
-        }
-    }
-    else if(puzz.requires > 0){
-        
-        if(puzz.requires > TowerScene.progress.solvedCount){            
-        
-            $tile.find('.locked text').text(puzz.requires);        
-            $tile.attr('status', 'locked');     
+TowerScene.setupGrid = function(){
 
-            if(!TowerScene.locked[puzzleId])
-                TowerScene.locked[puzzleId] = $tile;            
+    var components = {
+        tiles: [],
+        hPaths: [],
+        vPaths: []
+    };
+
+    var $grid = $('#tower-scene .level-select');
+    $grid.empty();
+    var tower = TowerScene.tower;
+    var height = tower.yxMap.length;
+    var width = tower.yxMap[0].length;
+
+    setupTiles();
+    setupHPaths();
+    setupVPaths();
+
+    TowerScene.components = components;
+    TowerScene.showAndUpdateTile(tower.first);
+
+    function setupTiles(){
+
+        for(var y = 0; y < height; y++){
+
+            components.tiles[y] = [];
+            for(var x = 0; x < width; x++){
+
+                var node = tower.yxMap[y][x];
+
+                if(!node)
+                    continue;
+
+                var $tile = $('#hidden .level-tile').clone();
+                $tile.data('x', x).data('y', y).data('id', node.id)
+                .css({
+                    left: x * 100 / width + '%',
+                    top: y * 100 / height + '%',
+                    width: 100 / width + '%',
+                    height: 100 / height + '%'
+                })
+                .hide()
+                .click(function(){
+                    
+                    if($(this).attr('status') == 'locked')
+                        return;
+
+                    var puzzle = TowerScene.tower.getPuzzle($(this).data('id'));  
+                    PuzzleScene.showPuzzle(puzzle);
+                })
+                .find('.levelid').text(node.id);
+
+                $grid.append($tile);
+                components.tiles[y][x] = $tile;
+            }
         }
-        else{
-            delete TowerScene.locked[puzzleId];
-            $tile.attr('status', 'unsolved');            
+    };
+
+    function setupHPaths(){
+
+        for(var y = 0; y < height; y++){
+
+            components.hPaths[y] = [];
+
+            for(var x = 0; x < width - 1; x++){
+
+                var $path = $('#hidden .level-path').clone();
+                $path.css({
+                    left: ((x + 0.8) * 100 / width) + '%',
+                    top: ((y + 0.45) * 100 / height) + '%',
+                    width: (0.4 * 100 / width) + '%',
+                    height: (0.1 * 100 / height) + '%'
+                }).hide();
+                
+                components.hPaths[y][x] = $path;
+                $grid.append($path);
+            }
         }
-    }
+    };
+
+    function setupVPaths(){
+
+        for(var y = 0; y < height -1; y++){
+
+            components.vPaths[y] = [];
+
+            for(var x = 0; x < width; x++){
+
+                var $path = $('#hidden .level-path').clone();
+                $path.css({
+                    left: ((x + 0.45) * 100 / width) + '%',
+                    top: ((y + 0.8) * 100 / height) + '%',
+                    width: (0.1 * 100 / width) + '%',
+                    height: (0.4 * 100 / height) + '%'
+                }).hide();
+                
+                components.vPaths[y][x] = $path;
+                $grid.append($path);
+            }
+        }
+    };
+};
+
+TowerScene.showAndUpdateTile = function(node, animate){
+    
+    if(!animate)
+        go(node);
     else
-        $tile.attr('status', 'unsolved');
-    
+        window.setTimeout(function(){go(node)}, 400);
+
+    function go(node){
+
+        var $tile = TowerScene.components.tiles[node.y][node.x];
+        $tile.fadeIn();
+        
+        if(TowerScene.progress.solved[node.id]){
+            
+            if($tile.attr('status') != 'solved'){
+                $tile.attr('status', 'solved');
+                TowerScene.showTilesConnectedTo(node, animate);
+            }
+        }
+        else if(node.requires > 0){
+            
+            if(node.requires > TowerScene.progress.solvedCount){            
+            
+                $tile.find('.locked text').text(node.requires);        
+                $tile.attr('status', 'locked');     
+
+                if(!TowerScene.locked[node.id])
+                    TowerScene.locked[node.id] = $tile;            
+            }
+            else{
+                delete TowerScene.locked[node.id];
+                $tile.attr('status', 'unsolved');            
+            }
+        }
+        else
+            $tile.attr('status', 'unsolved');
+    }    
 };
 
-TowerScene.showTilesConnectedTo = function(puzzleId, animate){
+TowerScene.showTilesConnectedTo = function(node, animate){
     
-    var y = parseInt(puzzleId[0]), x = parseInt(puzzleId[2]);
-    var paths = TowerScene.tower.map[puzzleId].paths;
-    var nextId, pathId;
+    var y = node.y, x = node.x;
+    var paths = node.paths ? node.paths : '';
+    var yxMap = TowerScene.tower.yxMap;
     
     if(paths.indexOf('L') != -1){
 
-        nextId = y + '-' + (x - 1);
-        pathId = 'h' + nextId;
-        check(nextId, pathId);        
+        TowerScene.showAndUpdateTile(yxMap[y][x - 1]);     
+        TowerScene.components.hPaths[y][x-1].fadeIn();
     }
     if(paths.indexOf('R') != -1){
 
-        pathId = 'h' + puzzleId;
-        nextId = y + '-' + (x + 1);
-        check(nextId, pathId);   
+        TowerScene.showAndUpdateTile(yxMap[y][x + 1]);   
+        TowerScene.components.hPaths[y][x].fadeIn();
     }
     if(paths.indexOf('U') != -1){
 
-        pathId = 'v' + puzzleId;
-        nextId = (y + 1) + '-' + x;
-        check(nextId, pathId);   
+        TowerScene.showAndUpdateTile(yxMap[y - 1][x]);    
+        TowerScene.components.vPaths[y-1][x].fadeIn();
     }
     if(paths.indexOf('D') != -1){
 
-        nextId = (y - 1) + '-' + x;
-        pathId = 'v' + nextId;
-        check(nextId, pathId);   
+        TowerScene.showAndUpdateTile(yxMap[y + 1][x]);     
+        TowerScene.components.vPaths[y][x].fadeIn();
     }
-    
-    function check(nextId, pathId){
-
-        TowerScene.showAndUpdateTile(nextId, animate);  
-        TowerScene.showPath(pathId);
-    }
-};
-
-TowerScene.showPath = function(pathId){
-    
-    TowerScene.components.paths[pathId].fadeIn();
 };
 
 TowerScene.setSolved = function(puzzleId){
@@ -184,13 +202,13 @@ TowerScene.setSolved = function(puzzleId){
     TowerScene.progress.solved[puzzleId] = 1;
     TowerScene.progress.solvedCount++;
     TowerScene.updateSolved();
-    TowerScene.showAndUpdateTile(puzzleId, true);
+    TowerScene.showAndUpdateTile(TowerScene.tower.idMap[puzzleId], true);
     
     for(var lockedId in TowerScene.locked){
         
-        var puzz = TowerScene.tower.map[lockedId];
+        var puzz = TowerScene.tower.idMap[lockedId];
         if(TowerScene.progress.solvedCount >= puzz.requires)
-            TowerScene.showAndUpdateTile(lockedId, true);
+            TowerScene.showAndUpdateTile(puzz, true);
     }
     
     MenuScene.updatePcts();

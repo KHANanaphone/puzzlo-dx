@@ -20,35 +20,39 @@ Lightning.prototype.drawContents = function(){
     if(!this.isTop)
         $icon.find('path').attr('transform', 'scale(1, -1) translate(0, -200)');
     
-    this.$tile.find('.icon').empty().append($icon);
-    
+    this.$tile.find('.icon').empty().append($icon);    
 }
 
 Lightning.prototype.setupClicking = function(){
-    
-    var self = this;
+       
     var $tile = this.$tile;
-    
+    var lightning = this;
+
     $tile
     .attr('ready', 1)
-    .click(function(){
-       
+    .click(clicked);
+
+    function clicked(){
+
         if($tile.attr('ready') == 0)
             return;
         else if(PuzzleScene.puzzle.movesLeft <= 0)
             return;
-//        else if(Timer.running)
-//            return;
         else if(PuzzleScene.solved)
             return;
-        
-//        $tile.removeClass('clickit');      
-//        $tile.width($tile.width());        
-//        $tile.addClass('clickit');
-        
+         
         $tile.attr('ready', 0);
-        LightningLogic.shootLightning(self);
-    });
+
+        Timer.AddAction({
+            x: lightning.x,
+            y: lightning.y,
+            direction: lightning.isTop ? 'D' : 'U',
+            color: 'yellow'
+        });
+
+        PuzzleScene.ReduceMovesLeft();
+        Timer.Run();
+    }
 }
 
 Lightning.prototype.makeReady = function(){

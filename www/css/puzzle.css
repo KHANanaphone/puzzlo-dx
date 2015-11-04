@@ -1,3 +1,4 @@
+@import url('pieces.css');
 
 /* LAYOUT */
 
@@ -128,45 +129,117 @@
     height: 70%;
 
     overflow: hidden;
-
 }
 
-.item-tile {
-
-    display: inline-block;
-    width: 12.5%;
-    height: 100%;
-    background-color: white;
-    border: 1px solid #888;
-    margin-top: 0;
-    margin-left: 0;
-    position: relative;
-    border-bottom: 2px solid #888;
-
+#tile-area.clickable .puzzle-tile[tile-type="board"]{
+    cursor: pointer;
 }
 
-.item-tile.next-item {
+#tile-area.clickable .puzzle-tile[tile-type="board"]:hover .bg{
 
-    border-color: red;
-
+    fill: rgba(255, 255, 255, 0.5);
 }
 
+/* ITEMS */ 
 #item-area {
 
     height: 10%;
-    width: 100%;
+    width: 90%;
     position: relative;
+    margin: 0% 5%;
 }
 
-#item-area .background{
-    width: 100%;
+#item-area > svg .bg{
+    /* 
+        doubled because it doesn't resize correctly when the parent's size is doubled
+        when shifting from inactive to active 
+    */
+    width: 200%;
+    height: 200%;
+    stroke: none;
+}
+
+#item-area > svg{
+
+    position: absolute;
+    width: 8%;
+    height: 50%;
+    top: 25%;
+
+    -webkit-transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+    transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+}
+
+#item-area > svg:first-child{
+    width: 16%;
     height: 100%;
+    top: 0%;
+    left: 0%;
 }
 
-#item-area .background circle{
-    
-    fill: #AAF;
-    opacity: 0.25;
+@-webkit-keyframes glow{
+    from {fill: white;}
+    to {fill: #B4FFAD;}
+}
+
+@-moz-keyframes glow{
+    from {fill: white;}
+    to {fill: #B4FFAD;}
+}
+
+@keyframes glow{
+    from {fill: white;}
+    to {fill: #8F8;}
+}
+
+#item-area > svg:first-child .bg{
+    -moz-animation: glow 1s linear infinite alternate;
+    -webkit-animation: glow 1s linear infinite alternate;
+    animation: glow 1s linear infinite alternate;
+}
+
+#item-area > svg:nth-child(2){
+
+    left: 20%;
+}
+
+#item-area > svg:nth-child(3){
+
+    left: 30%;
+}
+
+#item-area > svg:nth-child(4){
+
+    left: 40%;
+}
+
+#item-area > svg:nth-child(5){
+
+    left: 50%;
+}
+
+#item-area > svg:nth-child(6){
+
+    left: 60%;
+}
+
+#item-area > svg:nth-child(7){
+
+    left: 70%;
+}
+
+#item-area > svg:nth-child(8){
+
+    left: 80%;
+}
+
+#item-area > svg:nth-child(9){
+
+    left: 90%;
+}
+
+#item-area svg .bg{
+    fill: white;
 }
 
 #shots-left-area{
@@ -268,10 +341,10 @@
     stroke: white;
 }
 .puzzle-tile[tile-type='board'][even=true] .bg{
-    fill: rgb(171, 174, 195);
+    fill: rgba(171, 174, 195, 0.5);
 }
 .puzzle-tile[tile-type='board'][even=false] .bg{
-    fill: rgb(134, 134, 156);
+    fill: rgba(134, 134, 156, 0.5);
 }
 
 .icon text{
@@ -294,253 +367,3 @@
 
     cursor: pointer;
 }
-
-/* ICE & LIGHTNING */
-.puzzle-tile[tile-type='ice'] .bg,
-.puzzle-tile[tile-type='lightning'] .bg{
-
-    -webkit-transition: fill 0.4s;
-    transition: fill 0.4s;
-}
-
-.puzzle-tile[tile-type='ice'][ready='1']:hover .bg{
-    fill: rgba(185, 195, 255, 0.5);
-}
-
-.puzzle-tile[tile-type='lightning'][ready='1']:hover .bg{
-    fill: rgba(255, 249, 142, 0.5);
-}
-
-.puzzle-tile[tile-type='ice'][ready='1'],
-.puzzle-tile[tile-type='lightning'][ready='1'] {
-
-    cursor: pointer;   
-}
-
-.puzzle-tile[tile-type='ice'] .arrow-in{
-
-    fill: #77E;
-    -webkit-transition: fill 0.25s;
-    transition: fill 0.25s;
-}
-
-.puzzle-tile[tile-type='ice'] .arrow-out{
-
-    stroke-width: 6;
-    stroke: #222;
-    fill: #222;
-}
-
-.puzzle-tile[tile-type='lightning'] .arrow-in{
-
-    fill: #EE7;
-    -webkit-transition: fill 0.25s;
-    transition: fill 0.25s;
-}
-
-.puzzle-tile[tile-type='lightning'] .arrow-out{
-
-    stroke-width: 6;
-    stroke: #222;
-    fill: #222;
-}
-
-.puzzle-tile[tile-type='lightning'][ready='0'] .arrow-in,
-.puzzle-tile[tile-type='ice'][ready='0'] .arrow-in{
-
-    fill: transparent;
-}
-
-/* DIAMONDS & BOMBS */
-
-.icon text {
-
-    fill: white;
-
-}
-
-.icon .diamond-icon polygon{
-    
-    stroke: white;
-    stroke-width: 8px;
-}
-
-.icon[tile-subtype='normal'] .diamond-icon polygon {
-
-    fill: url(#grad_diamond_normal);
-}
-
-.icon[tile-subtype='ice'] .diamond-icon polygon,
-.icon[tile-subtype='ice'] .bomb-icon path {
-
-    fill: url(#grad_diamond_ice);
-}
-
-.icon[tile-subtype='lightning'] .diamond-icon polygon,
-.icon[tile-subtype='lightning'] .bomb-icon path {
-
-    fill: url(#grad_diamond_lightning);
-}
-
-.icon[tile-subtype='fire'] .diamond-icon polygon,
-.icon[tile-subtype='fire'] .bomb-icon path {
-
-    fill: url(#grad_diamond_fire);
-}
-
-.icon[tile-subtype='lightning'] .diamond-icon text,
-.icon[tile-subtype='lightning'] .bomb-icon text, 
-.icon[tile-subtype='ice'] .diamond-icon text,
-.icon[tile-subtype='ice'] .bomb-icon text,  
-.icon[tile-subtype='fire'] .diamond-icon text,
-.icon[tile-subtype='fire'] .bomb-icon text {
-
-    fill: white;
-}
-/* BLOCKS */
-
-.icon[tile-type='block'][tile-subtype='normal'] polygon {
-
-    fill: black;
-
-}
-
-.icon[tile-type='block'][tile-subtype='ice'] polygon {
-
-    fill: rgb(198, 241, 247);
-    stroke: black;
-
-}
-
-.icon[tile-type='block'][tile-subtype='fire'] polygon {
-
-    fill: #F88;
-    stroke: black;
-
-}
-
-.icon[tile-type='block'][tile-subtype='lightning'] polygon {
-
-    fill: #FFEA00;
-
-    stroke: black;
-
-}
-
-/* MIRRORS */
-
-.icon[tile-type='mirror'] polygon {
-    
-    stroke-width: 10px;
-}
-
-.icon[tile-type='mirror'][tile-subtype='normal'] polygon {
-    
-    stroke: black;
-    fill: black;
-}
-
-.icon[tile-type='mirror'][tile-subtype='splitter'] polygon {
-    
-    stroke: black;
-    fill: white;
-}
-
-/* POTIONS */
-
-.icon[tile-type='potion'] path{
-    
-    stroke-width: 7px;
-    stroke: #777;
-}
-
-.icon[tile-type='potion'] path.top{
-    
-    fill: white;
-}
-
-.icon[tile-type='potion'][tile-subtype='potion'] path.bottom{
-    
-    fill:rgb(142, 214, 255);
-}
-
-.icon[tile-type='potion'][tile-subtype='poison'] path.bottom{
-    
-    fill: rgb(93, 163, 101);
-}
-
-.icon[tile-type='potion'][tile-subtype='poison'] circle{
-    
-    stroke: rgb(0, 70, 0);
-    fill: rgb(41, 246, 41); 
-    stroke-width: 3px;
-}
-
-/* TELEPORTERS */
-
-.icon[tile-type='teleporter'] .spiral{
-    stroke-width: 10px;
-    stroke: white;
-    visibility: hidden;
-}
-
-.icon[tile-type='teleporter'].active .spiral{
-    
-    visibility: visible;
-}
-
-.icon[tile-type='teleporter'] circle{
-    stroke-width: 10px;
-}
-
-.icon[tile-type='teleporter'] text{
-    font-family: cursive;
-}
-
-.icon[tile-type='teleporter'] .spinner{
-    
-    stroke-width: 7px;
-}
-
-.icon[tile-type='teleporter'][tile-subtype='t0'] circle{
-    fill: red;
-    stroke: rgb(136, 21, 21);
-}
-
-
-.icon[tile-type='teleporter'][tile-subtype='t1'] circle{
-    fill: rgb(80, 80, 238);
-    stroke: rgb(51, 51, 105);
-}
-
-
-.icon[tile-type='teleporter'][tile-subtype='t2'] circle{
-    fill: rgb(111, 192, 111);
-    stroke: rgb(62, 116, 62);
-}
-
-
-.icon[tile-type='teleporter'][tile-subtype='t3'] circle{
-    fill: rgb(211, 211, 108);
-    stroke: rgb(87, 90, 23);
-}
-
-.icon[tile-type='teleporter'][tile-subtype='t0'] .spinner{
-    stroke: rgb(196, 16, 16);
-}
-
-
-.icon[tile-type='teleporter'][tile-subtype='t1'] .spinner{
-    stroke: rgb(45, 45, 231);
-}
-
-
-.icon[tile-type='teleporter'][tile-subtype='t2'] .spinner{
-    stroke: rgb(59, 148, 59);
-}
-
-
-.icon[tile-type='teleporter'][tile-subtype='t3'] .spinner{
-    stroke: rgb(143, 148, 35);
-}
-

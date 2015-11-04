@@ -45,7 +45,7 @@ FireLogic.ApplyFire = function(action, tile) {
         if(tile.value == 0)
             tile.Clear();
         else
-            tile.DrawContents();
+            tile.drawContents();
         
     } else if (tile.type == 'block') {
 

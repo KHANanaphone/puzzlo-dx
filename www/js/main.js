@@ -1,5 +1,5 @@
 var Main = {
-    storageId: 'pdx',
+    storageId: 'pdx3',
     towerInfos: {
         fun: {id: 'fun', name: 'Fun Tower'},
         advanced: {id: 'advanced', name: 'Advanced Tower'},
@@ -99,6 +99,9 @@ Main.showScene = function(scene){
     
     $('#' + scene + '-scene').fadeIn();
     Main.currentScene = scene;
+
+    if(scene == 'menu')
+        $('#main-content').attr('tower-type', 'fun');
 };
 
 var DEBUG_CTRL = false;

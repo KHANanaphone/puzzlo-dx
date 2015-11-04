@@ -1,0 +1,240 @@
+/* ICE & LIGHTNING */
+.puzzle-tile[tile-type='ice'] .bg,
+.puzzle-tile[tile-type='lightning'] .bg{
+
+    -webkit-transition: fill 0.4s;
+    transition: fill 0.4s;
+}
+
+.puzzle-tile[tile-type='ice'][ready='1']:hover .bg{
+    fill: rgba(185, 195, 255, 0.5);
+}
+
+.puzzle-tile[tile-type='lightning'][ready='1']:hover .bg{
+    fill: rgba(255, 249, 142, 0.5);
+}
+
+.puzzle-tile[tile-type='ice'][ready='1'],
+.puzzle-tile[tile-type='lightning'][ready='1'] {
+
+    cursor: pointer;   
+}
+
+.puzzle-tile[tile-type='ice'] .arrow-in{
+
+    fill: #77E;
+    -webkit-transition: fill 0.25s;
+    transition: fill 0.25s;
+}
+
+.puzzle-tile[tile-type='ice'] .arrow-out{
+
+    stroke-width: 4;
+    stroke: black;
+    fill: rgba(34, 34, 34, 0.5);
+}
+
+.puzzle-tile[tile-type='lightning'] .arrow-in{
+
+    fill: #EE7;
+    -webkit-transition: fill 0.25s;
+    transition: fill 0.25s;
+}
+
+.puzzle-tile[tile-type='lightning'] .arrow-out{
+
+    stroke-width: 4;
+    stroke: black;
+    fill: rgba(34, 34, 34, 0.5);
+}
+
+.puzzle-tile[tile-type='lightning'][ready='0'] .arrow-in,
+.puzzle-tile[tile-type='ice'][ready='0'] .arrow-in{
+
+    fill: transparent;
+}
+
+/* DIAMONDS & BOMBS */
+
+.icon text {
+
+    fill: white;
+
+}
+
+.icon .diamond-icon polygon{
+    
+    stroke: white;
+    stroke-width: 8px;
+}
+
+.icon .diamond-icon[color='normal'] polygon,
+.icon .block-icon[color='normal'] polygon {
+
+    fill: url(#grad_diamond_normal);
+}
+
+.icon .diamond-icon[color='blue'] polygon,
+.icon .block-icon[color='blue'] polygon,
+.icon .bomb-icon[color='blue'] path {
+
+    fill: url(#grad_diamond_blue);
+}
+
+.icon .diamond-icon[color='red'] polygon,
+.icon .block-icon[color='red'] polygon,
+.icon .bomb-icon[color='red'] path  {
+
+    fill: url(#grad_diamond_red);
+}
+
+.icon .diamond-icon[color='yellow'] polygon,
+.icon .block-icon[color='yellow'] polygon,
+.icon .bomb-icon[color='yellow'] path  {
+
+    fill: url(#grad_diamond_yellow);
+}
+
+.icon .block-icon[inverted='true'] polygon{
+
+    stroke-width: 10px;
+}
+
+.icon .diamond-icon[color='blue'][inverted='true'] polygon,
+.icon .block-icon[color='blue'][inverted='true'] polygon{
+
+    fill: white;
+    stroke: url(#grad_diamond_blue);
+}
+
+.icon .diamond-icon[color='red'][inverted='true'] polygon,
+.icon .block-icon[color='red'][inverted='true'] polygon{
+
+    fill: white;
+    stroke: url(#grad_diamond_red);
+}
+
+.icon .diamond-icon[color='yellow'][inverted='true'] polygon,
+.icon .block-icon[color='yellow'][inverted='true'] polygon{
+
+    fill: white;
+    stroke: url(#grad_diamond_yellow);
+}
+
+.icon .diamond-icon[color='blue'][inverted='true'] text{
+
+    stroke: black;
+    fill: url(#grad_diamond_blue);
+}
+
+.icon .diamond-icon[color='red'][inverted='true'] text{
+
+    stroke: black;
+    fill: url(#grad_diamond_red);
+}
+
+.icon .diamond-icon[color='yellow'][inverted='true'] text{
+
+    stroke: black;
+    fill: url(#grad_diamond_yellow);
+}
+
+/* BLOCKS */
+
+.icon .wall-icon polygon{
+    fill: black;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.icon .block-icon polygon {
+
+    stroke: white;
+}
+
+/* MIRRORS */
+
+.icon[tile-type='mirror'] polygon {
+    
+    stroke-width: 10px;
+}
+
+.icon[tile-type='mirror'][tile-subtype='normal'] polygon {
+    
+    stroke: black;
+    fill: black;
+}
+
+.icon[tile-type='mirror'][tile-subtype='splitter'] polygon {
+    
+    stroke: black;
+    fill: white;
+}
+
+/* TELEPORTERS */
+
+.icon[tile-type='teleporter'] .spiral{
+    stroke-width: 10px;
+    stroke: white;
+    visibility: hidden;
+}
+
+.icon[tile-type='teleporter'].active .spiral{
+    
+    visibility: visible;
+}
+
+.icon[tile-type='teleporter'] circle{
+    stroke-width: 10px;
+}
+
+.icon[tile-type='teleporter'] text{
+    font-family: cursive;
+}
+
+.icon[tile-type='teleporter'] .spinner{
+    
+    stroke-width: 7px;
+}
+
+.icon[tile-type='teleporter'][tile-subtype='t0'] circle{
+    fill: red;
+    stroke: rgb(136, 21, 21);
+}
+
+
+.icon[tile-type='teleporter'][tile-subtype='t1'] circle{
+    fill: rgb(80, 80, 238);
+    stroke: rgb(51, 51, 105);
+}
+
+
+.icon[tile-type='teleporter'][tile-subtype='t2'] circle{
+    fill: rgb(111, 192, 111);
+    stroke: rgb(62, 116, 62);
+}
+
+
+.icon[tile-type='teleporter'][tile-subtype='t3'] circle{
+    fill: rgb(211, 211, 108);
+    stroke: rgb(87, 90, 23);
+}
+
+.icon[tile-type='teleporter'][tile-subtype='t0'] .spinner{
+    stroke: rgb(196, 16, 16);
+}
+
+
+.icon[tile-type='teleporter'][tile-subtype='t1'] .spinner{
+    stroke: rgb(45, 45, 231);
+}
+
+
+.icon[tile-type='teleporter'][tile-subtype='t2'] .spinner{
+    stroke: rgb(59, 148, 59);
+}
+
+
+.icon[tile-type='teleporter'][tile-subtype='t3'] .spinner{
+    stroke: rgb(143, 148, 35);
+}

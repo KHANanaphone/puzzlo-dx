@@ -1,11 +1,12 @@
 function Puzzle(puzzleInfo){
     
-    this.height = puzzleInfo.height;
-    this.width = puzzleInfo.width;
+    this.height = puzzleInfo.contents.length;
+    this.width = puzzleInfo.contents[0].length;
     this.maxMoves = puzzleInfo.moves;
     this.initialContents = puzzleInfo.contents.slice();
     this.name = puzzleInfo.name;
     this.description = puzzleInfo.description;
+    this.items = puzzleInfo.items;
     
     this.setup();
 };

@@ -1,63 +1,138 @@
-Towers.advanced = new Tower('adv', {
-    '0-0': {
-        puzzleId: 'funTutorial1',
-        paths: 'R',
-    },
-    '0-1': {
-        puzzleId: 'funTutorial2',
-        paths: 'R',
-    },
-    '0-2': {
-        puzzleId: 'funTutorial3',
-        paths: 'UR',
-    },
-    '0-3': {
-        puzzleId: 'funBasic1',
-        paths: 'UR',
-    },
-    '0-4': {
-        puzzleId: 'funBasic2',
-        paths: 'UR',
-    },
-    '0-5': {
-        puzzleId: 'funBasic3',
-        paths: '',
-    },
-    '1-1': {
-        puzzleId: 'funBasic4',
-        paths: 'U',
-    },
-    '1-2': {
-        puzzleId: 'funBasic5',
-        paths: 'LU',
-    },
-    '1-3': {
-        puzzleId: 'funBasic6',
-        paths: 'LRU',
-    },
-    '1-4': {
-        puzzleId: 'funBasic7',
-        paths: 'LU',
-    },
-    '2-1': {
-        puzzleId: 'funBasic8',
-        paths: 'UR',
-    },
-    '2-2': {
-        puzzleId: 'funBasic9',
-        paths: 'LR',
-    },
-    '2-3': {
-        puzzleId: 'funBasic10',
-        paths: 'LR',
-    },
-    '2-4': {
-        puzzleId: 'funBasic11',
-        paths: 'L',
-    },
-    '3-1': {
-        puzzleId: 'funTutorial4',
-        paths: '',
-        requires: 12
-    }
+Puzzles.advanced = {};
+
+Towers.advanced = new Tower('advanced', [
+        ['4-4','4-2','4-1','3-7','3-9','3-8'],
+        ['4-6','4-X','4-3','3-5','3-X','3-6'],
+        ['4-8','4-7','4-5','3-3','3-2','3-4'],
+        [ null,'4-9', null, null,'3-1', null],
+        [ null,'1-9', null, null,'2-9', null],
+        ['1-4','1-6','1-8','2-4','2-6','2-8'],
+        ['1-2','1-X','1-7','2-2','2-X','2-7'],
+        ['1-1','1-3','1-5','2-1','2-3','2-5']
+    ], {
+
+        '1-1': {
+            first: true,
+            paths: 'UR'
+        },
+        '1-2': {
+            paths: 'UR'
+        },
+        '1-3': {
+            paths: 'UR'
+        },
+        '1-4': {
+            paths: 'R'
+        },
+        '1-5': {
+            paths: 'UR'
+        },
+        '1-6': {            
+            paths: 'DUR'
+        },
+        '1-7': {
+            paths: 'UL'
+        },
+        '1-8': {
+        },
+        '1-9': {
+        },
+        '1-X': {
+            requires: 36
+        },
+
+        '2-1': {            
+            requires: 7
+        },
+        '2-2': {
+
+        },
+        '2-3': {
+
+        },
+        '2-4': {
+
+        },
+        '2-5': {
+
+        },
+        '2-6': {
+
+        },
+        '2-7': {
+
+        },
+        '2-8': {
+
+        },
+        '2-9': {
+
+        },
+        '2-X': {
+
+        },
+
+        '3-1': {
+
+        },
+        '3-2': {
+
+        },
+        '3-3': {
+
+        },
+        '3-4': {
+
+        },
+        '3-5': {
+
+        },
+        '3-6': {
+
+        },
+        '3-7': {
+
+        },
+        '3-8': {
+
+        },
+        '3-9': {
+
+        },
+        '3-X': {
+
+        },
+
+        '4-1': {
+
+        },
+        '4-2': {
+
+        },
+        '4-3': {
+
+        },
+        '4-4': {
+
+        },
+        '4-5': {
+
+        },
+        '4-6': {
+
+        },
+        '4-7': {
+
+        },
+        '4-8': {
+
+        },
+        '4-9': {
+
+        },
+        '4-X': {
+
+        },
+
+
 });
