@@ -35,10 +35,13 @@ Tile.prototype.clicked = function() {
 
     if (!next)
         return;
+    else if (next.contents.type == 'shifter'){
+
+        if(next.contents.doShift(this))
+            PuzzleScene.nextItem();        
+    }
     else if(this.contents.type != 'blank')
-        return;
-    // else if (next.type == 'shifter')
-    //     ShifterLogic.DoShift(nextItemTile, this);
+            return;
     else {
         
         this.setContents(next.contents);
@@ -46,7 +49,6 @@ Tile.prototype.clicked = function() {
         // if(nextItemTile.type == 'teleporter')
         //     TeleporterLogic.CheckTeleporters();
         
-        PuzzleScene.nextItem();
     }
 }
 
@@ -66,40 +68,6 @@ Tile.prototype.drawContents = function() {
     this.contents.draw($icon);    
 }
 
-//     function drawDiamond(value) {
-
-//         if (value > 0) {
-
-//             var $diamond = $('#hidden .diamond-icon').clone();
-//             $icon.append($diamond);
-//             $diamond.find('text').html(value);
-//         }
-//     };
-
-//     function drawWall(value) {
-
-//         var $block = $('#hidden .breakable-block-icon').clone();
-//         $icon.append($block);
-//     };
-
-//     function drawBlock(value) {
-
-//         var $block = $('#hidden .breakable-block-icon').clone();
-//         $icon.append($block);
-//     };
-
-//     function drawBomb(value) {
-
-//         var $bomb = $('#hidden .bomb-icon').clone();
-//         $icon.append($bomb);
-//     };
-
-//     function drawShifter(value) {
-
-//         var $shifter = $('#hidden .shifter-icon').clone();
-//         $shifter.find('polygon').attr('transform', 'rotate(' + (90 * value) + ',100,75)');
-//         $icon.append($shifter);
-//     };
 
 //     function drawMirror(subtype, value) {
 

@@ -42,34 +42,35 @@ Towers.advanced = new Tower('advanced', [
         },
 
         '2-1': {            
-            requires: 7
+            requires: 7,
+            paths:'UR'
         },
         '2-2': {
-
+            paths:'UR'
         },
         '2-3': {
-
+            paths:'UR'
         },
         '2-4': {
-
+            paths:'R'
         },
         '2-5': {
-
+            paths:'U'
         },
         '2-6': {
-
+            paths:'DUR'
         },
         '2-7': {
-
+            paths:'LU'
         },
         '2-8': {
 
         },
         '2-9': {
-
+            paths:'U'
         },
         '2-X': {
-
+            requires: 36
         },
 
         '3-1': {

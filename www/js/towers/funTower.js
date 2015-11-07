@@ -92,7 +92,7 @@ Towers.fun = new Tower('fun', [
         },
        
         '5-1': { 
-            requires: 20,
+            requires: 19,
             paths: 'UR',
         },
         '5-2': {
@@ -112,7 +112,7 @@ Towers.fun = new Tower('fun', [
         },
         
         '6-1': { 
-            requires: 26,
+            requires: 24,
             paths: 'UR',
         },
         '6-2': {
@@ -132,7 +132,7 @@ Towers.fun = new Tower('fun', [
         },
         
         '7-1': { 
-            requires: 32,
+            requires: 29,
             paths: 'UR',
         },
         '7-2': {
@@ -152,7 +152,7 @@ Towers.fun = new Tower('fun', [
         },
         
         '8-1': { 
-            requires: 38,
+            requires: 34,
             paths: 'R',
         },
         '8-2': {
