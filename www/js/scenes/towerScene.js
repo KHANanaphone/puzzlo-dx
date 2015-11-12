@@ -1,7 +1,6 @@
 var TowerScene = {
-    categoryId: null,
-    components: {
-    }
+    category: null,
+    shift: 0
 };
 
 TowerScene.init = function(){
@@ -11,15 +10,41 @@ TowerScene.init = function(){
 
 TowerScene.loadTowers = function(categoryId){
 
-    TowerScene.categoryId = categoryId;
-    TowerScene.category = PUZZLO.tower_categories[categoryId];
-    TowerScene.progress = Main.progressInfo[categoryId];
-    TowerScene.setupTowers();
-    //TowerScene.updateSolved();
+    var cat = PUZZLO.tower_categories[categoryId];
+    TowerScene.category = cat;
+    TowerScene.shift = 0;
+
+    drawTowers(cat);
+    TowerScene.updateShift(false);
+
+    function drawTowers(category){
+
+        var $towers = $('#tower-scene .towers');
+
+        for(var towerName in category.towers){
+
+            var tower = category.towers[towerName];
+            var $tower = $('#hidden .tower').clone();
+            $tower.find('.tower-name').text(towerName);
+
+            for(var i = 0; i < tower.puzzles.length; i++){
+
+                var $row = $('#hidden .tower-row').clone();
+
+                $row.data({
+                    'name': towerName,
+                    'index': i
+                });
+
+                $tower.append($row);
+            }
+
+            $towers.append($tower);
+        }
+    }
 };
 
-TowerScene.setupTowers = function(){
-
+TowerScene.updateShift = function(animate){
 
 };
 

@@ -8,7 +8,7 @@
 #tower-scene .nav-arrow .lock{
 
     display: none;
-    opacity: 1;
+    opacity: 0.4;
     fill: black;
     stroke: #FFF;
     stroke-width: 8;
@@ -16,13 +16,17 @@
     transition: opacity 0.25s;
 }
 
+#tower-scene .nav-arrow .lock:hover{
+
+    opacity: 1;
+}
 #tower-scene .nav-arrow .lock text{
 
     font-size: 50px;
     text-anchor: middle;
     stroke: none;
     fill: white;
-    alignment-baseline: middle;
+    alignment-baseline: 'middle'
 }
 
 #tower-scene .nav-arrow[locked="true"] .lock{
