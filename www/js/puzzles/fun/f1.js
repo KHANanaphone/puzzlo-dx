@@ -1,7 +1,4 @@
-TOWERS.fun.f1 = {
-
-    name: 'Intro Tower',
-    puzzles: [{
+PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
 
         moves: 10,
         name: "Intro",
@@ -63,4 +60,4 @@ TOWERS.fun.f1 = {
             ['   ', '   ', 'DN1', '   ','   '],
         ]
     }]
-};
+);

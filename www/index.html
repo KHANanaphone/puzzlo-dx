@@ -31,6 +31,7 @@
     <script type="text/javascript" src="js/timer.js?v=1.04"></script>
 
     <script type="text/javascript" src="js/puzzles/puzzle.js"></script>
+    <script type="text/javascript" src="js/puzzles/towerCategory.js"></script>
     <script type="text/javascript" src="js/puzzles/fun/f1.js"></script>
     <script type="text/javascript" src="js/puzzles/fun/f2.js"></script>
     <!-- <script type="text/javascript" src="js/puzzles/fun/f3.js"></script>
@@ -141,19 +142,69 @@
         <div id="tower-scene" class="scene">
 
             <div class='back-button' onclick='TowerScene.back()'>
-                <svg viewbox='0,0,100,100'>
+                Back
+            </div>
+            <div class='nav-arrow nav-left'>
+                <svg class='arrow' viewbox='0,0,100,100' onclick='TowerScene.slideLeft()'>
                     <polygon points='5,50 50,5 50,30 95,30 95,70 50,70 50,95'></polygon>
+                </svg>
+                <svg class='lock' viewbox='0,0,200,150'>
+                    <path fill-rule="evenodd"
+                            d='
+                            M50,60
+                            l0,-10
+                            a50,50 0 0,1 100,0
+                            l0,10
+                            a15,15 0 0,1 15,15
+                            l0,60
+                            a15,15 0 0,1 -15,15
+                            l-100,0
+                            a15,15 0 0,1 -15,-15
+                            l0,-60
+                            a15,15 0 0,1 15,-15
+                            z
+                            m20,-5
+                            l0,-5
+                            a25,25 0 0,1 60,0
+                            l0,5
+                            z'
+                              ></path>
+                    <text x='100' y='110' class='req'>40</text>
+                </svg>
+            </div>
+            <div class='nav-arrow nav-right'>
+                <svg class='arrow' viewbox='0,0,100,100' onclick='TowerScene.slideRight()'>
+                    <polygon transform="scale(-1,1) translate(-100,0)" points='5,50 50,5 50,30 95,30 95,70 50,70 50,95'></polygon>
+                </svg>
+                <svg class='lock' viewbox='-10,-10,220,170'>
+                    <path fill-rule="evenodd"
+                            d='
+                            M50,60
+                            l0,-10
+                            a50,50 0 0,1 100,0
+                            l0,10
+                            a15,15 0 0,1 15,15
+                            l0,60
+                            a15,15 0 0,1 -15,15
+                            l-100,0
+                            a15,15 0 0,1 -15,-15
+                            l0,-60
+                            a15,15 0 0,1 15,-15
+                            z
+                            m20,-5
+                            l0,-5
+                            a25,25 0 0,1 60,0
+                            l0,5
+                            z'
+                              ></path>
+                    <text x='100' y='110' class='req'>40</text>
                 </svg>
             </div>
 
-            <div class='header'>
-                <span class='tower-name'>[Tower Name]</span>
+            <div class="towers">
             </div>
 
-            <div class="level-select">
-            </div>
-
-            <div class="tower-progress">
+            <div class="category-progress">
                 <div class="bar">
                     <div class='bar-hider'></div>
                 </div>

@@ -1,6 +1,6 @@
 (function(){
 
-	PIECES['D'] = {
+	PUZZLO.pieces['D'] = {
 
 		create: function(id){
 
@@ -25,7 +25,7 @@
 		}
 	};
 
-	PIECES['I'] = {
+	PUZZLO.pieces['I'] = {
 
 		create: function(id){
 

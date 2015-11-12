@@ -1,6 +1,6 @@
 (function(){
 
-	PIECES['['] = {
+	PUZZLO.pieces['['] = {
 
 		create: function(id){
 
@@ -23,7 +23,7 @@
 		}
 	};
 
-	PIECES['{'] = {
+	PUZZLO.pieces['{'] = {
 
 		create: function(id){
 
@@ -59,15 +59,15 @@
 
 	function applyLogic(tile, action){
 
-		if(this.inverted){	
-				
+		if(this.inverted){
+
 			if(action.color == this.color)
 				tile.clear();
 		}
-		else{	
+		else{
 
 			if(action.color != this.color)
-				tile.clear();		
+				tile.clear();
 		}
 
 		return true;

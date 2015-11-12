@@ -1,0 +1,73 @@
+#tower-scene .nav-arrow {
+    position: absolute;
+    width: 14%;
+    top: 38%;
+    z-index: 15;
+}
+
+#tower-scene .nav-arrow .lock{
+
+    display: none;
+    opacity: 1;
+    fill: black;
+    stroke: #FFF;
+    stroke-width: 8;
+    -webkit-transition: opacity 0.25s; /* Safari */
+    transition: opacity 0.25s;
+}
+
+#tower-scene .nav-arrow .lock text{
+
+    font-size: 50px;
+    text-anchor: middle;
+    stroke: none;
+    fill: white;
+    alignment-baseline: middle;
+}
+
+#tower-scene .nav-arrow[locked="true"] .lock{
+
+    display: inline-block;
+}
+#tower-scene .nav-arrow[locked="true"] .arrow{
+
+    display: none;
+}
+
+#tower-scene .nav-arrow svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tower-scene .nav-arrow.nav-right {
+    right: 1%;
+}
+
+#tower-scene .nav-arrow.nav-left {
+    left: 1%;
+}
+
+#tower-scene .nav-arrow .arrow{
+
+    opacity: 0.4;
+    cursor: pointer;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+#tower-scene .nav-arrow .arrow:hover{
+    opacity: 1;
+}
+
+#tower-scene .nav-arrow .arrow:hover polygon{
+    fill: black;
+}
+
+#tower-scene .nav-arrow .arrow polygon{
+
+    fill: transparent;
+    stroke: #FFF;
+    stroke-width: 3;
+    -webkit-transition: fill 0.25s; /* Safari */
+    transition: fill 0.25s;
+}

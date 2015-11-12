@@ -1,27 +1,10 @@
+@import 'tower/navarrows.css';
+
 #tower-scene {
 /*    background: url(../svg/tower1.png);*/
 }
 
-#tower-scene .header{
-    height: 7%;
-    width: 100%;
-    position: relative;
-    text-align: center;   
-    
-    font-family: 'Chunk';
-    color: white;
-    font-size: 2.5em;
-    padding-top: 0.2em;
-}
-
-#tower-scene .level-select{
-    height: 78%;
-    width: 92%;
-    position: relative;
-    margin: 5% auto;
-}
-
-#tower-scene .tower-progress{
+#tower-scene .category-progress{
     text-align: center;
     height: 6%;
     width: 94%;
@@ -53,11 +36,15 @@
     left: 0%;
     height: 100%;
     background-color: rgb(77, 68, 100);
-    
-/*
-    -webkit-transition: left 0.4s;
-    transition: left 0.4s;
-*/
+}
+
+/* TOWERS */
+
+#tower-scene .towers{
+    height: 85%;
+    width: 92%;
+    position: relative;
+    margin: 5% auto;
 }
 
 #tower-scene .level-select .level-tile{
@@ -67,11 +54,11 @@
 }
 
 #tower-scene .level-select .level-tile .inner{
-    
+
     margin: 15%;
     border: 0.3em solid white;
     background-color: white;
-    
+
     -webkit-transition: border-color 0.25s;
     transition: border-color 0.25s;
     -webkit-border-radius: 2px;
@@ -99,7 +86,7 @@
 }
 
 #tower-scene .level-tile svg{
-    
+
     margin-top: 0.32em;
 }
 
@@ -114,7 +101,7 @@
 }
 
 #tower-scene .level-tile .levelid{
-    
+
     font-size: 95px;
     text-anchor: middle;
     dominant-baseline: middle;
@@ -157,30 +144,30 @@
 }
 
 #tower-scene .level-tile .locked{
-    
+
     opacity: 0;
     -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
 }
 
 #tower-scene .level-tile[status='locked'] .locked{
-    
+
     opacity: 1;
 }
 
 #tower-scene .level-tile[status='locked'] .levelid,
 #tower-scene .level-tile[status='locked'] .checkmark{
-    
+
     opacity: 0;
 }
 
 #tower-scene .level-tile .locked path{
-    
+
     fill: #575;
 }
 
 #tower-scene .level-tile .locked text{
-    
+
     font-size: 90px;
     text-anchor: middle;
     dominant-baseline: middle;

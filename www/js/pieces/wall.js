@@ -1,4 +1,4 @@
-PIECES['W'] = {
+PUZZLO.pieces['W'] = {
 
 	create: function(id){
 

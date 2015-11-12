@@ -1,6 +1,6 @@
 (function(){
 
-	PIECES['S'] = {
+	PUZZLO.pieces['S'] = {
 
 		create: function(id){
 

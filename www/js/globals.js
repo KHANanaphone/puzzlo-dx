@@ -1,3 +1,4 @@
-var PIECES = {};
-var TOWERS = {};
-var GLOBALS = {};
+var PUZZLO = {
+    pieces : {},
+    tower_categories : {}
+};

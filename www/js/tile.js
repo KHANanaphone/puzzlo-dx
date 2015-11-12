@@ -38,17 +38,17 @@ Tile.prototype.clicked = function() {
     else if (next.contents.type == 'shifter'){
 
         if(next.contents.doShift(this))
-            PuzzleScene.nextItem();        
+            PuzzleScene.nextItem();
     }
     else if(this.contents.type != 'blank')
             return;
     else {
-        
+
         this.setContents(next.contents);
-        
+
         // if(nextItemTile.type == 'teleporter')
         //     TeleporterLogic.CheckTeleporters();
-        
+
     }
 }
 
@@ -57,15 +57,15 @@ Tile.prototype.setContents = function(contents) {
     if (typeof contents === 'object')
         this.contents = contents;
     else //it's a string id
-        this.contents = PIECES[contents[0]].create(contents);
-    
+        this.contents = PUZZLO.pieces[contents[0]].create(contents);
+
     this.drawContents();
 }
 
 Tile.prototype.drawContents = function() {
 
     var $icon = this.$tile.find('.icon').empty();
-    this.contents.draw($icon);    
+    this.contents.draw($icon);
 }
 
 
@@ -75,25 +75,25 @@ Tile.prototype.drawContents = function() {
 //         $mirror.find('polygon').attr('transform', 'rotate(' + (-45 * value) + ',100,100)');
 //         $icon.append($mirror);
 //     }
-    
+
 //     function drawPotion(subtype){
-        
+
 //         if(subtype == 'potion'){
-            
+
 //             var $potion = $('#hidden .potion-icon').clone();
 //             $icon.append($potion);
-//         }   
+//         }
 //         else if(subtype == 'poison'){
-            
+
 //             var $potion = $('#hidden .poison-icon').clone();
 //             $icon.append($potion);
-//         }    
+//         }
 //     }
-    
+
 //     function drawTeleporter(subtype){
-        
+
 //         var $teleporter = $('#hidden .teleporter-icon').clone().addClass(subtype);
-        
+
 // //        if(subtype == 't0')
 // //            $teleporter.find('text').text('\u2660');
 // //        else if(subtype == 't1')
@@ -102,7 +102,7 @@ Tile.prototype.drawContents = function() {
 // //            $teleporter.find('text').text('\u2665');
 // //        else if(subtype == 't3')
 // //            $teleporter.find('text').text('\u2666');
-                
+
 //         $icon.append($teleporter).removeClass('active');
 //     }
 
@@ -110,13 +110,13 @@ Tile.prototype.FlashBackground = function(color) {
 
     var $bg = this.$tile.find('.bg');
     var bgcolor = $bg.css('fill');
-    
+
     if(this.type == 'block' && this.value == 0){
         return;
-    }    
+    }
 
     TweenMax.fromTo($bg, Timer.interval / 800, {
-            fill: color 
+            fill: color
         }, {
             fill: bgcolor,
         onComplete: function() {
@@ -133,7 +133,7 @@ Tile.prototype.clear = function() {
 Tile.prototype.applyLogic = function(action){
 
     if(!this.contents.dontFlashBg){
-    
+
         if(action.color == 'blue')
             this.FlashBackground('#44B');
         else if(action.color == 'red')
@@ -157,7 +157,7 @@ Tile.prototype.applyLogic = function(action){
 
 //         if(this.value == 0)
 //             this.clear();
-//     } 
+//     }
 //     else if (tile.type == 'bomb') {
 
 //         BombLogic.Detonate(tile);
@@ -166,21 +166,21 @@ Tile.prototype.applyLogic = function(action){
 //         return true;
 //     }
 //     else if (tile.type == 'mirror'){
-        
+
 //         return MirrorLogic.ApplyLogic(action, tile);
 //     }
 //     else if (tile.type == 'potion'){
-        
+
 //         if(tile.subtype == 'poison')
 //             PotionLogic.ApplyPoison();
 //         else
 //             PotionLogic.ApplyPotion();
-        
+
 //         tile.Clear();
 //         return true;
-//     } 
+//     }
 //     else if(tile.type == 'teleporter'){
-        
+
 //         return TeleporterLogic.ApplyLogic(action, tile);
 //     }
 // };

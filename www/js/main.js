@@ -1,18 +1,8 @@
 var Main = {
-    storageId: 'pdx3',
-    categories: {
-        fun: {id: 'fun', name: 'Fun Towers'},
-        advanced: {id: 'advanced', name: 'Advanced Towers'},
-        dx: {id: 'dx', name: 'DX Towers'}
-    }
+    storageId: 'pdx3'
 };
 
 $(document).ready(function(){
-
-    for(var id in Main.categories){
-        var cat = Main.categories[id];
-        TOWERS[cat.id] = {};
-    }
 
     document.addEventListener("deviceready", deviceReady, false);
     FastClick.attach(document.body);
@@ -74,18 +64,15 @@ Main.loadProgressInfo = function(){
 
         var obj = {};
 
-        for(var catName in TOWERS){
+        for(var catName in PUZZLO.tower_categories){
 
-            var cat = TOWERS[catName];
-            for(var towerId in cat){
+            obj[catName] = {totalSolved: 0};
 
-                var tower = cat[towerId];
+            for(var towerId in PUZZLO.tower_categories[catName].towers){
 
-                obj[towerId] = {
-                    name: tower.name
-                    solved: 0,
-                    max: tower.puzzles.length
-                };
+                var tower = catName[towerId];
+                obj[catName][towerId] = 0
+                obj[catName].totalSolved += 0; //lol
             }
         };
 

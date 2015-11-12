@@ -8,15 +8,15 @@ html, body{
 #main-content{
 	position: relative;
 	margin: 0 auto;
-    
+
     height: 100%;
     width: 100%;
     margin: 0;
-    
+
     -webkit-transition: background-color 0.4s;
     transition: background-color 0.4s;
     overflow: hidden;
-    
+
     background-color: #445;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#445+1,000000+100 */
     background: #445; /* Old browsers */
@@ -85,7 +85,7 @@ html, body{
 }
 
 #change-link {
-    
+
     position: absolute;
     right: 1vh;
     top: 1vh;
@@ -103,13 +103,17 @@ html, body{
 }
 
 .back-button{
-    
+
     position: absolute;
     left: 2%;
-    top: 1%;
-    height: 7%;
-    width: 12%;
+    top: 2%;
+    color: white;
+    font-family: 'Makhina';
+    font-size: 1.7em;
     opacity: 0.4;
+    -ms-transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
     cursor: pointer;
     -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
