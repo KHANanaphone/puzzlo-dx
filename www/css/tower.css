@@ -1,4 +1,5 @@
 @import 'tower/navarrows.css';
+@import 'tower/towerSection.css';
 
 #tower-scene {
 /*    background: url(../svg/tower1.png);*/
@@ -36,16 +37,12 @@
     left: 0%;
     height: 100%;
     background-color: rgb(77, 68, 100);
+
+    transition: left 0.25s;
+    -webkit-transition: left: 0.25s;
 }
 
 /* TOWERS */
-
-#tower-scene .towers{
-    height: 85%;
-    width: 92%;
-    position: relative;
-    margin: 5% auto;
-}
 
 #tower-scene .level-select .level-tile{
     position: absolute;

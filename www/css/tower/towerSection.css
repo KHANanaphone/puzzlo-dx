@@ -1,0 +1,93 @@
+#tower-scene .tower-slider{
+    height: 85%;
+    width: 92%;
+    position: relative;
+    margin: 5% auto;
+    overflow: hidden;
+}
+
+#tower-scene .tower-section{
+    margin-left: 0%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    -webkit-transition: margin-left 0.25s;
+    transition: margin-left 0.25s;
+}
+
+#tower-scene .tower-section .tower{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#tower-scene .tower-section .tower-name{
+
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Patua One';
+    text-align: center;
+}
+
+#tower-scene .tower-rows{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#tower-scene .tower-row{
+
+    height: 3.8em;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 1% auto;
+    width: 70%;
+    border: 0.3em solid #FFF;
+    cursor: pointer;
+
+    -webkit-transition: border-color 0.25s, background-color 0.25s,opacity 0.25s;
+    transition: border-color 0.25s, background-color 0.25s,opacity 0.25s;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#tower-scene .tower-row[status='locked']{
+
+    opacity: 0.25;
+    cursor: default;
+}
+
+#tower-scene .tower-row[status='locked'] .puzzle-name{
+
+    color: transparent;
+}
+
+#tower-scene .tower-row[status='solved']{
+
+    border-color: #82D882;
+    background-color: rgba(92, 169, 92, 0.7);
+}
+
+#tower-scene .tower-row:not([status='locked']):hover{
+
+    border-color: #8A88CC;
+    background-color: rgba(141, 139, 177, 0.7);
+}
+
+#tower-scene .puzzle-name{
+
+    font-family: 'Patua One';
+    color: white;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 2em;
+
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+
+}

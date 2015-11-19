@@ -2,7 +2,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
 
         moves: 10,
         name: "Intro",
-        description: "Use the colored arrowed to destroy all of the diamonds.",
+        description: "Use the colored arrows to destroy all of the diamonds.",
         contents: [
             ['DN1', '   ', '   ', '   '],
             ['DN1', '   ', '   ', '   '],

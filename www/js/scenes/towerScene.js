@@ -15,28 +15,50 @@ TowerScene.loadTowers = function(categoryId){
     TowerScene.shift = 0;
 
     drawTowers(cat);
-    TowerScene.updateShift(false);
+    TowerScene.updateShift();
+    TowerScene.updateSolved();
 
     function drawTowers(category){
 
-        var $towers = $('#tower-scene .towers');
+        var $towers = $('#tower-scene .tower-section').empty();
 
-        for(var towerName in category.towers){
+        for(var t = 0; t < category.towers.length; t++){
 
-            var tower = category.towers[towerName];
+            var tower = category.towers[t];
+            var numSolved = Main.progressInfo[cat.id][t];
             var $tower = $('#hidden .tower').clone();
-            $tower.find('.tower-name').text(towerName);
+            $tower.find('.tower-name').text(tower.name);
+            $tower.css('left', (t * 100) + '%');
 
             for(var i = 0; i < tower.puzzles.length; i++){
 
+                var puzz = tower.puzzles[i];
                 var $row = $('#hidden .tower-row').clone();
 
                 $row.data({
-                    'name': towerName,
-                    'index': i
+                    'puzzle': puzz,
+                    'towerIndex': t,
+                    'puzzleIndex': i
                 });
 
-                $tower.append($row);
+                $row.find('.puzzle-name').text(puzz.name);
+                $row.click(function(){
+
+                    if($(this).attr('status') == 'locked')
+                        return;
+
+                    var data = $(this).data();
+
+                    TowerScene.currentPuzzle = {
+                        tower: data.towerIndex,
+                        puzzle: data.puzzleIndex
+                    };
+
+                    PuzzleScene.showPuzzle(new Puzzle(data.puzzle));
+                });
+
+                $row.attr('status', i > numSolved ? 'locked' : (i < numSolved ? 'solved' : 'unlocked'));
+                $tower.find('.tower-rows').prepend($row);
             }
 
             $towers.append($tower);
@@ -44,8 +66,38 @@ TowerScene.loadTowers = function(categoryId){
     }
 };
 
-TowerScene.updateShift = function(animate){
+TowerScene.updateShift = function(){
 
+    var shift = TowerScene.shift;
+    var category = TowerScene.category;
+    var $left = $('#tower-scene .nav-left');
+    var $right = $('#tower-scene .nav-right');
+    $('#tower-scene .tower-section').css('margin-left', (shift * -100) + '%');
+
+    if(shift == 0)
+        $left.hide();
+    else
+        $left.show();
+
+    var rightTower = category.towers[shift + 1];
+
+    if(!rightTower)
+        $right.hide();
+    else if(rightTower.required > Main.progressInfo[category.id].solved){
+        $right.show();
+        $right.attr('locked', true);
+        $right.find('.req').text(rightTower.required);
+    }
+    else {
+        $right.show();
+        $right.attr('locked', false);
+    }
+};
+
+TowerScene.slide = function(i){
+
+    TowerScene.shift += i;
+    TowerScene.updateShift();
 };
 
 TowerScene.showAndUpdateTile = function(node, animate){
@@ -115,32 +167,50 @@ TowerScene.showTilesConnectedTo = function(node, animate){
     }
 };
 
-TowerScene.setSolved = function(towerId){
+TowerScene.setSolved = function(){
 
-    // if(TowerScene.progress.solved[puzzleId] == 1)
-    //     return;
-    //
-    // TowerScene.progress.solved[puzzleId] = 1;
-    // TowerScene.progress.solvedCount++;
-    // TowerScene.updateSolved();
-    // TowerScene.showAndUpdateTile(TowerScene.tower.idMap[puzzleId], true);
-    //
-    // for(var lockedId in TowerScene.locked){
-    //
-    //     var puzz = TowerScene.tower.idMap[lockedId];
-    //     if(TowerScene.progress.solvedCount >= puzz.requires)
-    //         TowerScene.showAndUpdateTile(puzz, true);
-    // }
-    //
-    // MenuScene.updatePcts();
-    // Main.saveProgressInfo();
+    var category = TowerScene.category.id;
+    var tower = TowerScene.currentPuzzle.tower;
+    var puzzle = TowerScene.currentPuzzle.puzzle;
+
+    if(!saveProgress(category, tower, puzzle))
+        return;
+
+    setTimeout(function(){
+
+        $('#tower-scene .tower-section .tower')
+        .eq(tower).find('.tower-row')
+        .eq((puzzle + 1) * -1).attr('status', 'solved');
+
+        $('#tower-scene .tower-section .tower')
+        .eq(tower).find('.tower-row')
+        .eq((puzzle + 2) * -1).attr('status', 'unlocked');
+
+        TowerScene.updateSolved();
+        TowerScene.updateShift();
+
+    }, 300);
+
+    function saveProgress(cat, tower, puzzle){
+
+        if(Main.progressInfo[cat][tower] != puzzle)
+            return false;
+
+        Main.progressInfo[cat][tower] = puzzle + 1;
+        Main.progressInfo[cat].solved++;
+        Main.saveProgressInfo();
+        return true;
+    }
 };
 
 TowerScene.updateSolved = function(){
 
-    var pct = (TowerScene.progress.solvedCount / TowerScene.tower.puzzleCount) * 100;
-    $('#tower-scene .tower-progress .bar-hider').css('left', pct + '%');
-    $('#tower-scene .tower-progress .check-count').text(TowerScene.progress.solvedCount);
+    var info = Main.progressInfo[TowerScene.category.id]
+    var pct = info.solved / info.puzzles * 100;
+    $('#tower-scene .category-progress .bar-hider').css('left', pct + '%');
+    $('#tower-scene .category-progress .check-count').text(info.solved);
+
+    MenuScene.updatePcts();
 };
 
 TowerScene.back = function(){

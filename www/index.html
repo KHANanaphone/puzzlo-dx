@@ -32,18 +32,20 @@
 
     <script type="text/javascript" src="js/puzzles/puzzle.js"></script>
     <script type="text/javascript" src="js/puzzles/towerCategory.js"></script>
+
     <script type="text/javascript" src="js/puzzles/fun/f1.js"></script>
     <script type="text/javascript" src="js/puzzles/fun/f2.js"></script>
-    <!-- <script type="text/javascript" src="js/puzzles/fun/f3.js"></script>
+    <script type="text/javascript" src="js/puzzles/fun/f3.js"></script>
     <script type="text/javascript" src="js/puzzles/fun/f4.js"></script>
     <script type="text/javascript" src="js/puzzles/fun/f5.js"></script>
     <script type="text/javascript" src="js/puzzles/fun/f6.js"></script>
     <script type="text/javascript" src="js/puzzles/fun/f7.js"></script>
-    <script type="text/javascript" src="js/puzzles/fun/f8.js"></script>
-    <script type="text/javascript" src="js/puzzles/adv/section1.js"></script>
-    <script type="text/javascript" src="js/puzzles/adv/section2.js"></script>
-    <script type="text/javascript" src="js/puzzles/adv/section3.js"></script>
-    <script type="text/javascript" src="js/puzzles/adv/section4.js"></script> -->
+
+    <!-- <script type="text/javascript" src="js/puzzles/adv/a1.js"></script>
+    <script type="text/javascript" src="js/puzzles/adv/a2.js"></script>
+    <script type="text/javascript" src="js/puzzles/adv/a3.js"></script>
+    <script type="text/javascript" src="js/puzzles/adv/a4.js"></script>
+    <script type="text/javascript" src="js/puzzles/adv/a5.js"></script> -->
 
     <script type="text/javascript" src="js/pieces/blank.js?v=1.04"></script>
     <script type="text/javascript" src="js/pieces/block.js?v=1.04"></script>
@@ -64,9 +66,7 @@
         <div id="puzzle-scene" class="scene">
 
             <div class='back-button' onclick='PuzzleScene.back()'>
-                <svg viewbox='0,0,100,100'>
-                    <polygon points='5,50 50,5 50,30 95,30 95,70 50,70 50,95'></polygon>
-                </svg>
+                Back
             </div>
             <div class='puzzle-id'></div>
 
@@ -145,7 +145,7 @@
                 Back
             </div>
             <div class='nav-arrow nav-left'>
-                <svg class='arrow' viewbox='0,0,100,100' onclick='TowerScene.slideLeft()'>
+                <svg class='arrow' viewbox='0,0,100,100' onclick='TowerScene.slide(-1)'>
                     <polygon points='5,50 50,5 50,30 95,30 95,70 50,70 50,95'></polygon>
                 </svg>
                 <svg class='lock' viewbox='0,0,200,150'>
@@ -173,7 +173,7 @@
                 </svg>
             </div>
             <div class='nav-arrow nav-right'>
-                <svg class='arrow' viewbox='0,0,100,100' onclick='TowerScene.slideRight()'>
+                <svg class='arrow' viewbox='0,0,100,100' onclick='TowerScene.slide(1)'>
                     <polygon transform="scale(-1,1) translate(-100,0)" points='5,50 50,5 50,30 95,30 95,70 50,70 50,95'></polygon>
                 </svg>
                 <svg class='lock' viewbox='-10,-10,220,170'>
@@ -201,7 +201,9 @@
                 </svg>
             </div>
 
-            <div class="towers">
+            <div class='tower-slider'>
+                <div class="tower-section">
+                </div>
             </div>
 
             <div class="category-progress">
@@ -338,6 +340,16 @@
     <div class="menu-tower-row">
         <span class='name'></span>
         <span class='pct'></span>
+    </div>
+
+    <div class='tower'>
+        <div class='tower-name'></div>
+        <div class='tower-rows'>
+        </div>
+    </div>
+
+    <div class='tower-row'>
+        <div class='puzzle-name'></div>
     </div>
 
     <div class='level-tile'>

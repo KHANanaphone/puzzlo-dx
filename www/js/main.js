@@ -1,5 +1,5 @@
 var Main = {
-    storageId: 'pdx3'
+    storageId: 'pdx6'
 };
 
 $(document).ready(function(){
@@ -60,26 +60,33 @@ Main.loadProgressInfo = function(){
 
     var storageString = localStorage[Main.storageId];
 
-    if(!storageString){
-
-        var obj = {};
-
-        for(var catName in PUZZLO.tower_categories){
-
-            obj[catName] = {totalSolved: 0};
-
-            for(var towerId in PUZZLO.tower_categories[catName].towers){
-
-                var tower = catName[towerId];
-                obj[catName][towerId] = 0
-                obj[catName].totalSolved += 0; //lol
-            }
-        };
-
-        Main.progressInfo = obj;
-    }
+    if(!storageString)
+        Main.progressInfo = {};
     else
         Main.progressInfo = JSON.parse(storageString);
+
+    for(var catName in PUZZLO.tower_categories){
+
+        if(!Main.progressInfo[catName])
+            Main.progressInfo[catName] = {};
+
+        var cat = Main.progressInfo[catName];
+        cat.solved = 0;
+        cat.puzzles = 0;
+
+        for(var t = 0; t < PUZZLO.tower_categories[catName].towers.length; t++){
+
+            var tower = PUZZLO.tower_categories[catName].towers[t];
+
+            if(!cat[t])
+                cat[t] = 0;
+
+            cat.solved += cat[t];
+            cat.puzzles += tower.puzzles.length;
+        }
+    };
+
+    Main.saveProgressInfo();
 };
 
 Main.saveProgressInfo = function(){

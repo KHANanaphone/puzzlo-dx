@@ -58,8 +58,8 @@ MenuScene.updatePcts = function(){
     $('#menu-scene .tower-select .menu-tower-row').each(function(){
 
         var id = $(this).data('categoryId');
-        var pct = Math.round(
-            100 * Main.progressInfo[id].totalSolved / PUZZLO.tower_categories[id].puzzleCount);
+        var info = Main.progressInfo[id]
+        var pct = Math.round(info.solved / info.puzzles * 100);
 
         if(isNaN(pct))
             pct = 0;

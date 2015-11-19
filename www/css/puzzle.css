@@ -3,7 +3,7 @@
 /* LAYOUT */
 
 .popup{
-    
+
     position: absolute;
     z-index: 1000;
     top: 40%;
@@ -18,12 +18,12 @@
 }
 
 .popup .popup-text{
-    
+
     display: inline-block;
-    
-    font-family: Chunk;
+
+    font-family: Patua One;
     font-size: 1.6em;
-    
+
     position: absolute;
     top: 0;
     left: 0;
@@ -43,11 +43,11 @@
 }
 
 .popup .btn {
-    
+
     font-size: 1.2em;
     padding: 1%;
     text-transform: uppercase;
-    
+
     position: absolute;
     width: 38%;
     bottom: 6%;
@@ -55,13 +55,13 @@
 }
 
 #puzzle-name-section #puzzle-id{
-    
+
     font-size: 3.6em;
     line-height: 1em;
 }
 
 #puzzle-name-section #puzzle-name{
-    
+
     font-size: 1.8em;
     padding-left: 2%;
 }
@@ -87,11 +87,11 @@
 }
 
 #header-area .puzzle-name{
-    
+
     color: white;
     position: absolute;
     font-size: 2em;
-    font-family: 'Chunk';
+    font-family: 'Patua One';
     top: 20%;
     left: 10%;
     right: 10%;
@@ -100,7 +100,7 @@
 
 
 #header-area .retry-button{
-    
+
     position: absolute;
     right: 1%;
     top: 35%;
@@ -111,13 +111,13 @@
     -webkit-transform: rotate(40deg);
     transform: rotate(40deg);
     cursor: pointer;
-    
+
     -webkit-transition: color 0.25s;
     transition: color 0.25s;
 }
 
 #header-area .retry-button:hover{
-    
+
     color: white;
 }
 
@@ -140,7 +140,7 @@
     fill: rgba(255, 255, 255, 0.5);
 }
 
-/* ITEMS */ 
+/* ITEMS */
 #item-area {
 
     height: 10%;
@@ -150,9 +150,9 @@
 }
 
 #item-area > svg .bg{
-    /* 
+    /*
         doubled because it doesn't resize correctly when the parent's size is doubled
-        when shifting from inactive to active 
+        when shifting from inactive to active
     */
     width: 200%;
     height: 200%;
@@ -243,7 +243,7 @@
 }
 
 #shots-left-area{
-    font-family: 'Chunk';
+    font-family: 'Patua One';
     font-size: 2.4em;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
@@ -285,13 +285,13 @@
     color: rgb(156, 156, 156);
 
     font-size: 1.7em;
-    
+
     padding-left: 5%;
 
     -webkit-transition: color 0.2s;
 
     transition: color 0.2s;
-    
+
     text-decoration: none;
 
 }
@@ -348,7 +348,7 @@
 }
 
 .icon text{
-  
+
     font-family: 'Makhina';
     text-transform: uppercase;
 }

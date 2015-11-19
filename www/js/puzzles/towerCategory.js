@@ -2,7 +2,7 @@ function TowerCategory(id, name){
 
     this.id = id;
     this.name = name;
-    this.towers = {};
+    this.towers = [];
     this.puzzleCount = 0;
     this.towerCount = 0;
 };
@@ -15,7 +15,7 @@ TowerCategory.prototype.addTower = function(name, required, puzzles){
         puzzles: puzzles
     };
 
-    this.towers[name] = tower;
+    this.towers.push(tower);
     this.towerCount++;
     this.puzzleCount += puzzles.length;
 };

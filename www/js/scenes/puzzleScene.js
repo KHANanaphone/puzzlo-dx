@@ -13,7 +13,7 @@ var PuzzleScene = {
 };
 
 PuzzleScene.init = function(){
-    
+
     PuzzleScene.itemTiles = [];
 //
 //    for (var x = 0; x < 8; x++) {
@@ -26,12 +26,12 @@ PuzzleScene.init = function(){
  };
 
 PuzzleScene.showPuzzle = function(puzzle) {
-    
+
     PuzzleScene.refreshAll();
     PuzzleScene.solved = false;
     $('#bottom-buttons .btn').prop('disabled', false);
     $('#success-popup').hide();
-    $('#failure-popup').hide(); 
+    $('#failure-popup').hide();
     $('#tutorial-popup').hide();
 
     $('#puzzle-scene .puzzle-id').text(puzzle.id);
@@ -39,24 +39,24 @@ PuzzleScene.showPuzzle = function(puzzle) {
 
     PuzzleScene.setupBoard(puzzle);
     PuzzleScene.setupPuzzle(puzzle);
-    
+
     if(puzzle.description)
         showTutorialPopup(puzzle.description);
-    
+
     Main.showScene('puzzle');
     PuzzleScene.resizeTiles();
-    
+
     function showTutorialPopup(desc){
-        
+
         $('#tutorial-popup').fadeIn();
         $('#tutorial-popup .popup-text').text(desc);
     }
 };
 
 PuzzleScene.refreshAll = function(){
-    
+
     $('.clickit').removeClass('clickit');
-    
+
     $('#main-content').css('background-color', '');
     $('#bottom-area a').fadeIn();
     $('#success-popup').hide();
@@ -64,35 +64,35 @@ PuzzleScene.refreshAll = function(){
 };
 
 PuzzleScene.ClosePopup = function(){
-    
+
     $('#tutorial-popup').fadeOut();
 };
 
 PuzzleScene.resizeTiles = function(){
 
     var $tiles = $('#tiles');
-    
+
     var size = PuzzleScene.puzzleSize;
     var width = 2000 / size;
     var height = 2000 / size;
-    
+
     var offset = PuzzleScene.puzzle.width - PuzzleScene.puzzle.height;
     var vb = '0,0,2000,2000';
-    
+
     if(offset > 0)
         vb = '0,' + -0.5 * offset * height + ',2000,2000';
     else if(offset < 0)
         vb = 0.5 * offset * width + ',0,2000,2000';
 
     $('#tiles')[0].setAttribute('viewBox', vb);
-    
+
     $tiles.find('.puzzle-tile').each(function(){
-        
+
         var x = $(this).attr('tile-x');
         var y = $(this).attr('tile-y');
-        
+
         $(this).attr({
-            y: (y * height) + 'px', 
+            y: (y * height) + 'px',
             x: (x * width) + 'px',
             width: width + 'px',
             height: height + 'px'
@@ -101,44 +101,44 @@ PuzzleScene.resizeTiles = function(){
 };
 
 PuzzleScene.setupBoard = function(puzzle) {
-    
+
     PuzzleScene.puzzle = puzzle;
-    
-    var size = puzzle.width > puzzle.height ? puzzle.width : puzzle.height;   
+
+    var size = puzzle.width > puzzle.height ? puzzle.width : puzzle.height;
     size += 2;
     PuzzleScene.puzzleSize = size;
-    
+
     setupTiles();
     setLightnings();
     setIces();
     setBoard();
     setMovesMeter();
-    
-    function setupTiles(){        
-        
+
+    function setupTiles(){
+
         var $tiles = $('#tiles g').empty();
-        
+
         PuzzleScene.$tiles = [];
-        
+
         for(var i = 0; i < PuzzleScene.puzzleSize; i++){
-            
+
             PuzzleScene.$tiles[i] = [];
-            
+
             for(var j = 0; j < PuzzleScene.puzzleSize; j++){
-                
-                var $tile = $('#hidden .puzzle-tile').clone();                
-                $tile.attr('tile-x', j).attr('tile-y', i);                
+
+                var $tile = $('#hidden .puzzle-tile').clone();
+                $tile.attr('tile-x', j).attr('tile-y', i);
                 PuzzleScene.$tiles[i][j] = $tile;
                 $tiles.append($tile);
-            }            
-        }        
+            }
+        }
     };
-    
+
     function setLightnings() {
 
         PuzzleScene.shots.top = [];
         PuzzleScene.shots.bottom = [];
-        
+
         for (var i = 0; i < puzzle.width; i++) {
 
             var tile = new Lightning(PuzzleScene.$tiles[0][1 + i], true);
@@ -179,17 +179,17 @@ PuzzleScene.setupBoard = function(puzzle) {
                     x: j,
                     y: i
                 });
-                
+
                 PuzzleScene.board[i].push(tile);
             }
-        }        
+        }
     };
 
     function setMovesMeter(){
-        
+
         var max = PuzzleScene.puzzle.maxMoves;
         var $span = $('#shots-icons').empty();
-        
+
         for(var i = 0; i < max; i++){
             $span.append($('#hidden .dot').clone());
         }
@@ -197,7 +197,7 @@ PuzzleScene.setupBoard = function(puzzle) {
 };
 
 PuzzleScene.setupPuzzle = function() {
-    
+
     var puzzle = PuzzleScene.puzzle;
     puzzle.setup();
     PuzzleScene.UpdateMovesLeft();
@@ -230,7 +230,7 @@ PuzzleScene.setupPuzzle = function() {
                 PuzzleScene.board[j][i].setContents(puzzle.contents[j][i]);
             }
         }
-        
+
         // TeleporterLogic.CheckTeleporters();
     };
 
@@ -263,7 +263,7 @@ PuzzleScene.nextItem = function() {
 
     if(PuzzleScene.itemTiles.length == 0)
         return;
-    else 
+    else
         PuzzleScene.itemTiles.shift().$tile.remove();
 
     if (PuzzleScene.itemTiles.length > 0)
@@ -273,32 +273,32 @@ PuzzleScene.nextItem = function() {
 }
 
 PuzzleScene.retry = function() {
-    
+
     if(PuzzleScene.retrying)
         return;
-    
+
     PuzzleScene.retrying = true;
     PuzzleScene.solved = false;
-    
+
     var $button = $('#retry-button');
     $button.css('color', 'white');
     $('#tiles').fadeOut();
     PuzzleScene.refreshAll();
-    
+
     setTimeout(function(){
-            
+
         PuzzleScene.retrying = false;
         Timer.Stop();
         $button.css('color', '');
         PuzzleScene.setupPuzzle(PuzzleScene.puzzle);
         $('#tiles').fadeIn();
-        
+
     }, 400);
-    
+
 };
 
 PuzzleScene.back = function(){
-    
+
     if(!PuzzleScene.solved)
         Main.showScene('tower');
 };
@@ -313,15 +313,15 @@ PuzzleScene.UpdateMovesLeft = function() {
 
 //    var left = PuzzleScene.puzzle.movesLeft;
 //    var $span = $('#shots-icons .dot');
-//    
+//
 //    $span.each(function(index){
-//        
+//
 //        if(left > index)
 //            $(this).attr('class', 'dot filled');
 //        else
 //            $(this).attr('class', 'dot hollow');
 //    });
-//    
+//
     $('#shots-left-area .shots-left-value').text(PuzzleScene.puzzle.movesLeft);
 }
 
@@ -363,5 +363,5 @@ PuzzleScene.SolutionCheck = function() {
 PuzzleScene.solvedContinue = function(){
 
     Main.showScene('tower');
-    TowerScene.setSolved(this.puzzle.id);
+    TowerScene.setSolved();
 };
