@@ -59,7 +59,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
         items: ['DN1', 'DN1', 'BR '],
         contents: [
         	['DN1','DN1','DN1','WWW'],
-        	['   ','DN1','DN1','WWW'],
+        	['DN1','DN1','DN1','WWW'],
         	['DN1','DN1','DN1','WWW'],
         	['WWW','WWW','WWW','WWW']
         ]

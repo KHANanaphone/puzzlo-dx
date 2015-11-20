@@ -282,7 +282,7 @@ PuzzleScene.retry = function() {
 
     var $button = $('#retry-button');
     $button.css('color', 'white');
-    $('#tiles').fadeOut();
+    // $('#tiles').fadeOut();
     PuzzleScene.refreshAll();
 
     setTimeout(function(){
@@ -291,9 +291,9 @@ PuzzleScene.retry = function() {
         Timer.Stop();
         $button.css('color', '');
         PuzzleScene.setupPuzzle(PuzzleScene.puzzle);
-        $('#tiles').fadeIn();
+        // $('#tiles').fadeIn();
 
-    }, 400);
+    }, 1);
 
 };
 

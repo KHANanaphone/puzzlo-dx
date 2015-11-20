@@ -45,6 +45,7 @@ Tile.prototype.clicked = function() {
     else {
 
         this.setContents(next.contents);
+        PuzzleScene.nextItem();
 
         // if(nextItemTile.type == 'teleporter')
         //     TeleporterLogic.CheckTeleporters();

@@ -1,27 +1,39 @@
 PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
 
-        moves: 4,
-        name: "Bombs",
+        moves: 3,
+        name: "Reds",
         contents: [
-            ['DN1','[B]','DN1','   '],
-            ['   ','   ','   ','   '],
-            ['   ','DN3','[Y]','DN1']
+            ['DN1','   ','   ','   ','DN1'],
+            ['   ','DR1','   ','DR1','   '],
+            ['   ','   ','BR ','   ','   '],
+            ['   ','DR1','   ','DR1','   '],
+            ['DN1','   ','   ','   ','DN1']
         ]
     },{
 
         moves: 1,
-        name: "Bombs",
+        name: "Reds",
         contents: [
-            ['WWW','   ','   ','BR ','   ','   '],
-            ['WWW','   ','   ','   ','   ','   '],
-            ['WWW','[N]','   ','   ','   ','BR '],
-            ['DB1','   ','   ','   ','   ','   '],
-            ['WWW','   ','   ','BR ','   ','   ']
+            ['   ','DN1','   ','DN1','   '],
+            ['   ','   ','BR ','   ','DN1'],
+            ['   ','DR1','   ','BR ','   '],
+            ['DN1','   ','DN1','   ','DN2']
+        ]
+    },{
+
+        moves: 2,
+        name: "Red Block",
+        contents: [
+            ['DN1','   ','   ','   ','   '],
+            ['DN1','WWW','   ','   ','   '],
+            ['DN1','   ','BR ','   ','   '],
+            ['DN2','   ','   ','[R]','   '],
+            ['BR ','   ','   ','   ','DN1']
         ]
     },{
 
         moves: 3,
-        name: "Bombs",
+        name: "Reds",
         contents: [
             ['WWW','WWW','WWW','   ','   '],
             ['WWW','DN1','WWW','   ','   '],
@@ -31,40 +43,24 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
         ]
     },{
 
+        moves: 3,
+        name: "Reds",
+        contents: [
+            ['WWW','WWW','   ','WWW','BR '],
+            ['WWW','WWW','[N]','DR1','DN1'],
+            ['WWW','WWW','DR1','   ','DB1'],
+            ['WWW','DN1','[N]','   ','DN1'],
+            ['WWW','WWW','WWW','   ','   ']
+        ]
+    },{
+
         moves: 5,
-        name: "Bombs",
+        name: "Secret Code",
         contents: [
-            ['DB1','DN1','WWW','DN2','WWW'],
-            ['   ','[N]','   ','[N]','DN1'],
-            ['   ','   ','   ','[N]','   '],
-            ['   ','   ','   ','[N]','   '],
-            ['BR ','BR ','   ','DN1','   ']
-        ]
-    },{
-
-        moves: 10,
-        name: "Doom-o-cube",
-        contents: [
-            ['[N]','[N]','[N]','[N]','[N]'],
-            ['[N]','DB1','DB1','DY1','[N]'],
-            ['[N]','DY1','BR ','DY1','[N]'],
-            ['[N]','DY1','DB2','DB1','[N]'],
-            ['[N]','[N]','[N]','[N]','[N]']
-        ]
-    },{
-
-        moves: 4,
-        name: "Bombs",
-        contents: [
-            ['   ','   ','DN1','   ','   '],
-            ['   ','DN1','   ','DN1','   '],
-            ['DN1','   ','BR ','   ','DN1'],
-            ['   ','DN1','   ','DN1','   '],
-            ['   ','   ','DN1','   ','   '],
-            ['   ','DN1','   ','DN1','   '],
-            ['DN1','   ','BR ','   ','DN2'],
-            ['   ','DN1','   ','DN1','   '],
-            ['   ','   ','[N]','   ','   ']
+            ['DN1','   ','   ','   ','DY1','   ','DN1'],
+            ['   ','   ','   ','DY2','   ','   ','   '],
+            ['WWW','DR1','DR1','DR1','DR1','DR1','WWW'],
+            ['WWW','BR ','BR ','BR ','BR ','BR ','WWW']
         ]
     }]
 );
