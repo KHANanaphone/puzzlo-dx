@@ -1,138 +1,81 @@
-Puzzles.advanced['1-1'] = {
-    
-    moves: 3,   
-    name: "Inverted",
-    description: "These diamonds are the opposite, they can only be broken by their own color",
-    contents: [
-        ['IY1','   ','   ','   '],
-        ['   ','   ','   ','BR '],
-        ['IB1','   ','   ','   '],
-        ['   ','   ','   ','   '],
-        ['IR1','   ','   ','   ']
-    ]
-};
+PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 
-Puzzles.advanced['1-2'] = {
-    
-    moves: 2,   
-    name: "Inverted",
-    items: ['BR '],
+    moves: 2,
+    name: "New Bombs",
+    description: "Look at these mysterious blue and yellow bombs...",
+    contents: [
+        ['DN1','BB ','DN1','WWW','DN1','   ','   '],
+        ['   ','DN1','   ','WWW','BY ','DN1','DN1'],
+        ['   ','DN1','   ','WWW','DN1','   ','   '],
+    ]
+},{
+
+    moves: 2,
+    name: "",
+    items: ['BB ','BB '],
     contents: [
         ['   ','   ','   '],
-        ['   ','   ','   '],
-        ['IY1','IB1','IR1']
+        ['DN3','   ','DN3'],
+        ['   ','   ','   ']
     ]
-};
+},{
 
-Puzzles.advanced['1-3'] = {
-    
-    moves: 3,   
-    name: "Inverted",
-    description: "Blocks can also have the same properties",
-    items: ['BB ','BR '],
+    moves: 2,
+    name: "",
     contents: [
-        ['BR ','   ','   ','   ','   '],
-        ['   ','{Y}','   ','   ','   '],
-        ['   ','   ','{B}','   ','   '],
-        ['   ','   ','   ','{R}','   '],
-        ['   ','   ','   ','   ','IR1']
+        ['DN1','BB ','[N]]','DN1'],
+        ['   ','DN2','BY ','   '],
+        ['   ','   ','DN1','   '],
     ]
-};
+},{
 
-Puzzles.advanced['1-4'] = {
-    
-    moves: 4,   
-    name: "Inverted",
-    items: ['[N]','BR ','BR '],
+    moves: 1,
+    name: "Inkwell",
+    items: ['BY ','BY ','BY '],
     contents: [
-        ['WWW','WWW','DY1','WWW','WWW'],
-        ['WWW','   ','DY1','WWW','WWW'],
-        ['   ','   ','IY2','   ','   '],
-        ['WWW','   ','DY1','WWW','WWW'],
-        ['WWW','WWW','DY1','WWW','WWW']
+        ['WWW','WWW','WWW','WWW','WWW','WWW'],
+        ['   ','   ','   ','   ','WWW','WWW'],
+        ['WWW','WWW','   ','   ','WWW','WWW'],
+        ['WWW','   ','   ','BB ','WWW','WWW'],
+        ['WWW','BB ','   ','   ','   ','WWW'],
+        ['WWW','DN1','   ','   ','BB ','WWW'],
+        ['WWW','WWW','WWW','WWW','WWW','WWW']
     ]
-};
+},{
 
-Puzzles.advanced['1-5'] = {
-    
-    moves: 1,   
-    name: "Inverted",
-    items: ['BB ','BB ','BY ','BR '],
-    contents: [
-        ['   ','IR1','   ','   '],
-        ['WWW','   ','[N]','   '],
-        ['   ','   ','   ','   '],
-    ]
-};
-
-Puzzles.advanced['1-6'] = {
-    
-    moves: 1,   
-    name: "Inverted",
-    items: ['BR ','BR ','BR '],
+    moves: 1,
+    name: "",
+    items: ['BR ','BY '],
     contents: [
         ['   ','   ','   ','   ','   '],
-        ['   ','   ','   ','   ','   '],
-        ['   ','   ','IR3','   ','   '],
-        ['   ','   ','   ','   ','   '],
+        ['   ','DN1','DN1','   ','   '],
+        ['   ','DN1','   ','DN1','   '],
+        ['   ','DN2','DN1','DN1','   '],
         ['   ','   ','   ','   ','   ']
     ]
-};
+},{
 
-Puzzles.advanced['1-7'] = {
-    
-    moves: 2,   
-    name: "Inverted",
-    items: ['BB ','BY ','BB '],
+    moves: 5,
+    name: "",
+    items: ['BB ','BY '],
     contents: [
-        ['   ','   ','   ','   ','IB1','WWW'],
-        ['   ','DB1','DN1','DN1','IB1','WWW'],
-        ['   ','DY1','   ','   ','IB1','WWW'],
+        ['WWW','WWW','WWW','WWW'],
+        ['WWW','WWW','DN1','WWW'],
+        ['[N]','[N]','[N]','WWW'],
+        ['[N]','   ','[N]','WWW'],
+        ['[N]','[N]','[N]','WWW']
     ]
-};
+},{
 
-Puzzles.advanced['1-8'] = {
-    
-    moves: 3,   
-    name: "Inverted",
-    items: ['[N]'],
+    moves: 3,
+    name: "",
+    items: ['BB ','BY ', 'BR '],
     contents: [
-        ['IR1','WWW','   '],
-        ['   ','{Y}','   '],
-        ['   ','   ','BR '],
-        ['   ','   ','   '],
-        ['BR ','   ','DN2'],
-        ['   ','{R}','   ']
+        ['DR1','DY1','   ','   ','   ','   '],
+        ['   ','DB1','DR1','   ','   ','   '],
+        ['   ','   ','DY1','DB1','   ','   '],
+        ['   ','   ','   ','DR1','DY1','   '],
+        ['   ','   ','   ','   ','DB1','DR1'],
+        ['   ','   ','   ','   ','   ','DY1']
     ]
-};
-
-Puzzles.advanced['1-9'] = {
-    
-    moves: 2,   
-    name: "Inverted",
-    items: ['BB ','BB ','BY ','BR ','BR '],
-    contents: [
-        ['   ','   ','IR1','   ','   ','   '],
-        ['   ','   ','IY1','   ','   ','   '],
-        ['   ','   ','   ','   ','IB1','IR1'],
-        ['IR1','IB1','   ','   ','   ','   '],
-        ['   ','   ','   ','IY1','   ','   '],
-        ['   ','   ','   ','IR1','   ','   ']
-    ]
-};
-
-Puzzles.advanced['1-X'] = {
-    
-    moves: 2,   
-    name: "Inverted",
-    items: ['BB ','BB ','BY ','BY ','BR ','BR '],
-    contents: [
-        ['IR1','   ','   ','   ','   ','   ','IR1'],
-        ['   ','{B}','   ','   ','   ','{B}','   '],
-        ['   ','   ','IY1','   ','IY1','   ','   '],
-        ['   ','   ','   ','   ','   ','   ','   '],
-        ['   ','   ','IY1','   ','IY1','   ','   '],
-        ['   ','{B}','   ','   ','   ','{B}','   '],
-        ['IR1','   ','   ','   ','   ','   ','IR1']
-    ]
-};
+}]);
