@@ -14,7 +14,7 @@
 			if(id.indexOf('L') != -1)
 				xShift = -1;
 			else if(id.indexOf('R') != -1)
-				xShift = 1; 
+				xShift = 1;
 
 			return {
 
@@ -64,19 +64,20 @@
     	to.setContents(from.contents);
     	from.clear();
 
-    	var x = 200 * this.xShift;
-    	var y = 200 * this.yShift;
+    	var x = -300 * this.xShift;
+    	var y = -300 * this.yShift;
 
 	    TweenMax.fromTo(to.$tile.find('.icon'), 0.2, {
-	    		y: y + '%',
-	    		x: x + '%'
-	        }, {
-	    		y: '0%',
-	    		x: '0%',
-	        onComplete: function() {
+			attr: {y: y +'%', x: x+'%'}
+		},	{
+			attr: {y: 0, x: 0},
+			onUpdate: function(e){
+
+			},
+			onComplete: function() {
 
 	        }
-	    });
+		});
     }
 
 	function draw($tile){

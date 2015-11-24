@@ -12,30 +12,30 @@ PUZZLO.tower_categories.advanced.addTower('Inverted Tower', 5, [{
     ]
 },{
 
-    moves: 2,
-    name: "Inverted",
-    items: ['BR '],
+    moves: 3,
+    name: "",
+    description: "Blocks can also be inverted",
     contents: [
-        ['   ','   ','   '],
-        ['   ','   ','   '],
-        ['IY1','IB1','IR1']
+        ['   ','   ','IY1','   ','BR '],
+        ['   ','   ','IY1','   ','   '],
+        ['IB1','IB1','{R}','IB1','IB1'],
+        ['   ','   ','IY1','   ','   '],
+        ['   ','   ','IY1','   ','   ']
     ]
 },{
 
-    moves: 4,
-    name: "Inverted",
-    items: ['[N]','BR ','BR '],
+    moves: 7,
+    name: "",
     contents: [
-        ['WWW','WWW','DY1','WWW','WWW'],
-        ['WWW','   ','DY1','WWW','WWW'],
-        ['   ','   ','IY2','   ','   '],
-        ['WWW','   ','DY1','WWW','WWW'],
-        ['WWW','WWW','DY1','WWW','WWW']
+        ['IB1','IB1','IY1','IB1'],
+        ['IB1','IY1','IB1','IY1'],
+        ['IB1','IB1','IY1','IY1'],
+        ['IB1','IY1','IY1','IB1']
     ]
 },{
 
     moves: 1,
-    name: "Inverted",
+    name: "",
     items: ['BR ','BR ','BR '],
     contents: [
         ['   ','   ','   ','   ','   '],
@@ -47,7 +47,7 @@ PUZZLO.tower_categories.advanced.addTower('Inverted Tower', 5, [{
 },{
 
     moves: 1,
-    name: "Inverted",
+    name: "",
     items: ['BB ','BB ','BY ','BR '],
     contents: [
         ['   ','IR1','   ','   '],
@@ -57,7 +57,7 @@ PUZZLO.tower_categories.advanced.addTower('Inverted Tower', 5, [{
 },{
 
     moves: 3,
-    name: "Inverted",
+    name: "",
     items: ['[N]'],
     contents: [
         ['IR1','WWW','   '],
@@ -70,7 +70,7 @@ PUZZLO.tower_categories.advanced.addTower('Inverted Tower', 5, [{
 },{
 
     moves: 2,
-    name: "Inverted",
+    name: "",
     items: ['BB ','BB ','BY ','BR ','BR '],
     contents: [
         ['   ','   ','IR1','   ','   ','   '],

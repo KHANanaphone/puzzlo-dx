@@ -17,7 +17,7 @@
 .puzzle-tile[tile-type='ice'][ready='1'],
 .puzzle-tile[tile-type='lightning'][ready='1'] {
 
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 .puzzle-tile[tile-type='ice'] .arrow-in{
@@ -63,7 +63,7 @@
 }
 
 .icon .diamond-icon polygon{
-    
+
     stroke: white;
     stroke-width: 8px;
 }
@@ -152,21 +152,29 @@
     stroke: white;
 }
 
+/* SHIFTERS */
+
+.icon .shifter-icon polygon{
+
+    stroke: white;
+    stroke-width: 10px;
+}
+
 /* MIRRORS */
 
 .icon[tile-type='mirror'] polygon {
-    
+
     stroke-width: 10px;
 }
 
 .icon[tile-type='mirror'][tile-subtype='normal'] polygon {
-    
+
     stroke: black;
     fill: black;
 }
 
 .icon[tile-type='mirror'][tile-subtype='splitter'] polygon {
-    
+
     stroke: black;
     fill: white;
 }
@@ -180,7 +188,7 @@
 }
 
 .icon[tile-type='teleporter'].active .spiral{
-    
+
     visibility: visible;
 }
 
@@ -193,7 +201,7 @@
 }
 
 .icon[tile-type='teleporter'] .spinner{
-    
+
     stroke-width: 7px;
 }
 
