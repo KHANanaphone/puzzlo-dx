@@ -67,16 +67,15 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
     ]
 },{
 
-    moves: 3,
+    moves: 1,
     name: "",
-    items: ['BB ','BY ','BR ','BB '],
+    items: ['BB ','BY ','BR '],
     contents: [
-        ['DN1','DB1','   ','   ','   ','   ','   '],
-        ['   ','DR1','DY1','   ','   ','   ','   '],
-        ['   ','   ','DN1','DB1','   ','   ','   '],
-        ['   ','   ','   ','DR1','DY1','   ','   '],
-        ['   ','   ','   ','   ','DN1','DB1','   '],
-        ['   ','DN1','   ','   ','   ','DR1','DY1'],
-        ['   ','   ','   ','   ','   ','   ','DN1']
+        ['WWW','WWW','WWW','   ','WWW'],
+        ['WWW','DN1','WWW','   ','WWW'],
+        ['WWW','[N]','WWW','   ','WWW'],
+        ['WWW','   ','   ','   ','WWW'],
+        ['WWW','   ','WWW','   ','WWW'],
+        ['WWW','WWW','WWW','WWW','WWW'],
     ]
 }]);

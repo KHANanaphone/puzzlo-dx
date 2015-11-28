@@ -73,17 +73,15 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     ]
 },{
 
-    moves: 4,
-    name: "Boggity Boo",
-    items: ['SD ','SD ','SR ','SD '],
+    moves: 1,
+    name: "",
+    items: ['SR ','SRU','SL ','SLU','SR '],
     contents: [
-        ['WWW','WWW','WWW','   ','   '],
-        ['WWW','Dn3','WWW','[N]','   '],
-        ['   ','[N]','   ','   ','WWW'],
-        ['WWW','[N]','   ','   ','WWW'],
-        ['WWW','[N]','WWW','   ','   '],
-        ['   ','   ','   ','BB ','BR '],
-        ['   ','   ','   ','WWW','   ']
+        ['   ','   ','   ','   ','   ','   '],
+        ['   ','DN1','DN1','DN1','   ','   '],
+        ['   ','   ','   ','DN1','   ','   '],
+        ['   ','BB ','DN1','DN1','   ','   '],
+        ['   ','   ','   ','   ','   ','   ']
     ]
 }
 
