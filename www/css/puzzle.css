@@ -133,6 +133,7 @@
 
 #tile-area.clickable .puzzle-tile[tile-type="board"]{
     cursor: pointer;
+    pointer-events:all;
 }
 
 #tile-area.clickable .puzzle-tile[tile-type="board"]:hover .bg{

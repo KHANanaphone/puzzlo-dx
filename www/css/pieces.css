@@ -8,6 +8,8 @@
 
 .puzzle-tile[tile-type='ice'][ready='1']:hover .bg{
     fill: rgba(185, 195, 255, 0.5);
+    fill: black;
+    visibility: hidden;
 }
 
 .puzzle-tile[tile-type='lightning'][ready='1']:hover .bg{
@@ -71,6 +73,7 @@
 .icon .diamond-icon[color='normal'] polygon,
 .icon .block-icon[color='normal'] polygon {
 
+    fill: #000;
     fill: url(#grad_diamond_normal);
 }
 
@@ -78,6 +81,7 @@
 .icon .block-icon[color='blue'] polygon,
 .icon .bomb-icon[color='blue'] path {
 
+    fill: #66B;
     fill: url(#grad_diamond_blue);
 }
 
@@ -85,6 +89,7 @@
 .icon .block-icon[color='red'] polygon,
 .icon .bomb-icon[color='red'] path  {
 
+    fill: #B66;
     fill: url(#grad_diamond_red);
 }
 
@@ -92,6 +97,7 @@
 .icon .block-icon[color='yellow'] polygon,
 .icon .bomb-icon[color='yellow'] path  {
 
+    fill: #CC6;
     fill: url(#grad_diamond_yellow);
 }
 
