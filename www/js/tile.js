@@ -69,59 +69,21 @@ Tile.prototype.drawContents = function() {
     this.contents.draw($icon);
 }
 
-
-//     function drawMirror(subtype, value) {
-
-//         var $mirror = $('#hidden .mirror-icon').clone();
-//         $mirror.find('polygon').attr('transform', 'rotate(' + (-45 * value) + ',100,100)');
-//         $icon.append($mirror);
-//     }
-
-//     function drawPotion(subtype){
-
-//         if(subtype == 'potion'){
-
-//             var $potion = $('#hidden .potion-icon').clone();
-//             $icon.append($potion);
-//         }
-//         else if(subtype == 'poison'){
-
-//             var $potion = $('#hidden .poison-icon').clone();
-//             $icon.append($potion);
-//         }
-//     }
-
-//     function drawTeleporter(subtype){
-
-//         var $teleporter = $('#hidden .teleporter-icon').clone().addClass(subtype);
-
-// //        if(subtype == 't0')
-// //            $teleporter.find('text').text('\u2660');
-// //        else if(subtype == 't1')
-// //            $teleporter.find('text').text('\u2663');
-// //        else if(subtype == 't2')
-// //            $teleporter.find('text').text('\u2665');
-// //        else if(subtype == 't3')
-// //            $teleporter.find('text').text('\u2666');
-
-//         $icon.append($teleporter).removeClass('active');
-//     }
-
-Tile.prototype.FlashBackground = function(color) {
+Tile.prototype.flashBackground = function(color) {
 
     var $bg = this.$tile.find('.bg');
-    var bgcolor = $bg.css('fill');
+    var bgcolor = $bg.css('background-color');
 
     if(this.type == 'block' && this.value == 0){
         return;
     }
 
     TweenMax.fromTo($bg, Timer.interval / 800, {
-            fill: color
+            backgroundColor: color
         }, {
-            fill: bgcolor,
+            backgroundColor: bgcolor,
         onComplete: function() {
-            $bg.css('fill', '');
+            $bg.css('background-color', '');
         }
     });
 }
@@ -136,11 +98,11 @@ Tile.prototype.applyLogic = function(action){
     if(!this.contents.dontFlashBg){
 
         if(action.color == 'blue')
-            this.FlashBackground('#44B');
+            this.flashBackground('#44B');
         else if(action.color == 'red')
-            this.FlashBackground('red');
+            this.flashBackground('red');
         else if(action.color == 'yellow')
-            this.FlashBackground('#EE7');
+            this.flashBackground('#EE7');
     }
 
     var finished = this.contents.applyLogic(this, action);

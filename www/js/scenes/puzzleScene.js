@@ -73,29 +73,29 @@ PuzzleScene.resizeTiles = function(){
     var $tiles = $('#tiles');
 
     var size = PuzzleScene.puzzleSize;
-    var width = 2000 / size;
-    var height = 2000 / size;
+    var width = 100 / size;
+    var height = 100 / size;
 
     var offset = PuzzleScene.puzzle.width - PuzzleScene.puzzle.height;
-    var vb = '0,0,2000,2000';
 
-    if(offset > 0)
-        vb = '0,' + -0.5 * offset * height + ',2000,2000';
-    else if(offset < 0)
-        vb = 0.5 * offset * width + ',0,2000,2000';
+    var left = offset > 0 ? 0 : offset * width * -0.5;
+    var top = offset < 0 ? 0 : offset * height * 0.5;
 
-    $('#tiles')[0].setAttribute('viewBox', vb);
+    $('#tiles').css({
+        left: left + '%',
+        top: top + '%'
+    });
 
     $tiles.find('.puzzle-tile').each(function(){
 
         var x = $(this).attr('tile-x');
         var y = $(this).attr('tile-y');
 
-        $(this).attr({
-            y: (y * height) + 'px',
-            x: (x * width) + 'px',
-            width: width + 'px',
-            height: height + 'px'
+        $(this).css({
+            top: (y * height) + '%',
+            left: (x * width) + '%',
+            width: width + '%',
+            height: height + '%'
         });
     });
 };
@@ -116,7 +116,7 @@ PuzzleScene.setupBoard = function(puzzle) {
 
     function setupTiles(){
 
-        var $tiles = $('#tiles g').empty();
+        var $tiles = $('#tiles').empty();
 
         PuzzleScene.$tiles = [];
 

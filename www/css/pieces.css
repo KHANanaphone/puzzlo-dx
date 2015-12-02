@@ -2,18 +2,16 @@
 .puzzle-tile[tile-type='ice'] .bg,
 .puzzle-tile[tile-type='lightning'] .bg{
 
-    -webkit-transition: fill 0.4s;
-    transition: fill 0.4s;
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;
 }
 
 .puzzle-tile[tile-type='ice'][ready='1']:hover .bg{
-    fill: rgba(185, 195, 255, 0.5);
-    fill: black;
-    visibility: hidden;
+    background-color: rgba(185, 195, 255, 0.5);
 }
 
 .puzzle-tile[tile-type='lightning'][ready='1']:hover .bg{
-    fill: rgba(255, 249, 142, 0.5);
+    background-color: rgba(255, 249, 142, 0.5);
 }
 
 .puzzle-tile[tile-type='ice'][ready='1'],
@@ -24,7 +22,7 @@
 
 .puzzle-tile[tile-type='ice'] .arrow-in{
 
-    fill: #77E;
+    fill: url(#grad_blue);
     -webkit-transition: fill 0.25s;
     transition: fill 0.25s;
 }
@@ -38,7 +36,7 @@
 
 .puzzle-tile[tile-type='lightning'] .arrow-in{
 
-    fill: #EE7;
+        fill: url(#grad_yellow);
     -webkit-transition: fill 0.25s;
     transition: fill 0.25s;
 }
@@ -61,6 +59,8 @@
 .icon text {
 
     fill: white;
+    font-family: 'Makhina';
+    text-transform: uppercase;
 
 }
 
@@ -74,7 +74,7 @@
 .icon .block-icon[color='normal'] polygon {
 
     fill: #000;
-    fill: url(#grad_diamond_normal);
+    fill: url(#grad_black);
 }
 
 .icon .diamond-icon[color='blue'] polygon,
@@ -82,7 +82,7 @@
 .icon .bomb-icon[color='blue'] path {
 
     fill: #66B;
-    fill: url(#grad_diamond_blue);
+    fill: url(#grad_blue);
 }
 
 .icon .diamond-icon[color='red'] polygon,
@@ -90,7 +90,7 @@
 .icon .bomb-icon[color='red'] path  {
 
     fill: #B66;
-    fill: url(#grad_diamond_red);
+    fill: url(#grad_red);
 }
 
 .icon .diamond-icon[color='yellow'] polygon,
@@ -98,7 +98,7 @@
 .icon .bomb-icon[color='yellow'] path  {
 
     fill: #CC6;
-    fill: url(#grad_diamond_yellow);
+    fill: url(#grad_yellow);
 }
 
 .icon .block-icon[inverted='true'] polygon{
@@ -110,39 +110,39 @@
 .icon .block-icon[color='blue'][inverted='true'] polygon{
 
     fill: white;
-    stroke: url(#grad_diamond_blue);
+    stroke: url(#grad_blue);
 }
 
 .icon .diamond-icon[color='red'][inverted='true'] polygon,
 .icon .block-icon[color='red'][inverted='true'] polygon{
 
     fill: white;
-    stroke: url(#grad_diamond_red);
+    stroke: url(#grad_red);
 }
 
 .icon .diamond-icon[color='yellow'][inverted='true'] polygon,
 .icon .block-icon[color='yellow'][inverted='true'] polygon{
 
     fill: white;
-    stroke: url(#grad_diamond_yellow);
+    stroke: url(#grad_yellow);
 }
 
 .icon .diamond-icon[color='blue'][inverted='true'] text{
 
     stroke: black;
-    fill: url(#grad_diamond_blue);
+    fill: url(#grad_blue);
 }
 
 .icon .diamond-icon[color='red'][inverted='true'] text{
 
     stroke: black;
-    fill: url(#grad_diamond_red);
+    fill: url(#grad_red);
 }
 
 .icon .diamond-icon[color='yellow'][inverted='true'] text{
 
     stroke: black;
-    fill: url(#grad_diamond_yellow);
+    fill: url(#grad_yellow);
 }
 
 /* BLOCKS */
