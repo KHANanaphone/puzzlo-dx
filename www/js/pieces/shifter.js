@@ -64,19 +64,13 @@
     	to.setContents(from.contents);
     	from.clear();
 
-    	var x = -300 * this.xShift;
-    	var y = -300 * this.yShift;
+    	var left = -100 * this.xShift;
+    	var top = -100 * this.yShift;
 
-	    TweenMax.fromTo(to.$tile.find('.icon'), 0.2, {
-			attr: {y: y +'%', x: x+'%'}
+	    TweenMax.fromTo(to.$tile.find('.icon'), 0.25, {
+			css: {top: top +'%', left: left+'%'}
 		},	{
-			attr: {y: 0, x: 0},
-			onUpdate: function(e){
-
-			},
-			onComplete: function() {
-
-	        }
+			css: {top: 0,left: 0}
 		});
     }
 

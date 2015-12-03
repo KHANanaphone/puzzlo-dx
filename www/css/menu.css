@@ -4,7 +4,7 @@
 }
 
 #menu-scene .tower-select{
-    
+
     height: 43%;
     border: 4px solid white;
     -webkit-border-radius: 8px;
@@ -26,21 +26,21 @@
 }
 
 #menu-scene .menu-tower-row{
-    
+
     z-index: 15;
     position: relative;
     height: 34%;
 }
 
 #menu-scene .menu-puzzle-tile{
-    
+
     width: 25%;
     height: 34%;
     display: inline-block;
 }
 
 #menu-scene .menu-puzzle-tile.even{
-    
+
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#AAB+1,000000+100 */
     background: #AAC; /* Old browsers */
     background: -moz-linear-gradient(top,  #AAC 1%, #779 100%); /* FF3.6+ */
@@ -53,7 +53,7 @@
 }
 
 #menu-scene .menu-puzzle-tile.odd{
-    
+
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#BBD+1,000000+100 */
     background: #BBD; /* Old browsers */
     background: -moz-linear-gradient(top,  #BBD 1%, #88A 100%); /* FF3.6+ */
@@ -66,13 +66,14 @@
 }
 
 #menu-scene .menu-tower-row{
-    
-    font-family: 'Makhina';
+
+    font-family: 'Play';
     font-size: 1.7em;
     padding: 1.1em 0.6em;
     color: white;
     cursor: pointer;
-    
+    font-weight: bold;
+
     -webkit-transition: color 0.4s;
     transition: color 0.4s;
 }
@@ -82,27 +83,27 @@
 }
 
 #menu-scene .menu-tower-row.fun{
-    
+
   text-shadow:
-   -1px -1px 0 #00F,  
+   -1px -1px 0 #00F,
     1px -1px 0 #00F,
    -1px  1px 0 #00F,
     1px  1px 0 #00F;
 }
 
 #menu-scene .menu-tower-row.advanced{
-    
+
   text-shadow:
-   -1px -1px 0 #AA0,  
+   -1px -1px 0 #AA0,
     1px -1px 0 #AA0,
    -1px  1px 0 #AA0,
     1px  1px 0 #AA0;
 }
 
 #menu-scene .menu-tower-row.dx{
-    
+
   text-shadow:
-   -1px -1px 0 #F00,  
+   -1px -1px 0 #F00,
     1px -1px 0 #F00,
    -1px  1px 0 #F00,
     1px  1px 0 #F00;
@@ -110,19 +111,19 @@
 
 #menu-scene .menu-tower-row.fun:hover,
 #menu-scene .menu-tower-row.fun.clicked{
-    
+
     color: #88F;
 }
 
 #menu-scene .menu-tower-row.advanced:hover,
 #menu-scene .menu-tower-row.advanced.clicked{
-    
+
     color: #FF0;
 }
 
 #menu-scene .menu-tower-row.dx:hover,
 #menu-scene .menu-tower-row.dx.clicked{
-    
+
     color: #F88;
 }
 
@@ -133,8 +134,9 @@
 
 #menu-scene .p text{
     fill: white;
-    font-family: 'Makhina';
+    font-family: 'Play';
     font-size: 225px;
+    font-weight: bold;
 }
 
 #menu-scene .uzzlo{
@@ -178,7 +180,7 @@
 
 #menu-scene .menu-bg .bg{
 
-    stroke: none;
+    border: none;
 }
 
 #menu-scene .puzzle-tile{

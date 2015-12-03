@@ -59,12 +59,14 @@
 .icon text {
 
     fill: white;
-    font-family: 'Makhina';
+    font-family: 'Play';
     text-transform: uppercase;
-
+    stroke: rgba(0, 0, 0, 0.4);
+    stroke-width: 5px;
+    font-weight: bold;
 }
 
-.icon .diamond-icon polygon{
+.icon .diamond-icon[inverted='true'] polygon{
 
     stroke: white;
     stroke-width: 8px;
@@ -129,19 +131,19 @@
 
 .icon .diamond-icon[color='blue'][inverted='true'] text{
 
-    stroke: black;
+    stroke-width: 2px;
     fill: url(#grad_blue);
 }
 
 .icon .diamond-icon[color='red'][inverted='true'] text{
 
-    stroke: black;
+    stroke-width: 2px;
     fill: url(#grad_red);
 }
 
 .icon .diamond-icon[color='yellow'][inverted='true'] text{
 
-    stroke: black;
+    stroke-width: 2px;
     fill: url(#grad_yellow);
 }
 
