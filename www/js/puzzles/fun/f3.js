@@ -15,8 +15,8 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
         description: "Blocks can also be colored.",
         contents: [
             ['   ','DN1','DN1','[B]'],
-            ['DN1','   ','   ','DN1'],
-            ['DN1','   ','   ','DN1'],
+            ['DN1','WWW','WWW','DN1'],
+            ['DN1','WWW','WWW','DN1'],
             ['[Y]','DN1','DN1','   ']
         ]
     },{

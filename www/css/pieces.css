@@ -22,7 +22,7 @@
 
 .puzzle-tile[tile-type='ice'] .arrow-in{
 
-    fill: url(#grad_blue);
+    /*fill: url(#grad_blue);*/
     -webkit-transition: fill 0.25s;
     transition: fill 0.25s;
 }
@@ -36,7 +36,7 @@
 
 .puzzle-tile[tile-type='lightning'] .arrow-in{
 
-        fill: url(#grad_yellow);
+        /*fill: url(#grad_yellow);*/
     -webkit-transition: fill 0.25s;
     transition: fill 0.25s;
 }
@@ -58,7 +58,6 @@
 
 .icon text {
 
-    fill: white;
     font-family: 'Play';
     text-transform: uppercase;
     stroke: rgba(0, 0, 0, 0.4);
@@ -66,41 +65,43 @@
     font-weight: bold;
 }
 
+.icon .diamond-icon[inverted='false'] text,
+.icon .bomb-icon text{
+
+        fill: white;
+}
+
 .icon .diamond-icon[inverted='true'] polygon{
 
-    stroke: white;
+    fill: white;
     stroke-width: 8px;
 }
 
 .icon .diamond-icon[color='normal'] polygon,
 .icon .block-icon[color='normal'] polygon {
 
-    fill: #000;
-    fill: url(#grad_black);
+    /*fill: url(#grad_black);*/
 }
 
 .icon .diamond-icon[color='blue'] polygon,
 .icon .block-icon[color='blue'] polygon,
 .icon .bomb-icon[color='blue'] path {
 
-    fill: #66B;
-    fill: url(#grad_blue);
+    /*fill: url(#grad_blue);*/
 }
 
 .icon .diamond-icon[color='red'] polygon,
 .icon .block-icon[color='red'] polygon,
 .icon .bomb-icon[color='red'] path  {
 
-    fill: #B66;
-    fill: url(#grad_red);
+    /*fill: url(#grad_red);*/
 }
 
 .icon .diamond-icon[color='yellow'] polygon,
 .icon .block-icon[color='yellow'] polygon,
 .icon .bomb-icon[color='yellow'] path  {
 
-    fill: #CC6;
-    fill: url(#grad_yellow);
+    /*fill: url(#grad_yellow);*/
 }
 
 .icon .block-icon[inverted='true'] polygon{
@@ -111,54 +112,57 @@
 .icon .diamond-icon[color='blue'][inverted='true'] polygon,
 .icon .block-icon[color='blue'][inverted='true'] polygon{
 
-    fill: white;
-    stroke: url(#grad_blue);
+    /*stroke: url(#grad_blue);*/
 }
 
 .icon .diamond-icon[color='red'][inverted='true'] polygon,
 .icon .block-icon[color='red'][inverted='true'] polygon{
 
-    fill: white;
-    stroke: url(#grad_red);
+    /*stroke: url(#grad_red);*/
 }
 
 .icon .diamond-icon[color='yellow'][inverted='true'] polygon,
 .icon .block-icon[color='yellow'][inverted='true'] polygon{
 
-    fill: white;
-    stroke: url(#grad_yellow);
+    /*stroke: url(#grad_yellow);*/
 }
 
 .icon .diamond-icon[color='blue'][inverted='true'] text{
 
     stroke-width: 2px;
-    fill: url(#grad_blue);
+    /*fill: url(#grad_blue);*/
 }
 
 .icon .diamond-icon[color='red'][inverted='true'] text{
 
     stroke-width: 2px;
-    fill: url(#grad_red);
+    /*fill: url(#grad_red);*/
 }
 
 .icon .diamond-icon[color='yellow'][inverted='true'] text{
 
     stroke-width: 2px;
-    fill: url(#grad_yellow);
+    /*fill: url(#grad_yellow);*/
 }
 
 /* BLOCKS */
 
-.icon .wall-icon polygon{
+.icon .wall-icon[inverted='false'] polygon{
+
     fill: black;
     stroke: black;
     stroke-width: 2px;
 }
 
-.icon .block-icon polygon {
+.icon .block-icon[inverted='false'] polygon {
 
     stroke: white;
 }
+.icon .block-icon[inverted='true'] polygon {
+
+    fill: white;
+}
+
 
 /* SHIFTERS */
 
@@ -172,7 +176,7 @@
 
 .icon .mirror-icon polygon {
 
-    fill: url('#grad_mirror');
+    /*fill: url('#grad_mirror');*/
     stroke: #444;
     stroke-width: 3px;
 }

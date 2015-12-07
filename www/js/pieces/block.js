@@ -54,6 +54,11 @@
         .attr('color', this.color)
         .attr('inverted', this.inverted);
 
+		if(this.inverted)
+			$block.find('polygon').attr('stroke', 'url(#grad_' + this.color + ')');
+		else
+			$block.find('polygon').attr('fill', 'url(#grad_' + this.color + ')');
+
         $tile.append($block);
 	};
 

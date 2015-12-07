@@ -16,7 +16,10 @@ PUZZLO.pieces['B'] = {
 			draw: function($tile){
 
 	            var $bomb = $('#hidden .bomb-icon').clone();
+				
 	            $bomb.attr('color', this.color);
+				$bomb.find('path').attr('fill', 'url(#grad_' + this.color + ')');
+
 	            $tile.append($bomb);
 			},
 

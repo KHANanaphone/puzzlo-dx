@@ -37,6 +37,18 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     ]
 },{
 
+    moves: 2,
+    name: "",
+    items: ['SUL','SUR','SDR','SDL'],
+    contents: [
+        ['WWW','WWW','WWW','WWW','WWW'],
+        ['WWW','   ','DN2','   ','   '],
+        ['WWW','   ','DN2','   ','   '],
+        ['WWW','   ','DN2','   ','   '],
+        ['WWW','   ','   ','   ','   ']
+    ]
+},{
+
     moves: 3,
     name: "",
     items: ['SL ','SU'],

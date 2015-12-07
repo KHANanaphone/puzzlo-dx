@@ -1,4 +1,4 @@
-PUZZLO.tower_categories.advanced.addTower('Challenge Tower', 25, [{
+PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 
     moves: 2,
     name: "",
@@ -89,6 +89,21 @@ PUZZLO.tower_categories.advanced.addTower('Challenge Tower', 25, [{
         ['WWW','   ','{Y}','WWW'],
         ['WWW','   ','BR ','WWW'],
         ['WWW','WWW','WWW','IR1']
+    ]
+}, {
+
+    moves: 3,
+    name: "",
+    items: ['DR3','M\\','M\\','SUR','SUL'],
+    contents: [
+        ['   ','   ','BR ','   ','WWW','   '],
+        ['   ','   ','   ','   ','   ','   '],
+        ['BR ','   ','   ','   ','BR ','WWW'],
+        ['   ','   ','   ','   ','   ','WWW'],
+        ['WWW','   ','BR ','   ','   ','WWW'],
+        ['WWW','   ','   ','{R}','   ','WWW'],
+        ['WWW','   ','   ','   ','[R]','WWW'],
+        ['WWW','WWW','WWW','   ','WWW','IR1']
     ]
 }
 

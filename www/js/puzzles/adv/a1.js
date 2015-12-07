@@ -55,6 +55,18 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
     ]
 },{
 
+    moves: 6,
+    name: "",
+    items: ['BY '],
+    contents: [
+        ['DB1','WWW','DB1'],
+        ['DY1','DB1','DY1'],
+        ['DY1','DY1','DY1'],
+        ['DY1','DB1','DY1'],
+        ['DB1','WWW','DB1']
+    ]
+},{
+
     moves: 5,
     name: "",
     items: ['BB ','BY '],

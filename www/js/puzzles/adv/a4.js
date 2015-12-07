@@ -26,6 +26,18 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
     ]
 },{
 
+    moves: 1,
+    name: "",
+    items: ['M\\','M\\','M//','M--'],
+    contents: [
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','DN4','   ','   '],
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   ']
+    ]
+},{
+
     moves: 5,
     name: "",
     description: "Mirrors can be broken by hitting them in a certain way.",

@@ -48,6 +48,18 @@ PUZZLO.tower_categories.advanced.addTower('Inverted Tower', 5, [{
 
     moves: 1,
     name: "",
+    items: ['IR1','IY1','IB1','BR ','BB ','BY '],
+    contents: [
+        ['WWW','WWW','WWW','WWW','WWW'],
+        ['WWW','   ','   ','   ','WWW'],
+        ['DN1','   ','WWW','   ','WWW'],
+        ['   ','WWW','WWW','WWW','WWW'],
+        ['WWW','WWW','WWW','WWW','WWW']
+    ]
+},{
+
+    moves: 1,
+    name: "",
     items: ['BB ','BB ','BY ','BR '],
     contents: [
         ['   ','IR1','   ','   '],

@@ -100,73 +100,6 @@ TowerScene.slide = function(i){
     TowerScene.updateShift();
 };
 
-TowerScene.showAndUpdateTile = function(node, animate){
-
-    if(!animate)
-        go(node);
-    else
-        window.setTimeout(function(){go(node)}, 400);
-
-    function go(node){
-
-        var $tile = TowerScene.components.tiles[node.y][node.x];
-        $tile.fadeIn();
-
-        if(TowerScene.progress.solved[node.id]){
-
-            if($tile.attr('status') != 'solved'){
-                $tile.attr('status', 'solved');
-                TowerScene.showTilesConnectedTo(node, animate);
-            }
-        }
-        else if(node.requires > 0){
-
-            if(node.requires > TowerScene.progress.solvedCount){
-
-                $tile.find('.locked text').text(node.requires);
-                $tile.attr('status', 'locked');
-
-                if(!TowerScene.locked[node.id])
-                    TowerScene.locked[node.id] = $tile;
-            }
-            else{
-                delete TowerScene.locked[node.id];
-                $tile.attr('status', 'unsolved');
-            }
-        }
-        else
-            $tile.attr('status', 'unsolved');
-    }
-};
-
-TowerScene.showTilesConnectedTo = function(node, animate){
-
-    var y = node.y, x = node.x;
-    var paths = node.paths ? node.paths : '';
-    var yxMap = TowerScene.tower.yxMap;
-
-    if(paths.indexOf('L') != -1){
-
-        TowerScene.showAndUpdateTile(yxMap[y][x - 1]);
-        TowerScene.components.hPaths[y][x-1].fadeIn();
-    }
-    if(paths.indexOf('R') != -1){
-
-        TowerScene.showAndUpdateTile(yxMap[y][x + 1]);
-        TowerScene.components.hPaths[y][x].fadeIn();
-    }
-    if(paths.indexOf('U') != -1){
-
-        TowerScene.showAndUpdateTile(yxMap[y - 1][x]);
-        TowerScene.components.vPaths[y-1][x].fadeIn();
-    }
-    if(paths.indexOf('D') != -1){
-
-        TowerScene.showAndUpdateTile(yxMap[y + 1][x]);
-        TowerScene.components.vPaths[y][x].fadeIn();
-    }
-};
-
 TowerScene.setSolved = function(){
 
     var category = TowerScene.category.id;
@@ -201,6 +134,14 @@ TowerScene.setSolved = function(){
         Main.saveProgressInfo();
         return true;
     }
+};
+
+TowerScene.unlockAll = function(){
+
+    $('#tower-scene .tower-section .tower .tower-row').attr('status', 'unlocked');
+    Main.progressInfo[TowerScene.category.id].solved = 999;
+    TowerScene.updateShift();
+
 };
 
 TowerScene.updateSolved = function(){
