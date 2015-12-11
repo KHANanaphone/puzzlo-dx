@@ -59,6 +59,8 @@
     <script type="text/javascript" src="js/scenes/towerScene.js?v=1.04"></script>
     <script type="text/javascript" src="js/scenes/puzzleScene.js?v=1.04"></script>
 
+    <script type="text/javascript" src="js/debug.js?v=1.04"></script>
+
 </head>
 
 <body>
@@ -103,8 +105,8 @@
             <div class="popup" id="success-popup">
                 <div class='relative'>
 
-                    <span class="popup-text"><br/>Level Complete
-                    </span>
+                    <span class="popup-text">Level Complete</span>
+                    <span class="unlock-text"></span>
 
                     <button class="btn btn-success" onclick="PuzzleScene.solvedContinue();">Continue</button>
                 </div>
@@ -220,6 +222,9 @@
             </div>
             <div class='menu-bg'>
             </div>
+            <div class='total-score'>
+                <span class='count'>999</span> <i class='fa fa-check'></i>
+            </div>
         </div>
     </div>
 </div>
@@ -230,7 +235,7 @@
               <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
               <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
             </linearGradient>
-            <linearGradient id="grad_mirror" x1="0%" y1="100%" x2="100%" y2="0%">
+            <linearGradient id="grad_mirror" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
               <stop offset="50%" style="stop-color:rgb(255,255,255);stop-opacity:1" />
               <stop offset="100%" style="stop-color:rgb(80,80,80);stop-opacity:1" />
@@ -318,8 +323,15 @@
     </div>
 
     <div class="menu-tower-row">
-        <span class='name'></span>
-        <span class='pct'></span>
+        <div class='unlocked'>
+            <span class='name'></span>
+            <span class='right'>
+                <span class='text'></span> <i class='fa fa-check'></i>
+            </span>
+        </div>
+        <div class='locked'>
+            Locked
+        </div>
     </div>
 
     <div class='tower'>

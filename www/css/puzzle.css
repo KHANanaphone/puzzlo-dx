@@ -25,11 +25,24 @@
     font-size: 1.6em;
 
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     right: 0;
     padding: 2%;
     color: white;
+}
+
+.popup .unlock-text{
+
+    display: inline-block;
+    font-family: Patua One;
+    font-size: 1em;
+    position: absolute;
+    top: 37%;
+    left: 0;
+    right: 0;
+    padding: 2%;
+    color: #FDFFA1;
 }
 
 .blank{

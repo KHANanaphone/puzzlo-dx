@@ -50,26 +50,40 @@ MenuScene.init = function(){
         $towerSelect.append($row);
     };
 
-    MenuScene.updatePcts();
+    MenuScene.updateChecks();
 };
 
-MenuScene.updatePcts = function(){
+MenuScene.updateChecks = function(){
 
-    $('#menu-scene .tower-select .menu-tower-row').each(function(){
+    var solved =  Main.progressInfo.total;
+    $('#menu-scene .total-score .count').text(solved);
+
+    $('#menu-scene .tower-select .menu-tower-row').each(function(index){
 
         var id = $(this).data('categoryId');
         var info = Main.progressInfo[id]
-        var pct = Math.round(info.solved / info.puzzles * 100);
+        var req = PUZZLO.tower_categories[id].required;
 
-        if(isNaN(pct))
-            pct = 0;
+        if(req > solved){
+            $(this).attr('locked', 'true');
+        }
+        else{
 
-        $(this).find('.pct').text(pct + '%');
+            $(this).attr('locked', 'false');
+            var text = info.solved  + '/' + info.puzzles;
+            $(this).find('.text').text(text);
+
+            if(info.solved == info.puzzles)
+                $(this).attr('allclear', 'true');
+        }
+
     });
 };
 
 MenuScene.rowClicked = function($row){
 
+    if($row.attr('locked') == 'true')
+        return false;
     if(MenuScene.introRunning)
         return false;
 
@@ -81,9 +95,10 @@ MenuScene.rowClicked = function($row){
     Main.showScene('tower');
     TowerScene.loadTowers(categoryId);
 
-    window.setTimeout(function(){
+    setTimeout(function(){
 
         $row.removeClass('clicked');
+
     }, 500);
 };
 

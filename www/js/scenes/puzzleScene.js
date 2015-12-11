@@ -33,6 +33,7 @@ PuzzleScene.showPuzzle = function(puzzle) {
     $('#success-popup').hide();
     $('#failure-popup').hide();
     $('#tutorial-popup').hide();
+    $('#success-popup .unlock-text').text('');
 
     $('#puzzle-scene .puzzle-id').text(puzzle.id);
     $('#header-area .puzzle-name').text(puzzle.name);
@@ -349,10 +350,7 @@ PuzzleScene.SolutionCheck = function() {
     }
 
     if(solved){
-        PuzzleScene.solved = true;
-        $('#button-area a').fadeOut();
-        $('#success-popup').fadeIn();
-        $('#main-content').css('background-color', 'rgb(12, 100, 16);');
+        PuzzleScene.showSolvedDialog();
     }
     else if(PuzzleScene.puzzle.movesLeft == 0){
         $('#main-content').css('background-color', '#AA1420');
@@ -360,8 +358,30 @@ PuzzleScene.SolutionCheck = function() {
     }
 }
 
+PuzzleScene.showSolvedDialog = function(){
+
+    PuzzleScene.solved = true;
+    $('#button-area a').fadeOut();
+    $('#success-popup').fadeIn();
+    $('#main-content').css('background-color', 'rgb(12, 100, 16);');
+
+    var newUnlocks = Main.setCurrentSolved();
+
+    if(newUnlocks && newUnlocks.length > 0){
+
+        var type = newUnlocks[0][0];
+        var name = newUnlocks[0][1];
+        var $text = $('#success-popup .unlock-text');
+
+        // if(type == 'category')
+        //     $text.addClass('big').attr('category', name);
+
+        $text.text(name + ' unlocked!');
+    }
+};
+
 PuzzleScene.solvedContinue = function(){
 
     Main.showScene('tower');
-    TowerScene.setSolved();
+    TowerScene.updateSolved();
 };

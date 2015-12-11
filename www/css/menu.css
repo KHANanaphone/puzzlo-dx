@@ -32,6 +32,12 @@
     height: 34%;
 }
 
+#menu-scene .menu-tower-row .locked{
+
+    text-align: center;
+    opacity: 0.5;
+}
+
 #menu-scene .menu-puzzle-tile{
 
     width: 25%;
@@ -40,29 +46,11 @@
 }
 
 #menu-scene .menu-puzzle-tile.even{
-
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#AAB+1,000000+100 */
-    background: #AAC; /* Old browsers */
-    background: -moz-linear-gradient(top,  #AAC 1%, #779 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#AAC), color-stop(100%,#779)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #AAC 1%,#779 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #AAC 1%,#779 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #AAC 1%,#779 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #AAC 1%,#779 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AAC', endColorstr='#779',GradientType=0 ); /* IE6-9 */
+    background-color: rgba(171, 174, 195, 0.5);
 }
 
 #menu-scene .menu-puzzle-tile.odd{
-
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#BBD+1,000000+100 */
-    background: #BBD; /* Old browsers */
-    background: -moz-linear-gradient(top,  #BBD 1%, #88A 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#BBD), color-stop(100%,#88A)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #BBD 1%,#88A 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #BBD 1%,#88A 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #BBD 1%,#88A 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #BBD 1%,#88A 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BBD', endColorstr='#88A',GradientType=0 ); /* IE6-9 */
+    background-color: rgba(134, 134, 156, 0.5);
 }
 
 #menu-scene .menu-tower-row{
@@ -71,14 +59,17 @@
     font-size: 1.7em;
     padding: 1.1em 0.6em;
     color: white;
-    cursor: pointer;
     font-weight: bold;
-
-    -webkit-transition: color 0.4s;
-    transition: color 0.4s;
+    cursor: pointer;
 }
 
-#menu-scene .menu-tower-row .pct{
+#menu-scene .menu-tower-row .unlocked{
+
+        -webkit-transition: color 0.4s;
+        transition: color 0.4s;
+}
+
+#menu-scene .menu-tower-row .right{
     float: right;
 }
 
@@ -91,13 +82,24 @@
     1px  1px 0 #00F;
 }
 
+#menu-scene .menu-tower-row[allclear="true"] i,
+#menu-scene .menu-tower-row[allclear="true"] .text{
+
+    color: #FDD600;
+    text-shadow:
+        -2px -2px 0 #882,
+        2px -2px 0 #882,
+        -2px  2px 0 #882,
+        2px  2px 0 #882;
+}
+
 #menu-scene .menu-tower-row.advanced{
 
   text-shadow:
-   -1px -1px 0 #AA0,
-    1px -1px 0 #AA0,
-   -1px  1px 0 #AA0,
-    1px  1px 0 #AA0;
+   -1px -1px 0 #882,
+    1px -1px 0 #882,
+   -1px  1px 0 #882,
+    1px  1px 0 #882;
 }
 
 #menu-scene .menu-tower-row.dx{
@@ -109,20 +111,20 @@
     1px  1px 0 #F00;
 }
 
-#menu-scene .menu-tower-row.fun:hover,
-#menu-scene .menu-tower-row.fun.clicked{
+#menu-scene .menu-tower-row.fun:hover .unlocked,
+#menu-scene .menu-tower-row.fun.clicked .unlocked{
 
     color: #88F;
 }
 
-#menu-scene .menu-tower-row.advanced:hover,
-#menu-scene .menu-tower-row.advanced.clicked{
+#menu-scene .menu-tower-row.advanced:hover .unlocked,
+#menu-scene .menu-tower-row.advanced.clicked .unlocked{
 
     color: #FF0;
 }
 
-#menu-scene .menu-tower-row.dx:hover,
-#menu-scene .menu-tower-row.dx.clicked{
+#menu-scene .menu-tower-row.dx:hover .unlocked,
+#menu-scene .menu-tower-row.dx.clicked .unlocked{
 
     color: #F88;
 }
@@ -194,4 +196,37 @@
 
 #menu-scene .puzzle-text text{
     fill: white;
+}
+
+#menu-scene .total-score{
+
+    position: absolute;
+    bottom: 1%;
+    right: 2%;
+    font-family: 'Play';
+    font-size: 1.7em;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+
+    text-shadow:
+    -1px -1px 0 #090,
+    1px -1px 0 #090,
+    -1px  1px 0 #090,
+    1px  1px 0 #090;
+}
+
+#menu-scene .total-score i{
+
+    color: #AFA;
+}
+
+#menu-scene .menu-tower-row[locked="false"] .locked{
+
+    display: none;
+}
+
+#menu-scene .menu-tower-row[locked="true"] .unlocked{
+
+    display: none;
 }

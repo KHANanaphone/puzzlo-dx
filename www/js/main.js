@@ -1,5 +1,6 @@
 var Main = {
-    storageId: 'pdx6'
+    storageId: 'pdx6',
+    currentPuzzle: {}
 };
 
 $(document).ready(function(){
@@ -65,6 +66,7 @@ Main.loadProgressInfo = function(){
     else
         Main.progressInfo = JSON.parse(storageString);
 
+    var totalSolved = 0;
     for(var catName in PUZZLO.tower_categories){
 
         if(!Main.progressInfo[catName])
@@ -84,8 +86,11 @@ Main.loadProgressInfo = function(){
             cat.solved += cat[t];
             cat.puzzles += tower.puzzles.length;
         }
+
+        totalSolved += cat.solved;
     };
 
+    Main.progressInfo.total = totalSolved;
     Main.saveProgressInfo();
 };
 
@@ -111,6 +116,39 @@ Main.showScene = function(scene){
 
     if(scene == 'menu')
         $('#main-content').attr('tower-type', 'fun');
+};
+
+Main.setCurrentSolved = function(){
+
+    var cat = Main.currentPuzzle.category;
+    var tower = Main.currentPuzzle.tower;
+    var puzzle = Main.currentPuzzle.puzzle;
+
+    if(Main.progressInfo[cat][tower] != puzzle)
+        return null;
+
+    var newUnlocks = [];
+    Main.progressInfo[cat][tower] = puzzle + 1;
+    Main.progressInfo[cat].solved++;
+    Main.progressInfo.total++;
+    Main.saveProgressInfo();
+    MenuScene.updateChecks();
+
+    for(var catName in PUZZLO.tower_categories){
+
+        var cat2 = PUZZLO.tower_categories[catName];
+        if(cat2.required == Main.progressInfo.total)
+            newUnlocks.push(['category', cat2.name]);
+    }
+
+    for(var i = 0; i < PUZZLO.tower_categories[cat].towers.length; i++){
+
+        var tow2 = PUZZLO.tower_categories[cat].towers[i];
+        if(tow2.required == Main.progressInfo[cat].solved)
+            newUnlocks.push(['tower', tow2.name]);
+    }
+
+    return newUnlocks;
 };
 
 var DEBUG_CTRL = false;

@@ -49,12 +49,19 @@ TowerScene.loadTowers = function(categoryId){
 
                     var data = $(this).data();
 
-                    TowerScene.currentPuzzle = {
+                    Main.currentPuzzle = {
+                        category: TowerScene.category.id,
                         tower: data.towerIndex,
                         puzzle: data.puzzleIndex
                     };
 
-                    PuzzleScene.showPuzzle(new Puzzle(data.puzzle));
+                    if(PUZZLO.debug.ctrlDown){
+                        Main.setCurrentSolved();
+                        TowerScene.updateSolved();
+                    }
+                    else{
+                        PuzzleScene.showPuzzle(new Puzzle(data.puzzle));
+                    }
                 });
 
                 $row.attr('status', i > numSolved ? 'locked' : (i < numSolved ? 'solved' : 'unlocked'));
@@ -100,14 +107,7 @@ TowerScene.slide = function(i){
     TowerScene.updateShift();
 };
 
-TowerScene.setSolved = function(){
-
-    var category = TowerScene.category.id;
-    var tower = TowerScene.currentPuzzle.tower;
-    var puzzle = TowerScene.currentPuzzle.puzzle;
-
-    if(!saveProgress(category, tower, puzzle))
-        return;
+TowerScene.updateTower = function(){
 
     setTimeout(function(){
 
@@ -123,25 +123,6 @@ TowerScene.setSolved = function(){
         TowerScene.updateShift();
 
     }, 300);
-
-    function saveProgress(cat, tower, puzzle){
-
-        if(Main.progressInfo[cat][tower] != puzzle)
-            return false;
-
-        Main.progressInfo[cat][tower] = puzzle + 1;
-        Main.progressInfo[cat].solved++;
-        Main.saveProgressInfo();
-        return true;
-    }
-};
-
-TowerScene.unlockAll = function(){
-
-    $('#tower-scene .tower-section .tower .tower-row').attr('status', 'unlocked');
-    Main.progressInfo[TowerScene.category.id].solved = 999;
-    TowerScene.updateShift();
-
 };
 
 TowerScene.updateSolved = function(){
@@ -151,7 +132,27 @@ TowerScene.updateSolved = function(){
     $('#tower-scene .category-progress .bar-hider').css('left', pct + '%');
     $('#tower-scene .category-progress .check-count').text(info.solved);
 
-    MenuScene.updatePcts();
+    var category = TowerScene.category;
+    for(var i = 0; i < category.towers.length; i++){
+
+        var solved = Main.progressInfo[category.id][i];
+        var tower = category.towers[i];
+
+        $('#tower-scene .tower-section .tower').eq(i)
+        .find('.tower-row').each(function(index){
+
+            var revIndex = tower.puzzles.length - index - 1;
+            if(revIndex < solved)
+                $(this).attr('status', 'solved');
+            else if(revIndex == solved)
+                $(this).attr('status', 'unlocked');
+            else
+                $(this).attr('status', 'locked');
+
+        });
+    };
+
+    TowerScene.updateShift();
 };
 
 TowerScene.back = function(){

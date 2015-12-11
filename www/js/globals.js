@@ -1,4 +1,5 @@
 var PUZZLO = {
     pieces : {},
-    tower_categories : {}
+    tower_categories : {},
+    debug: {}
 };

@@ -1,10 +1,11 @@
-function TowerCategory(id, name){
+function TowerCategory(id, name, required){
 
     this.id = id;
     this.name = name;
     this.towers = [];
     this.puzzleCount = 0;
     this.towerCount = 0;
+    this.required = required;
 };
 
 TowerCategory.prototype.addTower = function(name, required, puzzles){
@@ -20,6 +21,6 @@ TowerCategory.prototype.addTower = function(name, required, puzzles){
     this.puzzleCount += puzzles.length;
 };
 
-PUZZLO.tower_categories.fun = new TowerCategory('fun', 'Fun Towers');
-PUZZLO.tower_categories.advanced = new TowerCategory('advanced', 'Advanced Towers');
-PUZZLO.tower_categories.dx = new TowerCategory('dx', 'DX Towers');
+PUZZLO.tower_categories.fun = new TowerCategory('fun', 'Fun Towers', 0);
+PUZZLO.tower_categories.advanced = new TowerCategory('advanced', 'Advanced Towers', 30);
+PUZZLO.tower_categories.dx = new TowerCategory('dx', 'DX Towers', 60);
