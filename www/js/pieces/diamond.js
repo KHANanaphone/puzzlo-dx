@@ -55,14 +55,11 @@
 
         $diamond
         .attr('color', this.color)
-        .attr('inverted', this.inverted)
         .find('text')
         .html(this.health);
 
-		if(this.inverted){
-			$diamond.find('text').attr('fill', 'url(#grad_' + this.color + ')');
-			$diamond.find('polygon').attr('stroke', 'url(#grad_' + this.color + ')');
-		}
+		if(this.inverted)
+			$diamond.find('polygon').attr('fill', 'url(#grad_inv_' + this.color + ')');
 		else
 			$diamond.find('polygon').attr('fill', 'url(#grad_' + this.color + ')');
 
@@ -71,13 +68,16 @@
 
 	function applyLogic(tile, action){
 
-		if(this.inverted){
-			if(action.color != this.color)
-				return true;
-		}
-		else{
-			if(action.color == this.color)
-				return true;
+		if(this.color != 'normal'){
+			
+			if(this.inverted){
+				if(action.color == this.color)
+					return true;
+			}
+			else{
+				if(action.color != this.color)
+					return true;
+			}
 		}
 
 		this.health--;

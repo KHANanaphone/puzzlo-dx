@@ -54,17 +54,6 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
         ]
     },{
 
-        moves: 3,
-        name: "Items",
-        items: ['DN1', 'DN1', 'BR '],
-        contents: [
-        	['DN1','DN1','DN1','WWW'],
-        	['DN1','DN1','DN1','WWW'],
-        	['DN1','DN1','DN1','WWW'],
-        	['WWW','WWW','WWW','WWW']
-        ]
-    },{
-
         moves: 2,
         name: "Items",
         items: ['BR ','BR '],
@@ -75,5 +64,21 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
             ['   ','DN1','DN1','DN1','   '],
             ['   ','   ','   ','   ','   ']
         ]
+    },{
+
+            moves: 3,
+            name: "Items",
+            items: ['BR ','BR ','BR '],
+            contents: [
+                ['   ','   ','DN1','   ','   '],
+                ['   ','DN1','   ','DN1','   '],
+                ['DN1','   ','   ','   ','DN1'],
+                ['   ','DN1','   ','DN1','   '],
+                ['   ','   ','DN2','   ','   '],
+                ['   ','DN1','   ','DN1','   '],
+                ['DN1','   ','   ','   ','DN1'],
+                ['   ','DN1','   ','DN1','   '],
+                ['   ','   ','DN1','   ','   ']
+            ]
     }]
 );

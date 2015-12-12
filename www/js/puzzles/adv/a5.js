@@ -12,17 +12,15 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
     ]
 },{
 
-    moves: 3,
+    moves: 5,
     name: "",
-    items: ['BB ','BY ','BR ','BB '],
+    items: ['BB ','BY '],
     contents: [
-        ['DN1','DB1','   ','   ','   ','   ','   '],
-        ['   ','DR1','DY1','   ','   ','   ','   '],
-        ['   ','   ','DN1','DB1','   ','   ','   '],
-        ['   ','   ','   ','DR1','DY1','   ','   '],
-        ['   ','   ','   ','   ','DN1','DB1','   '],
-        ['   ','DN1','   ','   ','   ','DR1','DY1'],
-        ['   ','   ','   ','   ','   ','   ','DN1']
+        ['WWW','WWW','WWW','WWW'],
+        ['WWW','WWW','DN1','WWW'],
+        ['[N]','[N]','[N]','WWW'],
+        ['[N]','   ','[N]','WWW'],
+        ['[N]','[N]','[N]','WWW']
     ]
 }, {
 
@@ -31,7 +29,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
     items: ['SD ','SD ','SR ','SD '],
     contents: [
         ['WWW','WWW','WWW','   ','   '],
-        ['WWW','Dn3','WWW','[N]','   '],
+        ['WWW','DN3','WWW','[N]','   '],
         ['   ','[N]','   ','   ','WWW'],
         ['WWW','[N]','   ','   ','WWW'],
         ['WWW','[N]','WWW','   ','   '],
@@ -58,7 +56,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
     contents: [
         ['   ','   ','   ','   ','   '],
         ['   ','   ','   ','   ','   '],
-        ['   ','   ','DR6','M//','   '],
+        ['   ','   ','IR6','M//','   '],
         ['   ','   ','   ','   ','   '],
         ['   ','   ','   ','   ','   ']
     ]
@@ -66,12 +64,12 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 
     moves: 2,
     name: "Crazy Cray Maze",
-    items: ['BR ','SU ','SD ','SU '],
+    items: ['SU ','SD ','SU '],
     contents: [
         ['   ','   ','   ','   ','   ','WWW','WWW'],
         ['M\\','M//','M\\','M//','M//','WWW','WWW'],
         ['M//','M\\','M\\','M\\','M//','WWW','WWW'],
-        ['M//','M\\','M//','M//','M\\','IB1','WWW'],
+        ['M//','M\\','M//','M//','M\\','DB1','WWW'],
         ['M\\','M//','M\\','M//','M//','WWW','WWW'],
         ['M\\','M//','M//','M//','M//','WWW','WWW'],
         ['   ','   ','   ','   ','   ','WWW','WWW']
@@ -86,24 +84,24 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
         ['WWW','   ','   ','[N]'],
         ['WWW','   ','   ','[N]'],
         ['WWW','   ','   ','[N]'],
-        ['WWW','   ','{Y}','WWW'],
+        ['WWW','   ','[Y]','WWW'],
         ['WWW','   ','BR ','WWW'],
-        ['WWW','WWW','WWW','IR1']
+        ['WWW','WWW','WWW','DR1']
     ]
 }, {
 
     moves: 3,
     name: "",
-    items: ['DR3','M\\','M\\','SUR','SUL'],
+    items: ['IR3','M\\','M\\','SUR','SUL'],
     contents: [
         ['   ','   ','BR ','   ','WWW','   '],
         ['   ','   ','   ','   ','   ','   '],
         ['BR ','   ','   ','   ','BR ','WWW'],
         ['   ','   ','   ','   ','   ','WWW'],
         ['WWW','   ','BR ','   ','   ','WWW'],
-        ['WWW','   ','   ','{R}','   ','WWW'],
-        ['WWW','   ','   ','   ','[R]','WWW'],
-        ['WWW','WWW','WWW','   ','WWW','IR1']
+        ['WWW','   ','   ','[R]','   ','WWW'],
+        ['WWW','   ','   ','   ','{R}','WWW'],
+        ['WWW','WWW','WWW','   ','WWW','DR1']
     ]
 }
 

@@ -51,11 +51,10 @@
         var $block = $('#hidden .block-icon').clone();
 
         $block
-        .attr('color', this.color)
-        .attr('inverted', this.inverted);
+        .attr('color', this.color);
 
 		if(this.inverted)
-			$block.find('polygon').attr('stroke', 'url(#grad_' + this.color + ')');
+			$block.find('polygon').attr('fill', 'url(#grad_inv_' + this.color + ')');
 		else
 			$block.find('polygon').attr('fill', 'url(#grad_' + this.color + ')');
 
@@ -64,14 +63,18 @@
 
 	function applyLogic(tile, action){
 
-		if(this.inverted){
+		if(this.color == 'normal'){
+			
+			tile.clear();
+		}
+		else if(this.inverted){
 
-			if(action.color == this.color)
+			if(action.color != this.color)
 				tile.clear();
 		}
 		else{
 
-			if(action.color != this.color)
+			if(action.color == this.color)
 				tile.clear();
 		}
 

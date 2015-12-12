@@ -27,7 +27,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
         name: "Bombs",
         contents: [
             ['WWW','   ','   ','BR ','   ','   '],
-            ['DB1','   ','   ','   ','   ','   '],
+            ['DR1','   ','   ','   ','   ','   '],
             ['WWW','[N]','   ','   ','   ','BR '],
             ['WWW','   ','   ','   ','   ','   '],
             ['WWW','   ','   ','BR ','   ','   ']
@@ -62,7 +62,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
         moves: 5,
         name: "Bombs",
         contents: [
-            ['DB1','DN1','WWW','DN2','WWW'],
+            ['DY1','DN1','WWW','DN2','WWW'],
             ['   ','[N]','   ','[N]','DN1'],
             ['   ','   ','   ','[N]','   '],
             ['   ','   ','   ','[N]','   '],

@@ -30,10 +30,10 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     name: "",
     items: ['SR ','SUL'],
     contents: [
-        ['   ','   ','IY1','   '],
-        ['IB1','   ','IB1','   '],
-        ['   ','   ','IB1','   '],
-        ['   ','IY1','IY1','   ']
+        ['   ','   ','DY1','   '],
+        ['DB1','   ','DB1','   '],
+        ['   ','   ','DB1','   '],
+        ['   ','DY1','DY1','   ']
     ]
 },{
 
@@ -53,10 +53,10 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     name: "",
     items: ['SL ','SU'],
     contents: [
-        ['   ','   ','IY1','   '],
-        ['DN1','DN1','IB1','IY1'],
-        ['DN1','DN1','IY1','IB1'],
-        ['   ','   ','IB1','   ']
+        ['   ','   ','DY1','   '],
+        ['DN1','DN1','DB1','DY1'],
+        ['DN1','DN1','DY1','DB1'],
+        ['   ','   ','DB1','   ']
     ]
 },{
 
@@ -66,7 +66,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     contents: [
         ['   ','DN2','   '],
         ['   ','   ','   '],
-        ['   ','DY1','WWW'],
+        ['   ','IY1','WWW'],
         ['   ','   ','   '],
         ['WWW','DN2','   ']
     ]

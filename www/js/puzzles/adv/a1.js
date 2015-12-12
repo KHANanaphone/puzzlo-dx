@@ -59,35 +59,32 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
     name: "",
     items: ['BY '],
     contents: [
-        ['DB1','WWW','DB1'],
-        ['DY1','DB1','DY1'],
-        ['DY1','DY1','DY1'],
-        ['DY1','DB1','DY1'],
-        ['DB1','WWW','DB1']
-    ]
-},{
-
-    moves: 5,
-    name: "",
-    items: ['BB ','BY '],
-    contents: [
-        ['WWW','WWW','WWW','WWW'],
-        ['WWW','WWW','DN1','WWW'],
-        ['[N]','[N]','[N]','WWW'],
-        ['[N]','   ','[N]','WWW'],
-        ['[N]','[N]','[N]','WWW']
+        ['DY1','WWW','DY1'],
+        ['DB1','DY1','DB1'],
+        ['DB1','DB1','DB1'],
+        ['DB1','DY1','DB1'],
+        ['DY1','WWW','DY1']
     ]
 },{
 
     moves: 1,
     name: "",
-    items: ['BB ','BY ','BR '],
+    items: ['BB ','BB ','BY ','BR '],
     contents: [
-        ['WWW','WWW','WWW','   ','WWW'],
-        ['WWW','DN1','WWW','   ','WWW'],
-        ['WWW','[N]','WWW','   ','WWW'],
+        ['   ','DR1','   ','   '],
+        ['WWW','   ','[N]','   '],
+        ['   ','   ','   ','   ']
+    ]
+},{
+
+    moves: 1,
+    name: "",
+    items: ['DR1','DY1','DB1','BR ','BY ','BB '],
+    contents: [
+        ['WWW','WWW','WWW','WWW','WWW'],
         ['WWW','   ','   ','   ','WWW'],
-        ['WWW','   ','WWW','   ','WWW'],
+        ['DN1','   ','WWW','   ','WWW'],
+        ['   ','WWW','WWW','WWW','WWW'],
         ['WWW','WWW','WWW','WWW','WWW'],
     ]
 }]);

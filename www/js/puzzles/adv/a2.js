@@ -1,70 +1,59 @@
-PUZZLO.tower_categories.advanced.addTower('Inverted Tower', 5, [{
+PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
 
     moves: 3,
-    name: "Inverted",
-    description: "These diamonds are the opposite, they can only be broken by their own color",
+    name: "Splits",
+    description: "Split-color diamonds can be destroyed with either color.",
     contents: [
-        ['IY1','   ','   ','   '],
-        ['   ','   ','   ','BR '],
-        ['IB1','   ','   ','   '],
-        ['   ','   ','   ','   '],
-        ['IR1','   ','   ','   ']
+        ['   ','   ','DN1','   ','BR '],
+        ['   ','   ','DN1','   ','   '],
+        ['DN1','DN1','IR2','DN1','DN1'],
+        ['   ','   ','DN1','   ','   '],
+        ['DR1','   ','DN1','   ','   ']
+    ]
+},{
+
+    moves: 1,
+    name: 'puzzle needed',
+    description: "Blocks can also be split-colored",
+    contents: [
+        ['DN1']
     ]
 },{
 
     moves: 3,
     name: "",
-    description: "Blocks can also be inverted",
     contents: [
-        ['   ','   ','IY1','   ','BR '],
-        ['   ','   ','IY1','   ','   '],
-        ['IB1','IB1','{R}','IB1','IB1'],
-        ['   ','   ','IY1','   ','   '],
-        ['   ','   ','IY1','   ','   ']
+        ['WWW','WWW','   ','WWW','BR '],
+        ['WWW','WWW','[N]','IR1','DN1'],
+        ['WWW','WWW','IR1','   ','DN1'],
+        ['WWW','DN1','[N]','   ','DN1'],
+        ['WWW','WWW','WWW','WWW','DN1']
     ]
 },{
 
-    moves: 7,
+    moves: 2,
     name: "",
+    items: ['BR ','BB '],
     contents: [
-        ['IB1','IB1','IY1','IB1'],
-        ['IB1','IY1','IB1','IY1'],
-        ['IB1','IB1','IY1','IY1'],
-        ['IB1','IY1','IY1','IB1']
+        ['   ','   ','DN1','   ','   '],
+        ['   ','   ','DN1','   ','   '],
+        ['DN1','DN1','{Y}','DN1','DN1'],
+        ['   ','   ','DN1','   ','   '],
+        ['   ','   ','DN1','   ','   ']
     ]
 },{
 
-    moves: 1,
+    moves: 2,
     name: "",
-    items: ['BR ','BR ','BR '],
+    items: ['BB ','BY ','BR '],
     contents: [
-        ['   ','   ','   ','   ','   '],
-        ['   ','   ','   ','   ','   '],
-        ['   ','   ','IR3','   ','   '],
-        ['   ','   ','   ','   ','   '],
-        ['   ','   ','   ','   ','   ']
-    ]
-},{
-
-    moves: 1,
-    name: "",
-    items: ['IR1','IY1','IB1','BR ','BB ','BY '],
-    contents: [
-        ['WWW','WWW','WWW','WWW','WWW'],
-        ['WWW','   ','   ','   ','WWW'],
-        ['DN1','   ','WWW','   ','WWW'],
-        ['   ','WWW','WWW','WWW','WWW'],
-        ['WWW','WWW','WWW','WWW','WWW']
-    ]
-},{
-
-    moves: 1,
-    name: "",
-    items: ['BB ','BB ','BY ','BR '],
-    contents: [
-        ['   ','IR1','   ','   '],
-        ['WWW','   ','[N]','   '],
-        ['   ','   ','   ','   '],
+        ['DN1','   ','   ','   ','   ','   ','   '],
+        ['   ','IR1','IR1','   ','   ','   ','   '],
+        ['   ','   ','DN1','IR1','   ','   ','   '],
+        ['   ','   ','   ','IR1','IR1','   ','   '],
+        ['   ','   ','   ','   ','DN1','IR1','   '],
+        ['   ','   ','   ','   ','   ','IR1','   '],
+        ['   ','   ','   ','   ','   ','   ','DN1']
     ]
 },{
 
@@ -72,24 +61,31 @@ PUZZLO.tower_categories.advanced.addTower('Inverted Tower', 5, [{
     name: "",
     items: ['[N]'],
     contents: [
-        ['IR1','WWW','   '],
-        ['   ','{Y}','   '],
+        ['DR1','WWW','   '],
+        ['WWW','{B}','   '],
         ['   ','   ','BR '],
         ['   ','   ','   '],
         ['BR ','   ','DN2'],
-        ['   ','{R}','   ']
+        ['   ','{B}','   ']
+    ]
+},{
+
+    moves: 1,
+    name: 'puzzle needed',
+    contents: [
+        ['DN1']
     ]
 },{
 
     moves: 2,
     name: "",
-    items: ['BB ','BB ','BY ','BR ','BR '],
+    items: ['BB ','BY ','BR ','BR '],
     contents: [
+        ['   ','   ','DR1','   ','   ','   '],
         ['   ','   ','IR1','   ','   ','   '],
-        ['   ','   ','IY1','   ','   ','   '],
-        ['   ','   ','   ','   ','IB1','IR1'],
-        ['IR1','IB1','   ','   ','   ','   '],
-        ['   ','   ','   ','IY1','   ','   '],
-        ['   ','   ','   ','IR1','   ','   ']
+        ['   ','   ','   ','   ','IR1','DR1'],
+        ['DR1','IR1','   ','   ','   ','   '],
+        ['   ','   ','   ','IR1','   ','   '],
+        ['   ','   ','   ','DR1','   ','   ']
     ]
 }]);

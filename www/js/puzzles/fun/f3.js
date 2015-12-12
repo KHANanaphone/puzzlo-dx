@@ -2,11 +2,11 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
 
         moves: 2,
         name: "Colors",
-        description: "Colored diamonds block shots of their own color.",
+        description: "Colored diamonds can only be destroyed by their own color.",
         contents: [
-            ['   ', 'DB1', '   '],
-            ['DY1', 'DY1', 'DY1'],
-            ['   ', 'DB1', '   ']
+            ['   ', 'DY1', '   '],
+            ['DB1', 'DB1', 'DB1'],
+            ['   ', 'DY1', '   ']
         ]
     },{
 
@@ -14,10 +14,10 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
         name: "Colored Blocks",
         description: "Blocks can also be colored.",
         contents: [
-            ['   ','DN1','DN1','[B]'],
-            ['DN1','WWW','WWW','DN1'],
-            ['DN1','WWW','WWW','DN1'],
-            ['[Y]','DN1','DN1','   ']
+            ['[B]','[Y]','   ','   ','   ','   ','   '],
+            ['DN1','DN1','   ','   ','   ','   ','   '],
+            ['DN1','DN1','   ','[B]','DN1','DN1','DN1'],
+            ['DN1','DN1','   ','[Y]','DN1','DN1','DN1']
         ]
     },{
 
@@ -35,7 +35,7 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
         moves: 3,
         name: "Colors",
         contents: [
-            ['[Y]','DY2','DB1','DN2']
+            ['[B]','DB2','DY1','DN2']
         ]
     },{
 
@@ -43,8 +43,8 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
         name: "Colors",
         contents: [
         	['   ','   ','WWW','   '],
-        	['WWW','DY1','DB1','   '],
-        	['   ','DB1','DY1','[N]'],
+        	['WWW','DB1','DY1','   '],
+        	['   ','DY1','DB1','[N]'],
         	['   ','WWW','   ','   ']
         ]
     },{
@@ -52,14 +52,10 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
         moves: 4,
         name: "Tic Tac No",
         contents: [
-            ['   ','   ','DN1','   ','   ','DN1','   ','   '],
-            ['   ','   ','DN1','   ','   ','DN1','   ','   '],
-            ['DN1','DN1','DB1','DN1','DN1','DY1','DN1','DN1'],
-            ['   ','   ','DN1','   ','   ','DN1','   ','   '],
-            ['   ','   ','DN1','   ','   ','DN1','   ','   '],
-            ['DN1','DN1','DB1','DN1','DN1','DB1','DN1','DN1'],
-            ['   ','   ','DN1','   ','   ','DN1','   ','   '],
-            ['   ','   ','DN1','   ','   ','DN1','   ','   ']
+            ['   ','   ','DN1','DN1'],
+            ['DN1','DN1','DY1','DB1'],
+            ['DN1','DN1','DB1','DY1'],
+            ['   ','   ','DN1','DN1']
         ]
     }]
 );

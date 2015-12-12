@@ -4,11 +4,11 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
     name: "Mirrors",
     description: "Mirrors will change the direction of a shot.",
     contents: [
-        ['   ','   ','   ','IB1'],
-        ['IB1','   ','   ','M//'],
+        ['   ','   ','   ','DB1'],
+        ['DB1','   ','   ','M//'],
         ['DN2','   ','   ','M||'],
-        ['IY1','   ','   ','M\\'],
-        ['   ','   ','   ','IY1']
+        ['DY1','   ','   ','M\\'],
+        ['   ','   ','   ','DY1']
     ]
 },{
 
@@ -18,7 +18,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
     contents: [
         ['   ','   ','   ','   ','DN2'],
         ['   ','   ','   ','   ','   '],
-        ['   ','   ','IR2','   ','   '],
+        ['   ','   ','DR2','   ','   '],
         ['   ','   ','   ','   ','   '],
         ['M||','   ','   ','   ','M||'],
         ['   ','   ','   ','   ','   '],
@@ -42,9 +42,9 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
     name: "",
     description: "Mirrors can be broken by hitting them in a certain way.",
     contents: [
-        ['   ','   ','IY1','   ','   '],
-        ['   ','   ','IB1','   ','   '],
-        ['DN2','   ','M//','IY1','IB1'],
+        ['   ','   ','DY1','   ','   '],
+        ['   ','   ','DB1','   ','   '],
+        ['DN2','   ','M//','DY1','DB1'],
         ['WWW','   ','   ','   ','   '],
         ['BR ','WWW','DN2','   ','   ']
     ]
@@ -55,7 +55,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
     items: ['M//','BR '],
     contents: [
         ['WWW','WWW','WWW','   ','   '],
-        ['WWW','IY1','WWW','   ','   '],
+        ['WWW','DY1','WWW','   ','   '],
         ['WWW','M||','WWW','   ','   '],
         ['   ','   ','   ','   ','   '],
         ['   ','   ','   ','   ','DN1']

@@ -1,5 +1,5 @@
 var Main = {
-    storageId: 'pdx6',
+    storageId: 'pdx7',
     currentPuzzle: {}
 };
 
