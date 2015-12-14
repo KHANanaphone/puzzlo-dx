@@ -115,7 +115,7 @@ text, span {
 
     position: absolute;
     left: 2%;
-    top: 2%;
+    top: 1%;
     color: white;
     font-family: 'Play';
     font-size: 1.7em;
@@ -124,10 +124,11 @@ text, span {
     -webkit-transform: rotate(-40deg);
     transform: rotate(-40deg);
     cursor: pointer;
-    -webkit-transition: opacity 0.25s;
-    transition: opacity 0.25s;
+    -webkit-transition: opacity 0.15s;
+    transition: opacity 0.15s;
     z-index: 15;
     font-weight: bold;
+    line-height: 2em;
 }
 
 .back-button:hover{

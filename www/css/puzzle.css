@@ -17,31 +17,33 @@
     height: 11em;
 }
 
+.popup .message-centerer-out{
+
+    display: table;
+    width: 100%;
+    height: 70%;
+}
+
+.popup .message-centerer-in{
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .popup .popup-text{
 
-    display: inline-block;
-
+    display: block;
     font-family: Patua One;
     font-size: 1.6em;
-
-    position: absolute;
-    top: 10%;
-    left: 0;
-    right: 0;
-    padding: 2%;
     color: white;
 }
 
 .popup .unlock-text{
 
-    display: inline-block;
+    display: block;
     font-family: Patua One;
     font-size: 1em;
-    position: absolute;
-    top: 37%;
-    left: 0;
-    right: 0;
-    padding: 2%;
     color: #FDFFA1;
 }
 
@@ -117,7 +119,8 @@
 
     position: absolute;
     right: 1%;
-    top: 35%;
+    top: 24%;
+    line-height: 2em;
     color: rgb(173, 173, 173);
     font-family: 'Play';
     font-size: 1.7em;
@@ -127,8 +130,8 @@
     cursor: pointer;
     font-weight: bold;
 
-    -webkit-transition: color 0.25s;
-    transition: color 0.25s;
+    -webkit-transition: color 0.15s;
+    transition: color 0.15s;
 }
 
 #header-area .retry-button:hover{

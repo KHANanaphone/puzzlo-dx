@@ -106,9 +106,12 @@
 
             <div class="popup" id="success-popup">
                 <div class='relative'>
-
-                    <span class="popup-text">Level Complete</span>
-                    <span class="unlock-text"></span>
+                    <div class='message-centerer-out'>
+                        <div class='message-centerer-in'>
+                            <span class="popup-text">Level Complete</span>
+                            <span class="unlock-text"></span>
+                        </div>
+                    </div>
 
                     <button class="btn btn-success" onclick="PuzzleScene.solvedContinue();">Continue</button>
                 </div>
@@ -117,8 +120,12 @@
             <div class="popup" id="failure-popup">
                 <div class='relative'>
 
-                    <span class="popup-text"><br/>No Moves Left
-                    </span>
+                    <div class='message-centerer-out'>
+                        <div class='message-centerer-in'>
+                            <span class="popup-text"><br/>No Moves Left
+                            </span>
+                        </div>
+                    </div>
 
                     <button class="btn btn-danger" onclick="PuzzleScene.retry()">Retry</button>
                 </div>

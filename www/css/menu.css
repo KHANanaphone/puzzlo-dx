@@ -36,6 +36,7 @@
 
     text-align: center;
     opacity: 0.5;
+    cursor: default;
 }
 
 #menu-scene .menu-puzzle-tile{
@@ -60,17 +61,22 @@
     padding: 1.1em 0.6em;
     color: white;
     font-weight: bold;
+}
+#menu-scene .menu-tower-row span{
+
     cursor: pointer;
 }
 
 #menu-scene .menu-tower-row .unlocked{
 
-        -webkit-transition: color 0.4s;
-        transition: color 0.4s;
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
+    cursor: pointer;
 }
 
 #menu-scene .menu-tower-row .right{
     float: right;
+    color: white;
 }
 
 #menu-scene .menu-tower-row.fun{
@@ -82,8 +88,7 @@
     1px  1px 0 #00F;
 }
 
-#menu-scene .menu-tower-row[allclear="true"] i,
-#menu-scene .menu-tower-row[allclear="true"] .text{
+#menu-scene .menu-tower-row[allclear="true"] i{
 
     color: #FDD600;
     text-shadow:

@@ -8,7 +8,7 @@ Timer.Run = function() {
 
     if(Timer.running)
         return;
-    
+
     Timer.running = true;
     Timer.Step();
 };
@@ -49,16 +49,16 @@ Timer.Step = function() {
         else if (action.direction == 'R')
             action.x++;//move
         else if (action.direction == 'UL'){
-            action.y--; action.x--;           
-        } 
+            action.y--; action.x--;
+        }
         else if (action.direction == 'UR'){
-            action.y--; action.x++;           
-        } 
+            action.y--; action.x++;
+        }
         else if (action.direction == 'DL'){
-            action.y++; action.x--;           
-        } 
+            action.y++; action.x--;
+        }
         else if (action.direction == 'DR'){
-            action.y++; action.x++; 
+            action.y++; action.x++;
         }
     }
 
@@ -88,4 +88,18 @@ Timer.Stop = function() {
 
     Timer.running = false;
     Timer.actions = [];
+};
+
+Timer.getActionsAt = function(x, y){
+
+    var actions = [];
+    for(var i = 0; i < Timer.actions.length; i++){
+
+        var a = Timer.actions[i];
+
+        if(a.x == x && a.y == y)
+            actions.push(a)
+    };
+
+    return actions;
 };
