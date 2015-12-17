@@ -48,13 +48,17 @@
     <script type="text/javascript" src="js/puzzles/adv/a5.js"></script>
 
     <script type="text/javascript" src="js/puzzles/dx/dx1.js"></script>
+    <script type="text/javascript" src="js/puzzles/dx/dx2.js"></script>
+    <script type="text/javascript" src="js/puzzles/dx/dx3.js"></script>
 
     <script type="text/javascript" src="js/pieces/blank.js?v=1.04"></script>
     <script type="text/javascript" src="js/pieces/block.js?v=1.04"></script>
     <script type="text/javascript" src="js/pieces/bomb.js?v=1.04"></script>
     <script type="text/javascript" src="js/pieces/diamond.js?v=1.04"></script>
+    <script type="text/javascript" src="js/pieces/keydoor.js?v=1.04"></script>
     <script type="text/javascript" src="js/pieces/mirror.js?v=1.04"></script>
     <script type="text/javascript" src="js/pieces/shifter.js?v=1.04"></script>
+    <script type="text/javascript" src="js/pieces/teleporter.js?v=1.04"></script>
     <script type="text/javascript" src="js/pieces/wall.js?v=1.04"></script>
 
     <script type="text/javascript" src="js/scenes/menuScene.js?v=1.04"></script>
@@ -99,7 +103,11 @@
 
             <div class="popup" id="tutorial-popup">
                 <div class='relative'>
-                    <span class="popup-text"></span>
+                    <div class='message-centerer-out'>
+                        <div class='message-centerer-in'>
+                            <span class="popup-text"></span>
+                        </div>
+                    </div>
                     <button class="btn btn-primary" onclick="PuzzleScene.ClosePopup()">Got it</button>
                 </div>
             </div>
@@ -333,8 +341,8 @@
     </svg>
 
     <svg class='teleporter-icon' viewBox='0 0 200 200'>
-        <circle cx='100' cy='100' r='90'></circle>
-        <path class='spinner' d='M100,10 L100,190 M10,100 L190,100'></path>
+        <circle class='outer' cx='100' cy='100' r='80'></circle>
+        <circle class='inner' cx='100' cy='100' r='40'></circle>
     </svg>
 
     <div class="dot">

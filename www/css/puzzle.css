@@ -177,6 +177,8 @@
 
     -webkit-transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
     transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 #item-area .puzzle-tile:first-child{
@@ -203,9 +205,9 @@
 }
 
 #item-area .puzzle-tile:first-child .bg{
-    -moz-animation: glow 0.6s linear infinite alternate;
-    -webkit-animation: glow 0.6s linear infinite alternate;
-    animation: glow 0.6s linear infinite alternate;
+    -moz-animation: glow 0.6s ease-out infinite alternate;
+    -webkit-animation: glow 0.6s ease-out infinite alternate;
+    animation: glow 0.6s ease-out infinite alternate;
 }
 
 #item-area .puzzle-tile:nth-child(2){

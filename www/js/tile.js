@@ -47,9 +47,8 @@ Tile.prototype.clicked = function() {
         this.setContents(next.contents);
         PuzzleScene.nextItem();
 
-        // if(nextItemTile.type == 'teleporter')
-        //     TeleporterLogic.CheckTeleporters();
-
+        if(next.contents.type == 'teleporter')
+            PuzzleScene.checkTeleporters();
     }
 }
 
@@ -110,40 +109,3 @@ Tile.prototype.applyLogic = function(action){
 
     return finished;
 };
-
-//     if(this.type == 'diamond'){
-
-//         if(this.subtype == type)
-//             return true;
-
-//         this.value--;
-
-//         if(this.value == 0)
-//             this.clear();
-//     }
-//     else if (tile.type == 'bomb') {
-
-//         BombLogic.Detonate(tile);
-//         tile.Clear();
-
-//         return true;
-//     }
-//     else if (tile.type == 'mirror'){
-
-//         return MirrorLogic.ApplyLogic(action, tile);
-//     }
-//     else if (tile.type == 'potion'){
-
-//         if(tile.subtype == 'poison')
-//             PotionLogic.ApplyPoison();
-//         else
-//             PotionLogic.ApplyPotion();
-
-//         tile.Clear();
-//         return true;
-//     }
-//     else if(tile.type == 'teleporter'){
-
-//         return TeleporterLogic.ApplyLogic(action, tile);
-//     }
-// };

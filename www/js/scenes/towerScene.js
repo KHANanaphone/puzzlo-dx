@@ -125,34 +125,42 @@ TowerScene.updateTower = function(){
     }, 300);
 };
 
-TowerScene.updateSolved = function(){
+TowerScene.updateSolved = function(delay){
 
-    var info = Main.progressInfo[TowerScene.category.id]
-    var pct = info.solved / info.puzzles * 100;
-    $('#tower-scene .category-progress .bar-hider').css('left', pct + '%');
-    $('#tower-scene .category-progress .check-count').text(info.solved);
+    if(delay)
+        setTimeout(doIt, 500);
+    else
+        doIt();
 
-    var category = TowerScene.category;
-    for(var i = 0; i < category.towers.length; i++){
+    function doIt(){
 
-        var solved = Main.progressInfo[category.id][i];
-        var tower = category.towers[i];
+        var info = Main.progressInfo[TowerScene.category.id]
+        var pct = info.solved / info.puzzles * 100;
+        $('#tower-scene .category-progress .bar-hider').css('left', pct + '%');
+        $('#tower-scene .category-progress .check-count').text(info.solved);
 
-        $('#tower-scene .tower-section .tower').eq(i)
-        .find('.tower-row').each(function(index){
+        var category = TowerScene.category;
+        for(var i = 0; i < category.towers.length; i++){
 
-            var revIndex = tower.puzzles.length - index - 1;
-            if(revIndex < solved)
-                $(this).attr('status', 'solved');
-            else if(revIndex == solved)
-                $(this).attr('status', 'unlocked');
-            else
-                $(this).attr('status', 'locked');
+            var solved = Main.progressInfo[category.id][i];
+            var tower = category.towers[i];
 
-        });
-    };
+            $('#tower-scene .tower-section .tower').eq(i)
+            .find('.tower-row').each(function(index){
 
-    TowerScene.updateShift();
+                var revIndex = tower.puzzles.length - index - 1;
+                if(revIndex < solved)
+                    $(this).attr('status', 'solved');
+                else if(revIndex == solved)
+                    $(this).attr('status', 'unlocked');
+                else
+                    $(this).attr('status', 'locked');
+
+            });
+        };
+
+        TowerScene.updateShift();
+    }
 };
 
 TowerScene.back = function(){

@@ -12,16 +12,21 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
     ]
 },{
 
-    moves: 1,
-    name: 'puzzle needed',
+    moves: 2,
+    name: 'Spilts 2',
     description: "Blocks can also be split-colored",
+    items: ['BB '],
     contents: [
-        ['DN1']
+        ['BR ','   ','{Y}'],
+        ['   ','   ','   '],
+        ['   ','   ','{Y}'],
+        ['   ','   ','DY1'],
+        ['   ','   ','WWW']
     ]
 },{
 
     moves: 3,
-    name: "",
+    name: 'Splits 3',
     contents: [
         ['WWW','WWW','   ','WWW','BR '],
         ['WWW','WWW','[N]','IR1','DN1'],
@@ -32,7 +37,7 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
 },{
 
     moves: 2,
-    name: "",
+    name: 'Splits 4',
     items: ['BR ','BB '],
     contents: [
         ['   ','   ','DN1','   ','   '],
@@ -44,7 +49,7 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
 },{
 
     moves: 2,
-    name: "",
+    name: 'Splits 5',
     items: ['BB ','BY ','BR '],
     contents: [
         ['DN1','   ','   ','   ','   ','   ','   '],
@@ -58,7 +63,7 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
 },{
 
     moves: 3,
-    name: "",
+    name: 'Splits 6',
     items: ['[N]'],
     contents: [
         ['DR1','WWW','   '],
@@ -70,15 +75,20 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
     ]
 },{
 
-    moves: 1,
-    name: 'puzzle needed',
+    moves: 2,
+    name: 'Splits 7',
+    items: ['BB ','BB ','BB ','BY '],
     contents: [
-        ['DN1']
+        ['BR ','   ','   ','   ','BR '],
+        ['   ','IR1','   ','IR1','   '],
+        ['   ','   ','IR1','   ','   '],
+        ['   ','IR1','   ','IR1','   '],
+        ['DR1','   ','   ','   ','DR1']
     ]
 },{
 
     moves: 2,
-    name: "",
+    name: 'Splits 8',
     items: ['BB ','BY ','BR ','BR '],
     contents: [
         ['   ','   ','DR1','   ','   ','   '],

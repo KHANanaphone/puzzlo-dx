@@ -66,13 +66,13 @@ PUZZLO.tower_categories.dx.addTower('Synchro Tower', 0, [{
 
     moves: 3,
     name: "Synchro 6",
-    items: ['M||','M//','M--','M//'],
+    items: ['M//','M--','M//'],
     contents: [
         ['WWW','   ','DB1','   ','   ','DY1'],
         ['WWW','   ','DY1','   ','WWW','   '],
         ['WWW','   ','   ','   ','WWW','   '],
         ['WWW','   ','   ','   ','WWW','   '],
-        ['DY1','[B]','   ','   ','   ','   '],
+        ['DY1','[B]','M||','   ','   ','   '],
         ['WWW','WWW','WWW','WWW','WWW','WWW']
     ]
 },{

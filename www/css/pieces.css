@@ -111,68 +111,83 @@
 
 /* TELEPORTERS */
 
-.icon[tile-type='teleporter'] .spiral{
-    stroke-width: 10px;
-    stroke: white;
-    visibility: hidden;
+.icon .teleporter-icon .outer{
+
+    stroke: black;
+    stroke-width: 5px;
+    fill: #383838;
 }
 
-.icon[tile-type='teleporter'].active .spiral{
+.icon .teleporter-icon .inner{
 
-    visibility: visible;
+    stroke-width: 3px;
+    fill: transparent;
 }
 
-.icon[tile-type='teleporter'] circle{
-    stroke-width: 10px;
+.icon .teleporter-icon[teleporter-index="1"] .inner{
+
+    stroke: #060;
 }
 
-.icon[tile-type='teleporter'] text{
-    font-family: cursive;
+.icon .teleporter-icon[teleporter-index="1"][active="true"] .inner{
+
+    fill: #0B0;
+    stroke: #0B0;
 }
 
-.icon[tile-type='teleporter'] .spinner{
+.icon .teleporter-icon[teleporter-index="1"][active="true"] .outer{
 
-    stroke-width: 7px;
+    stroke: #0B0;
+    fill: #060;
 }
 
-.icon[tile-type='teleporter'][tile-subtype='t0'] circle{
-    fill: red;
-    stroke: rgb(136, 21, 21);
+.icon .teleporter-icon[teleporter-index="2"] .inner{
+
+    stroke: #840;
 }
 
+.icon .teleporter-icon[teleporter-index="2"][active="true"] .inner{
 
-.icon[tile-type='teleporter'][tile-subtype='t1'] circle{
-    fill: rgb(80, 80, 238);
-    stroke: rgb(51, 51, 105);
+    fill: #F80;
+    stroke: #F80;
 }
 
+.icon .teleporter-icon[teleporter-index="2"][active="true"] .outer{
 
-.icon[tile-type='teleporter'][tile-subtype='t2'] circle{
-    fill: rgb(111, 192, 111);
-    stroke: rgb(62, 116, 62);
+    fill: #840;
+    stroke: #F80;
 }
 
+.icon .teleporter-icon[teleporter-index="3"] .inner{
 
-.icon[tile-type='teleporter'][tile-subtype='t3'] circle{
-    fill: rgb(211, 211, 108);
-    stroke: rgb(87, 90, 23);
+    stroke: #808;
 }
 
-.icon[tile-type='teleporter'][tile-subtype='t0'] .spinner{
-    stroke: rgb(196, 16, 16);
+.icon .teleporter-icon[teleporter-index="3"][active="true"] .inner{
+
+    fill: #F0F;
+    stroke: #F0F;
 }
 
+.icon .teleporter-icon[teleporter-index="3"][active="true"] .outer{
 
-.icon[tile-type='teleporter'][tile-subtype='t1'] .spinner{
-    stroke: rgb(45, 45, 231);
+    fill: #808;
+    stroke: #F0F;
 }
 
+.icon .teleporter-icon[teleporter-index="4"] .inner{
 
-.icon[tile-type='teleporter'][tile-subtype='t2'] .spinner{
-    stroke: rgb(59, 148, 59);
+    stroke: #488;
 }
 
+.icon .teleporter-icon[teleporter-index="4"][active="true"] .inner{
 
-.icon[tile-type='teleporter'][tile-subtype='t3'] .spinner{
-    stroke: rgb(143, 148, 35);
+        stroke: #8FF;
+        fill: #8FF;
+}
+
+.icon .teleporter-icon[teleporter-index="4"][active="true"] .outer{
+
+        stroke: #8FF;
+        fill: #488;
 }

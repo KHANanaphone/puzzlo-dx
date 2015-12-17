@@ -232,7 +232,7 @@ PuzzleScene.setupPuzzle = function() {
             }
         }
 
-        // TeleporterLogic.CheckTeleporters();
+        PuzzleScene.checkTeleporters();
     };
 
     function setupItems() {
@@ -380,8 +380,34 @@ PuzzleScene.showSolvedDialog = function(){
     }
 };
 
+PuzzleScene.checkTeleporters = function(){
+
+    var board = PuzzleScene.board;
+    var teles = {};
+
+    for (var i = 0; i < board.length; i++) {
+        for (var j = 0; j < board[i].length; j++) {
+
+            var tile = board[i][j];
+
+            if(tile.contents.type == 'teleporter'){
+
+                if(teles[tile.contents.teleporterIndex] == 'done'){
+                    ;
+                }
+                else if(teles[tile.contents.teleporterIndex]){
+                    teles[tile.contents.teleporterIndex].pairWith(tile.contents, true);
+                    teles[tile.contents.teleporterIndex] = 'done';
+                }
+                else
+                    teles[tile.contents.teleporterIndex] = tile.contents;
+            }
+        };
+    };
+};
+
 PuzzleScene.solvedContinue = function(){
 
     Main.showScene('tower');
-    TowerScene.updateSolved();
+    TowerScene.updateSolved(true);
 };
