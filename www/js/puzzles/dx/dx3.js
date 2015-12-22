@@ -60,14 +60,17 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 12, [{
     ]
 },{
 
-    moves: 5,
+    moves: 1,
     name: "Keys/Doors 6",
+    items: ['T1 ','T1 ','BY '],
     contents: [
-        ['DN1','KK1','KD3','DN1'],
-        ['WWW','WWW','KK4','DN2'],
-        ['WWW','KK3','DN1','DN2'],
-        ['KD1','DN2','KK2','KD4'],
-        ['WWW','KD2','WWW','DN1']
+        ['   ','   ','   ','BR ','   ','   ','   '],
+        ['   ','   ','   ','KD1','   ','   ','   '],
+        ['   ','   ','   ','DN1','   ','   ','   '],
+        ['   ','   ','   ','DN1','   ','   ','   '],
+        ['   ','   ','   ','KK1','   ','   ','   '],
+        ['   ','   ','   ','WWW','   ','   ','   '],
+        ['   ','   ','   ','DN2','   ','   ','   ']
     ]
 },{
 

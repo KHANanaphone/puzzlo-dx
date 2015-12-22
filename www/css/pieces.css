@@ -122,6 +122,35 @@
     stroke-width: 3px;
 }
 
+@-webkit-keyframes tele{
+    0% {opacity: 0.5}
+    50% {opacity: 1}
+    100% {opacity: 0.5}
+}
+@-moz-keyframes tele{
+    0% {opacity: 0.5}
+    50% {opacity: 1}
+    100% {opacity: 0.5}
+}
+@-o-keyframes tele{
+    0% {opacity: 0.5}
+    50% {opacity: 1}
+    100% {opacity: 0.5}
+}
+@keyframes tele{
+    0% {opacity: 0.5}
+    50% {opacity: 1}
+    100% {opacity: 0.5}
+}
+
+.icon .teleporter-icon[active="true"] .inner{
+
+    -webkit-animation: tele 2s infinite;
+    -moz-animation:    tele 2s infinite;
+    -o-animation:      tele 2s infinite;
+    animation:         tele 2s infinite;
+}
+
 .icon .teleporter-icon[teleporter-index="1"] .inner{
 
     stroke: #060;
@@ -184,9 +213,14 @@
 
 
 /* KEY/DOORS */
-.icon .key-icon path,
+.icon .key-icon path{
+
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-width: 15px;
+}
+
 .icon .door-icon path{
 
     stroke: rgba(255, 255, 255, 0.5);
-    stroke-width: 10px;
+    stroke-width: 35px;
 }
