@@ -406,6 +406,24 @@ PuzzleScene.checkTeleporters = function(){
     };
 };
 
+PuzzleScene.openDoors = function(index, color){
+
+    var board = PuzzleScene.board;
+
+    for (var i = 0; i < board.length; i++) {
+        for (var j = 0; j < board[i].length; j++) {
+
+            var tile = board[i][j];
+
+            if(tile.contents.type == 'door' && tile.contents.keydoorIndex == index){
+
+                tile.flashBackground(color);
+                tile.clear();
+            }
+        }
+    }
+}
+
 PuzzleScene.solvedContinue = function(){
 
     Main.showScene('tower');

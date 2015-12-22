@@ -115,13 +115,11 @@
 
     stroke: black;
     stroke-width: 5px;
-    fill: #383838;
 }
 
 .icon .teleporter-icon .inner{
 
     stroke-width: 3px;
-    fill: transparent;
 }
 
 .icon .teleporter-icon[teleporter-index="1"] .inner{
@@ -131,14 +129,12 @@
 
 .icon .teleporter-icon[teleporter-index="1"][active="true"] .inner{
 
-    fill: #0B0;
-    stroke: #0B0;
+    stroke: #0F0;
 }
 
 .icon .teleporter-icon[teleporter-index="1"][active="true"] .outer{
 
-    stroke: #0B0;
-    fill: #060;
+    stroke: #0F0;
 }
 
 .icon .teleporter-icon[teleporter-index="2"] .inner{
@@ -148,13 +144,11 @@
 
 .icon .teleporter-icon[teleporter-index="2"][active="true"] .inner{
 
-    fill: #F80;
     stroke: #F80;
 }
 
 .icon .teleporter-icon[teleporter-index="2"][active="true"] .outer{
 
-    fill: #840;
     stroke: #F80;
 }
 
@@ -165,13 +159,11 @@
 
 .icon .teleporter-icon[teleporter-index="3"][active="true"] .inner{
 
-    fill: #F0F;
     stroke: #F0F;
 }
 
 .icon .teleporter-icon[teleporter-index="3"][active="true"] .outer{
 
-    fill: #808;
     stroke: #F0F;
 }
 
@@ -182,12 +174,19 @@
 
 .icon .teleporter-icon[teleporter-index="4"][active="true"] .inner{
 
-        stroke: #8FF;
-        fill: #8FF;
+    stroke: #8FF;
 }
 
 .icon .teleporter-icon[teleporter-index="4"][active="true"] .outer{
 
-        stroke: #8FF;
-        fill: #488;
+    stroke: #8FF;
+}
+
+
+/* KEY/DOORS */
+.icon .key-icon path,
+.icon .door-icon path{
+
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-width: 10px;
 }

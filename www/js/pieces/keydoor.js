@@ -15,12 +15,13 @@ PUZZLO.pieces['K'] = {
     				this.$tile = $tile;
 
     	            var $key = $('#hidden .key-icon').clone();
-    	            $key.attr('keydoor-index', this.keydoorIndex
+    	            $key.attr('fill', 'url(#grad_keydoor_' + this.keydoorIndex + ')');
 
     	            $tile.append($key);
     			},
                 applyLogic: function(tile, action){
 
+                    PuzzleScene.openDoors(this.keydoorIndex, action.color);
                     tile.clear();
                     return false;
                 }
@@ -36,7 +37,7 @@ PUZZLO.pieces['K'] = {
     				this.$tile = $tile;
 
     	            var $door = $('#hidden .door-icon').clone();
-    	            $door.attr('keydoor-index', this.keydoorIndex
+    	            $door.attr('fill', 'url(#grad_keydoor_' + this.keydoorIndex + ')');
 
     	            $tile.append($door);
     			},
@@ -48,3 +49,5 @@ PUZZLO.pieces['K'] = {
         }
     }
 }
+
+)();

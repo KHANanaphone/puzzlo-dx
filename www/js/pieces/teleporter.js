@@ -13,13 +13,24 @@ PUZZLO.pieces['T'] = {
 
 				this.$tile = $tile;
 
-	            var $bomb = $('#hidden .teleporter-icon').clone();
+	            var $tele = $('#hidden .teleporter-icon').clone();
+                $tele.attr('active', this.paired ? true : false);
 
-	            $bomb.attr('teleporter-index', this.teleporterIndex);
-                $bomb.attr('active', this.paired ? true : false);
+				if(!this.paired){
+
+					$tele.find('.outer').attr('fill', 'url(#grad_normal)');
+					$tele.find('.inner').attr('fill', 'transparent');
+				}
+				else{
+
+					$tele.find('.outer').attr('fill', 'url(#grad_normal)');
+					$tele.find('.inner').attr('fill', 'url(#grad_tele_' + this.teleporterIndex + ')');
+				}
+
+	            $tele.attr('teleporter-index', this.teleporterIndex);
 				//$bomb.find('path').attr('fill', 'url(#grad_' + this.color + ')');
 
-	            $tile.append($bomb);
+	            $tile.append($tele);
 			},
 
 			applyLogic: function(tile, action){

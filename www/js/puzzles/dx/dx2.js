@@ -73,7 +73,7 @@ PUZZLO.tower_categories.dx.addTower('Teleporter Tower', 6, [{
 },{
 
     moves: 3,
-    name: "Teleporters 3",
+    name: "Teleporters 7",
     description: "If there's only one teleporter, the shot will just disappear.",
     items: ['T4 ','T4 '],
     contents: [
