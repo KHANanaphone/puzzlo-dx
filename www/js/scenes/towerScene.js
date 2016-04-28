@@ -144,9 +144,12 @@ TowerScene.updateSolved = function(delay){
 
             var solved = Main.progressInfo[category.id][i];
             var tower = category.towers[i];
+            var $tower = $('#tower-scene .tower-section .tower').eq(i);
 
-            $('#tower-scene .tower-section .tower').eq(i)
-            .find('.tower-row').each(function(index){
+            if(solved == tower.puzzles.length)
+                $tower.attr('status', 'finished');
+
+            $tower.find('.tower-row').each(function(index){
 
                 var revIndex = tower.puzzles.length - index - 1;
                 if(revIndex < solved)

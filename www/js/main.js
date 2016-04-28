@@ -127,7 +127,7 @@ Main.setCurrentSolved = function(){
     if(Main.progressInfo[cat][tower] != puzzle)
         return null;
 
-    var newUnlocks = [];
+    var notifications = [];
     Main.progressInfo[cat][tower] = puzzle + 1;
     Main.progressInfo[cat].solved++;
     Main.progressInfo.total++;
@@ -138,17 +138,28 @@ Main.setCurrentSolved = function(){
 
         var cat2 = PUZZLO.tower_categories[catName];
         if(cat2.required == Main.progressInfo.total)
-            newUnlocks.push(['category', cat2.name]);
+            notifications.push(['category_unlocked', cat2.name]);
     }
 
     for(var i = 0; i < PUZZLO.tower_categories[cat].towers.length; i++){
 
         var tow2 = PUZZLO.tower_categories[cat].towers[i];
         if(tow2.required == Main.progressInfo[cat].solved)
-            newUnlocks.push(['tower', tow2.name]);
+            notifications.push(['tower_unlocked', tow2.name]);
     }
 
-    return newUnlocks;
+    var t = PUZZLO.tower_categories[cat].towers[tower];
+    if(Main.progressInfo[cat][tower] == t.puzzles.length){
+
+        notifications.push(['tower_complete', t.name]);
+    }
+
+    if(Main.progressInfo[cat].solved == Main.progressInfo[cat].puzzles){
+
+        notifications.push(['category_complete', cat]);
+    }
+
+    return notifications;
 };
 
 var DEBUG_CTRL = false;

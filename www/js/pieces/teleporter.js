@@ -2,12 +2,28 @@ PUZZLO.pieces['T'] = {
 
 	create: function(id){
 
+		var canToggle = false;
+		var index = id[1];
+		if(index == '?'){
+			index = 1;
+			canToggle = true;
+		}
+
 		return {
 
+			canToggle: canToggle,
 			$tile: null,
 			type: 'teleporter',
-			teleporterIndex: id[1],
+			teleporterIndex: index,
             paired: null,
+
+			toggle: function(){
+
+				if(!this.canToggle)
+					return;
+
+				this.teleporterIndex = (this.teleporterIndex % 4) + 1;
+			},
 
 			draw: function($tile){
 

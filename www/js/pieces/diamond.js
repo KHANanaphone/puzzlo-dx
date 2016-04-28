@@ -4,17 +4,23 @@
 
 		create: function(id){
 
+			var c = id[1];
+			var canToggle = c == '?' ? true : false;
+
+
 			var color = {
 				'N' : 'normal',
 				'B' : 'blue',
 				'Y' : 'yellow',
-				'R' : 'red'
+				'R' : 'red',
+				'?' : 'red' // default toggle state
 			}[id[1]];
 
 			var health = parseInt(id[2]);
 
 			return {
-
+				canToggle: canToggle,
+				toggle: toggle,
 				type: 'diamond',
 				color: color,
 				health: health,
@@ -29,16 +35,21 @@
 
 		create: function(id){
 
+			var c = id[1];
+			var canToggle = c == '?' ? true : false;
+
 			var color = {
 				'B' : 'blue',
 				'Y' : 'yellow',
-				'R' : 'red'
+				'R' : 'red',
+				'?' : 'red' // default toggle state
 			}[id[1]];
 
 			var health = parseInt(id[2]);
 
 			return {
-
+				canToggle: canToggle,
+				toggle: toggle,
 				type: 'diamond',
 				color: color,
 				health: health,
@@ -51,6 +62,7 @@
 
 	function draw($tile){
 
+		this.$tile = $tile;
         var $diamond = $('#hidden .diamond-icon').clone();
 
         $diamond
@@ -69,7 +81,7 @@
 	function applyLogic(tile, action){
 
 		if(this.color != 'normal'){
-			
+
 			if(this.inverted){
 				if(action.color == this.color)
 					return true;
@@ -86,6 +98,19 @@
 			tile.clear();
 
 		return false;
-	}
+	};
+
+	function toggle(){
+
+		if(!this.canToggle)
+			return;
+
+		if(this.color == 'blue')
+			this.color = 'red';
+		else if(this.color == 'red')
+			this.color = 'yellow';
+		else if(this.color == 'yellow')
+			this.color = 'blue';
+	};
 
 }).call();

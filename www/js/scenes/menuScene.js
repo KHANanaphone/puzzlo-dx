@@ -19,7 +19,6 @@ MenuScene.init = function(){
     Main.loadProgressInfo();
 
     var $towerSelect = $('#menu-scene .tower-select');
-    var $bg = $towerSelect.find('.background');
     var y = -1;
 
     for(var cat in PUZZLO.tower_categories){
@@ -27,25 +26,14 @@ MenuScene.init = function(){
         y++;
         var category = PUZZLO.tower_categories[cat];
 
-        for(var x = 0; x < 4; x++){
-
-            var $tile = $('#hidden .menu-puzzle-tile').clone();
-
-            if((x + y) % 2)
-                $tile.addClass('even');
-            else
-                $tile.addClass('odd');
-
-            $bg.append($tile);
-        };
-
         var $row = $('#hidden .menu-tower-row').clone();
-        $row.data('categoryId', category.id);
-        $row.addClass(category.id);
-        $row.find('.name').text(category.name);
-        $row.click(function(){
+        $row.data('categoryId', category.id)
+        .addClass(category.id)
+        .addClass(y % 2 ? 'even' : 'odd')
+        .click(function(){
             MenuScene.rowClicked($(this));
-        });
+        })
+        .find('.name').text(category.name);
 
         $towerSelect.append($row);
     };

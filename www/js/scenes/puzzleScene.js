@@ -367,16 +367,34 @@ PuzzleScene.showSolvedDialog = function(){
 
     var newUnlocks = Main.setCurrentSolved();
 
-    if(newUnlocks && newUnlocks.length > 0){
+    if(!newUnlocks)
+        return;
 
-        var type = newUnlocks[0][0];
-        var name = newUnlocks[0][1];
+    for(var i = 0; i < newUnlocks.length; i++){
+
+        var type = newUnlocks[i][0];
+        var name = newUnlocks[i][1];
         var $text = $('#success-popup .unlock-text');
+        var text = '';
 
-        // if(type == 'category')
-        //     $text.addClass('big').attr('category', name);
+        if(type == 'tower_unlocked'){
 
-        $text.text(name + ' unlocked!');
+            text = 'Tower unlocked: ' + name;
+        }
+        else if(type == 'category_unlocked'){
+
+            text = name + 'Category unlocked: ' + name;
+        }
+        else if(type == 'tower_complete'){
+
+            text = name + ' tower completed';
+        }
+        else if(type == 'category_complete'){
+
+            text = name + ' puzzles completed';
+        }
+
+        $text.append(text + '<br/>');
     }
 };
 
@@ -384,6 +402,7 @@ PuzzleScene.checkTeleporters = function(){
 
     var board = PuzzleScene.board;
     var teles = {};
+    var teleList = [];
 
     for (var i = 0; i < board.length; i++) {
         for (var j = 0; j < board[i].length; j++) {
@@ -391,6 +410,9 @@ PuzzleScene.checkTeleporters = function(){
             var tile = board[i][j];
 
             if(tile.contents.type == 'teleporter'){
+
+                teleList.push(tile);
+                tile.contents.paired = null;
 
                 if(teles[tile.contents.teleporterIndex] == 'done'){
                     ;
@@ -404,6 +426,9 @@ PuzzleScene.checkTeleporters = function(){
             }
         };
     };
+
+    for(var t = 0; t < teleList.length; t++)
+        teleList[t].drawContents();
 };
 
 PuzzleScene.openDoors = function(index, color){

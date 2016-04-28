@@ -20,6 +20,20 @@
     cursor: pointer;
 }
 
+.puzzle-tile .toggle-icon{
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    height: 40%;
+    fill: rgba(255, 255, 255, 0.7);
+}
+
+.puzzle-tile.can-toggle .toggle-icon{
+    visibility: visible;
+}
+
 .puzzle-tile[tile-type='ice'] .arrow-in{
 
     /*fill: url(#grad_blue);*/
@@ -223,4 +237,12 @@
 
     stroke: rgba(255, 255, 255, 0.5);
     stroke-width: 35px;
+}
+
+.icon .sand-icon .sand-bg{
+    fill: rgba(113, 89, 30, 0.5);
+}
+
+.icon .sand-icon .sand-grain{
+    fill: #FFDD87;
 }

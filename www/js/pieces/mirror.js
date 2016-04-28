@@ -4,10 +4,17 @@
 
 		create: function(id){
 
+			var canToggle = false;
 			var facing = id.substring(1);
+			if(facing == '??'){
+				facing = '//';
+				canToggle = true;
+			}
 
 			return {
 
+				canToggle: canToggle,
+				toggle: toggle,
 				type: 'mirror',
 				facing: facing,
 				draw: draw,
@@ -16,6 +23,20 @@
 		}
 	};
 
+	function toggle(){
+
+		if(!this.canToggle)
+			return;
+
+		if(this.facing == '//')
+			this.facing = '--';
+		else if(this.facing == '--')
+			this.facing = '\\';
+		else if(this.facing == '\\')
+			this.facing = '||';
+		else if(this.facing == '||')
+			this.facing = '//';
+	};
 
 	function draw($tile){
 
@@ -119,7 +140,7 @@
 
         if(newDir){
             action.direction = newDir;
-            return false;           
+            return false;
         }
         else {
             tile.clear();

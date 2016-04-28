@@ -8,6 +8,11 @@ function Tile($tile, properties) {
 
     $tile.attr('tile-type', 'board');
 
+    $tile.click(
+        function() {
+            self.clicked();
+        });
+
     if (properties.isBoardTile) {
 
         this.x = properties.x;
@@ -21,11 +26,6 @@ function Tile($tile, properties) {
         } else {
             $tile.attr('even', false);
         }
-
-        $tile.click(
-            function() {
-                self.clicked();
-            });
     };
 };
 
@@ -33,15 +33,26 @@ Tile.prototype.clicked = function() {
 
     var next = PuzzleScene.itemTiles[0];
 
-    if (!next)
+    if(this.contents.canToggle){
+
+        this.contents.toggle();
+        this.flashBackground('white');
+        this.drawContents();
+
+        if(this.contents.type == 'teleporter')
+            PuzzleScene.checkTeleporters();
+    }
+    else if (!next){
         return;
+    }
     else if (next.contents.type == 'shifter'){
 
         if(next.contents.doShift(this))
             PuzzleScene.nextItem();
     }
-    else if(this.contents.type != 'blank')
+    else if(this.contents.type != 'blank'){
             return;
+    }
     else {
 
         this.setContents(next.contents);
@@ -66,6 +77,11 @@ Tile.prototype.drawContents = function() {
 
     var $icon = this.$tile.find('.icon').empty();
     this.contents.draw($icon);
+
+    if(this.contents.canToggle)
+        this.$tile.addClass('can-toggle');
+    else
+        this.$tile.removeClass('can-toggle');
 }
 
 Tile.prototype.flashBackground = function(color) {

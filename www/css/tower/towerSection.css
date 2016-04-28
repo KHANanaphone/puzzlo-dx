@@ -36,17 +36,15 @@
 
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 15%;
+    right: 15%;
 }
 
 #tower-scene .tower-row{
 
     height: 3.8em;
     background-color: rgba(255, 255, 255, 0.3);
-    margin: 1% auto;
-    width: 70%;
-    border: 0.3em solid #FFF;
+    margin: auto;
     cursor: pointer;
 
     -webkit-transition: border-color 0.25s, background-color 0.25s,opacity 0.25s;
@@ -54,6 +52,8 @@
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.41);
+
 }
 
 #tower-scene .tower-row[status='locked']{
@@ -67,16 +67,19 @@
     color: transparent;
 }
 
+#tower-scene .tower[status='finished'] .tower-row{
+
+    /*background-color: rgb(218, 213, 45);*/
+}
+
 #tower-scene .tower-row[status='solved']{
 
-    border-color: #82D882;
-    background-color: rgba(92, 169, 92, 0.7);
+    background-color: rgb(98, 194, 80);;
 }
 
 #tower-scene .tower-row:not([status='locked']):hover{
 
-    border-color: #8A88CC;
-    background-color: rgba(141, 139, 177, 0.7);
+    background-color: rgba(80, 124, 204, 0.6);
 }
 
 #tower-scene .puzzle-name{
@@ -85,7 +88,7 @@
     color: white;
     font-size: 1.6em;
     text-align: center;
-    line-height: 2em;
+    line-height: 2.4em;
 
     -webkit-transition: color 0.25s;
     transition: color 0.25s;

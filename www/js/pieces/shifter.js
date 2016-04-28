@@ -4,20 +4,30 @@
 
 		create: function(id){
 
-			var xShift = 0, yShift = 0;
+			var canToggle = false, xShift = 0, yShift = 0;
 
-			if(id.indexOf('U') != -1)
-				yShift = -1;
-			else if(id.indexOf('D') != -1)
-				yShift = 1;
+			if(id.indexOf('?') != -1){
 
-			if(id.indexOf('L') != -1)
-				xShift = -1;
-			else if(id.indexOf('R') != -1)
+				canToggle = true;
 				xShift = 1;
+				yShift = 0;
+			}
+			else{
+				if(id.indexOf('U') != -1)
+					yShift = -1;
+				else if(id.indexOf('D') != -1)
+					yShift = 1;
+
+				if(id.indexOf('L') != -1)
+					xShift = -1;
+				else if(id.indexOf('R') != -1)
+					xShift = 1;
+			}
 
 			return {
 
+				canToggle: canToggle,
+				toggle: toggle,
 				type: 'shifter',
 				xShift: xShift,
 				yShift: yShift,
@@ -29,9 +39,31 @@
 		}
 	};
 
+	function toggle(){
+
+		var x = this.xShift, y = this.yShift;
+
+    	if(x == 0 && y == -1)
+    		this.xShift = 1;
+    	else if(x == 1 && y == -1)
+    		this.yShift = 0;
+    	else if(x == 1 && y == 0)
+    		this.yShift = 1;
+    	else if(x == 1 && y == 1)
+    		this.xShift = 0;
+    	else if(x == 0 && y == 1)
+    		this.xShift = -1;
+    	else if(x == -1 && y == 1)
+    		this.yShift = 0;
+    	else if(x == -1 && y == 0)
+    		this.yShift = -1;
+    	else if(x == -1 && y == -1)
+    		this.xShift = 0;
+	};
+
 	function doShift(from){
 
-		if (from.contents.type == 'blank' || from.contents.type == 'wall')
+		if (from.contents.type == 'blank' || from.contents.type == 'wall' || from.contents.type == 'sand')
             return;
 
         var toX = from.x + this.xShift;

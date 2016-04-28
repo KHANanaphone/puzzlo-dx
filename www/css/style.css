@@ -8,7 +8,7 @@ html, body{
     background-color: #446;
 }
 
-text, span {
+text, span, .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
