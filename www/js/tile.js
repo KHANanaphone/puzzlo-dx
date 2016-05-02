@@ -93,7 +93,7 @@ Tile.prototype.flashBackground = function(color) {
         return;
     }
 
-    TweenMax.fromTo($bg, Timer.interval / 800, {
+    TweenMax.fromTo($bg, 0.3, {
             backgroundColor: color
         }, {
             backgroundColor: bgcolor,

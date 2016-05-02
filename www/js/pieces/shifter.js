@@ -86,7 +86,7 @@
 				//this is an attempt to solve the "shift an object into a shot to
 				//bypass it" bug
 
-				var actions = Timer.getActionsAt(to.x + 1, to.y + 1);
+				var actions = ShotManager.getActionsAt(to.x + 1, to.y + 1);
 
 				for(var i = 0; i < actions.length; i++){
 

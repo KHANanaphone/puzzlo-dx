@@ -16,7 +16,7 @@ PUZZLO.pieces['B'] = {
 			draw: function($tile){
 
 	            var $bomb = $('#hidden .bomb-icon').clone();
-				
+
 	            $bomb.attr('color', this.color);
 				$bomb.find('path').attr('fill', 'url(#grad_' + this.color + ')');
 
@@ -35,7 +35,7 @@ PUZZLO.pieces['B'] = {
 					dirs = ['D', 'U'];
 
 				for(var i = 0; i < dirs.length; i++)
-			        Timer.AddAction({
+			        new Shot({
 			            x: tile.x + 1,
 			            y: tile.y + 1,
 			            direction: dirs[i],

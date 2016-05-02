@@ -6,10 +6,10 @@
 #menu-scene .tower-select{
 
     height: 43%;
-    border: 1px solid white;
-    /*-webkit-border-radius: 8px;
+    border: 4px solid white;
+    -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
-    border-radius: 8px;*/
+    border-radius: 8px;
     position: absolute;
     opacity: 0;
     bottom: 8%;
@@ -29,17 +29,7 @@
 
     z-index: 15;
     position: relative;
-    height: 33.33%;
-}
-
-#menu-scene .menu-tower-row.odd{
-
-    background-color: rgba(180, 180, 195, 0.5);
-}
-
-#menu-scene .menu-tower-row.even{
-
-    background-color: rgba(134, 134, 156, 0.5);
+    height: 34%;
 }
 
 #menu-scene .menu-tower-row .locked{
@@ -56,6 +46,14 @@
     display: inline-block;
 }
 
+#menu-scene .menu-puzzle-tile.even{
+    background-color: rgba(171, 174, 195, 0.5);
+}
+
+#menu-scene .menu-puzzle-tile.odd{
+    background-color: rgba(134, 134, 156, 0.5);
+}
+
 #menu-scene .menu-tower-row{
 
     font-family: 'Play';
@@ -69,10 +67,10 @@
     cursor: pointer;
 }
 
-#menu-scene .menu-tower-row{
+#menu-scene .menu-tower-row .unlocked{
 
-    -webkit-transition: background-color 0.4s;
-    transition: background-color 0.4s;
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
     cursor: pointer;
 }
 
@@ -118,22 +116,22 @@
     1px  1px 0 #F00;
 }
 
-#menu-scene .menu-tower-row.fun:hover,
-#menu-scene .menu-tower-row.fun.clicked{
+#menu-scene .menu-tower-row.fun:hover .unlocked,
+#menu-scene .menu-tower-row.fun.clicked .unlocked{
 
-    background-color: #88F;
+    color: #88F;
 }
 
-#menu-scene .menu-tower-row.advanced:hover,
-#menu-scene .menu-tower-row.advanced.clicked{
+#menu-scene .menu-tower-row.advanced:hover .unlocked,
+#menu-scene .menu-tower-row.advanced.clicked .unlocked{
 
-    background-color: #C8D22C;
+    color: #FF0;
 }
 
-#menu-scene .menu-tower-row.dx:hover,
-#menu-scene .menu-tower-row.dx.clicked{
+#menu-scene .menu-tower-row.dx:hover .unlocked,
+#menu-scene .menu-tower-row.dx.clicked .unlocked{
 
-    background-color: #B74848;
+    color: #F88;
 }
 
 #menu-scene .p polygon{

@@ -21,7 +21,7 @@ Lightning.prototype.drawContents = function(){
         $icon.find('path').attr('transform', 'scale(1, -1) translate(0, -200)');
 
     $icon.find('.arrow-in').attr('fill', 'url(#grad_yellow)');
-    
+
     this.$tile.find('.icon').empty().append($icon);
 }
 
@@ -45,7 +45,7 @@ Lightning.prototype.setupClicking = function(){
 
         $tile.attr('ready', 0);
 
-        Timer.AddAction({
+        new Shot({
             x: lightning.x,
             y: lightning.y,
             direction: lightning.isTop ? 'D' : 'U',
@@ -53,7 +53,6 @@ Lightning.prototype.setupClicking = function(){
         });
 
         PuzzleScene.ReduceMovesLeft();
-        Timer.Run();
     }
 }
 

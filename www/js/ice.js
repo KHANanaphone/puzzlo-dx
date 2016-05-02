@@ -45,7 +45,7 @@ Ice.prototype.setupClicking = function(){
 
         $tile.attr('ready', 0);
 
-        Timer.AddAction({
+        new Shot({
             x: ice.x,
             y: ice.y,
             direction: ice.isLeft ? 'R' : 'L',
@@ -53,7 +53,6 @@ Ice.prototype.setupClicking = function(){
         });
 
         PuzzleScene.ReduceMovesLeft();
-        Timer.Run();
     }
 }
 

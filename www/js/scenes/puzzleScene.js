@@ -289,7 +289,7 @@ PuzzleScene.retry = function() {
     setTimeout(function(){
 
         PuzzleScene.retrying = false;
-        Timer.Stop();
+        ShotManager.stop();
         $button.css('color', '');
         PuzzleScene.setupPuzzle(PuzzleScene.puzzle);
         // $('#tiles').fadeIn();

@@ -1,3 +1,38 @@
+/* SHOT EFFECT */
+
+.shot {
+    position: absolute;
+
+    -webkit-transition-property: top, left;
+    transition-property: top, left;
+    
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+.shot circle {
+
+    stroke-width: 2px;
+}
+
+.shot.blue circle {
+
+    fill: #CCF;
+    stroke: blue;
+}
+
+.shot.red circle {
+
+    fill: #FCC;
+    stroke: red;
+}
+
+.shot.yellow circle {
+
+    fill: #FFC;
+    stroke: yellow;
+}
+
 /* ICE & LIGHTNING */
 .puzzle-tile[tile-type='ice'] .bg,
 .puzzle-tile[tile-type='lightning'] .bg{
