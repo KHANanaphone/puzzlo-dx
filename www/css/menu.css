@@ -6,7 +6,6 @@
 #menu-scene .tower-select{
 
     height: 43%;
-    border: 4px solid white;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
@@ -19,6 +18,7 @@
 }
 
 #menu-scene .background{
+
     width: 100%;
     height: 100%;
     position: absolute;
@@ -34,6 +34,7 @@
 
 #menu-scene .menu-tower-row .locked{
 
+    padding: 1.1em 0.6em;
     text-align: center;
     opacity: 0.5;
     cursor: default;
@@ -58,7 +59,6 @@
 
     font-family: 'Play';
     font-size: 1.7em;
-    padding: 1.1em 0.6em;
     color: white;
     font-weight: bold;
 }
@@ -69,8 +69,9 @@
 
 #menu-scene .menu-tower-row .unlocked{
 
-    -webkit-transition: color 0.4s;
-    transition: color 0.4s;
+    padding: 1.1em 0.6em;
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
     cursor: pointer;
 }
 
@@ -79,7 +80,7 @@
     color: white;
 }
 
-#menu-scene .menu-tower-row.fun{
+#menu-scene .menu-tower-row.fun .locked{
 
   text-shadow:
    -1px -1px 0 #00F,
@@ -88,17 +89,7 @@
     1px  1px 0 #00F;
 }
 
-#menu-scene .menu-tower-row[allclear="true"] i{
-
-    color: #FDD600;
-    text-shadow:
-        -2px -2px 0 #882,
-        2px -2px 0 #882,
-        -2px  2px 0 #882,
-        2px  2px 0 #882;
-}
-
-#menu-scene .menu-tower-row.advanced{
+#menu-scene .menu-tower-row.advanced .locked{
 
   text-shadow:
    -1px -1px 0 #882,
@@ -107,7 +98,7 @@
     1px  1px 0 #882;
 }
 
-#menu-scene .menu-tower-row.dx{
+#menu-scene .menu-tower-row.dx .locked{
 
   text-shadow:
    -1px -1px 0 #F00,
@@ -116,22 +107,42 @@
     1px  1px 0 #F00;
 }
 
+#menu-scene .menu-tower-row[allclear="true"] .right{
+
+    color: #CFC;
+}
+
+#menu-scene .menu-tower-row.fun .unlocked{
+
+    background-color: #88F;
+}
+
+#menu-scene .menu-tower-row.advanced .unlocked{
+
+    background-color: #CC5;
+}
+
+#menu-scene .menu-tower-row.dx .unlocked{
+
+    background-color: #FB7D7D;
+}
+
 #menu-scene .menu-tower-row.fun:hover .unlocked,
 #menu-scene .menu-tower-row.fun.clicked .unlocked{
 
-    color: #88F;
+    background-color: #44F;
 }
 
 #menu-scene .menu-tower-row.advanced:hover .unlocked,
 #menu-scene .menu-tower-row.advanced.clicked .unlocked{
 
-    color: #FF0;
+        background-color: #DD2;
 }
 
 #menu-scene .menu-tower-row.dx:hover .unlocked,
 #menu-scene .menu-tower-row.dx.clicked .unlocked{
 
-    color: #F88;
+        background-color: #F22;
 }
 
 #menu-scene .p polygon{
