@@ -73,6 +73,8 @@
     -webkit-transition: background-color 0.4s ease;
     transition: background-color 0.4s ease;
     cursor: pointer;
+
+    background-color: rgba(128,128,128,0.5);
 }
 
 #menu-scene .menu-tower-row .right{
@@ -80,7 +82,7 @@
     color: white;
 }
 
-#menu-scene .menu-tower-row.fun .locked{
+#menu-scene .menu-tower-row.fun{
 
   text-shadow:
    -1px -1px 0 #00F,
@@ -89,7 +91,7 @@
     1px  1px 0 #00F;
 }
 
-#menu-scene .menu-tower-row.advanced .locked{
+#menu-scene .menu-tower-row.advanced{
 
   text-shadow:
    -1px -1px 0 #882,
@@ -98,7 +100,7 @@
     1px  1px 0 #882;
 }
 
-#menu-scene .menu-tower-row.dx .locked{
+#menu-scene .menu-tower-row.dx{
 
   text-shadow:
    -1px -1px 0 #F00,
@@ -110,21 +112,6 @@
 #menu-scene .menu-tower-row[allclear="true"] .right{
 
     color: #CFC;
-}
-
-#menu-scene .menu-tower-row.fun .unlocked{
-
-    background-color: #88F;
-}
-
-#menu-scene .menu-tower-row.advanced .unlocked{
-
-    background-color: #CC5;
-}
-
-#menu-scene .menu-tower-row.dx .unlocked{
-
-    background-color: #FB7D7D;
 }
 
 #menu-scene .menu-tower-row.fun:hover .unlocked,
