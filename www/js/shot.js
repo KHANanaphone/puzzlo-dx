@@ -7,9 +7,8 @@ function Shot(options){
     this.direction = options.direction;
     this.color = options.color;
 
-    this.$shot = $('#hidden .shot')
-    .clone()
-    .attr('class', 'shot ' + options.color);
+    this.$shot = $('<div></div>')
+    .addClass('shot');
 
     var size = 100 / PuzzleScene.puzzleSize;
 
@@ -24,9 +23,46 @@ function Shot(options){
     $('#tiles').append(this.$shot);
     ShotManager.add(this);
 
-    setTimeout(function(){
+    window.setTimeout(function(){
         self.moveToNext();
     }, 5);
+
+    this.particleInterval = window.setInterval(function(){
+        self.createParticle();
+    }, 50);
+};
+
+Shot.prototype.createParticle = function(){
+
+    var $particle = $('#hidden .shot-particle')
+    .clone()
+    .attr('class', 'shot-particle ' + this.color);
+
+    $('#tiles').append($particle);
+
+    $particle.css({
+        top: this.$shot.css('top'),
+        left: this.$shot.css('left')
+    });
+
+    var size = 100 / this.$shot.height();
+
+    $particle.css({
+        top: '+=' + (bellRandom()*this.$shot.height()),
+        left: '+=' + (bellRandom()*this.$shot.width())
+    });
+
+    $('#tiles').append($particle);
+
+    window.setTimeout(function(){
+
+        $particle.remove();
+    }, 500);
+
+    function bellRandom(){
+
+        return (Math.random() + Math.random() + Math.random() + Math.random()) / 4;
+    };
 };
 
 Shot.prototype.moveToNext = function(){
@@ -59,13 +95,6 @@ Shot.prototype.moveToNext = function(){
 
     var $tile = PuzzleScene.$tiles[nextY][nextX];
 
-    //check boundary, set 'finished' flag if needed
-    if (!$tile || $tile.attr('tile-type') != 'board') {
-
-        ShotManager.remove(self);
-        return;
-    }
-
     this.$shot.css({
 
         top: size * nextY + '%',
@@ -92,6 +121,7 @@ Shot.prototype.moveToNext = function(){
 Shot.prototype.destroy = function(){
 
     this.$shot.remove();
+    window.clearInterval(this.particleInterval);
 };
 
 Shot.prototype.applyLogic = function(){

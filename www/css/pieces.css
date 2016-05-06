@@ -5,32 +5,45 @@
 
     -webkit-transition-property: top, left;
     transition-property: top, left;
-    
+
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
 }
 
-.shot circle {
-
-    stroke-width: 2px;
+@-webkit-keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
-.shot.blue circle {
-
-    fill: #CCF;
-    stroke: blue;
+keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
-.shot.red circle {
+.shot-particle {
 
-    fill: #FCC;
-    stroke: red;
+    position: absolute;
+    width: 1.5%;
+    height: 1.5%;
+    opacity: 0;
+
+    -webkit-animation: fadeout 0.5s linear;
+    animation: fadeout 0.5s linear;
 }
 
-.shot.yellow circle {
+.shot-particle.blue circle {
 
-    fill: #FFC;
-    stroke: yellow;
+    fill: blue;
+}
+
+.shot-particle.red circle {
+
+    fill: red;
+}
+
+.shot-particle.yellow circle {
+
+    fill: yellow;
 }
 
 /* ICE & LIGHTNING */
