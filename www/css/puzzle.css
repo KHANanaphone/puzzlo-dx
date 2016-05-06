@@ -150,7 +150,8 @@
     overflow: hidden;
 }
 
-#tile-area.clickable .puzzle-tile[tile-type="board"]{
+#tile-area.clickable .puzzle-tile[tile-type="board"],
+#tile-area.clickable .puzzle-tile[tile-type="board"] text{
     cursor: pointer;
     pointer-events:all;
 }
