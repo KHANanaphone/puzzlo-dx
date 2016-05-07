@@ -51,11 +51,11 @@ PUZZLO.tower_categories.dx.addTower('Synchro Tower', 0, [{
 
     moves: 2,
     name: "Synchro 5",
-    items: ["BR ","BR ",'M||','M//','M--'],
+    items: ["BR ",'M||','M--'],
     contents: [
-        ['   ','   ','   ','WWW','DR1'],
+        ['M//','   ','   ','WWW','DR1'],
         ['   ','   ','   ','DY1','   '],
-        ['   ','   ','   ','DY1','   '],
+        ['   ','   ','BR ','DY1','   '],
         ['   ','   ','   ','DY1','   '],
         ['   ','   ','   ','DY1','   '],
         ['   ','   ','   ','DY1','   '],

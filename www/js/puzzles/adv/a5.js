@@ -63,16 +63,16 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 },{
 
     moves: 2,
-    name: "Crazy Cray Maze",
-    items: ['SU ','SD ','SU '],
+    name: "",
+    items: ['BR ','M//','M//','SL '],
     contents: [
-        ['   ','   ','   ','   ','   ','WWW','WWW'],
-        ['M\\','M//','M\\','M//','M//','WWW','WWW'],
-        ['M//','M\\','M\\','M\\','M//','WWW','WWW'],
-        ['M//','M\\','M//','M//','M\\','DB1','WWW'],
-        ['M\\','M//','M\\','M//','M//','WWW','WWW'],
-        ['M\\','M//','M//','M//','M//','WWW','WWW'],
-        ['   ','   ','   ','   ','   ','WWW','WWW']
+        ['   ','   ','   ','   ','WWW','WWW','WWW','WWW'],
+        ['   ','   ','M--','   ','WWW','DB1','DN1','WWW'],
+        ['   ','   ','   ','   ','WWW','   ','   ','WWW'],
+        ['   ','   ','   ','   ','IB1','   ','   ','WWW'],
+        ['   ','   ','   ','   ','WWW','   ','   ','WWW'],
+        ['   ','   ','   ','   ','WWW','   ','DN1','WWW'],
+        ['   ','   ','   ','   ','WWW','WWW','WWW','WWW'],
     ]
 },{
 
@@ -92,16 +92,15 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 
     moves: 3,
     name: "",
-    items: ['IR3','M\\','M\\','SUR','SUL'],
+    items: ['IR3','M\\','M\\','M\\','M\\','M\\'],
     contents: [
-        ['   ','   ','BR ','   ','WWW','   '],
-        ['   ','   ','   ','   ','   ','   '],
-        ['BR ','   ','   ','   ','BR ','WWW'],
-        ['   ','   ','   ','   ','   ','WWW'],
-        ['WWW','   ','BR ','   ','   ','WWW'],
-        ['WWW','   ','   ','[R]','   ','WWW'],
-        ['WWW','   ','   ','   ','{R}','WWW'],
-        ['WWW','WWW','WWW','   ','WWW','DR1']
+        ['BR ','   ','   ','   ','   ','   ','WWW'],
+        ['   ','   ','   ','   ','   ','   ','WWW'],
+        ['   ','   ','   ','   ','   ','   ','WWW'],
+        ['   ','   ','   ','BR ','   ','WWW','WWW'],
+        ['   ','   ','   ','   ','[R]','WWW','WWW'],
+        ['   ','   ','   ','WWW','   ','[B]','WWW'],
+        ['WWW','WWW','   ','WWW','WWW','WWW','DR1']
     ]
 }
 

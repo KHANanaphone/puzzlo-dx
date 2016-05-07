@@ -26,11 +26,11 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
         moves: 1,
         name: "Bombs",
         contents: [
-            ['WWW','   ','   ','BR ','   ','   '],
-            ['DR1','   ','   ','   ','   ','   '],
-            ['WWW','[N]','   ','   ','   ','BR '],
-            ['WWW','   ','   ','   ','   ','   '],
-            ['WWW','   ','   ','BR ','   ','   ']
+            ['WWW','   ','   ','BR ','   ','WWW','WWW'],
+            ['DR1','   ','   ','   ','   ','   ','WWW'],
+            ['WWW','[N]','   ','   ','   ','BR ','WWW'],
+            ['WWW','   ','   ','   ','   ','   ','WWW'],
+            ['WWW','   ','   ','BR ','   ','WWW','WWW']
         ]
     },{
 

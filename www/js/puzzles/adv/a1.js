@@ -83,7 +83,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
     contents: [
         ['WWW','WWW','WWW','WWW','WWW'],
         ['WWW','   ','   ','   ','WWW'],
-        ['DN1','   ','WWW','   ','WWW'],
+        ['...','   ','WWW','   ','WWW'],
         ['   ','WWW','WWW','WWW','WWW'],
         ['WWW','WWW','WWW','WWW','WWW'],
     ]
