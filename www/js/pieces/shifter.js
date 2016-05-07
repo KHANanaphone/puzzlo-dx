@@ -39,8 +39,9 @@
 		if (from.contents.type == 'blank' || from.contents.type == 'wall' || from.contents.type == 'sand')
             return;
 
-        var toX = from.x + this.xShift;
-        var toY = from.y + this.yShift;
+		var shift = PUZZLO.directionToXY(this.direction);
+        var toX = from.x + shift[0];
+        var toY = from.y + shift[1];
 
         try{
 
@@ -53,18 +54,11 @@
 
         		this.animateShift(from, to);
 
-				//if there's an action occurring at the spot where we're moving
-				//something, have that thing apply its logic to the action.
-				//
-				//This is an attempt to solve the "shift an object into a shot to
-				//bypass it" bug
-
 				var actions = ShotManager.getShotsAt(to.x + 1, to.y + 1);
 
 				for(var i = 0; i < actions.length; i++){
 
-					debugger;
-					if(shotTravellingIntoShifter(actions[i].direction, this.direction));
+					if(shotTravellingIntoShifter(actions[i].direction, this.direction))
 						to.contents.applyLogic(to.$tile, actions[i]);
 				}
 
@@ -78,11 +72,24 @@
         	return false;
         }
 
-		function shotTravellingIntoShifter(shotDirection, shifterDirection){
+		function shotTravellingIntoShifter(d1, d2){
 
-			if(shotDirection == 'U' && shifterDirection == '0 -1')
+			if(d1 == 'U' && d2 == 'D')
 				return true;
-
+			else if(d1 == 'UR' && d2 == 'DL')
+				return true;
+			else if(d1 == 'R' && d2 == 'L')
+				return true;
+			else if(d1 == 'DR' && d2 == 'UL')
+				return true;
+			else if(d1 == 'D' && d2 == 'U')
+				return true;
+			else if(d1 == 'DL' && d2 == 'UR')
+				return true;
+			else if(d1 == 'L' && d2 == 'R')
+				return true;
+			else if(d1 == 'UL' && d2 == 'DR')
+				return true;
 
 			return false;
 		};
@@ -93,8 +100,9 @@
     	to.setContents(from.contents);
     	from.clear();
 
-    	var left = -100 * this.xShift;
-    	var top = -100 * this.yShift;
+		var shift = PUZZLO.directionToXY(this.direction);
+    	var left = -100 * shift[0];
+    	var top = -100 * shift[1];
 
 	    TweenMax.fromTo(to.$tile.find('.icon'), 0.25, {
 			css: {top: top +'%', left: left+'%'}
@@ -110,23 +118,23 @@
         $shifter.find('polygon').attr('transform', 'rotate(' + rotateValue + ',100,75)');
         $tile.append($shifter);
 
-        function getRotateValue(dir){
+        function getRotateValue(direction){
 
 	        if (direction == 'U')
 	            return 0;
-	        else if (direction == 'UL')
+	        else if (direction == 'UR')
 	            return 45;
-	        else if (direction == 'L')
+	        else if (direction == 'R')
 	            return 90;
-	        else if (direction == 'DL')
+	        else if (direction == 'DR')
 	            return 135;
 	        else if (direction == 'D')
 	            return 180;
-	        else if (direction == 'DR')
+	        else if (direction == 'DL')
 	            return 225;
-	        else if (direction == 'R')
+	        else if (direction == 'L')
 	            return 270;
-	        else if (direction == 'UR')
+	        else if (direction == 'UL')
 	            return 315;
 
         	return 0;

@@ -47,6 +47,8 @@ Tile.prototype.clicked = function() {
     }
     else if (next.contents.type == 'shifter'){
 
+        if(ShotManager.getShotsAt(this.x + 1, this.y + 1).length > 0)
+            return;
         if(next.contents.doShift(this))
             PuzzleScene.nextItem();
     }

@@ -1,6 +1,5 @@
 var ShotManager = {
     shots: [],
-    interval: 240,
     nextId: 1,
     stopped: true
 };

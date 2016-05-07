@@ -2,8 +2,8 @@ function Shot(options){
 
     var self = this;
 
-    this.x = options.x;
-    this.y = options.y;
+    this.x = parseInt(options.x);
+    this.y = parseInt(options.y);
     this.direction = options.direction;
     this.color = options.color;
 
@@ -87,11 +87,11 @@ Shot.prototype.moveToNext = function(){
 
         top: size * nextY + '%',
         left: size * nextX + '%',
-        '-webkit-transition-duration': ShotManager.interval / 1000 + 's',
-        'transition-duration': ShotManager.interval / 1000 + 's'
+        '-webkit-transition-duration': PUZZLO.timerInterval / 1000 + 's',
+        'transition-duration': PUZZLO.timerInterval / 1000 + 's'
     });
 
-    setTimeout(doAction, ShotManager.interval);
+    setTimeout(doAction, PUZZLO.timerInterval);
 
     function doAction(){
 

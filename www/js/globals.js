@@ -2,6 +2,7 @@ var PUZZLO = {
     pieces : {},
     tower_categories : {},
     debug: {},
+    timerInterval: 240,
 
     directionToXY: function(direction){
 

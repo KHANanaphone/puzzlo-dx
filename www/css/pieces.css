@@ -8,6 +8,8 @@
 
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
+
+    pointer-events: none;
 }
 
 @-webkit-keyframes fadeout {
@@ -29,6 +31,7 @@ keyframes fadeout {
 
     -webkit-animation: fadeout 0.5s linear;
     animation: fadeout 0.5s linear;
+    pointer-events: none;
 }
 
 .shot-particle.blue circle {
