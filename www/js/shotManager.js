@@ -1,6 +1,6 @@
 var ShotManager = {
     shots: [],
-    interval: 280,
+    interval: 240,
     nextId: 1,
     stopped: true
 };
@@ -12,7 +12,7 @@ ShotManager.add = function(shot){
     ShotManager.shots.push(shot);
 };
 
-ShotManager.remove = function(shot){
+ShotManager.remove = function(shot, skipSolutionCheck){
 
     var index = ShotManager.shots.indexOf(shot);
 
@@ -25,7 +25,9 @@ ShotManager.remove = function(shot){
     if(ShotManager.shots.length == 0){
 
         ShotManager.stopped = true;
-        PuzzleScene.SolutionCheck();
+
+        if(!skipSolutionCheck)
+            PuzzleScene.SolutionCheck();
     }
 };
 
@@ -37,14 +39,14 @@ ShotManager.getShotsAt = function(x, y){
         var shot = ShotManager.shots[i];
 
         if(shot.x == x && shot.y == y)
-            actions.push(shot)
+            shots.push(shot)
     };
 
-    return actions;
+    return shots;
 };
 
 ShotManager.stop = function(){
 
-    for(var i = 0; i < ShotManager.shots; i++)
-        ShotManager.remove(shots[i]);
+    for(var i = 0; i < ShotManager.shots.length; i++)
+        ShotManager.remove(ShotManager.shots[i], true);
 };

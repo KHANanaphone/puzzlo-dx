@@ -4,33 +4,22 @@
 
 		create: function(id){
 
-			var canToggle = false, xShift = 0, yShift = 0;
+			var canToggle = false, direction;
 
 			if(id.indexOf('?') != -1){
 
 				canToggle = true;
-				xShift = 1;
-				yShift = 0;
+				direction = 'R';
 			}
-			else{
-				if(id.indexOf('U') != -1)
-					yShift = -1;
-				else if(id.indexOf('D') != -1)
-					yShift = 1;
-
-				if(id.indexOf('L') != -1)
-					xShift = -1;
-				else if(id.indexOf('R') != -1)
-					xShift = 1;
-			}
+			else
+				direction = id.substring(1).trim();
 
 			return {
 
 				canToggle: canToggle,
 				toggle: toggle,
 				type: 'shifter',
-				xShift: xShift,
-				yShift: yShift,
+				direction: direction,
 				doShift: doShift,
 				draw: draw,
 				applyLogic: applyLogic,
@@ -41,24 +30,8 @@
 
 	function toggle(){
 
-		var x = this.xShift, y = this.yShift;
-
-    	if(x == 0 && y == -1)
-    		this.xShift = 1;
-    	else if(x == 1 && y == -1)
-    		this.yShift = 0;
-    	else if(x == 1 && y == 0)
-    		this.yShift = 1;
-    	else if(x == 1 && y == 1)
-    		this.xShift = 0;
-    	else if(x == 0 && y == 1)
-    		this.xShift = -1;
-    	else if(x == -1 && y == 1)
-    		this.yShift = 0;
-    	else if(x == -1 && y == 0)
-    		this.yShift = -1;
-    	else if(x == -1 && y == -1)
-    		this.xShift = 0;
+		var directions = ['U','UR','R','DR','D','DL','L','UL'];
+		return directions[directions.indexOf(this.direction) % 8];
 	};
 
 	function doShift(from){
@@ -83,14 +56,16 @@
 				//if there's an action occurring at the spot where we're moving
 				//something, have that thing apply its logic to the action.
 				//
-				//this is an attempt to solve the "shift an object into a shot to
+				//This is an attempt to solve the "shift an object into a shot to
 				//bypass it" bug
 
-				var actions = ShotManager.getActionsAt(to.x + 1, to.y + 1);
+				var actions = ShotManager.getShotsAt(to.x + 1, to.y + 1);
 
 				for(var i = 0; i < actions.length; i++){
 
-					to.contents.applyLogic(to.$tile, actions[i]);
+					debugger;
+					if(shotTravellingIntoShifter(actions[i].direction, this.direction));
+						to.contents.applyLogic(to.$tile, actions[i]);
 				}
 
         		return true;
@@ -102,6 +77,15 @@
         catch(e){
         	return false;
         }
+
+		function shotTravellingIntoShifter(shotDirection, shifterDirection){
+
+			if(shotDirection == 'U' && shifterDirection == '0 -1')
+				return true;
+
+
+			return false;
+		};
     };
 
     function animateShift(from, to){
@@ -122,28 +106,28 @@
 	function draw($tile){
 
         var $shifter = $('#hidden .shifter-icon').clone();
-        var rotateValue = getRotateValue(this.xShift, this.yShift);
+        var rotateValue = getRotateValue(this.direction);
         $shifter.find('polygon').attr('transform', 'rotate(' + rotateValue + ',100,75)');
         $tile.append($shifter);
 
-        function getRotateValue(x, y){
+        function getRotateValue(dir){
 
-        	if(x == 0 && y == -1)
-        		return 0;
-        	else if(x == 1 && y == -1)
-        		return 45;
-        	else if(x == 1 && y == 0)
-        		return 90;
-        	else if(x == 1 && y == 1)
-        		return 135;
-        	else if(x == 0 && y == 1)
-        		return 180;
-        	else if(x == -1 && y == 1)
-        		return 225;
-        	else if(x == -1 && y == 0)
-        		return 270;
-        	else if(x == -1 && y == -1)
-        		return 315;
+	        if (direction == 'U')
+	            return 0;
+	        else if (direction == 'UL')
+	            return 45;
+	        else if (direction == 'L')
+	            return 90;
+	        else if (direction == 'DL')
+	            return 135;
+	        else if (direction == 'D')
+	            return 180;
+	        else if (direction == 'DR')
+	            return 225;
+	        else if (direction == 'R')
+	            return 270;
+	        else if (direction == 'UR')
+	            return 315;
 
         	return 0;
         }

@@ -61,37 +61,25 @@ Shot.prototype.createParticle = function(){
 
     function bellRandom(){
 
-        return (Math.random() + Math.random() + Math.random() + Math.random()) / 4;
+        return (Math.random() +
+        Math.random() +
+        Math.random() +
+        Math.random() +
+        Math.random() +
+         Math.random() +
+         Math.random() +
+         Math.random()) / 8;
     };
 };
 
 Shot.prototype.moveToNext = function(){
 
     var size = 100 / PuzzleScene.puzzleSize;
-    var nextX = this.x;
-    var nextY = this.y;
     var self = this;
 
-    if (this.direction == 'U')
-        nextY--;
-    else if (this.direction == 'D')
-        nextY++;
-    else if (this.direction == 'L')
-        nextX--;
-    else if (this.direction == 'R')
-        nextX++;//move
-    else if (this.direction == 'UL'){
-        nextY--; nextX--;
-    }
-    else if (this.direction == 'UR'){
-        nextY--; nextX++;
-    }
-    else if (this.direction == 'DL'){
-        nextY++; nextX--;
-    }
-    else if (this.direction == 'DR'){
-        nextY++; nextX++;
-    }
+    var shift = PUZZLO.directionToXY(this.direction);
+    var nextX = this.x + shift[0];
+    var nextY = this.y + shift[1];
 
     var $tile = PuzzleScene.$tiles[nextY][nextX];
 
@@ -106,6 +94,9 @@ Shot.prototype.moveToNext = function(){
     setTimeout(doAction, ShotManager.interval);
 
     function doAction(){
+
+        if(self.destroyed)
+            return;
 
         self.x = nextX;
         self.y = nextY;
@@ -122,6 +113,7 @@ Shot.prototype.destroy = function(){
 
     this.$shot.remove();
     window.clearInterval(this.particleInterval);
+    this.destroyed = true;
 };
 
 Shot.prototype.applyLogic = function(){
