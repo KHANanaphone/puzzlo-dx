@@ -13,12 +13,11 @@ function Shot(options){
     var size = 100 / PuzzleScene.puzzleSize;
 
     this.$shot.css({
-
-        top: size * this.y + '%',
-        left: size * this.x + '%',
         width: size + '%',
         height: size + '%'
     });
+
+    this.quickMove();
 
     $('#tiles').append(this.$shot);
     ShotManager.add(this);
@@ -45,11 +44,11 @@ Shot.prototype.createParticle = function(){
         left: this.$shot.css('left')
     });
 
-    var size = 100 / this.$shot.height();
+    var size = this.$shot.height();
 
     $particle.css({
-        top: '+=' + (bellRandom()*this.$shot.height()),
-        left: '+=' + (bellRandom()*this.$shot.width())
+        top: '+=' + (size*0.25 + bellRandom()*size/2),
+        left: '+=' + (size*0.25 + bellRandom()*size/2)
     });
 
     $('#tiles').append($particle);
@@ -72,6 +71,16 @@ Shot.prototype.createParticle = function(){
     };
 };
 
+Shot.prototype.quickMove = function(){
+
+    var size = 100 / PuzzleScene.puzzleSize;
+
+    this.$shot.css({
+        left: size * this.x + '%',
+        top: size * this.y + '%'
+    });
+};
+
 Shot.prototype.moveToNext = function(){
 
     var size = 100 / PuzzleScene.puzzleSize;
@@ -83,15 +92,10 @@ Shot.prototype.moveToNext = function(){
 
     var $tile = PuzzleScene.$tiles[nextY][nextX];
 
-    this.$shot.css({
-
+    this.$shot.animate({
         top: size * nextY + '%',
-        left: size * nextX + '%',
-        '-webkit-transition-duration': PUZZLO.timerInterval / 1000 + 's',
-        'transition-duration': PUZZLO.timerInterval / 1000 + 's'
-    });
-
-    setTimeout(doAction, PUZZLO.timerInterval);
+        left: size * nextX + '%'
+    }, PUZZLO.timerInterval, doAction);
 
     function doAction(){
 

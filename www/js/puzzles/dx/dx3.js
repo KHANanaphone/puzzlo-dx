@@ -5,8 +5,8 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 12, [{
     description: "Hit the key to unlock the same-colored door.",
     contents: [
         ['WWW','WWW','WWW','   ','WWW'],
-        ['WWW','KK1','WWW','KD1','WWW'],
-        ['   ','[N]','WWW','[N]','   '],
+        ['WWW','KK1','WWW','   ','WWW'],
+        ['   ','[N]','WWW','[N]','KD1'],
         ['WWW','   ','WWW','DN1','WWW'],
         ['WWW','   ','WWW','WWW','WWW'],
     ]

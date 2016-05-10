@@ -1,14 +1,8 @@
 /* SHOT EFFECT */
 
 .shot {
+
     position: absolute;
-
-    -webkit-transition-property: top, left;
-    transition-property: top, left;
-
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear;
-
     pointer-events: none;
 }
 
@@ -183,8 +177,7 @@ keyframes fadeout {
 }
 
 .icon .teleporter-icon .inner{
-
-    stroke-width: 3px;
+stroke-width: 10px;
 }
 
 @-webkit-keyframes tele{

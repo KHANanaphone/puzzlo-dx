@@ -31,13 +31,15 @@
 	function toggle(){
 
 		var directions = ['U','UR','R','DR','D','DL','L','UL'];
-		return directions[directions.indexOf(this.direction) % 8];
+		this.direction = directions[directions.indexOf(this.direction) + 1 % 8];
 	};
 
 	function doShift(from){
 
 		if (from.contents.type == 'blank' || from.contents.type == 'wall' || from.contents.type == 'sand')
             return;
+		if(ShotManager.getShotsAt(from.x + 1, from.y + 1).length > 0)
+			return;
 
 		var shift = PUZZLO.directionToXY(this.direction);
         var toX = from.x + shift[0];

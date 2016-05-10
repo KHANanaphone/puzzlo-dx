@@ -54,8 +54,9 @@ PUZZLO.pieces['T'] = {
 				if(!this.paired)
                 	return true;
 
-				action.x = this.paired.$tile.parents('.puzzle-tile').attr('tile-x');
-				action.y = this.paired.$tile.parents('.puzzle-tile').attr('tile-y');
+				action.x = parseInt(this.paired.$tile.parents('.puzzle-tile').attr('tile-x'));
+				action.y = parseInt(this.paired.$tile.parents('.puzzle-tile').attr('tile-y'));
+				action.quickMove();
 
 				return false;
 			},

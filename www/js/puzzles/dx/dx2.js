@@ -72,11 +72,12 @@ PUZZLO.tower_categories.dx.addTower('Teleporter Tower', 6, [{
     ]
 },{
 
-    moves: 3,
+    moves: 4,
     name: "Teleporters 7",
     description: "If there's only one teleporter, the shot will just disappear.",
     items: ['T4 ','T4 '],
     contents: [
+        ['WWW','WWW','WWW','WWW','   ','   '],
         ['WWW','WWW','WWW','BY ','   ','DB1'],
         ['WWW','WWW','   ','[Y]','   ','M//'],
         ['WWW','BR ','   ','DB1','DN1','DN1'],
