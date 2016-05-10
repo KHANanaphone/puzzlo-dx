@@ -11,21 +11,8 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 12, [{
         ['WWW','   ','WWW','WWW','WWW'],
     ]
 },{
-
     moves: 2,
     name: "Keys/Doors 2",
-    items: ['KK1','KK2','KK3','KK4'],
-    contents: [
-        ['   ','KD1','WWW'],
-        ['   ','KD2','WWW'],
-        ['   ','KD3','WWW'],
-        ['   ','KD4','WWW'],
-        ['WWW','DN1','WWW'],
-        ['WWW','WWW','WWW']
-    ]
-},{
-    moves: 2,
-    name: "Keys/Doors 3",
     items: ['BB ','BY '],
     contents: [
         ['DN2','DN1','KD2','DN1','DN1'],
@@ -36,20 +23,22 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 12, [{
     ]
 },{
 
-    moves: 2,
-    name: "Keys/Doors 4",
-    items: ['BR ','BR '],
+    moves: 3,
+    name: "Keys/Doors 3",
+    items: ['KD1','SU ','KK1'],
     contents: [
-        ['   ','   ','   ','   ','   '],
-        ['KD1','DN1','DN1','DN1','KD1'],
-        ['KD2','DN1','DN1','DN1','KD2'],
-        ['KD3','DN1','DN1','DN1','KD3'],
-        ['   ','KK1','KK2','KK3','   ']
+        ['WWW','WWW','WWW','WWW','WWW'],
+        ['WWW','WWW','DN1','WWW','WWW'],
+        ['...','...','   ','...','...'],
+        ['WWW','WWW','DB1','WWW','WWW'],
+        ['...','...','   ','...','...'],
+        ['WWW','WWW','DB1','WWW','WWW'],
+        ['WWW','WWW','KD1','WWW','WWW']
     ]
 },{
 
     moves: 5,
-    name: "Keys/Doors 5",
+    name: "Keys/Doors 4",
     items: ['KK1','KD1'],
     contents: [
         ['DR1','WWW','   ','WWW'],
@@ -57,6 +46,20 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 12, [{
         ['   ','   ','DY1','   '],
         ['DB2','DB1','   ','BR '],
         ['   ','   ','[N]','   ']
+    ]
+},{
+    moves: 1,
+    name: "Keys/Doors 5",
+    items: ['M\\','M\\','M//','M//','BY '],
+    contents: [
+        ['M//','   ','   ','   ','   ','M\\'],
+        ['   ','   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   ','   '],
+        ['   ','WWW','WWW','WWW','WWW','   '],
+        ['   ','WWW','DN1','KK2','KD1','M//'],
+        ['   ','WWW','WWW','WWW','WWW','WWW'],
+        ['M\\','KK1','   ','   ','KD2','DN1']
     ]
 },{
 
