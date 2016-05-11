@@ -64,10 +64,10 @@ PUZZLO.tower_categories.dx.addTower('Teleporter Tower', 6, [{
 
     moves: 2,
     name: "Teleporters 6",
-    items: ['T1 ','T1 ','M\\'],
+    items: ['M\\','M\\','T1 ','T1 '],
     contents: [
         ['WWW','   ','   ','WWW','M--','   ','   ','WWW'],
-        ['WWW','DB1','M\\','DY1','   ','DR1','BB ','WWW'],
+        ['WWW','DB1','   ','DY1','   ','DR1','BB ','WWW'],
         ['WWW','   ','   ','BR ','   ','WWW','   ','WWW'],
     ]
 },{

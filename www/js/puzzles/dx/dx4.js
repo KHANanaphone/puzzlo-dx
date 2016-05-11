@@ -61,15 +61,35 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 12, [{
         ['BR ','...','   ','   ','   ','...','[R]']
     ]
 },{
-    moves: 6,
+    moves: 4,
     name: "Toggles 6",
-    items: ['T? ','S? '],
+    items: ['T1 ','T2 ','T3 ','M//'],
+    teleporterTypes: 3,
+    disabled: {bottom: [3]},
     contents: [
-        ['WWW','DB1','T1 ','BR ','DN1','   '],
-        ['   ','DY1','[N]','T2 ','BR ','DN1'],
-        ['   ','DR1','   ','[N]','T3 ','BR '],
-        ['   ','   ','DR1','   ','[N]','WWW'],
-        ['   ','   ','   ','DR1','WWW','WWW']
+        ['WWW','[Y]','WWW','WWW','WWW','WWW','WWW','WWW'],
+        ['   ','T? ','[N]','   ','   ','   ','   ','   '],
+        ['WWW','[N]','WWW','WWW','WWW','WWW','WWW','WWW'],
+        ['WWW','   ','WWW','   ','   ','   ','   ','WWW'],
+        ['WWW','   ','WWW','   ','   ','   ','   ','WWW'],
+        ['WWW','   ','WWW','   ','   ','   ','   ','WWW'],
+        ['WWW','   ','WWW','   ','   ','   ','   ','WWW'],
+        ['WWW','   ','WWW','DY1','WWW','WWW','WWW','WWW']
+    ]
+},{
+    moves: 1,
+    name: "Toggles 7",
+    items: ['BR '],
+    disabled: {bottom: [3]},
+    contents: [
+        ['   ','M||','BB ','   ','BB ','   ','BB ','M\\'],
+        ['M--','   ','   ','   ','   ','   ','   ','   '],
+        ['BY ','   ','   ','   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   ','   ','   ','   '],
+        ['BY ','   ','   ','   ','D?9 ','   ','   ','M//'],
+        ['   ','   ','   ','   ','   ','   ','   ','   '],
+        ['BY ','   ','   ','   ','   ','   ','   ','   '],
+        ['M\\','   ','   ','   ','M//','   ','   ','   '],
     ]
 }
 ]);

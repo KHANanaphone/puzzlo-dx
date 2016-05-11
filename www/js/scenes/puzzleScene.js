@@ -142,11 +142,17 @@ PuzzleScene.setupBoard = function(puzzle) {
 
         for (var i = 0; i < puzzle.width; i++) {
 
-            var tile = new Lightning(PuzzleScene.$tiles[0][1 + i], true);
-            PuzzleScene.shots.top.push(tile);
+            if(!puzzle.isDisabled('top', i)){
 
-            var tile2 = new Lightning(PuzzleScene.$tiles[puzzle.height + 1][1 + i], false);
-            PuzzleScene.shots.bottom.push(tile2);
+                var tile = new Lightning(PuzzleScene.$tiles[0][1 + i], true);
+                PuzzleScene.shots.top.push(tile);
+            }
+
+            if(!puzzle.isDisabled('bottom', i)){
+
+                var tile2 = new Lightning(PuzzleScene.$tiles[puzzle.height + 1][1 + i], false);
+                PuzzleScene.shots.bottom.push(tile2);
+            }
         }
     };
 
@@ -157,11 +163,17 @@ PuzzleScene.setupBoard = function(puzzle) {
 
         for (var i = 0; i < puzzle.height; i++) {
 
-            var tile = new Ice(PuzzleScene.$tiles[1 + i][0], true);
-            PuzzleScene.shots.left.push(tile);
+            if(!puzzle.isDisabled('left', i)){
 
-            var tile2 = new Ice(PuzzleScene.$tiles[1 + i][puzzle.width + 1], false);
-            PuzzleScene.shots.right.push(tile2);
+                var tile = new Ice(PuzzleScene.$tiles[1 + i][0], true);
+                PuzzleScene.shots.left.push(tile);
+            }
+
+            if(!puzzle.isDisabled('right', i)){
+
+                var tile2 = new Ice(PuzzleScene.$tiles[1 + i][puzzle.width + 1], false);
+                PuzzleScene.shots.right.push(tile2);
+            }
         }
     };
 
@@ -211,14 +223,20 @@ PuzzleScene.setupPuzzle = function() {
 
         for (var i = 0; i < puzzle.width; i++) {
 
-            PuzzleScene.shots.top[i].makeReady();
-            PuzzleScene.shots.bottom[i].makeReady();
+            if(PuzzleScene.shots.top[i])
+                PuzzleScene.shots.top[i].makeReady();
+
+            if(PuzzleScene.shots.bottom[i])
+                PuzzleScene.shots.bottom[i].makeReady();
         }
 
         for (var i = 0; i < PuzzleScene.puzzle.height; i++) {
 
-            PuzzleScene.shots.left[i].makeReady();
-            PuzzleScene.shots.right[i].makeReady();
+            if(PuzzleScene.shots.left[i])
+                PuzzleScene.shots.left[i].makeReady();
+
+            if(PuzzleScene.shots.right[i])
+                PuzzleScene.shots.right[i].makeReady();
         }
     };
 

@@ -56,7 +56,7 @@ Ice.prototype.setupClicking = function(){
     }
 }
 
-Ice.prototype.makeReady = function(){
+Ice.prototype.makeReady = function(val){
 
     this.$tile.attr('ready', 1);
 }

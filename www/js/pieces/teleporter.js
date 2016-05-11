@@ -22,7 +22,8 @@ PUZZLO.pieces['T'] = {
 				if(!this.canToggle)
 					return;
 
-				this.teleporterIndex = (this.teleporterIndex % 4) + 1;
+				var count = PuzzleScene.puzzle.teleporterTypes ?  PuzzleScene.puzzle.teleporterTypes : 4;
+				this.teleporterIndex = (this.teleporterIndex % count) + 1;
 			},
 
 			draw: function($tile){

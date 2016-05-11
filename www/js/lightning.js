@@ -56,7 +56,7 @@ Lightning.prototype.setupClicking = function(){
     }
 }
 
-Lightning.prototype.makeReady = function(){
+Lightning.prototype.makeReady = function(val){
 
     this.$tile.attr('ready', 1);
 }
