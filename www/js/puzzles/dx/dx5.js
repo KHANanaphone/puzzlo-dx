@@ -1,7 +1,21 @@
-{
+PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
+
+    moves: 5,
+    name: "GM",
+    items: ['M//','M//'],
+    contents: [
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   '],
+        ['   ','   ','   ','   ','   ']
+    ]
+},{
 
     moves: 7,
-    name: "Teleporters 7",
+    name: "GM 1",
     items: ['M//','M//'],
     contents: [
         ['WWW','WWW','WWW','WWW','DB1','WWW'],
@@ -12,11 +26,10 @@
         ['   ','   ','   ','   ','T2 ','WWW'],
         ['   ','   ','   ','   ','   ','T1 ']
     ]
-}
-,{
+},{
 
     moves: 5,
-    name: "Keys/Doors 7",
+    name: "GM 2",
     items: ['SU ','SL ','SD ','SR '],
     contents: [
         ['WWW','   ','   ','   ','   ','WWW','KD1'],
@@ -29,4 +42,18 @@
         ['WWW','KK1','KK2','KK3','KK4','WWW','WWW'],
         ['WWW','WWW','WWW','WWW','WWW','WWW','WWW']
     ]
-}
+},{
+    moves: 5,
+    name: "GM 3",
+    items: ['M//','SR ','SD '],
+    contents: [
+        ['   ','T1 ','   ','   ','   ','M\\'],
+        ['   ','   ','   ','   ','[N]','[N]'],
+        ['WWW','   ','WWW','   ','M\\','T1 '],
+        ['[N]','   ','   ','   ','   ','WWW'],
+        ['WWW','   ','WWW','   ','   ','WWW'],
+        ['WWW','DN2','WWW','M--','M//','WWW'],
+        ['WWW','M--','WWW','DN1','WWW','WWW'],
+        ['WWW','WWW','WWW','WWW','WWW','WWW'],
+    ]
+}]);
