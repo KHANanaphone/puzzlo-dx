@@ -80,7 +80,6 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 18, [{
     moves: 1,
     name: "Toggles 7",
     items: ['BR '],
-    disabled: {bottom: [3]},
     contents: [
         ['M--','M||','BB ','   ','BB ','   ','BB ','M\\'],
         ['BY ','   ','   ','   ','   ','   ','   ','   '],
