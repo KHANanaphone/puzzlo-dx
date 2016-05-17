@@ -1,4 +1,4 @@
-PUZZLO.tower_categories.dx.addTower('Toggles Tower', 18, [{
+PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
     moves: 1,
     name: "Toggles 1",
     description: "AAAAAAA",

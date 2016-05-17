@@ -1,4 +1,4 @@
-PUZZLO.tower_categories.dx.addTower('Teleporter Tower', 6, [{
+PUZZLO.tower_categories.dx.addTower('Teleporter Tower', 5, [{
 
     moves: 3,
     name: "Teleporters 1",

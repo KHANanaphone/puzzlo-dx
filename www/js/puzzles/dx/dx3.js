@@ -1,4 +1,4 @@
-PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 12, [{
+PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 10, [{
 
     moves: 4,
     name: "Keys/Doors 1",

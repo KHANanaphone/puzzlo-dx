@@ -83,8 +83,7 @@
 }
 
 #menu-scene .menu-tower-row.fun{
-
-  text-shadow:
+text-shadow:
    -1px -1px 0 #00F,
     1px -1px 0 #00F,
    -1px  1px 0 #00F,
@@ -111,6 +110,7 @@
 
 #menu-scene .menu-tower-row[allclear="true"] .right{
 color: #3CFF3C;
+text-shadow: none;
 }
 
 #menu-scene .menu-tower-row.fun:hover .unlocked,
