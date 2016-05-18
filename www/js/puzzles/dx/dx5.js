@@ -104,6 +104,7 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 1,
     name: "GM FINAL",
     items: ['T1 ','T1 ','T2 ','T2 ','T3 ','T3 ','T4 ','T4 '],
+    disabled: {top: [0,1,2,3,4,5,6,7], bottom: [0,1,2,3,4,5,6,7]},
     contents: [
         ['   ','   ','   ','   ','   ','   ','   ','   '],
         ['   ','   ','   ','   ','   ','DN2','   ','   '],

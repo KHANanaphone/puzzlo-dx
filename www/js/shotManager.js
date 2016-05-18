@@ -46,6 +46,6 @@ ShotManager.getShotsAt = function(x, y){
 
 ShotManager.stop = function(){
 
-    for(var i = 0; i < ShotManager.shots.length; i++)
+    for(var i = ShotManager.shots.length - 1; i >= 0; i--)
         ShotManager.remove(ShotManager.shots[i], true);
 };
