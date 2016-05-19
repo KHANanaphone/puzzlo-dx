@@ -75,9 +75,9 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
     ]
 },{
 
-    moves: 2,
+    moves: 1,
     name: 'Splits 7',
-    items: ['BB ','BB ','BB ','BY '],
+    items: ['BB ','BY ','BB ','BY '],
     contents: [
         ['BR ','   ','   ','   ','BR '],
         ['   ','IR1','   ','IR1','   '],

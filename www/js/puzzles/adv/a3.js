@@ -87,7 +87,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 
     moves: 1,
     name: "",
-    items: ['SR ','SRU','SL ','SLU','SR '],
+    items: ['SR ','SUR','SL ','SUL','SR '],
     contents: [
         ['   ','   ','   ','   ','   ','   '],
         ['   ','DN1','DN1','DN1','   ','   '],

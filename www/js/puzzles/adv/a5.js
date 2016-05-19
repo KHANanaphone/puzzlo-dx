@@ -29,7 +29,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
     items: ['SD ','SD ','SR ','SD '],
     contents: [
         ['WWW','WWW','WWW','   ','   '],
-        ['WWW','DN3','WWW','[N]','   '],
+        ['WWW','DN3','WWW','IY1','   '],
         ['   ','[N]','   ','   ','WWW'],
         ['WWW','[N]','   ','   ','WWW'],
         ['WWW','[N]','WWW','   ','   '],

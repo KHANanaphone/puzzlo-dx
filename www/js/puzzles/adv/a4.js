@@ -76,17 +76,16 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
     ]
 },{
 
-    moves: 1,
+    moves: 2,
     name: "Loops",
     description: "All action must stop before a level is cleared.",
-    items: ['BB ','M\\','M//'],
     contents: [
-        ['M--','   ','   ','   ','   ','   '],
-        ['DN3','   ','   ','   ','   ','   '],
-        ['BY ','   ','   ','   ','   ','   '],
-        ['[N]','   ','   ','   ','   ','   '],
-        ['DN3','   ','   ','   ','   ','   '],
-        ['M--','   ','   ','   ','   ','   ']
+        ['M--','WWW','M//','M//','M//','M//'],
+        ['DN3','WWW','M//','M//','M//','M//'],
+        ['BY ','WWW','M//','M//','M//','M//'],
+        ['[N]','WWW','M//','M//','M//','M//'],
+        ['DN3','WWW','M//','M//','M//','M//'],
+        ['M--','DN1','M//','M//','M//','M//']
     ]
 },{
 
