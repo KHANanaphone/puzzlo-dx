@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
 
         moves: 4,
-        name: "Items",
+        name: "Bonus 1",
         items: ['[N]'],
         contents: [
             ['DN1','   ','   ','   ','   '],
@@ -13,7 +13,7 @@ PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
     },{
 
         moves: 3,
-        name: "Items",
+        name: "Bonus 2",
         items: ['DN1', 'DN1', 'BR '],
         contents: [
         	['DN1','DN1','DN1','WWW'],
@@ -24,7 +24,7 @@ PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
     },{
 
         moves: 10,
-        name: "Doom-o-cube",
+        name: "Bonus 3",
         contents: [
             ['[N]','[N]','[N]','[N]','[N]'],
             ['WWW','   ','DB1','   ','[N]'],
@@ -35,7 +35,7 @@ PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
     },{
 
         moves: 6,
-        name: "Items",
+        name: "Bonus 4",
         items: ['BR '],
         contents: [
             ['   ','   ','   ','   ','[N]','WWW'],

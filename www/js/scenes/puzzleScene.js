@@ -402,7 +402,7 @@ PuzzleScene.showSolvedDialog = function(){
         }
         else if(type == 'tower_complete'){
 
-            text = name + ' tower completed';
+            text = name + ' completed';
         }
         else if(type == 'category_complete'){
 

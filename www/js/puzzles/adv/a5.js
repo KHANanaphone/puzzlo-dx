@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 
     moves: 2,
-    name: "",
+    name: "Master 1",
     items: ['M//','M\\','SU ','SR '],
     contents: [
         ['   ','   ','   ','   '],
@@ -13,7 +13,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 },{
 
     moves: 5,
-    name: "",
+    name: "Master 2",
     items: ['BB ','BY '],
     contents: [
         ['WWW','WWW','WWW','WWW'],
@@ -25,7 +25,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 }, {
 
     moves: 4,
-    name: "Boggity Boo",
+    name: "Master 3",
     items: ['SD ','SD ','SR ','SD '],
     contents: [
         ['WWW','WWW','WWW','   ','   '],
@@ -39,7 +39,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Master 4",
     items: ['BR ','BR ','M\\'],
     contents: [
         ['   ','   ','   ','   ','   ','   '],
@@ -51,7 +51,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 }, {
 
     moves: 5,
-    name: "",
+    name: "Master 5",
     items: ['M--','BR '],
     contents: [
         ['   ','   ','   ','   ','   '],
@@ -63,7 +63,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Master 6",
     items: ['BR ','M//','M//','SL '],
     contents: [
         ['   ','   ','   ','   ','WWW','WWW','WWW','WWW'],
@@ -77,7 +77,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 },{
 
     moves: 3,
-    name: "",
+    name: "Master 7",
     items: ['BY ','BY ','BY ','SL ','SUR',],
     contents: [
         ['WWW','WWW','WWW','WWW'],
@@ -91,7 +91,7 @@ PUZZLO.tower_categories.advanced.addTower('Master Tower', 25, [{
 }, {
 
     moves: 3,
-    name: "",
+    name: "Master 8",
     items: ['IR3','M\\','M\\','M\\','M\\','M\\'],
     contents: [
         ['BR ','   ','   ','   ','   ','   ','WWW'],

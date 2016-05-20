@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
 
         moves: 2,
-        name: "Blocks",
+        name: "Blocks 1",
         description: "Shoot a block to take it out of the way",
         contents: [
             ['WWW', 'DN1', 'WWW'],
@@ -31,7 +31,7 @@ PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
     }, {
 
         moves: 5,
-        name: "Blocks",
+        name: "Blocks 4",
         contents: [
             ['   ','WWW','   '],
             ['[N]','DN3','[N]'],
@@ -40,7 +40,7 @@ PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
     }, {
 
         moves: 7,
-        name: "Blocks",
+        name: "Blocks 5",
         contents: [
             ['[N]','   ','   ','WWW','WWW'],
             ['[N]','[N]','   ','WWW','WWW'],
@@ -51,7 +51,7 @@ PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
     }, {
 
         moves: 5,
-        name: "Forest of Blocks",
+        name: "Blocks 6",
         contents: [
             ['   ','   ','   ','   ','   ','   ','[N]'],
             ['DN2','[N]','   ','   ','[N]','DN2','   '],

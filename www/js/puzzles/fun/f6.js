@@ -12,7 +12,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 2,
-        name: "Items",
+        name: "Items 2",
         description: "If a diamond is in your inventory, you must still break it to pass the level",
         items: ['DB1','DY1'],
         contents: [
@@ -25,7 +25,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 1,
-        name: "Items",
+        name: "Items 3",
         items: ['BR ','BR '],
         contents: [
             ['   ','...','...','...','...'],
@@ -41,7 +41,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 1,
-        name: "Items",
+        name: "Items 4",
         items: ['DN3'],
         contents: [
         	['BR ','   ','   ','   ','   ','BR '],
@@ -55,7 +55,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 2,
-        name: "Items",
+        name: "Items 5",
         items: ['BR ','BR '],
         contents: [
             ['   ','   ','   ','   ','   '],
@@ -67,7 +67,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
             moves: 3,
-            name: "Items",
+            name: "Items 6",
             items: ['BR ','BR ','BR '],
             contents: [
                 ['   ','   ','DN1','   ','   '],

@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
 
         moves: 10,
-        name: "Intro",
+        name: "Intro 1",
         description: "Use the colored arrows to destroy all of the diamonds.",
         contents: [
             ['DN1', '   ', '   ', '   '],
@@ -12,7 +12,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 2,
-        name: " ",
+        name: "Intro 2",
         contents: [
             ['WWW', 'DN1', 'WWW'],
             ['DN1', 'DN2', 'DN1'],
@@ -21,7 +21,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 6,
-        name: " ",
+        name: "Intro 3",
         contents: [
             ['DN3', '   ', 'DN3'],
             ['   ', '   ', '   '],
@@ -30,7 +30,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 6,
-        name: " ",
+        name: "Intro 4",
         contents: [
             ['DN2', 'DN1', 'DN2', 'DN1', 'DN2'],
             ['DN1', '   ', 'DN1', '   ', 'DN1'],

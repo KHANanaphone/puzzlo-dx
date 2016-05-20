@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 
     moves: 1,
-    name: "Shifters",
+    name: "Shifters 1",
     description: "Use a shifter to move an item on the playing field.",
     items: ['SU '],
     contents: [
@@ -13,7 +13,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 },{
 
     moves: 1,
-    name: "",
+    name: "Shifters 2",
     description: "You can shift multiple items if they're lined up.",
     items: ['SD '],
     contents: [
@@ -27,7 +27,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Shifters 3",
     items: ['SR ','SUL'],
     contents: [
         ['   ','   ','DY1','   '],
@@ -38,7 +38,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Shifters 4",
     items: ['SUL','SUR','SDR','SDL'],
     contents: [
         ['WWW','WWW','WWW','WWW','WWW'],
@@ -50,7 +50,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 },{
 
     moves: 3,
-    name: "",
+    name: "Shifters 5",
     items: ['SL ','SU'],
     contents: [
         ['   ','   ','DY1','   '],
@@ -61,7 +61,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Shifters 6",
     items: ['BR ','SL ','SL ','SL '],
     contents: [
         ['   ','DN2','   '],
@@ -73,7 +73,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 },{
 
     moves: 3,
-    name: "",
+    name: "Shifters 7",
     items: ['SU ','SD ','SU '],
     contents: [
         ['   ','   ','   ','   ','   ','   '],
@@ -86,7 +86,7 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
 },{
 
     moves: 1,
-    name: "",
+    name: "Shifters 8",
     items: ['SR ','SUR','SL ','SUL','SR '],
     contents: [
         ['   ','   ','   ','   ','   ','   '],

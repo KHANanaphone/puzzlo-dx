@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
 
         moves: 1,
-        name: "Bombs",
+        name: "Bombs 1",
         description: "Hit a bomb to detonate it.",
         contents: [
             ['DN1','   ','   ','   ','DN1'],
@@ -13,7 +13,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 1,
-        name: "Bombs",
+        name: "Bombs 2",
         contents: [
             ['   ','   ','BR ','   ','   '],
             ['   ','BR ','   ','BR ','   '],
@@ -24,7 +24,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 1,
-        name: "Bombs",
+        name: "Bombs 3",
         contents: [
             ['WWW','   ','   ','BR ','   ','WWW','WWW'],
             ['DR1','   ','   ','   ','   ','   ','WWW'],
@@ -35,7 +35,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 4,
-        name: "Bombs",
+        name: "Bombs 4",
         contents: [
         	['   ','DN1','DN2','DN1','DN1','   '],
         	['DN1','   ','DN3','BR ','   ','DN1'],
@@ -47,7 +47,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 1,
-        name: "Bombs",
+        name: "Bombs 5",
         contents: [
         	['BR ','   ','   ','   '],
         	['   ','BR ','   ','   '],
@@ -60,7 +60,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 5,
-        name: "Bombs",
+        name: "Bombs 6",
         contents: [
             ['DY1','DN1','WWW','DN2','WWW'],
             ['   ','[N]','   ','[N]','DN1'],

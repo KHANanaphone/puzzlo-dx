@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
 
     moves: 3,
-    name: "Splits",
+    name: "Splits 1",
     description: "Split-color diamonds can be destroyed with either color.",
     contents: [
         ['   ','   ','DN1','   ','BR '],

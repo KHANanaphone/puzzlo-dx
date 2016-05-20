@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
 
         moves: 3,
-        name: "Reds",
+        name: "Reds 1",
         contents: [
             ['DR1','   ','   ','   ','   '],
             ['   ','[N]','   ','   ','   '],
@@ -12,7 +12,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
     },{
 
         moves: 2,
-        name: "Reds",
+        name: "Reds 2",
         contents: [
             ['   ','   ','BR ','   ','   '],
             ['DN1','[R]','DN2','[R]','DN1']
@@ -20,7 +20,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
     },{
 
         moves: 2,
-        name: "Red Block",
+        name: "Red Blocks",
         contents: [
             ['BR ','   ','   ','   ','   '],
             ['DN1','[N]','   ','   ','   '],
@@ -31,7 +31,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
     },{
 
         moves: 3,
-        name: "Reds",
+        name: "Reds 4",
         contents: [
             ['DR1','WWW','   ','   '],
             ['WWW','[N]','   ','DY1'],
@@ -41,7 +41,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
     },{
 
         moves: 4,
-        name: "Reds",
+        name: "Reds 5",
         contents: [
             ['WWW','WWW','   ','WWW','BR '],
             ['WWW','WWW','[N]','DR1','DB1'],

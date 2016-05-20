@@ -1,7 +1,7 @@
-PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
+PUZZLO.tower_categories.advanced.addTower('Colored Bomb Tower', 0, [{
 
     moves: 2,
-    name: "New Bombs",
+    name: "Colored Bombs 1",
     description: "Look at these mysterious blue and yellow bombs...",
     contents: [
         ['DN1','BB ','DN1','WWW','DN1','   ','   '],
@@ -11,7 +11,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Colored Bombs 2",
     items: ['BB ','BB '],
     contents: [
         ['   ','   ','   '],
@@ -21,7 +21,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Colored Bombs 3",
     contents: [
         ['DN1','BB ','[N]]','DN1'],
         ['   ','DN2','BY ','   '],
@@ -30,7 +30,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 },{
 
     moves: 1,
-    name: "Inkwell",
+    name: "Colored Bombs 4",
     items: ['BY ','BY ','BY '],
     contents: [
         ['WWW','WWW','WWW','WWW','WWW','WWW'],
@@ -44,7 +44,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 },{
 
     moves: 1,
-    name: "",
+    name: "Colored Bombs 5",
     items: ['BR ','BY '],
     contents: [
         ['   ','   ','   ','   ','   '],
@@ -56,7 +56,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 },{
 
     moves: 6,
-    name: "",
+    name: "Colored Bombs 6",
     items: ['BY '],
     contents: [
         ['DY1','WWW','DY1'],
@@ -68,7 +68,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 },{
 
     moves: 1,
-    name: "",
+    name: "Colored Bombs 7",
     items: ['BB ','BB ','BY ','BR '],
     contents: [
         ['   ','DR1','   ','   '],
@@ -78,7 +78,7 @@ PUZZLO.tower_categories.advanced.addTower('Color Bomb Tower', 0, [{
 },{
 
     moves: 1,
-    name: "",
+    name: "Colored Bombs 8",
     items: ['DR1','DY1','DB1','BR ','BY ','BB '],
     contents: [
         ['WWW','WWW','WWW','WWW','WWW'],

@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
 
     moves: 3,
-    name: "Mirrors",
+    name: "Mirrors 1",
     description: "Mirrors will change the direction of a shot.",
     contents: [
         ['   ','   ','   ','DB1'],
@@ -13,7 +13,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
 },{
 
     moves: 1,
-    name: "",
+    name: "Mirrors 2",
     items: ['BR '],
     contents: [
         ['   ','   ','   ','   ','DN2'],
@@ -27,7 +27,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
 },{
 
     moves: 1,
-    name: "",
+    name: "Mirrors 3",
     items: ['M\\','M\\','M//','M--'],
     contents: [
         ['   ','   ','   ','   ','   '],
@@ -39,7 +39,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
 },{
 
     moves: 5,
-    name: "",
+    name: "Mirrors 4",
     description: "Mirrors can be broken by hitting them in a certain way.",
     contents: [
         ['   ','   ','DY1','   ','   '],
@@ -51,7 +51,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
 },{
 
     moves: 3,
-    name: "",
+    name: "Mirrors 5",
     items: ['M//','BR '],
     contents: [
         ['WWW','WWW','WWW','   ','   '],
@@ -63,7 +63,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
 },{
 
     moves: 2,
-    name: "",
+    name: "Mirrors 6",
     items: ['BR ','M\\','M//'],
     contents: [
         ['DN1','   ','DN1','   ','DN1'],
@@ -90,7 +90,7 @@ PUZZLO.tower_categories.advanced.addTower('Mirror Tower', 15, [{
 },{
 
     moves: 3,
-    name: "",
+    name: "Mirrors 8",
     items: ['SR ','SR ','SR ','SR '],
     contents: [
         ['WWW','WWW','WWW','WWW','WWW','WWW'],
