@@ -330,18 +330,15 @@ PuzzleScene.ReduceMovesLeft = function() {
 
 PuzzleScene.UpdateMovesLeft = function() {
 
-//    var left = PuzzleScene.puzzle.movesLeft;
-//    var $span = $('#shots-icons .dot');
-//
-//    $span.each(function(index){
-//
-//        if(left > index)
-//            $(this).attr('class', 'dot filled');
-//        else
-//            $(this).attr('class', 'dot hollow');
-//    });
-//
-    $('#shots-left-area .shots-left-value').text(PuzzleScene.puzzle.movesLeft);
+    var left = PuzzleScene.puzzle.movesLeft;
+    $('#shots-left-area .shots-left-value').text(left);
+
+    if(left == 1){
+        $('#shots-left-area .shots-left-s').hide();
+    }
+    else {
+        $('#shots-left-area .shots-left-s').show();
+    }
 }
 
 PuzzleScene.SolutionCheck = function() {
