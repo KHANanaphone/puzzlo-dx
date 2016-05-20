@@ -31,7 +31,7 @@
 	function toggle(){
 
 		var directions = ['U','UR','R','DR','D','DL','L','UL'];
-		this.direction = directions[directions.indexOf(this.direction) + 1 % 8];
+		this.direction = directions[(directions.indexOf(this.direction) + 1) % 8];
 	};
 
 	function doShift(from){
