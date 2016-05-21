@@ -398,7 +398,7 @@ PuzzleScene.showSolvedDialog = function(){
         }
         else if(type == 'category_unlocked'){
 
-            text = name + 'Category unlocked: ' + name;
+            text = 'Category unlocked: ' + name;
         }
         else if(type == 'tower_complete'){
 
