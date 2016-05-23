@@ -15,6 +15,12 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
     moves: 2,
     name: 'Spilts 2',
     description: "Blocks can also be split-colored",
+    disabled: {
+        top: [],
+        left: [],
+        right: [4],
+        bottom: [2]
+    },
     items: ['BB '],
     contents: [
         ['BR ','   ','{Y}'],
@@ -27,6 +33,12 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
 
     moves: 3,
     name: 'Splits 3',
+    disabled: {
+        top: [0,1,3],
+        left: [0,1,2,3,4],
+        right: [],
+        bottom: [0,1,2,3]
+    },
     contents: [
         ['WWW','WWW','   ','WWW','BR '],
         ['WWW','WWW','[N]','IR1','DN1'],
@@ -65,6 +77,12 @@ PUZZLO.tower_categories.advanced.addTower('Split Tower', 5, [{
     moves: 3,
     name: 'Splits 6',
     items: ['[N]'],
+    disabled: {
+        top: [1],
+        left: [1],
+        right: [],
+        bottom: []
+    },
     contents: [
         ['DR1','WWW','   '],
         ['WWW','{B}','   '],

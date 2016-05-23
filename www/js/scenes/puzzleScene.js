@@ -50,7 +50,7 @@ PuzzleScene.showPuzzle = function(puzzle) {
     function showTutorialPopup(desc){
 
         $('#tutorial-popup').fadeIn();
-        $('#tutorial-popup .popup-text').text(desc);
+        $('#tutorial-popup .popup-text').html(desc);
     }
 };
 

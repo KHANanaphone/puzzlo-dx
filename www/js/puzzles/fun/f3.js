@@ -35,6 +35,12 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
 
         moves: 7,
         name: "Colors 3",
+        disabled: {
+            top: [0,1,2,3,4],
+            left: [0,1,2,3,4],
+            right: [0],
+            bottom: [0]
+        },
         contents: [
             ['WWW','WWW','WWW','WWW','WWW'],
             ['WWW','DN1','DN1','DN1','DY1'],

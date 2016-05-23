@@ -2,7 +2,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
 
         moves: 1,
         name: "Items",
-        description: "ITEMS",
+        description: "Click on an empty space to<br />place a piece there",
         items: ['BR '],
         contents: [
             ['DN1','   ','DN1'],

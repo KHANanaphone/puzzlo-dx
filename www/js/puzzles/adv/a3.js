@@ -16,6 +16,12 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     name: "Shifters 2",
     description: "You can shift multiple items if they're lined up.",
     items: ['SD '],
+    disabled: {
+        top: [],
+        left: [4,5],
+        right: [],
+        bottom: [0]
+    },
     contents: [
         ['   ','   ','DN1'],
         ['   ','   ','[N]'],
@@ -40,6 +46,12 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     moves: 2,
     name: "Shifters 4",
     items: ['SUL','SUR','SDR','SDL'],
+    disabled: {
+        top: [0,1,2,3,4],
+        left: [0,1,2,3,4],
+        right: [0],
+        bottom: [0]
+    },
     contents: [
         ['WWW','WWW','WWW','WWW','WWW'],
         ['WWW','   ','DN2','   ','   '],
@@ -63,6 +75,12 @@ PUZZLO.tower_categories.advanced.addTower('Shifter Tower', 10, [{
     moves: 2,
     name: "Shifters 6",
     items: ['BR ','SL ','SL ','SL '],
+    disabled: {
+        top: [],
+        left: [4],
+        right: [2],
+        bottom: []
+    },
     contents: [
         ['   ','DN2','   '],
         ['   ','   ','   '],

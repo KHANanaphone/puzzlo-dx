@@ -32,6 +32,10 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
 
         moves: 3,
         name: "Reds 4",
+        disabled: {
+            top: [0,1],
+            left: [0,1]
+        },
         contents: [
             ['DR1','WWW','   ','   '],
             ['WWW','[N]','   ','DY1'],
@@ -42,6 +46,11 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
 
         moves: 4,
         name: "Reds 5",
+        disabled: {
+            top: [0,1,3],
+            left: [0,1,2,3,4],
+            bottom: [0,1,2]
+        },
         contents: [
             ['WWW','WWW','   ','WWW','BR '],
             ['WWW','WWW','[N]','DR1','DB1'],
@@ -53,6 +62,12 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
 
         moves: 5,
         name: "Secret Code",
+        disabled: {
+            top: [0,6],
+            left: [0,1,2,3],
+            right: [0,1,2,],
+            bottom: [0,1,2,3,4,5,6]
+        },
         contents: [
             ['DR1','   ','   ','   ','DR1','   ','DR1'],
             ['   ','   ','   ','DR2','   ','   ','   '],
