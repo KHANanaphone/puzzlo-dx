@@ -13,6 +13,12 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
 
         moves: 2,
         name: "Intro 2",
+        disabled: {
+            top: [0,2],
+            left: [0,2],
+            right: [0,2],
+            bottom: [0,2]
+        },
         contents: [
             ['WWW', 'DN1', 'WWW'],
             ['DN1', 'DN2', 'DN1'],
@@ -23,9 +29,8 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
         moves: 6,
         name: "Intro 3",
         contents: [
-            ['DN3', '   ', 'DN3'],
-            ['   ', '   ', '   '],
-            ['DN3', '   ', 'DN3']
+            ['DN3', 'DN3'],
+            ['DN3', 'DN3']
         ]
     },{
 

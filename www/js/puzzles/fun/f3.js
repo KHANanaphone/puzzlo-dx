@@ -2,22 +2,34 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
 
         moves: 2,
         name: "Colors 1",
+        disabled: {
+            top: [0,2],
+            left: [0,2],
+            right: [0,2],
+            bottom: [0,2]
+        },
         description: "Colored diamonds can only be destroyed by their own color.",
         contents: [
-            ['   ', 'DY1', '   '],
+            ['WWW', 'DY1', 'WWW'],
             ['DB1', 'DB1', 'DB1'],
-            ['   ', 'DY1', '   ']
+            ['WWW', 'DY1', 'WWW']
         ]
     },{
 
-        moves: 4,
+        moves: 3,
         name: "Colored Blocks",
+        disabled: {
+            top: [0,2,3],
+            left: [0,1,3],
+            right: [0,2,3],
+            bottom: [0,1,2,3]
+        },
         description: "Blocks can also be colored.",
         contents: [
-            ['[B]','[Y]','   ','   ','   ','   ','   '],
-            ['DN1','DN1','   ','   ','   ','   ','   '],
-            ['DN1','DN1','   ','[B]','DN1','DN1','DN1'],
-            ['DN1','DN1','   ','[Y]','DN1','DN1','DN1']
+            ['WWW','   ','WWW','WWW'],
+            ['WWW','[B]','   ','   '],
+            ['   ','[Y]','DN1','WWW'],
+            ['WWW','WWW','WWW','WWW']
         ]
     },{
 
