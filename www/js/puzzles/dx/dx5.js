@@ -3,6 +3,12 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 5,
     name: "GM",
     items: ['T2 ','T2 ','SL ','T1'],
+    disabled: {
+        top: [0,1,2],
+        left: [0,1,3,4],
+        right: [2,3],
+        bottom: [3]
+    },
     contents: [
         ['WWW','WWW','WWW','   ','   '],
         ['WWW','DN3','WWW','   ','   '],
@@ -17,6 +23,12 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 7,
     name: "GM 1",
     items: ['M//','M//','SU '],
+    disabled: {
+        top: [0,1,2,3,5],
+        left: [0],
+        right: [0,2,3,4,5],
+        bottom: []
+    },
     contents: [
         ['WWW','WWW','WWW','WWW','DB1','WWW'],
         ['T1 ','DB1','DY1','DB1','[N]','DY1'],
@@ -31,6 +43,12 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 5,
     name: "GM 2",
     items: ['SU ','SL ','SD ','SR '],
+    disabled: {
+        top: [0,5],
+        left: [0,1,2,3,4,5,6,7,8],
+        right: [0,1,2,3,4,5,6,7,8],
+        bottom: [0,1,2,3,4,5,6]
+    },
     contents: [
         ['WWW','   ','   ','   ','   ','WWW','KD1'],
         ['WWW','M\\','M\\','   ','   ','WWW','KD2'],
@@ -46,6 +64,12 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 5,
     name: "GM 3",
     items: ['M//','SR ','SD '],
+    disabled: {
+        top: [],
+        left: [2,4,5,6,7],
+        right: [3,4,5,6,7],
+        bottom: [0,1,2,3,4,5]
+    },
     contents: [
         ['   ','T1 ','   ','   ','   ','M\\'],
         ['   ','   ','   ','   ','[N]','[N]'],
@@ -60,6 +84,12 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 2,
     name: "GM 4",
     items: ['M\\'],
+    disabled: {
+        top: [5,6],
+        left: [3],
+        right: [0,1,2,3,4,5,6],
+        bottom: [5,6]
+    },
     contents: [
         ['   ','   ','M\\','M//','M\\','WWW','WWW'],
         ['   ','   ','M//','M??','M//','WWW','WWW'],
@@ -73,7 +103,12 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 7,
     name: "GM 5",
     items: [],
-    disabled: {top: [8]},
+    disabled: {
+        top: [1,3,5,7,8],
+        left: [1,3,5,7],
+        right: [1,3,5,7],
+        bottom: [1,3,5,7]
+    },
     contents: [
         ['DY1','   ','KK1','   ','M\\','   ','T1 ','   ','DY1'],
         ['   ','   ','   ','   ','   ','   ','   ','   ','   '],
@@ -89,6 +124,12 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
     moves: 3,
     name: "GM 6",
     items: ['SD ','SD ','SD ','SD ','SD ','SD ','SD ','SD '],
+    disabled: {
+        top: [0,1,2,3,4,5,6,7],
+        left: [0,1,2,3,4,5,6,7],
+        right: [1,2,3,4,5,6,8],
+        bottom: [0,1,2,3,4,5,7]
+    },
     contents: [
         ['WWW','WWW','WWW','WWW','WWW','WWW','WWW','BR '],
         ['WWW','   ','BY ','M--','   ','   ','   ','WWW'],
@@ -103,6 +144,7 @@ PUZZLO.tower_categories.dx.addTower('Grandmaster Tower', 32, [{
 },{
     moves: 1,
     name: "GM FINAL",
+    description: "Have Fun!",
     items: ['T1 ','T1 ','T2 ','T2 ','T3 ','T3 ','T4 ','T4 '],
     disabled: {top: [0,1,2,3,4,5,6,7], bottom: [0,1,2,3,4,5,6,7]},
     contents: [

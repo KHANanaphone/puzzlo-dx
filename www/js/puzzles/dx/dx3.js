@@ -3,6 +3,12 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 10, [{
     moves: 4,
     name: "Keys/Doors 1",
     description: "Hit the key to unlock the same-colored door.",
+    disabled: {
+        top: [0,1,2,4],
+        left: [0,1,3,4],
+        right: [0,1,3,4],
+        bottom: [0,2,3,4]
+    },
     contents: [
         ['WWW','WWW','WWW','   ','WWW'],
         ['WWW','KK1','WWW','   ','WWW'],
@@ -26,6 +32,12 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 10, [{
     moves: 3,
     name: "Keys/Doors 3",
     items: ['KD1','SU ','KK1'],
+    disabled: {
+        top: [0,1,2,3,4],
+        left: [0,1,3,5,6],
+        right: [0,1,3,5,6],
+        bottom: [0,1,3,4]
+    },
     contents: [
         ['WWW','WWW','WWW','WWW','WWW'],
         ['WWW','WWW','DN1','WWW','WWW'],
@@ -40,6 +52,12 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 10, [{
     moves: 5,
     name: "Keys/Doors 4",
     items: ['KK1','KD1'],
+    disabled: {
+        top: [1,3],
+        left: [1],
+        right: [0,1],
+        bottom: []
+    },
     contents: [
         ['DR1','WWW','   ','WWW'],
         ['WWW','BB ','DB1','WWW'],
@@ -80,6 +98,12 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 10, [{
     moves: 4,
     name: "Keys/Doors 7",
     items: ['M//','M//','M//','M//'],
+    disabled: {
+        top: [0,1,2,3,4,5,7,8],
+        left: [0,1,2,3,4,5,7,8],
+        right: [0,1,3,4,5,6,7,8],
+        bottom: [0,1,3,4,5,6,7,8]
+    },
     contents: [
         ['WWW','WWW','WWW','WWW','WWW','WWW','   ','WWW','WWW'],
         ['WWW','   ','   ','   ','WWW','   ','   ','DY1','WWW'],
@@ -96,6 +120,12 @@ PUZZLO.tower_categories.dx.addTower('Keys/Doors Tower', 10, [{
     moves: 4,
     name: "Keys/Doors 8",
     items: ['M//','M\\','M//','M\\','SU '],
+    disabled: {
+        top: [0,1,3,4,6,7],
+        left: [0,1,3,4,5,7,8],
+        right: [0,1,2,3,4,5,7,8],
+        bottom: [0,1,3,4,6,7]
+    },
     contents: [
         ['WWW','WWW','   ','WWW','WWW','   ','WWW','WWW'],
         ['WWW','WWW','   ','WWW','WWW','   ','WWW','WWW'],

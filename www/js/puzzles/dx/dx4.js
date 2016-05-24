@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
     moves: 1,
     name: "Toggles 1",
-    description: "AAAAAAA",
+    description: "Tap the toggling diamond to<br />change its color",
     items: ['BR ','BY '],
     contents: [
         ['   ','   ','   ','   ','   '],
@@ -13,6 +13,7 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
 },{
     moves: 1,
     name: "Toggles 2",
+    description: "Tap the toggling mirror to rotate it",
     contents: [
         ['M??','M??','M??','M??','M??','   ','   ','   '],
         ['   ','   ','   ','   ','   ','   ','   ','   '],
@@ -26,7 +27,7 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
 },{
     moves: 2,
     name: "Toggles 3",
-    description: "BBBBBB",
+    description: "Tap the toggling shifter<br />(on your item bar)<br />to rotate it",
     items: ['S? ','S? ','S? '],
     contents: [
         ['   ','   ','   ','   ','   '],
@@ -39,7 +40,14 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
 },{
     moves: 1,
     name: "Toggles 4",
-    description: "You can't use shifters on togglers...directly.",
+    description: "You can't use shifters on togglers...directly",
+    teleporterTypes: 2,
+    disabled: {
+        top: [4,5,6],
+        left: [],
+        right: [0,1,2,3,4],
+        bottom: [1,2,4,5,6]
+    },
     items: ['S? ','S? ','S? '],
     contents: [
         ['   ','   ','   ','[N]','WWW','WWW','WWW'],
@@ -52,6 +60,12 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
     moves: 2,
     name: "Toggles 5",
     items: ['M//','M\\'],
+    disabled: {
+        top: [0,1,2,3,4,5,6],
+        left: [0],
+        right: [0],
+        bottom: []
+    },
     contents: [
         ['WWW','WWW','WWW','WWW','WWW','WWW','WWW'],
         ['   ','...','WWW','DY1','WWW','...','   '],
@@ -63,9 +77,15 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
 },{
     moves: 4,
     name: "Toggles 6",
+    description: "Hmmm...something's missing...",
     items: ['T1 ','T2 ','T3 ','M//'],
     teleporterTypes: 3,
-    disabled: {bottom: [3]},
+    disabled: {
+        top: [0,2,3,4,5,6,7],
+        left: [0,2,3,4,5,6,7],
+        right: [0,2,3,4,5,6,7],
+        bottom: [0,2,3,4,5,6,7]
+    },
     contents: [
         ['WWW','[Y]','WWW','WWW','WWW','WWW','WWW','WWW'],
         ['   ','T? ','[N]','   ','   ','   ','   ','   '],
@@ -80,20 +100,32 @@ PUZZLO.tower_categories.dx.addTower('Toggles Tower', 15, [{
     moves: 1,
     name: "Toggles 7",
     items: ['BB ','BY ','BB ','BY ','BB ','BY ','BB ','BY '],
+    disabled: {
+        top: [0,1,2,3,4,5,6,7],
+        left: [0,1,2,3,4,5,6,7],
+        right: [0,1,2,3,4,5,6,7],
+        bottom: [0,2,3,4,5,6,7]
+    },
     contents: [
-        ['   ','   ','   ','   ','   ','   ','   ','D?9'],
-        ['   ','   ','   ','   ','M//','   ','M\\','   '],
-        ['   ','   ','   ','M//','   ','M\\','   ','   '],
-        ['   ','   ','M//','   ','M\\','   ','   ','M//'],
-        ['   ','M//','   ','M\\','   ','   ','M//','   '],
-        ['   ','   ','M\\','   ','   ','M//','   ','   '],
-        ['   ','M\\','   ','   ','M//','   ','   ','   '],
-        ['M||','   ','   ','M//','   ','   ','   ','   ']
+        ['WWW','WWW','WWW','WWW','WWW','WWW','WWW','D?9'],
+        ['WWW','WWW','WWW','WWW','M//','   ','M\\','   '],
+        ['WWW','WWW','WWW','M//','   ','M\\','   ','   '],
+        ['WWW','WWW','M//','   ','M\\','   ','   ','M//'],
+        ['WWW','M//','   ','M\\','   ','   ','M//','WWW'],
+        ['WWW','   ','M\\','   ','   ','M//','WWW','WWW'],
+        ['WWW','M\\','   ','   ','M//','WWW','WWW','WWW'],
+        ['M||','   ','   ','M//','WWW','WWW','WWW','WWW']
     ]
 },{
     moves: 6,
     name: "Toggles 8",
     items: [],
+    disabled: {
+        top: [0,1,2,4,5,6],
+        left: [0,1,3,4,6,7],
+        right: [0,1,3,4,6,7],
+        bottom: [0,1,2,4,5,6]
+    },
     contents: [
         ['WWW','WWW','WWW','KK3','WWW','WWW','WWW'],
         ['WWW','WWW','WWW','KD1','WWW','WWW','WWW'],

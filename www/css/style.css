@@ -83,7 +83,7 @@ text, span, .noselect {
 }
 
 
-@font-face {
+/*@font-face {
     font-family: 'Building';
     src: url('fonts/Building_Typeface.ttf');
 }
@@ -91,7 +91,7 @@ text, span, .noselect {
 @font-face {
     font-family: 'Play';
     src: url('fonts/Play.ttf');
-}
+}*/
 
 #change-link {
 
