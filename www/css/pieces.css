@@ -6,6 +6,11 @@
     pointer-events: none;
 }
 
+@-moz-keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 @-webkit-keyframes fadeout {
     from {opacity: 1;}
     to {opacity: 0;}
@@ -23,6 +28,7 @@ keyframes fadeout {
     height: 1.5%;
     opacity: 0;
 
+    -moz-animation: fadeout 0.5s linear;
     -webkit-animation: fadeout 0.5s linear;
     animation: fadeout 0.5s linear;
     pointer-events: none;
