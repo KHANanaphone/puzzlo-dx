@@ -65,7 +65,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
         disabled: {
             top: [0,6],
             left: [0,1,2,3],
-            right: [0,1,2,],
+            right: [0,1,2,3],
             bottom: [0,1,2,3,4,5,6]
         },
         contents: [
