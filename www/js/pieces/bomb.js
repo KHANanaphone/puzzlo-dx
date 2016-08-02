@@ -42,6 +42,7 @@ PUZZLO.pieces['B'] = {
 			            color: this.color
 			        });
 
+				AudioManager.play('bomb');
 				tile.clear();
 				return true;
 			}

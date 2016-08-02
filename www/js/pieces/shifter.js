@@ -34,7 +34,7 @@
 		this.direction = directions[(directions.indexOf(this.direction) + 1) % 8];
 	};
 
-	function doShift(from){
+	function doShift(from, mute){
 
 		if (from.contents.type == 'blank' || from.contents.type == 'wall' || from.contents.type == 'sand')
             return;
@@ -52,7 +52,10 @@
         	if(!to)
         		return false;
 
-        	if(to.contents.type == 'blank' || this.doShift(to)){
+        	if(to.contents.type == 'blank' || this.doShift(to, true)){
+
+				if(!mute)
+					AudioManager.play('shift');
 
         		this.animateShift(from, to);
 

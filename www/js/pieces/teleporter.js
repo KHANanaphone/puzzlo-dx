@@ -52,13 +52,17 @@ PUZZLO.pieces['T'] = {
 
 			applyLogic: function(tile, action){
 
-				if(!this.paired)
-                	return true;
+				if(!this.paired){
+
+					AudioManager.play('wall');
+	                return true;
+				}
 
 				action.x = parseInt(this.paired.$tile.parents('.puzzle-tile').attr('tile-x'));
 				action.y = parseInt(this.paired.$tile.parents('.puzzle-tile').attr('tile-y'));
 				action.quickMove();
 
+				AudioManager.play('teleport');
 				return false;
 			},
 

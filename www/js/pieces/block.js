@@ -64,18 +64,31 @@
 	function applyLogic(tile, action){
 
 		if(this.color == 'normal'){
-			
+
+			AudioManager.play('breakblock');
 			tile.clear();
 		}
 		else if(this.inverted){
 
-			if(action.color != this.color)
+			if(action.color != this.color){
+
+				AudioManager.play('breakblock');
 				tile.clear();
+			}
+			else{
+				AudioManager.play('wall');
+			}
 		}
 		else{
 
-			if(action.color == this.color)
+			if(action.color == this.color){
+
+				AudioManager.play('breakblock');
 				tile.clear();
+			}
+			else{
+				AudioManager.play('wall');
+			}
 		}
 
 		return true;

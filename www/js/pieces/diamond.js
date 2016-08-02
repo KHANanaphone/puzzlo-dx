@@ -83,16 +83,23 @@
 		if(this.color != 'normal'){
 
 			if(this.inverted){
-				if(action.color == this.color)
+				if(action.color == this.color){
+
+					AudioManager.play('Wall');
 					return true;
+				}
 			}
 			else{
-				if(action.color != this.color)
+				if(action.color != this.color){
+
+					AudioManager.play('Wall');					
 					return true;
+				}
 			}
 		}
 
 		this.health--;
+		AudioManager.play(this.health ? 'DamageDiamond' : 'BreakDiamond');
 
 		if(this.health == 0)
 			tile.clear();

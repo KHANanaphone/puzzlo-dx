@@ -139,11 +139,15 @@
         }
 
         if(newDir){
+
             action.direction = newDir;
+			AudioManager.play('mirrorreflect');
             return false;
         }
         else {
+
             tile.clear();
+			AudioManager.play('mirrorbreak');
             return true;
         }
 	}

@@ -303,6 +303,7 @@ PuzzleScene.retry = function() {
     $button.css('color', 'white');
     // $('#tiles').fadeOut();
     PuzzleScene.refreshAll();
+    AudioManager.play('Retry');
 
     setTimeout(function(){
 
@@ -318,8 +319,11 @@ PuzzleScene.retry = function() {
 
 PuzzleScene.back = function(){
 
-    if(!PuzzleScene.solved)
+    if(!PuzzleScene.solved){
+
         Main.showScene('tower');
+        AudioManager.play('Retry');
+    }
 };
 
 PuzzleScene.ReduceMovesLeft = function() {
@@ -365,10 +369,13 @@ PuzzleScene.SolutionCheck = function() {
     }
 
     if(solved){
+        AudioManager.play('success');
         PuzzleScene.showSolvedDialog();
     }
     else if(PuzzleScene.puzzle.movesLeft == 0){
+        
         $('#main-content').css('background-color', '#AA1420');
+        AudioManager.play('fail');
         $('#failure-popup').fadeIn();
     }
 }

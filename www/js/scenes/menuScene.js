@@ -82,6 +82,7 @@ MenuScene.rowClicked = function($row){
     $row.addClass('clicked');
     Main.showScene('tower');
     TowerScene.loadTowers(categoryId);
+    AudioManager.play('MenuOption');
 
     setTimeout(function(){
 

@@ -61,6 +61,7 @@ TowerScene.loadTowers = function(categoryId){
                     }
                     else{
                         PuzzleScene.showPuzzle(new Puzzle(data.puzzle));
+                        AudioManager.play('Teleport');
                     }
                 });
 
@@ -105,6 +106,7 @@ TowerScene.slide = function(i){
 
     TowerScene.shift += i;
     TowerScene.updateShift();
+    AudioManager.play('Toggle');
 };
 
 TowerScene.updateTower = function(){
@@ -169,4 +171,5 @@ TowerScene.updateSolved = function(delay){
 TowerScene.back = function(){
 
     Main.showScene('menu');
+    AudioManager.play('Retry');
 };
