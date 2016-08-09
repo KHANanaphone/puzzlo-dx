@@ -52,7 +52,7 @@ Ice.prototype.setupClicking = function(){
             color: 'blue'
         });
 
-		AudioManager.play('Blue');
+		AudioManager.playSfx('Blue');
         PuzzleScene.ReduceMovesLeft();
     }
 }

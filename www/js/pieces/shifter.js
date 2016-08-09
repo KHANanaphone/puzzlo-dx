@@ -55,7 +55,7 @@
         	if(to.contents.type == 'blank' || this.doShift(to, true)){
 
 				if(!mute)
-					AudioManager.play('shift');
+					AudioManager.playSfx('shift');
 
         		this.animateShift(from, to);
 

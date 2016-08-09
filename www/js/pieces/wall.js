@@ -15,7 +15,7 @@ PUZZLO.pieces['W'] = {
 
 			applyLogic: function(tile, action){
 
-				AudioManager.play('wall');
+				AudioManager.playSfx('wall');
 				return true;
 			}
 

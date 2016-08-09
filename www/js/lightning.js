@@ -52,7 +52,7 @@ Lightning.prototype.setupClicking = function(){
             color: 'yellow'
         });
 
-		AudioManager.play('Yellow');
+		AudioManager.playSfx('Yellow');
         PuzzleScene.ReduceMovesLeft();
     }
 }

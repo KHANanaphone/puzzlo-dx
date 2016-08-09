@@ -22,7 +22,7 @@ PUZZLO.pieces['K'] = {
                 applyLogic: function(tile, action){
 
                     PuzzleScene.openDoors(this.keydoorIndex, action.color);
-        			AudioManager.play('unlock');
+        			AudioManager.playSfx('unlock');
                     tile.clear();
                     return false;
                 }
@@ -44,7 +44,7 @@ PUZZLO.pieces['K'] = {
     			},
                 applyLogic: function(tile, action){
 
-                    AudioManager.play('wall');
+                    AudioManager.playSfx('wall');
                     return true;
                 }
             }

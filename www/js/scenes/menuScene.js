@@ -82,7 +82,7 @@ MenuScene.rowClicked = function($row){
     $row.addClass('clicked');
     Main.showScene('tower');
     TowerScene.loadTowers(categoryId);
-    AudioManager.play('MenuOption');
+    AudioManager.playSfx('MenuOption');
 
     setTimeout(function(){
 
@@ -144,4 +144,16 @@ MenuScene.createRandomBgObject = function(){
         $tile.remove();
         MenuScene.createRandomBgObject();
     };
+};
+
+MenuScene.toggleAudio = function(source, type){
+
+    if($(source).hasClass('on')){
+        $(source).removeClass('on');
+        AudioManager.setEnabled(type, false);
+    }
+    else {
+        $(source).addClass('on');
+        AudioManager.setEnabled(type, true);
+    }
 };

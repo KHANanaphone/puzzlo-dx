@@ -65,29 +65,29 @@
 
 		if(this.color == 'normal'){
 
-			AudioManager.play('breakblock');
+			AudioManager.playSfx('breakblock');
 			tile.clear();
 		}
 		else if(this.inverted){
 
 			if(action.color != this.color){
 
-				AudioManager.play('breakblock');
+				AudioManager.playSfx('breakblock');
 				tile.clear();
 			}
 			else{
-				AudioManager.play('wall');
+				AudioManager.playSfx('wall');
 			}
 		}
 		else{
 
 			if(action.color == this.color){
 
-				AudioManager.play('breakblock');
+				AudioManager.playSfx('breakblock');
 				tile.clear();
 			}
 			else{
-				AudioManager.play('wall');
+				AudioManager.playSfx('wall');
 			}
 		}
 

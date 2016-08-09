@@ -232,3 +232,32 @@
 
     display: none;
 }
+
+#menu-scene .sound {
+position: absolute;
+left: 5%;
+bottom: 0;
+}
+
+#menu-scene .sound span {
+
+    opacity: 0.6;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+#menu-scene .sound span:hover {
+
+    opacity: 1;
+}
+
+#menu-scene .sound .fa-times {
+
+    color: red;
+}
+
+#menu-scene .sound .on .fa-times {
+
+    display: none;
+}

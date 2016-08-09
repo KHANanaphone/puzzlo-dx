@@ -141,13 +141,13 @@
         if(newDir){
 
             action.direction = newDir;
-			AudioManager.play('mirrorreflect');
+			AudioManager.playSfx('mirrorreflect');
             return false;
         }
         else {
 
             tile.clear();
-			AudioManager.play('mirrorbreak');
+			AudioManager.playSfx('mirrorbreak');
             return true;
         }
 	}

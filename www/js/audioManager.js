@@ -1,6 +1,10 @@
 var AudioManager = {
 
     sfx: {},
+    enabled: {
+        sfx: true,
+        music: true
+    },
 
     loadAll: function(){
 
@@ -29,12 +33,30 @@ var AudioManager = {
         }
     },
 
-    play: function(name){
+    playSfx: function(name){
+
+        if(!this.enabled.sfx)
+            return;
 
         var name = name.toLowerCase();
 
         if(this.sfx[name])
             this.sfx[name].play();
+    },
+
+    setEnabled: function(type, enabled){
+
+        if(type === 'sfx' && enabled === false){
+
+            for(var sfxName in this.sfx)
+                this.sfx[sfxName].stop();
+        }
+        else if(type === 'music'){
+
+            // something
+        }
+
+        this.enabled[type] = enabled;
     }
 };
 

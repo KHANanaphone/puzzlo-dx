@@ -42,7 +42,7 @@ PUZZLO.pieces['B'] = {
 			            color: this.color
 			        });
 
-				AudioManager.play('bomb');
+				AudioManager.playSfx('bomb');
 				tile.clear();
 				return true;
 			}

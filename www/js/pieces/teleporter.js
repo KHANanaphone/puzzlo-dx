@@ -54,7 +54,7 @@ PUZZLO.pieces['T'] = {
 
 				if(!this.paired){
 
-					AudioManager.play('wall');
+					AudioManager.playSfx('wall');
 	                return true;
 				}
 
@@ -62,7 +62,7 @@ PUZZLO.pieces['T'] = {
 				action.y = parseInt(this.paired.$tile.parents('.puzzle-tile').attr('tile-y'));
 				action.quickMove();
 
-				AudioManager.play('teleport');
+				AudioManager.playSfx('teleport');
 				return false;
 			},
 
