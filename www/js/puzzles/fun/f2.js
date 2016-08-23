@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
 
         moves: 2,
-        name: "Blocks 1",
+        name: "Intro to Blocks",
         disabled: {
             top: [0,1,2],
             left: [0,1,3],
@@ -25,6 +25,7 @@ PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
             right: [0,2],
             bottom: [0,1,2]
         },
+        description: "Sometimes, order is important.",
         contents: [
             ['WWW','WWW','WWW'],
             ['DN1','[N]','DN2'],
@@ -44,7 +45,7 @@ PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
     }, {
 
         moves: 5,
-        name: "Blocks 4",
+        name: "Heavily Armored",
         disabled: {
             top: [1]
         },
@@ -56,7 +57,7 @@ PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
     }, {
 
         moves: 7,
-        name: "Blocks 5",
+        name: "Staircase",
         disabled: {
             top: [3,4],
             left: [4],
@@ -73,7 +74,7 @@ PUZZLO.tower_categories.fun.addTower('Block Tower', 4, [{
     }, {
 
         moves: 5,
-        name: "Blocks 6",
+        name: "The Forest",
         contents: [
             ['   ','   ','   ','   ','   ','   ','[N]'],
             ['DN2','[N]','   ','   ','[N]','DN2','   '],

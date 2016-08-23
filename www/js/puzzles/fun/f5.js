@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
 
         moves: 3,
-        name: "Reds 1",
+        name: "Intro to Reds",
         contents: [
             ['DR1','   ','   ','   ','   '],
             ['   ','[N]','   ','   ','   '],
@@ -12,7 +12,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
     },{
 
         moves: 2,
-        name: "Reds 2",
+        name: "Redlining",
         contents: [
             ['   ','   ','BR ','   ','   '],
             ['DN1','[R]','DN2','[R]','DN1']
@@ -31,7 +31,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
     },{
 
         moves: 3,
-        name: "Reds 4",
+        name: "Corner Case",
         disabled: {
             top: [0,1],
             left: [0,1]
@@ -45,7 +45,7 @@ PUZZLO.tower_categories.fun.addTower('Reds Tower', 20, [{
     },{
 
         moves: 4,
-        name: "Reds 5",
+        name: "Well-Guarded",
         disabled: {
             top: [0,1,3],
             left: [0,1,2,3,4],

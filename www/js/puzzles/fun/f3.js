@@ -1,14 +1,14 @@
 PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
 
         moves: 2,
-        name: "Colors 1",
+        name: "Intro to Colors",
         disabled: {
             top: [0,2],
             left: [0,2],
             right: [0,2],
             bottom: [0,2]
         },
-        description: "Colored diamonds can only be destroyed by their own color.",
+        description: "Colored diamonds can only be\r\ndestroyed by their own color.",
         contents: [
             ['WWW', 'DY1', 'WWW'],
             ['DB1', 'DB1', 'DB1'],
@@ -34,7 +34,7 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
     },{
 
         moves: 7,
-        name: "Colors 3",
+        name: "Diagon-Wall",
         disabled: {
             top: [0,1,2,3,4],
             left: [0,1,2,3,4],
@@ -51,14 +51,14 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
     },{
 
         moves: 3,
-        name: "Colors 4",
+        name: "Line",
         contents: [
             ['[B]','DB2','DY1','DN2']
         ]
     },{
 
         moves: 5,
-        name: "Colors 5",
+        name: "Shuriken",
         contents: [
         	['   ','   ','WWW','   '],
         	['WWW','DB1','DY1','   '],
@@ -68,7 +68,7 @@ PUZZLO.tower_categories.fun.addTower('Colors Tower', 8, [{
     },{
 
         moves: 4,
-        name: "Colors 6",
+        name: "Now Try This!",
         contents: [
             ['   ','   ','DN1','DN1'],
             ['DN1','DN1','DY1','DB1'],

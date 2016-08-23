@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
 
         moves: 1,
-        name: "Items",
+        name: "Intro to Items",
         description: "Click on an empty space to<br />place a piece there",
         items: ['BR '],
         contents: [
@@ -12,7 +12,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 2,
-        name: "Items 2",
+        name: "Crossroads",
         description: "If a diamond is in your inventory, you must still break it to pass the level",
         items: ['DB1','DY1'],
         contents: [
@@ -25,7 +25,8 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 1,
-        name: "Items 3",
+        name: "Desert",
+        description: "You can't place items on a \"sand\" tile.",
         items: ['BR ','BR '],
         contents: [
             ['   ','...','...','...','...'],
@@ -41,7 +42,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 1,
-        name: "Items 4",
+        name: "Line 'em up'",
         items: ['DN3'],
         contents: [
         	['BR ','   ','   ','   ','   ','BR '],
@@ -55,7 +56,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
         moves: 2,
-        name: "Items 5",
+        name: "Square",
         items: ['BR ','BR '],
         contents: [
             ['   ','   ','   ','   ','   '],
@@ -67,7 +68,7 @@ PUZZLO.tower_categories.fun.addTower('Items Tower', 26, [{
     },{
 
             moves: 3,
-            name: "Items 6",
+            name: "Figure 8",
             items: ['BR ','BR ','BR '],
             contents: [
                 ['   ','   ','DN1','   ','   '],

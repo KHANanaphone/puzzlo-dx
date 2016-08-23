@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
 
         moves: 4,
-        name: "Bonus 1",
+        name: "Weird Item",
         items: ['[N]'],
         disabled: {
             top: [],
@@ -19,7 +19,7 @@ PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
     },{
 
         moves: 3,
-        name: "Bonus 2",
+        name: "No Longer Fun",
         items: ['DN1', 'DN1', 'BR '],
         disabled: {
             top: [3],
@@ -36,7 +36,7 @@ PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
     },{
 
         moves: 10,
-        name: "Bonus 3",
+        name: "Break On Through",
         disabled: {
             top: [],
             left: [1,3],
@@ -53,7 +53,7 @@ PUZZLO.tower_categories.fun.addTower('Bonus Tower', 36, [{
     },{
 
         moves: 6,
-        name: "Bonus 4",
+        name: "Diagonal Defense",
         items: ['BR '],
         disabled: {
             top: [5],

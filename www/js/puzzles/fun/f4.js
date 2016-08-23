@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
 
         moves: 1,
-        name: "Bombs 1",
+        name: "Intro to Bombs",
         description: "Hit a bomb to detonate it.",
         contents: [
             ['DN1','   ','   ','   ','DN1'],
@@ -13,7 +13,8 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 1,
-        name: "Bombs 2",
+        name: "Diamond Blaster",
+        description: "Was this an alternate name for the game?",
         contents: [
             ['   ','   ','BR ','   ','   '],
             ['   ','BR ','   ','BR ','   '],
@@ -24,7 +25,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 1,
-        name: "Bombs 3",
+        name: "Decisions Decisions",
         disabled: {
             top: [0,5,6],
             left: [0,2,3,4],
@@ -41,7 +42,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 4,
-        name: "Bombs 4",
+        name: "Spirograph",
         contents: [
         	['   ','DN1','DN2','DN1','DN1','   '],
         	['DN1','   ','DN3','BR ','   ','DN1'],
@@ -53,7 +54,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 1,
-        name: "Bombs 5",
+        name: "Big Bomber",
         contents: [
         	['BR ','   ','   ','   '],
         	['   ','BR ','   ','   '],
@@ -66,7 +67,7 @@ PUZZLO.tower_categories.fun.addTower('Bombs Tower', 14, [{
     },{
 
         moves: 5,
-        name: "Bombs 6",
+        name: "Think Carefully",
         disabled: {
             top: [2,4],
             right: [0]

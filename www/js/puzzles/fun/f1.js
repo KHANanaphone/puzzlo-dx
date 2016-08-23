@@ -12,7 +12,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 2,
-        name: "Intro 2",
+        name: "Plus",
         disabled: {
             top: [0,2],
             left: [0,2],
@@ -27,7 +27,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 6,
-        name: "Intro 3",
+        name: "Threes",
         contents: [
             ['DN3', 'DN3'],
             ['DN3', 'DN3']
@@ -35,7 +35,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 6,
-        name: "Intro 4",
+        name: "Window",
         contents: [
             ['DN2', 'DN1', 'DN2', 'DN1', 'DN2'],
             ['DN1', '   ', 'DN1', '   ', 'DN1'],
@@ -46,7 +46,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 4,
-        name: ":)",
+        name: "Creepy Face",
         contents: [
             ['   ', 'DN1', '   ', 'DN1','   '],
             ['   ', '   ', '   ', '   ','   '],
@@ -56,7 +56,7 @@ PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
     },{
 
         moves: 4,
-        name: "<>",
+        name: "Big Diamond",
         contents: [
             ['   ', '   ', 'DN1', '   ','   '],
             ['   ', 'DN1', '   ', 'DN1','   '],
