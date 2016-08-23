@@ -144,12 +144,12 @@
 }
 
 #menu-scene .uzzlo{
-    fill: white;
+    fill: black;
     font-family: 'Patua One';
-    font-size: 150px;
-    stroke: black;
+    font-size: 85px;
+    stroke: #ffffff;
     stroke-width: 3px;
-    letter-spacing: -78px;
+    letter-spacing: -100px;
 }
 
 #menu-scene #dx-logo{
@@ -235,7 +235,7 @@
 
 #menu-scene .sound {
 position: absolute;
-left: 5%;
+left: 3%;
 bottom: 0;
 }
 

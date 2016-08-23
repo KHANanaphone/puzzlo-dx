@@ -104,9 +104,7 @@ MenuScene.beginAnimation = function(){
 
     tl.to($uzzlo, 1, {attr: {x: 400}, ease: Linear.easeNone}, 0);
     tl.to($p, 1, {rotation: 0, ease: Circ.easeOut}, 1);
-    tl.to($uzzlo, 0.4, {attr: {y: 100}, ease: Quad.easeOut}, 1);
-    tl.to($uzzlo, 0.4, {attr: {y: 300}, ease: Quad.easeIn}, 1.4);
-    tl.to($uzzlo, 0.5, {attr: {x: 300}, letterSpacing: '0px'}, 1.8);
+    tl.to($uzzlo, 0.5, {attr: {x: 300}, letterSpacing: '0px'}, 1);
 
     $dx.each(function(index){
 
@@ -115,7 +113,7 @@ MenuScene.beginAnimation = function(){
         tl.to(this, 0.5, {'stroke-dashoffset': 0}, 2.3 + index * 0.2);
     });
 
-    tl.to($towerSelect, 0.5, {opacity: 1}, 1.8);
+    tl.to($towerSelect, 0.5, {opacity: 1}, 1);
     tl.play();
 
     setTimeout(MenuScene.createRandomBgObject, 2000);
@@ -135,7 +133,7 @@ MenuScene.createRandomBgObject = function(){
     var type = MenuScene.bgTileTypes[Math.floor(Math.random() * MenuScene.bgTileTypes.length)];
     tile.setContents(type);
 
-    $tile.css('top', '-10%').css('left', (Math.random() * 100) + '%');
+    $tile.css('top', '-10%').css('left', (Math.random() * 90 + 5) + '%');
     $('#menu-scene .menu-bg').append($tile);
 
     TweenLite.to($tile, 10, {top: '105%', rotation:'450', onComplete:remove, ease:Linear.easeNone});
