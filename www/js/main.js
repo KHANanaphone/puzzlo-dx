@@ -115,7 +115,7 @@ Main.showScene = function(scene){
     Main.currentScene = scene;
 
     if(scene == 'menu')
-        $('#main-content').attr('tower-type', 'fun');
+        $('body').attr('tower-type', 'fun');
 };
 
 Main.setCurrentSolved = function(){

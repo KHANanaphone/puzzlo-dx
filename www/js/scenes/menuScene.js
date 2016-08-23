@@ -77,7 +77,7 @@ MenuScene.rowClicked = function($row){
 
     var categoryId = $row.data('categoryId');
 
-    $('#main-content').attr('tower-type', categoryId);
+    $('body').attr('tower-type', categoryId);
 
     $row.addClass('clicked');
     Main.showScene('tower');

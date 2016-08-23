@@ -1,7 +1,7 @@
 PUZZLO.tower_categories.fun.addTower('Intro Tower', 0, [{
 
         moves: 10,
-        name: "Intro 1",
+        name: "Welcome",
         description: "Use the colored arrows to destroy all of the diamonds.",
         contents: [
             ['DN1', '   ', '   ', '   '],

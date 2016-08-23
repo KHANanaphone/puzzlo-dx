@@ -8,28 +8,7 @@ html, body{
     background-color: #446;
 }
 
-text, span, .noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    cursor: default;
-}
-
-#main-content{
-	position: relative;
-	margin: 0 auto;
-
-    height: 100%;
-    width: 100%;
-    margin: 0;
-
-    -webkit-transition: background-color 0.4s;
-    transition: background-color 0.4s;
-    overflow: hidden;
+body {
 
     background-color: #445;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#445+1,000000+100 */
@@ -43,7 +22,7 @@ text, span, .noselect {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445', endColorstr='#002',GradientType=0 ); /* IE6-9 */
 }
 
-#main-content[tower-type="advanced"]{
+body[tower-type="advanced"]{
 
     background-color: #332;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#332+1,000000+100 */
@@ -57,7 +36,7 @@ text, span, .noselect {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#332', endColorstr='#220',GradientType=0 ); /* IE6-9 */
 }
 
-#main-content[tower-type="dx"]{
+body[tower-type="dx"]{
 
     background-color: #422;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#422+1,000000+100 */
@@ -69,6 +48,31 @@ text, span, .noselect {
     background: -ms-linear-gradient(top,  #422 1%,#200 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #422 1%,#200 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#422', endColorstr='#200',GradientType=0 ); /* IE6-9 */
+}
+
+text, span, .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: default;
+}
+
+#main-content{
+    background: url(../img/gradient-squares.png);
+	position: relative;
+	margin: 0 auto;
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+    overflow: hidden;
 }
 
 .scene{
@@ -104,11 +108,10 @@ text, span, .noselect {
 
 #size-setter{
    height: 100%;
-    position: relative;
-    margin: 0 auto;
-    background: url(../img/gradient-squares.png);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+   position: relative;
+   margin: 0 auto;
+   /* border-left: 1px solid rgba(255, 255, 255, 0.2); */
+   /* border-right: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 .back-button{
